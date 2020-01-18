@@ -1,0 +1,199 @@
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <title>Accidentes BCN</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%
+        }
+
+        .legend {
+            background-color: #fff;
+            border-radius: 3px;
+            bottom: 30px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            padding: 10px;
+            position: absolute;
+            right: 10px;
+            z-index: 1;
+        }
+
+        .legend h4 {
+            margin: 0 0 10px;
+        }
+
+        .legend p {
+            margin-left: 30px;
+            position: absolute;
+            display: block;
+            top: 0;
+        }
+
+        .legend div {
+            position: relative;
+        }
+
+        .legend div span {
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+            opacity: 0.8;
+            background-color: #d49a66;
+        }
+
+        .map-overlay {
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            position: absolute;
+            width: 25%;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            z-index: 100;
+        }
+
+        .map-overlay .map-overlay-inner {
+            background-color: #fff;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+            border-radius: 3px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .map-overlay input {
+            background-color: transparent;
+            display: inline-block;
+            width: 100%;
+            position: relative;
+            margin: 0;
+            cursor: ew-resize;
+        }
+    </style>
+
+    <script>
+        function Init() {
+            /* Paso 0
+            var diasSemana = ["Dilluns", "Dimarts", "Dimecres", "Dijous", "Divendres", "Dissabte", "Diumenge"];
+            var colorDia = ['#e26131', '#d0d378', '#78d3b0', '#78bcd3', '#9e78d3', '#d378cd', '#d37878'];
+            */
+            mapboxgl.accessToken =
+                'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2pjamdzbHZlMjg5YjMzbzBvMjRpazc3eSJ9.6L0nrPLbjWxZCMdBit-z8g';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/gismasterm2/cjcumodeg0i4p2rpaihqxx96w',
+                center: [2.16859, 41.3954],
+                zoom: 13,
+                hash: true,
+                pitch: 45
+            });
+            map.addControl(new mapboxgl.NavigationControl());
+            /* Paso 1
+            creaLeyenda();
+            */           
+            map.on('load', function () {
+                map.addSource("accidentes_source", {
+                    type: "vector",
+                    url: "mapbox://gismasterm2.5sruyo1q"
+                }); //fin map source
+
+                map.addLayer({
+                    id: "accidentes",
+                    type: "circle",
+                    source: "accidentes_source",
+                    'source-layer': "accidentes2017-8f5d0i",
+                    /* pas0 1
+          paint: {
+      'circle-radius': 4,
+      'circle-color': {
+        property: "Descripció dia setmana",
+        type: 'categorical',
+        stops: [
+        [diasSemana[0], colorDia[0]],
+        [diasSemana[1], colorDia[1]],
+        [diasSemana[2], colorDia[2]],
+        [diasSemana[3], colorDia[3]],
+        [diasSemana[4], colorDia[4]],
+        [diasSemana[5], colorDia[5]],
+        [diasSemana[6], colorDia[6]]
+        ]
+      },
+      'circle-opacity': 0.8
+    }
+    */
+                    /* Paso 2
+                    ,filter:['==', 'Descripció dia setmana', diasSemana[0]]
+                    */
+
+                }); //fin add layers
+
+
+                /* Paso 2
+
+                document.getElementById('slider').addEventListener('input', function(e) {
+                    filtraDias(e.target.value);           
+                    });
+                
+                */
+
+
+            }); //Fin load mapa
+
+            /* Paso 1
+            function creaLeyenda() {
+                var leyendaHtml = "<div>Semana</div>";
+                for (i = 0; i < diasSemana.length; i++) {
+                    leyendaHtml = leyendaHtml + '<div><span style="background-color:' + colorDia[i] +
+                        ';width:10px;height:10px;margin: 0 5px"></span>' + diasSemana[i] + '</div>';
+
+                }
+
+                document.getElementById('legend').innerHTML = leyendaHtml;
+            }
+            */
+            /* Paso 2
+            function filtraDias(numdia){
+                  var filters = ['==', 'Descripció dia setmana', diasSemana[numdia]];
+                  map.setFilter('accidentes', filters);
+                  document.getElementById('diasemanaid').textContent = diasSemana[numdia];
+            }
+            */
+
+        }
+    </script>
+</head>
+
+<body onload="Init()">
+ <!-- Paso 1
+    <div id='legend' class='legend'>
+        ### Accidentes
+    </div>
+ -->
+
+    <!-- Pas 2
+      <div class='map-overlay top'>
+          <div class='map-overlay-inner'>
+      ### Accidentes x dias de la semana
+    <label id='diasemanaid'></label>
+    <input id='slider' type='range' min='0' max='6' step='1' value='0' />
+          </div>
+      </div>
+    -->
+    <div id='map'></div>
+
+</body>
+
+</html>

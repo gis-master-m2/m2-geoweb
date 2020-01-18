@@ -1,0 +1,65 @@
+<html lang="es">
+    <head>
+    <title>Leaflet y Mapox</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="autor"/>
+      <meta name="description" content="descripción página">
+      <meta name="robots" content="index,follow">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.0/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.0/leaflet.js"></script>
+    <style>
+            body {
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+            }
+            #map {
+              height: 100%;
+              width: 100%;
+            }
+     </style>
+<script>
+        var map;
+        var capa1;
+        function init(){
+            map = L.map('map',{
+            center:[41.6863, 1.8382],
+            zoom:8,
+            attributionControl:false
+            });
+            capa1= L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            {
+            maxZoom : 19,
+            minZoom : 1,
+            attribution : 'OSM'
+            });
+            capa1.addTo(map);
+            L.marker([41.3954, 2.16859],{
+                draggable:true
+            }).addTo(map)
+                        .bindPopup('<iframe width="250" height="200" src="https://www.youtube.com/embed/5lYdrhYYWpg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+                       // .openPopup();
+                       /*
+                            comentario para abrir popup
+                            n,vm,nfmbns
+                       */
+
+                       map.on('click',function(e){
+                           console.info(e);
+                              new L.circleMarker(e.latlng, {
+                                       color: '#ffffff',
+                                       fillColor: '#00ff00',
+                                       fillOpacity: 0.9,
+                                       radius: 8
+                                     }).addTo(map)
+                                .bindPopup(e.latlng.lat+","+ e.latlng.lng)
+                                .openPopup();
+                          });
+        }
+        </script>
+</head>
+    <body onload="init()">
+    <div id="map"></div>
+    </body>
+    </html>

@@ -1,0 +1,51 @@
+<html lang="es">
+
+<head>
+  <title>Ejemplo 0 Cesium básico</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="autor" />
+  <meta name="description" content="descripción página">
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="http://betaserver.icgc.cat/cesium/Cesium/Widgets/widgets.css" />
+  <script src="http://betaserver.icgc.cat/cesium/Cesium/Cesium.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+    #map {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      height: 100%;
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+
+      map = new Cesium.Viewer('map');
+
+      /*
+         map.camera.flyTo({
+            destination : Cesium.Cartesian3.fromDegrees( 2.1806,41.4003, 15000)
+        });
+
+        */
+
+    });
+  </script>
+</head>
+<body>
+  <div id="map"></div>
+</body>
+</html>

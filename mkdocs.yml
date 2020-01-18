@@ -1,0 +1,38 @@
+site_name: Módulo 2 - Mapas y OpenData
+site_url: https://gis-master-m2.github.io/m2-geoweb/
+site_description: Mapas y OpenData, Localización, Visualización y Análisis de GeoDatos.
+site_author: geoweb
+theme:
+  name: 'material'
+  language: 'es'
+  highlightjs: true
+  suppress_nextprev: true
+extra_css:
+  - 'stylesheets/extra.css'
+markdown_extensions:
+  - codehilite:
+      linenums: True
+  - admonition
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - footnotes
+repo_url: "https://github.com/gis-master-m2/m2-geoweb"
+
+nav:
+- Inicio: index.md
+- 1. Introducción a la GeoWeb,Herramientas, Servicios y Conceptos: introduccion_a_las_tecnologias_geoweb.md
+- 2. Plataformas GitHub y Medium.Lenguaje Git.: taller_github.md
+- 3. Introducción a Leaflet: introduccion_a_leaflet.md
+- 4. Plugins Leaflet: plugins_leaflet.md
+- 5. Mapas personalizados con MapBox Studio y MapBox GL JS: introduccion_a_mapbox.md
+- 6. Mapas personalizados con Maputnik y MapBox GL JS: introduccion_maputnik.md
+- 7. MapBox GL JS avanzado: mapbox_avanzado.md
+- 8. Visualización y publicación con Kepler GL: visualizacion_con_kepler_gl.md
+#- 10. Mallas discretas y algoritmos en JS: introduccion_a_mapbox.md
+#- 11. Visualización y publicación con Kepler GL: visualizacion_con_kepler_gl.md
+#- 6. Introducción a Cesium: introduccion_a_cesium.md
+#- 4. Recursos OpenData: recursos_open_data.md
+
+
+plugins:
+    - search
