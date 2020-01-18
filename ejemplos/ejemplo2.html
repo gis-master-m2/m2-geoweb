@@ -1,0 +1,46 @@
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Mi estilo</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%
+        }
+    </style>
+    <script>
+        function Init() {
+
+            mapboxgl.accessToken = '';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'https://gis-master-m2.github.io/geoweb/datos/miestilo.json',
+                center: [2.16859, 41.3954],
+                zoom: 13,
+                hash: true,
+                pitch: 45,
+                attributionControl: false
+            });
+            map.addControl(new mapboxgl.AttributionControl({
+                compact: true
+            }));
+            map.addControl(new mapboxgl.NavigationControl());
+
+
+        }
+    </script>
+</head>
+<body onload="Init()">
+    <div id='map'></div>
+</body>
+</html>
