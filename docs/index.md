@@ -15,10 +15,9 @@ Materiales para el módulo 2: Mapas y OpenData, Localización, Visualización y 
 * [6. Mapas personalizados con Maputnik y MapBox GL JS.](introduccion_maputnik)
 * [7. MapBox GL JS avanzado](mapbox_avanzado)
 * [8. Visualización y publicación con Kepler GL](visualizacion_con_kepler_gl)
-* [9. Mallas discretas y algoritmos en JS](introduccion_a_mapbox_NONE)
-* [10. Introducción a Cesium](introduccion_a_cesium)
+* [9. Introducción a Cesium](introduccion_a_cesium)
+* [10. Mallas discretas y algoritmos en JS](introduccion_a_mapbox_NONE)
 * [11. Recursos OpenData](recursos_open_data)
-
 
 
 #### Recursos

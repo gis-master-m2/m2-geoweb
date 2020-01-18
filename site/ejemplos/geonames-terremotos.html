@@ -1,0 +1,113 @@
+<html>
+
+<head lang="es">
+    <title>GeoNames</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+
+        #ventana {
+            position: absolute;
+            top: 100px;
+            left: 10px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        var terremotoPunto = null;
+        var map;
+        $(document).ready(function () {
+
+            map = L.map("map", {
+                attributionControl: false,
+                zoom: 8,
+                center: [42, 2]
+            });
+
+            L.tileLayer('//{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
+                attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> — Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+                subdomains: 'abcd',
+                maxZoom: 17,
+                minZoom: 2
+            }).addTo(map);
+
+
+            function peticionTerremotos() {
+                var peticion = 'http://api.geonames.org/earthquakesJSON?' +
+                    'north=' + map.getBounds()._northEast.lat + '&' +
+                    'south=' + map.getBounds()._southWest.lat + '&' +
+                    'east=' + map.getBounds()._northEast.lng + '&' +
+                    'west=' + map.getBounds()._southWest.lng + '&' +
+                    'maxRows=50&' +
+                    'username=masterupc&';
+                $.ajax({
+                    url: peticion,
+                    method: "GET",
+                    dataType: "jsonp",
+                    success: function (respuesta) {
+                        respuestaTerremotos(respuesta);
+
+                    }
+                }); //fin ajax
+
+            } //fin peticion
+
+            function respuestaTerremotos(respuesta) {
+                if (respuesta == null) {
+                    return;
+                } else {
+
+                    if (terremotoPunto) {
+                        map.eachLayer(function (layer) {
+                            if (layer._radius) {
+                                map.removeLayer(layer);
+                            }
+                        });
+                    }
+                    var total_terremotos = respuesta.earthquakes;
+                    for (var i = 0; i < total_terremotos.length; i++) {
+                        var terremoto = total_terremotos[i];
+                        terremotoPunto = new L.circleMarker([terremoto.lat, terremoto.lng], {
+                            radius: parseInt(terremoto.magnitude * 2),
+                            fillColor: "#aa0808",
+                            color: "#ffffff",
+                            weight: 2,
+                            opacity: 1,
+                            fillOpacity: 0.8
+                        });
+                        terremotoPunto.bindPopup("Mg:" + terremoto.magnitude + "<br>" + terremoto.datetime);
+                        terremotoPunto.addTo(map);
+
+                    }
+                }
+            } //Fin respuesta terremotos
+
+
+            peticionTerremotos();
+
+            map.on('moveend', function () {
+                peticionTerremotos();
+            });
+
+        }); //fin document ready
+    </script>
+</body>
+
+</html>

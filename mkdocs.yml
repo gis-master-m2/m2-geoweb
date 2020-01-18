@@ -28,6 +28,7 @@ nav:
 - 6. Mapas personalizados con Maputnik y MapBox GL JS: introduccion_maputnik.md
 - 7. MapBox GL JS avanzado: mapbox_avanzado.md
 - 8. Visualización y publicación con Kepler GL: visualizacion_con_kepler_gl.md
+- 9. Introducción a Cesium: introduccion_a_cesium.md
 #- 10. Mallas discretas y algoritmos en JS: introduccion_a_mapbox.md
 #- 11. Visualización y publicación con Kepler GL: visualizacion_con_kepler_gl.md
 #- 6. Introducción a Cesium: introduccion_a_cesium.md

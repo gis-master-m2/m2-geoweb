@@ -1,0 +1,698 @@
+
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Mapas y OpenData, Localización, Visualización y Análisis de GeoDatos.">
+      
+      
+        <link rel="canonical" href="https://gis-master-m2.github.io/m2-geoweb/introduccion_a_vector_tiles/">
+      
+      
+        <meta name="author" content="geoweb">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar al portapapeles">
+      
+        <meta name="lang:clipboard.copied" content="Copiado al portapapeles">
+      
+        <meta name="lang:search.language" content="es">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No se encontraron documentos">
+      
+        <meta name="lang:search.result.one" content="1 documento encontrado">
+      
+        <meta name="lang:search.result.other" content="# documentos encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Introduccion a vector tiles - Módulo 2 - Mapas y OpenData</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#introduccion-a-vector-tiles-y-mapbox-i" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://gis-master-m2.github.io/m2-geoweb/" title="Módulo 2 - Mapas y OpenData" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Módulo 2 - Mapas y OpenData
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Introduccion a vector tiles
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Teclee para comenzar búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/gis-master-m2/m2-geoweb/" title="Ir al repositorio" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://gis-master-m2.github.io/m2-geoweb/" title="Módulo 2 - Mapas y OpenData" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Módulo 2 - Mapas y OpenData
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/gis-master-m2/m2-geoweb/" title="Ir al repositorio" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Inicio" class="md-nav__link">
+      Inicio
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_a_las_tecnologias_geoweb/" title="1. Introducción a la GeoWeb,Herramientas, Servicios y Conceptos" class="md-nav__link">
+      1. Introducción a la GeoWeb,Herramientas, Servicios y Conceptos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../taller_github/" title="2. Plataformas GitHub y Medium.Lenguaje Git." class="md-nav__link">
+      2. Plataformas GitHub y Medium.Lenguaje Git.
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_a_leaflet/" title="3. Introducción a Leaflet" class="md-nav__link">
+      3. Introducción a Leaflet
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../plugins_leaflet/" title="4. Plugins Leaflet" class="md-nav__link">
+      4. Plugins Leaflet
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_a_mapbox/" title="5. Mapas personalizados con MapBox Studio y MapBox GL JS" class="md-nav__link">
+      5. Mapas personalizados con MapBox Studio y MapBox GL JS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_maputnik/" title="6. Mapas personalizados con Maputnik y MapBox GL JS" class="md-nav__link">
+      6. Mapas personalizados con Maputnik y MapBox GL JS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../mapbox_avanzado/" title="7. MapBox GL JS avanzado" class="md-nav__link">
+      7. MapBox GL JS avanzado
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../visualizacion_con_kepler_gl/" title="8. Visualización y publicación con Kepler GL" class="md-nav__link">
+      8. Visualización y publicación con Kepler GL
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-a-vector-tiles-y-mapbox-i" class="md-nav__link">
+    Introducción a Vector Tiles y Mapbox (I)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contexto" class="md-nav__link">
+    Contexto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    HTTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocolos" class="md-nav__link">
+    Protocolos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas" class="md-nav__link">
+    Caracteristicas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas-y-recursos" class="md-nav__link">
+    Herramientas y recursos
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parsers-generators" class="md-nav__link">
+    Parsers &amp; Generators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clients" class="md-nav__link">
+    Clients
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications-command-line-tools" class="md-nav__link">
+    Applications / Command line tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cli-utilities" class="md-nav__link">
+    CLI Utilities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapbox-gl-js-plugins" class="md-nav__link">
+    Mapbox GL JS Plugins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servers" class="md-nav__link">
+    Servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#low-level-utilities" class="md-nav__link">
+    Low-level utilities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#articles" class="md-nav__link">
+    Articles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/gis-master-m2/m2-geoweb/edit/master/docs/introduccion_a_vector_tiles.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Introduccion a vector tiles</h1>
+                
+                <h3 id="introduccion-a-vector-tiles-y-mapbox-i">Introducción a Vector Tiles y Mapbox (I)</h3>
+<p>Vector Tiles es un formato para almacenar datos geográficos en formato binario (Google Protobuf) y pensados para la visualización en navegadores web modernos que soporten webGL.</p>
+<p>Una tesela vectorial (vector tiles) contiene datos vectoriales georreferenciados (puede contener múltiples capas), recortados en teselas para facilitar su recuperación. Son equivalentes a las teselas raster tradicionales (XYZ,WMTS, TMS) pero retornan datos vectoriales en lugar de una imagen.</p>
+<p>Cada conjunto de teselas vectoriales tiene su propio esquema. Un esquema consiste en nombres de capas, atributos, selección de elementos.</p>
+<h4 id="contexto">Contexto</h4>
+<p>En 2005 GoogleMaps introdujo una "nueva" forma de mostrar datos geográficos por la web, pregenerando el mapa por niveles de zoom y tiles (teselas) de 256x256 pixeles.</p>
+<p>También creó una nueva proyección basada en mercator, llamada pseude-mercator o <a href="https://en.wikipedia.org/wiki/Web_Mercator_projection">web mercator</a>, cuyo código EPSG es 3857</p>
+<p><img alt="alt text" src="../img/tile_pyramid_1.png" title="Pirámides" />
+<img alt="alt text" src="../img/zoom.png" title="Zoom" /></p>
+<p>Después de GoogleMaps, otros proveedores o plataformas cómo OpenStreetMap siguen esta misma forma de organizar la geoinformación.</p>
+<h4 id="http">HTTP</h4>
+<p>Para cargar la imágenes se ulitza una llamada HTTP rest dónde se especifica;</p>
+<blockquote>
+<p>https://.../.../z/x/y.format</p>
+<p>Z= Nivel de zoom</p>
+<p>X=coordenada X</p>
+<p>Y=coordenada Y</p>
+<p>Formato </p>
+<p>Raster: Imágen png o JPEG</p>
+<p>Vector: (pbf o mvt)</p>
+</blockquote>
+<p><img alt="alt text" src="../img/request.png" title="XyZ" /></p>
+<h4 id="protocolos">Protocolos</h4>
+<p>Existen tres especificaciones para servir tiles</p>
+<ul>
+<li>
+<p>TMS (Tile Map Service): X Y coordenadas empiezan de debajo  izquierda (típico eje cartesiano de coordenadas)</p>
+</li>
+<li>
+<p>WMTS (Web Map Tile Service): OGC estandard , corrdenadas empiezan de arriba izquierda.</p>
+</li>
+<li>
+<p>ZXY o "slippy map": Igual que TMS pero la Y empieza por arriba izquierda</p>
+</li>
+</ul>
+<p><img alt="alt text" src="../img/tms.png" title="XyZ" />
+<img alt="alt text" src="../img/xyz.png" title="XyZ" /></p>
+<h4 id="caracteristicas">Caracteristicas</h4>
+<p>Las teselas vectoriales han sido utilizadas por el cliente Android de Google Maps desde diciembre de 2010 y en el cliente de escritorio desde 2013. Las teselas vectoriales para renderizar los datos de OpenStreetMap se propusieron por primera vez en marzo de 2013 y están soportadas por Mapnik, el renderizador de datos de OpenStreetMap más utilizado. 
+Mapbox, proveedor comercial de herramientas de cartografía personalizada y de hosting, es el máxini impulsor de esta tecnologia y ha centrado su herramienta de cartografía, Mapbox Studio, en torno a las teselas vectoriales.</p>
+<ul>
+<li>Cada tile es un contenedor de datos vectores y atributos</li>
+<li>Los Tiles no tienen estilo, el estilo se aplica en cliente</li>
+<li>Soporta rotación y orientación</li>
+<li>Soporta extrusión y 3D</li>
+</ul>
+<h3 id="herramientas-y-recursos">Herramientas y recursos</h3>
+<p>Fuente:
+<a href="https://github.com/mapbox/awesome-vector-tiles">https://github.com/mapbox/awesome-vector-tiles</a></p>
+<h4 id="parsers-generators">Parsers &amp; Generators</h4>
+<ul>
+<li><a href="https://github.com/mapbox/vector-tile-js">vector-tile-js</a> - Parses vector tiles with JavaScript.</li>
+<li><a href="https://github.com/mapbox/mapnik-vector-tile">mapnik-vector-tile</a> - C++ vector tile read/write implementation on top of Mapnik.</li>
+<li><a href="https://github.com/TimSC/mbtiles-cpp">mbtiles-cpp</a> - C++ library for decoding of mbtiles and vector data into function callbacks.</li>
+<li><a href="https://github.com/mapbox/vector-tile-py">vector-tile-py</a> - Python tool to convert a Mapnik vector tile to GeoJSON</li>
+<li><a href="https://github.com/mapnik/node-mapnik">node-mapnik</a> - Node.js API for vector tiles which depends on <code>mapnik-vector-tile</code></li>
+<li><a href="https://github.com/mapbox/vector-tile-cs">vector-tile-cs</a> - Parses vector tiles with C# (native C# implementation, no dependencies).</li>
+<li><a href="https://github.com/bertt/mapbox-vector-tile-cs">mapbox-vector-tile-cs</a> - Parses vector tiles with C# (uses protobuf-net).</li>
+<li><a href="https://github.com/mapbox/tilelive-bridge">tilelive-bridge</a> - Implements <a href="https://github.com/mapbox/tilelive.js/blob/master/API.md">Tilelive API</a> for creating vector tiles from traditional Mapnik datasources in Node.js.</li>
+<li><a href="https://github.com/mapbox/tilelive-vector">tilelive-vector</a> - Implements <a href="https://github.com/mapbox/tilelive.js/blob/master/API.md">Tilelive API</a> for reading vector tiles and rendering to image tiles in Node.js.</li>
+<li><a href="https://github.com/mapzen/mapbox-vector-tile">mapbox-vector-tile</a> is a Python package for vector tile encoding. Used in Mapzen's vector tile service <a href="https://github.com/tilezen/tileserver">tileserver</a> and TileStache. <a href="https://github.com/tilezen/mapbox-vector-tile/issues/42">:warning:</a> Only support V1 Tile spec and not V2, no longer maintained</li>
+<li><a href="https://github.com/mapbox/geojson-vt">geojson-vt</a> - Slice GeoJSON into vector tiles on the fly in the browser.</li>
+<li><a href="https://github.com/ElectronicChartCentre/java-vector-tile">java-vector-tile</a> - A java encoder and decoder for vector tiles.</li>
+<li><a href="https://github.com/wdtinc/mapbox-vector-tile-java">mapbox-vector-tile-java</a> - Encode and decode v2.1 Mapbox Vector Tiles. Convert JTS Geometry to and from MVT features, including simple user data support. Utility functions for converting world coordinates to MVT coordinates and clipping to a tile envelope.</li>
+<li><a href="https://github.com/developmentseed/cached-vector-tile">cached-vector-tile</a> - An alternative implementation of the vector-tile-js interface, backed by plain JS objects/arrays rather than parsed-on-demand protobuf data. Trades away memory efficiency for faster feature.loadGeometry() calls.</li>
+<li><a href="https://github.com/rastapasta/tilegrinder">tilegrinder</a> - A helper library for applying a data altering function on each vector tile in an MBTiles, using the native protobuf wrapper for de- and encoding, recompressing the results and storing them either in an MBTiles or as single files.</li>
+<li><a href="https://github.com/manimaul/SwiftVectorTiles">SwiftVectorTiles</a> - A Swift encoder for vector tiles according to the Mapbox vector tile spec.</li>
+<li><a href="https://github.com/paulmach/orb">orb</a> - A Go geometry library with mvt &lt;-&gt; geojson support.</li>
+</ul>
+<h4 id="clients">Clients</h4>
+<ul>
+<li><a href="https://github.com/mapbox/mapbox-gl-native">Mapbox GL Native</a> - C++/OpenGL vector maps library with native SDKs for Android, iOS, Node.js, macOS, and Qt</li>
+<li><a href="https://github.com/mapbox/mapbox-gl-js">Mapbox GL JS</a> - JavaScript/WebGL vector maps library.</li>
+<li><a href="https://github.com/openlayers/openlayers/pull/4219">OpenLayers 3</a> - JavaScript vector &amp; raster library.</li>
+<li><a href="https://github.com/mousebird/WhirlyGlobe/blob/master/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/src/MaplyMapnikVectorTiles.mm">WhirlyGlobe/Maply</a> - Objective C code that is able to read and render vector tiles(and style with mapnik xml) on iOS devices.</li>
+<li><a href="https://github.com/SpatialServer/Leaflet.MapboxVectorTile">Leaflet.MapboxVectorTile</a> is able to read PBF MapboxVectorTiles from a REST endpoint and render them as a TileLayer on a Leaflet Map. Use this option if you want to utilize vector tiles on a standard Leaflet web map without needing WebGL.</li>
+<li><a href="https://github.com/CartoDB/mobile-sdk">CARTO Mobile SDK</a> - C++ maps library focused on offline features, for iOS, Android, Windows Phone and Xamarin with bindings for Java, Objective-C and C#. Based on <a href="https://developer.nutiteq.com">Nutiteq Maps SDK</a>, but open source and uses CartoCSS.</li>
+<li><a href="https://github.com/tangrams/tangram">Mapzen Tangram</a> - JavaScript library for rendering 2D &amp; 3D maps live in a web browser with WebGL, supports MVT, GeoJSON, TopoJSON</li>
+<li><a href="https://github.com/tangrams/tangram-es">Mapzen Tangram-es</a> - C++ library for rendering 2D and 3D maps using OpenGL ES 2 with custom styling and interactions</li>
+<li><a href="https://github.com/mapbox/mapbox-gl-leaflet">mapbox-gl-leaflet</a> - Create Mapbox GL layers in Leaflet</li>
+<li><a href="https://github.com/mapbox/react-native-mapbox-gl">react-native-mapbox-gl</a> - Render Mapbox GL maps from React applications</li>
+<li><a href="https://github.com/devTristan/hoverboard">hoverboard</a> - Render vector tiles on canvas with Leaflet 0.7.x (supports GeoJSON, TopoJSON, and protobuf) <a href="https://github.com/madd512/hoverboard/issues/13#issuecomment-171406102">:warning:</a> no longer maintained</li>
+<li><a href="https://github.com/IvanSanchez/Leaflet.VectorGrid">Leaflet.VectorGrid</a> - Display gridded vector data (sliced GeoJSON, TopoJSON or Mapbox Vector Tiles) in Leaflet 1.0.0</li>
+<li><a href="https://developers.arcgis.com/javascript/">ArcGIS API for JavaScript</a> - Draw vector tile layers as part of your web map. Rendering done via <code>mapbox-gl-js</code> integration.</li>
+<li><a href="https://github.com/rastapasta/mapscii">mapscii</a> - A Vector Tile to Braille and ASCII renderer for xterm-compatible terminals</li>
+<li><a href="https://github.com/rinigus/mapbox-gl-qml">Unofficial Mapbox GL Native bindings for Qt QML</a> - Qt QML bindings for Qt 5.6 and higher.</li>
+<li><a href="https://github.com/landtechnologies/Mapbox-vector-tiles-basic-js-renderer">Mapbox-vector-tiles-basic-js-renderer</a> - A fork of mapbox-gl-js giving you full control over rendering of specific tiles, also provides vector tile overlay for google maps.</li>
+</ul>
+<h4 id="applications-command-line-tools">Applications / Command line tools</h4>
+<ul>
+<li><a href="https://www.mapbox.com/mapbox-studio/">Mapbox Studio</a> - Web design studio for creating and styling vector tiles.</li>
+<li><a href="https://github.com/mapbox/mapbox-studio">Mapbox Studio Classic</a> - Desktop design studio for both creating vector tiles from raw geodata and for rendering them on-the-fly into image tiles. Internally uses <code>tilelive.js</code> modules to handle vector tiles (see <code>tilelive-bridge</code> and <code>tilelive-vector</code>) :warning: use <a href="https://www.mapbox.com/mapbox-studio/">Mapbox Studio</a> instead.</li>
+<li><a href="https://github.com/kosmtik/kosmtik">kosmtik</a> - Design maps with CartoCSS and Mapnik.</li>
+<li><a href="http://www.esri.com/en/software/arcgis-pro">ArcGIS Pro</a> - Generate vector tiles from maps authored in ArcGIS Pro or imported from ArcMap.</li>
+<li><a href="http://sputnik-maps.github.io/mvt-styler/">MVT Styler</a> - map style editor for vector tiles.</li>
+<li><a href="https://github.com/maputnik/editor">Maputnik</a> - A visual style editor for the Mapbox GL style specification.</li>
+<li><a href="https://github.com/geometalab/Vector-Tiles-Reader-QGIS-Plugin">QGIS Vector Tiles Reader</a> - QGIS Python plugin which reads Mapbox Vector Tiles from local MBTiles file or remote</li>
+<li><a href="https://github.com/lukasmartinelli/mapbox-gl-inspect">mapbox-gl-inspect</a> - Plugin for Mapbox GL JS to view the view and inspect VT features.</li>
+</ul>
+<h4 id="cli-utilities">CLI Utilities</h4>
+<ul>
+<li><a href="https://github.com/mapbox/mbview">mbview</a> - Watch MBTiles in your localhost. View tiles in a basic Mapbox GL JS webapp locally</li>
+<li><a href="https://github.com/mapbox/tippecanoe">tippecanoe</a> - Build vector tilesets from large collections of GeoJSON features.</li>
+<li><a href="https://github.com/systemed/tilemaker">tilemaker</a> - Command line tool to produce vector tiles directly from an .osm.pbf extract without an intermediate database.</li>
+<li><a href="https://github.com/ondrap/mapbox-filter">mapbox-filter</a> - Filter MBTiles according to Mapbox GL JS styles, shrink MBTiles directly, serve locally over http, publish to S3-compatibile storage</li>
+<li><a href="https://github.com/vross/vector-tiles-producer">vector-tiles-producer</a> Command line tool in C++ to creates vector tiles for a given area at chosen zoom levels using a Mapnik XML. :warning: no longer maintained</li>
+<li><a href="https://github.com/developmentseed/vt-geojson">vt-geojson</a> - decodes vector tiles to GeoJSON FeatureCollections</li>
+<li><a href="https://github.com/mojodna/tl">tl</a> - An alternate command line interface to tilelive</li>
+<li><a href="https://github.com/rastapasta/tileshrink">tileshrink</a> - Reduce the layer extent and simplify the resulting geometries of all vector tiles in an MBTiles</li>
+<li><a href="https://github.com/Geovation/tiler">tiler @GeoVation</a> - Command line tool for converting GeoJSON, Shapefiles or PostGIS layer to raw Vector Tiles (or MBTiles)</li>
+<li><a href="https://github.com/thomersch/grandine/tree/master/cmd/tiler">tiler @thomersch</a> - Command line tool to convert GeoJSON to Vector Tiles (written in Go language).</li>
+<li><a href="https://github.com/NYCPlanning/geojson2mvt">geojson2mvt</a> - npm package for building a static vector tile tree for given xyz bounds from a geojson file (uses <a href="https://github.com/mapbox/geojson-vt">geojson-vt</a>)</li>
+<li><a href="http://gdal.org/drv_mvt.html">OGR MVT</a> and <a href="http://gdal.org/frmt_mbtiles.html">MBTiles</a> - The GDAL/OGR MVT and MBTILES drivers can be used to read and write vector tiles, respectively as tileset on the filesystem or in a mbtiles container (GDAL &gt;= 2.3.0)</li>
+<li><a href="https://github.com/mapbox/mbutil">MBUtil</a> - Import and export MBTiles to disk :warning: no longer maintained</li>
+<li><a href="https://github.com/ericfischer/datamaps">Datamaps</a> C application that can be used to create vector tiles and store them in an mbtiles. See the <code>render-vector</code> command. :warning: no longer maintained, use tippecanoe instead</li>
+</ul>
+<h4 id="mapbox-gl-js-plugins">Mapbox GL JS Plugins</h4>
+<ul>
+<li><a href="https://github.com/mapbox/gl-draw">gl-draw</a> - Adds support for drawing and editing features on Mapbox GL JS maps</li>
+</ul>
+<h4 id="servers">Servers</h4>
+<ul>
+<li><a href="https://github.com/mojodna/tessera">tessera</a> - Supports serving and rendering vector tiles. Uses the same core libraries as Mapbox Studio.</li>
+<li><a href="https://github.com/urbica/tessella">tessella</a> - lightweight Node.js Mapbox Vector Tiles server. Inspired by tessera.</li>
+<li><a href="https://github.com/naturalatlas/tilestrata">tilestrata</a> - with tilestrata-vt, it can generate Mapnik Vector Tiles; with <a href="https://github.com/Stezii/tilestrata-postgismvt">tilestrata-postgismvt</a>, it can serve Mapbox Vector Tiles from a PostGIS db</li>
+<li><a href="https://github.com/etalab/utilery">Utilery</a> Server to generate vector tiles from PostGIS queries. Python based <a href="https://github.com/tilery/utilery/issues/6">:warning:</a> no longer maintained</li>
+<li><a href="https://github.com/tilezen/tileserver">tileserver</a> Mapzen Vector Tile Service.</li>
+<li><a href="https://github.com/TileStache/TileStache">TileStache</a> added support for Mapbox Vector tiles via .pbf extension requests.</li>
+<li><a href="https://github.com/kartotherian/kartotherian">Kartotherian</a> Wikipedia tile server with <a href="https://github.com/kartotherian/tilerator">Tilerator</a> backend tile pre-generator</li>
+<li><a href="http://www.esri.com/software/arcgis/arcgisonline">ArcGIS Online</a> - Supports serving vector tiles and rendering in the mapping application powered by the ArcGIS API for JavaScript</li>
+<li><a href="http://www.esri.com/software/arcgis/arcgisserver/extensions/portal-for-arcgis">Portal for ArcGIS</a> - Supports serving vector tiles and rendering in the mapping application powered by the ArcGIS API for JavaScript</li>
+<li><a href="https://github.com/faradayio/tilesplash">tilesplash</a> - A light and quick nodejs webserver for serving topojson or mapbox vector tiles from a postgis backend</li>
+<li><a href="https://github.com/vicapow/go-vtile-example">go-vtile-example</a> - An example server written in Go</li>
+<li><a href="https://github.com/terranodo/tegola">Tegola</a> - A MVT server written in pure Go that supports serving tiles from a PostGIS data provider.</li>
+<li><a href="https://github.com/pka/t-rex/">t-rex</a> - MVT server in a single executable written in Rust. Serves tiles from PostGIS supporting custom tile grids.</li>
+<li><a href="https://rinigus.github.io/osmscout-server/">OSM Scout Server</a> - Maps server providing vector and raster tiles, geocoder, and router. Designed to be used on Linux (mobile and PC) to provide offline maps; written in C++</li>
+<li><a href="https://github.com/openmaptiles/postserve">postserve</a> - A small Python based tileserver using ST_AsMVT and ST_AsMVTGeom to generate vector tiles on the fly. Designed for use with PostGIS 2.4 and the OpenMapTiles project</li>
+<li><a href="https://github.com/spatialdev/PGRestAPI">SpatialServer (PGRestAPI)</a> - A multi-purpose GeoSpatial NodeJS web server created at <a href="http://spatialdev.com">SpatialDev</a> that not only serves MBTiles stuffed with vector tiles, it can also cut vector tiles on the fly from a PostGIS database. <a href="https://github.com/spatialdev/PGRestAPI/issues/142#issuecomment-231132808">:warning:</a> No longer maintained.</li>
+<li><a href="https://github.com/openmaptiles">OpenMapTiles</a> - Set of open-source tools for self-hosting of OpenStreetMap maps in more than 50 languages. It provides both raster as well as vector tiles, WMS and WMTS services for GIS programs, support for JavaScript viewers and mobile SDK.</li>
+<li><a href="https://github.com/sitewisely/hastile">Hastile</a> - Haskell web server using PostGIS to deliver vector tiles.</li>
+<li><a href="http://mapserver.org/">MapServer</a> - Open Source platform for publishing spatial data and interactive mapping applications to the web. MVT output available in 7.2</li>
+</ul>
+<h4 id="low-level-utilities">Low-level utilities</h4>
+<ul>
+<li><a href="https://github.com/anandthakker/vt-pbf">vt-pbf</a> serialize JavaScript objects representing vector tiles into binary Protocol Buffer encodings of vector tiles</li>
+<li><a href="https://github.com/mapbox/vtzero">vtzero</a> - minimalist vector tile decoder and encoder in C++</li>
+<li><a href="https://github.com/mapbox/mvt-fixtures/">mvt-fixtures</a> - a suite of valid and invalid test fixtures according to the Mapbox Vector Tile spec versions. Includes simplified unit test fixtures and real-world fixtures to test your encoders and decoders.</li>
+<li><a href="https://github.com/sitewisely/zellige">zellige</a> - command line utility written to convert GeoJSON to MVT.</li>
+<li><a href="https://github.com/mapbox/mapbox-gl-function">mapbox-gl-function</a> - Mapbox GL style function evaluator :warning: now maintained as party of mapbox-gl-js</li>
+<li><a href="https://github.com/mapbox/mapbox-gl-filter-simplify">mapbox-gl-filter-simplify</a> - Simplifies and complexifies filters in Mapbox GL Styles :warning: removed</li>
+</ul>
+<h4 id="articles">Articles</h4>
+<ul>
+<li><a href="http://gdunlop.github.io/Vector-tiles-remixed/">Vector tiles remixed</a> - guide to using <a href="https://github.com/systemed/tilemaker">tilemaker</a> to generating vector tiles</li>
+<li><a href="https://geovation.github.io/build-your-own-static-vector-tile-pipeline">Build Your Own Static Vector Tile Pipeline</a> - guide transforming, encoding and hosting tiles in the cloud; using ogr2ogr + tippecanoe + Mapbox GL JS</li>
+<li><a href="https://medium.com/nycplanninglabs/using-the-new-mvt-function-in-postgis-75f8addc1d68">Using the new MVT function in PostGIS</a> - Building a vector tile service with PostGIS, express, and pg-promise.</li>
+</ul>
+<h4 id="license">License</h4>
+<p><a href="http://creativecommons.org/publicdomain/zero/1.0/"><img alt="CC0" src="http://i.creativecommons.org/p/zero/1.0/88x31.png" /></a></p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.es.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

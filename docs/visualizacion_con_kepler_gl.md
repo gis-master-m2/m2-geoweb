@@ -36,18 +36,17 @@ Esta basada en WebGL pensada para  la exploración visual de conjuntos de datos 
 
 ### Ejercicio de visualización con Kepler.gl
 
-!!! "Queremos analizar los accidentes de coche en la ciudad de Barcelona"
+!!! tip "Queremos analizar los accidentes de coche en la ciudad de Barcelona"
 
-    Hemos visto este post en Medium [https://towardsdatascience.com/analysis-of-car-accidents-in-barcelona-using-pandas-matplotlib-and-folium-73384240106b](https://towardsdatascience.com/analysis-of-car-accidents-in-barcelona-using-pandas-matplotlib-and-folium-73384240106b)
+    Hemos visto este post en Medium, sobre accidentes de Barcelona [https://towardsdatascience.com/analysis-of-car-accidents-in-barcelona-using-pandas-matplotlib-and-folium-73384240106b](https://towardsdatascience.com/analysis-of-car-accidents-in-barcelona-using-pandas-matplotlib-and-folium-73384240106b)
     
 ### Preparación datos
-git
-"2005-11-29T17:03:03.00"
+
 * Origen dataset CSV de [https://opendata-ajuntament.barcelona.cat/data/es/dataset/accidents-tipus-gu-bcn](datos/2018_accidents_tipus_gu_bcn_TIME.csv)
 
 * Descargamos [2018_accidents_tipus_gu_bcn_.csv](datos/2018_accidents_tipus_gu_bcn_TIME.csv)
 
-* En este archivo se han conatenado las fechas para genera un nuevo campo tipo timestamp
+* En este archivo se han concatenado las fechas para añadir un nuevo campo tipo timestamp
 
 !!! Truco "Con LibreOffice seria"
     ```
@@ -62,6 +61,9 @@ git
 
 * Cargamos **2018_accidents_tipus_gu_bcn_TIME.csv**
 
+>  `Añadimos csv`
+
+![alt text](img/step1-kepler.png "add dataset")
 
 #### Paso2 : Añadimos estilo própio
 
@@ -71,30 +73,59 @@ git
 `Base map` -->`add Map Style` --> `Paste style url` 
 
 
-
 #### Paso2 : Añadir capas
-#### Paso1 : Añadir filtros
-#### Paso1 : Definir "tooltips"
-#### Paso1 : Guardar y exporta a HTML
-#### Paso1 : Subir al GIT
 
+* Añadimos tres capas de tipo **Punto**,**Hexbin**, **HeatMap**
 
->  `Añadimos csv`
+* Ejemplo para HexBin
 
-![alt text](img/step1-kepler.png "add dataset")
+    > `Add Layer: Type Hexbin`
 
+    > `Columns: Latitud Longuitud`
 
-> `Add Layer: Type Hexbin`
+    > `Color: Scale Quantize`
 
-> `Columns: Latitud Longuitud`
+    > `Hexagon radius 0.1`
 
-> `Color: Scale Quantize`
-
-> `Hexagon radius 0.1`
-
-> `Coverage 0.75`
+    > `Coverage 0.75`
 
 ![alt text](img/step2-kepler.png "add dataset")
 
-!!!Info 
-    Continuamos añadiendo más capas y mapas bases
+
+* Visualizamos su capacidades y realizamos temàticos
+
+#### Paso1 : Añadir filtros
+
+* Permite filtrar los datos de todas las capa asociadas a un dataset
+
+![alt text](img/kepler3.png "add dataset")
+
+* Por dia de la semana
+* Por el campo **Time**
+
+
+#### Paso1 : Definir "tooltips"
+
+![alt text](img/kepler4.png "add dataset")
+#### Paso1 : Guardar y exporta a HTML
+
+![alt text](img/kepler5.png "add dataset")
+![alt text](img/kepler6.png "add dataset")
+![alt text](img/kepler7.png "add dataset")
+* Exportamos nuestro mapa a formato HTML **accidentes.html** dentro de nuestro proyecto /geoweb
+#### Paso1 : Subir al GIT
+
+!!! success "¿Subimos el ejemplo al GitHub?"
+	
+	```bash
+
+		git pull
+        git add .
+        git commit -m "Mapa Kepler"
+        git push
+
+	```    
+
+!!! success "Mirámos Medium"
+	
+    https://medium.com/

@@ -65,8 +65,8 @@ Videos
     <meta name="author" content="autor" />
     <meta name="description" content="descripción página">
     <meta name="robots" content="index,follow">
-    <script src="https://cesiumjs.org/releases/1.53/Build/Cesium/Cesium.js"></script>
-    <link href="https://cesiumjs.org/releases/1.53/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <script src="https://cesiumjs.org/releases/1.65/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesiumjs.org/releases/1.65/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
     <style>
         #map {
             position: absolute;
@@ -123,8 +123,8 @@ Videos
     <meta name="author" content="autor" />
     <meta name="description" content="descripción página">
     <meta name="robots" content="index,follow">
-    <script src="https://cesiumjs.org/releases/1.53/Build/Cesium/Cesium.js"></script>
-    <link href="https://cesiumjs.org/releases/1.53/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <script src="https://cesiumjs.org/releases/1.65/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesiumjs.org/releases/1.65/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
     <style>
         #map {
             position: absolute;
@@ -201,8 +201,8 @@ Videos
     <meta name="author" content="autor" />
     <meta name="description" content="descripción página">
     <meta name="robots" content="index,follow">
-    <script src="https://cesiumjs.org/releases/1.53/Build/Cesium/Cesium.js"></script>
-    <link href="https://cesiumjs.org/releases/1.53/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <script src="https://cesiumjs.org/releases/1.65/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesiumjs.org/releases/1.65/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
     <style>
         #map {
             position: absolute;
@@ -284,8 +284,8 @@ Videos
     <meta name="author" content="autor" />
     <meta name="description" content="descripción página">
     <meta name="robots" content="index,follow">
-    <script src="https://cesiumjs.org/releases/1.53/Build/Cesium/Cesium.js"></script>
-    <link href="https://cesiumjs.org/releases/1.53/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <script src="https://cesiumjs.org/releases/1.65/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesiumjs.org/releases/1.65/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
     <style>
         #map {
             position: absolute;
@@ -376,8 +376,8 @@ Videos
     <meta name="author" content="autor" />
     <meta name="description" content="descripción página">
     <meta name="robots" content="index,follow">
-    <script src="https://cesiumjs.org/releases/1.53/Build/Cesium/Cesium.js"></script>
-    <link href="https://cesiumjs.org/releases/1.53/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <script src="https://cesiumjs.org/releases/1.65/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesiumjs.org/releases/1.65/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
         #map {

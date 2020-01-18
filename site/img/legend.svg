@@ -1,0 +1,173 @@
+<svg id="legend-staand" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 217.4" preserveAspectRatio="xMaxYMin meet" height="217"
+			 width="50">
+				<style>
+					.a {
+						fill: #333;
+						font-family: sans-serif;
+						font-size: 7px;
+						letter-spacing: 0px;
+						line-height: 0%;
+						stroke-width: 0.9px;
+						word-spacing: 0px;
+					}
+
+					.b {
+						-inkscape-font-specification: 'Open Sans';
+						fill: #333;
+						font-family: 'Open Sans';
+						font-size: 7px;
+						stroke-width: 0.9px;
+					}
+				</style>
+				<rect width="19.2" height="19.8" x="30.8" y="19.8" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#f00;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;text-rendering:auto"
+				/>
+				<rect width="19.2" height="19.8" x="30.8" y="39.5" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#fd4d4d;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;text-rendering:auto"
+				/>
+				<rect width="19.2" height="19.8" x="30.8" y="59.3" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#ce2f7e;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;text-rendering:auto"
+				/>
+				<rect width="19.2" height="19.8" x="30.8" y="79.1" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#123a8f;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;text-rendering:auto"
+				/>
+				<rect width="19.2" height="19.8" x="30.8" y="98.8" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#3d73e6;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;text-rendering:auto"
+				/>
+				<rect width="19.2" height="19.8" x="30.8" y="118.6" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#14b1fd;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;text-rendering:auto"
+				/>
+				<rect width="19.2" height="19.8" x="30.8" y="138.4" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#22ecf0;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;text-rendering:auto"
+				/>
+				<rect width="19.2" height="19.8" x="30.8" y="158.1" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#3de6b1;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;text-rendering:auto"
+				/>
+				<rect width="19.2" height="19.8" x="30.8" y="177.9" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#3de66d;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;text-rendering:auto"
+				/>
+				<rect width="19.2" height="19.8" x="30.8" y="197.7" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#e6b03d;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;text-rendering:auto"
+				/>
+				<rect width="19.2" height="19.8" x="30.8" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#808080;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;text-rendering:auto"
+				/>
+				<text x="11.5" y="210" class="a">
+					<tspan x="11.5" y="210" class="b"> 0-3m </tspan>
+				</text>
+				<text x="11.5" y="190.3" class="a">
+					<tspan x="11.5" y="190.3" class="b"> 3-6m </tspan>
+				</text>
+				<text x="11.5" y="170.5" class="a">
+					<tspan x="11.5" y="170.5" class="b"> 6-9m </tspan>
+				</text>
+				<text x="7.6" y="150.7" class="a">
+					<tspan x="7.6" y="150.7" class="b"> 9-12m </tspan>
+				</text>
+				<text x="3.6" y="131" class="a">
+					<tspan x="3.6" y="131" class="b"> 12-15m </tspan>
+				</text>
+				<text x="3.6" y="111.2" class="a">
+					<tspan x="3.6" y="111.2" class="b"> 15-20m </tspan>
+				</text>
+				<text x="3.6" y="91.4" class="a">
+					<tspan x="3.6" y="91.4" class="b"> 20-40m </tspan>
+				</text>
+				<text x="3.6" y="71.7" class="a">
+					<tspan x="3.6" y="71.7" class="b"> 40-60m </tspan>
+				</text>
+				<text x="-0.4" y="51.9" class="a">
+					<tspan x="-0.4" y="51.9" class="b"> 60-100m </tspan>
+				</text>
+				<text x="5.8" y="32.1" class="a">
+					<tspan x="5.8" y="32.1" class="b"> &gt;100m </tspan>
+				</text>
+				<text x="15.2" y="12.5" class="a">
+					<tspan x="15.2" y="12.5" class="b"> Null </tspan>
+				</text>
+			</svg>
+			<svg id="legend-pretty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 365 500" height="500" width="365" preserveAspectRatio="xMaxYMin meet">
+				<style>
+					.d {
+						color-interpolation-filters: linearRGB;
+						color-interpolation: sRGB;
+						color-rendering: auto;
+						fill: #14b1fd;
+						image-rendering: auto;
+						isolation: auto;
+						mix-blend-mode: normal;
+						shape-rendering: auto;
+						solid-color: #000;
+						solid-opacity: 1;
+						stroke-width: 1.42;
+						stroke: #000;
+						text-rendering: auto;
+					}
+
+					.c {
+						-inkscape-font-specification: 'Open Sans';
+						font-family: 'Open Sans';
+						font-size: 17.8px;
+						letter-spacing: 0px;
+						line-height: 895%;
+						opacity: 0.99;
+						stroke-width: 1.02px;
+						word-spacing: 0px;
+					}
+
+					.c {
+						-inkscape-font-specification: 'Open Sans';
+						font-family: 'Open Sans';
+						font-size: 17.8px;
+						stroke-width: 1.02px;
+					}
+				</style>
+				<path d="M333.104 0.711V24.563h-8.007V45.077H297.567V499.291h66.721V45.077h-8.255V24.563h-3.854-1.708-13.615V0.711Z" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#f00;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;stroke-width:1.42;stroke:#000;text-rendering:auto"
+				/>
+				<path d="m284.417 121.107-11.155 28.189-6.406 5.475v46.265l-5.597 4.034v60.244l-10.075 6.915v227.062h66.466V272.23l-10.075-6.915v-60.244l-5.597-4.034v-46.265l-6.406-5.475z"
+				 style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#fd4d4d;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;stroke-width:1.42;stroke:#000;text-rendering:auto"
+				/>
+				<path d="M260.552 291.995 224.298 272.404V499.291h36.254z" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#ce2f7e;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;stroke-width:1.42;stroke:#000;text-rendering:auto"
+				/>
+				<path d="m297.647 348.018v4.034h2.133v34.516l-26.631 6.681V499.291h26.631 0.358 55.178V352.051 348.018H299.78Z" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#123a8f;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;stroke-width:1.42;stroke:#000;text-rendering:auto"
+				/>
+				<path d="m198.48 422.574c-1.649 0-3.067 0.933-3.721 2.277h-3.14v4.173h-4.053v4.798h-1.98v5.175c-0.629 0.144-1.322 0.259-2.094 0.341v59.953h29.976v-59.953c-0.766-0.076-1.459-0.2-2.094-0.365v-5.151h-1.98v-4.798h-4.053v-4.173h-3.14c-0.655-1.343-2.073-2.277-3.721-2.277z"
+				 class="d" />
+				<path d="m228.605 422.597c-2.387 0-4.322 1.764-4.322 3.939 0.002 0.542 0.127 1.079 0.367 1.575h-2.019c-1.544 6.607-1.785 10.434-9.787 11.245v59.934h31.522v-59.934c-7.337-0.696-8.626-5.155-9.787-11.245h-2.016c0.239-0.497 0.362-1.033 0.363-1.575 0-2.176-1.935-3.939-4.321-3.939z"
+				 class="d" />
+				<path d="m255.729 398.993v4.234H244.527 242.57v4.324h1.957v89.395h-1.957v2.345h71.93v-2.345h-1.957v-89.395h1.957v-4.324h-1.957-11.369v-4.234h-2.484v4.234h-18.996v-4.234h-2.484v4.234h-18.996v-4.234z"
+				 style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#3d73e6;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;stroke-width:1.42;stroke:#000;text-rendering:auto"
+				/>
+				<path d="m157.059 441.327-15.442 15.009h4.08v42.955h38.165v-42.955h4.08l-7.779-7.561v-6.24h-4.03v2.323l-3.633-3.531z" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#22ecf0;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;stroke-width:1.42;stroke:#000;text-rendering:auto"
+				/>
+				<path d="M22.893 455.508 1.569 479.737H5.325V499.291H40.461v-19.554h3.756l-5.679-6.453v-10.286h-6.239v3.197z" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#808080;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;stroke-width:1.42;stroke:#000;text-rendering:auto"
+				/>
+				<path d="m129.538 455.508-21.324 24.229h3.756v19.554h35.136v-19.554h3.756l-5.679-6.453v-10.286h-6.239v3.197z" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#3de6b1;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;stroke-width:1.42;stroke:#000;text-rendering:auto"
+				/>
+				<path d="m95.761 470.361-19.566 5.659v3.738h1.25v19.533h37.897v-19.533h1.25v-3.738z" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#3de66d;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;stroke-width:1.42;stroke:#000;text-rendering:auto"
+				/>
+				<path d="m81.345 479.764-30.227 7.955v11.571h26.122v-15.071l4.105-1.075z" style="color-interpolation-filters:linearRGB;color-interpolation:sRGB;color-rendering:auto;fill:#e6b03d;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000;solid-opacity:1;stroke-width:1.42;stroke:#000;text-rendering:auto"
+				/>
+				<text x="218.027" y="455.615" class="c">
+					<tspan x="218.027" y="455.615">15</tspan>
+				</text>
+				<text x="154.193" y="467.827" class="c">
+					<tspan x="154.193" y="467.827">12</tspan>
+				</text>
+				<text x="268.25" y="421.555" class="c">
+					<tspan x="268.25" y="421.555">20</tspan>
+				</text>
+				<text x="315.983" y="371.948" class="c">
+					<tspan x="315.983" y="371.948">40</tspan>
+				</text>
+				<text x="268.654" y="232.355" class="c">
+					<tspan x="268.654" y="232.355">100</tspan>
+				</text>
+				<text x="232.081" y="303.908" class="c">
+					<tspan x="232.081" y="303.908">60</tspan>
+				</text>
+				<text x="310.418" y="70.175" class="c">
+					<tspan x="310.418" y="70.175">&gt;100</tspan>
+				</text>
+				<text x="7.442" y="487.937" style="-inkscape-font-specification:'Open Sans';font-family:'Open Sans';font-size:11.9px;letter-spacing:0px;line-height:895%;opacity:0.99;word-spacing:0px">
+					<tspan x="7.442" y="487.937" style="-inkscape-font-specification:'Open Sans';font-family:'Open Sans';font-size:11.9px">NULL</tspan>
+				</text>
+				<text x="124.415" y="480.739" class="c">
+					<tspan x="124.415" y="480.739">9</tspan>
+				</text>
+				<text x="91.194" y="488.36" class="c">
+					<tspan x="91.194" y="488.36">6</tspan>
+				</text>
+				<text x="65.298" y="497.828" class="c">
+					<tspan x="65.298" y="497.828">3</tspan>
+				</text>
+			</svg>
