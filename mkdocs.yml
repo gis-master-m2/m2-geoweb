@@ -29,7 +29,7 @@ nav:
 - 7. MapBox GL JS avanzado: mapbox_avanzado.md
 - 8. Visualización y publicación con Kepler GL: visualizacion_con_kepler_gl.md
 - 9. Introducción a Cesium: introduccion_a_cesium.md
-#- 10. Mallas discretas y algoritmos en JS: introduccion_a_mapbox.md
+- 10. Mallas discretas y algoritmos en JS: mallas_discretas_algoritmos.md
 #- 11. Visualización y publicación con Kepler GL: visualizacion_con_kepler_gl.md
 #- 6. Introducción a Cesium: introduccion_a_cesium.md
 #- 4. Recursos OpenData: recursos_open_data.md
