@@ -42,7 +42,7 @@ Esta basada en WebGL pensada para  la exploración visual de conjuntos de datos 
     
 ### Preparación datos
 
-* Origen dataset CSV de [https://opendata-ajuntament.barcelona.cat/data/es/dataset/accidents-tipus-gu-bcn](datos/2018_accidents_tipus_gu_bcn_TIME.csv)
+* Origen dataset CSV de [Personas involucradas en accidentes gestionados por la Guardia Urbana en la ciudad de Barcelona](https://opendata-ajuntament.barcelona.cat/data/es/dataset/accidents-persones-gu-bcn)
 
 * Descargamos [2018_accidents_tipus_gu_bcn_.csv](datos/2018_accidents_tipus_gu_bcn_TIME.csv)
 
@@ -50,7 +50,7 @@ Esta basada en WebGL pensada para  la exploración visual de conjuntos de datos 
 
 !!! Truco "Con LibreOffice seria"
     ```
-    =CONCATENATE(L2;"-";M2;"-";O2;"T";P2;":00")
+    =CONCATENATE(L2;"-";M2;"-";O2;"T";Q2;":00")
     ```
 
 
