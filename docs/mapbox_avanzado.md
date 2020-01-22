@@ -919,6 +919,74 @@ function addPopupToMapEdificios(nombreCapa) {
 ```
 
 
+!!! tip "Geocodificador Mapbox GL"
+
+```html hl_lines="46"
+    <html>
+
+    <head>
+    <meta charset='utf-8' />
+    <title>Edificios</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" type="text/css"/>
+    <link href='css/estilobase.css' rel='stylesheet' />
+    <script src='js/utils.js'></script>
+    <script src='js/edificios.js'></script>
+    <script>
+        //Añadir vuestor token y/o estilo !!
+        var map;
+        function init() {
+            mapboxgl.accessToken =
+                'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
+             map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/dark-v10',
+                center: [2.16859, 41.3954],
+                zoom: 15,
+                attributionControl: false,
+                pitch: 45,
+                hash: true
+            });
+
+            map.addControl(new mapboxgl.AttributionControl({ compact: true }));
+            map.addControl(new mapboxgl.NavigationControl());
+
+            map.addControl(
+                new MapboxGeocoder({
+                accessToken: mapboxgl.accessToken,
+                mapboxgl: mapboxgl
+                }));
+           
+            map.on('load', function () {
+                
+                addEdificiosCapa();
+
+                addPopupToMapEdificios("edificios");
+             }); //fin onload
+            
+        } // final init
+    </script>
+    </head>
+
+    <body onload="init()">
+    <div class="panelTopIzquierda">
+        <h5>Altura edificios</h5>
+        <label id="altura">Altura superior a 0 m</label>
+        <input  onChange="filtrarEdificios(this.value)" id="slider" type="range" min="1" max="110" step="5" value="0" />
+    </div>
+    <div id="map"></div>
+    </body>
+
+    </html>
+
+```
+
+```
+
+
 !!! tip "¿Ponemos título?"
 
 
