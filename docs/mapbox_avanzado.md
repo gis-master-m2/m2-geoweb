@@ -921,7 +921,7 @@ function addPopupToMapEdificios(nombreCapa) {
 
 !!! tip "Geocodificador Mapbox GL"
 
-```html hl_lines="46"
+```html hl_lines="9 10 33 34 35 36 37"
     <html>
 
     <head>
