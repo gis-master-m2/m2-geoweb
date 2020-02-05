@@ -54,21 +54,6 @@ git clone https://github.com/{tu usuario git}/geoweb.git
 
 ```
 
-### Paso 3 (opcion 2). Si ya existe el directorio (proyecto)
-* Crearemos repo des de nuestro pc [Tutorial](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
-
-* Nos situamos dentro del directorio **geoweb** de nuestro servidor y abrimos termial git (botón derecho mouse y Git Bash here)
-
-```sh
-git init
-git add .
-git commit -m "proyecto geoweb"
-git remote add origin https://github.com/{tu usuario git}/geoweb.git
-git remote -v
-git push -u origin master
-
-```
-Atentificamos con usuario y password  
 
 ### Paso 4
 
@@ -125,7 +110,39 @@ git commit -m "change readme"
 git push -u origin master
 ```
 
-En total habríamos escrito estas 4 lineas
+!!! warning "Si al hacer commit la primera vez tenemos este aviso"
+
+    ```sh
+    Run 
+
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
+
+    to set your account's default identity.
+    Omit --global to set the identity only in this repository.
+
+    fatal: unable to auto-detect email address (got 'usuario@yourpc.(none)')
+    ```
+
+
+!!! Tip "Entramos nuestor usuario de git y volvemos a hacer push"
+
+    ```sh
+
+    git config --global user.email micorreo@gmail.com
+    git config --global user.name  misusuario
+
+    git pull
+    git add .
+    git commit -m "change readme"
+    git push -u origin master       
+
+   
+    ```
+
+
+
+Al final cada vez que subamos cambios debemos escribir estas 4 lineas
 
 ```sh
 git pull
@@ -137,6 +154,8 @@ git push -u origin master
 
 !!! note
     Cada vez que editamos debemos hacer esta operación para subir código
+
+
 
 
 ### Paso 8
@@ -177,6 +196,24 @@ Botón derecho del mouse -->"Git bash here"
 ```sh
 git pull
 ```
+
+
+
+### Para crear un proyecto desde nuestro PC directament a Github
+* Crearemos repo des de nuestro pc [Tutorial](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
+
+* Nos situamos dentro del directorio **geoweb** de nuestro servidor y abrimos termial git (botón derecho mouse y Git Bash here)
+
+```sh
+git init
+git add .
+git commit -m "proyecto geoweb"
+git remote add origin https://github.com/{tu usuario git}/geoweb.git
+git remote -v
+git push -u origin master
+
+```
+Atentificamos con usuario y password  
 
 <hr>
 
