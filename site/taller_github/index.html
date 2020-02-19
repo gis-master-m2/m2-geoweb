@@ -335,13 +335,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-3-opcion-2-si-ya-existe-el-directorio-proyecto" title="Paso 3 (opcion 2). Si ya existe el directorio (proyecto)" class="md-nav__link">
-    Paso 3 (opcion 2). Si ya existe el directorio (proyecto)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#paso-4" title="Paso 4" class="md-nav__link">
     Paso 4
   </a>
@@ -400,6 +393,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-crear-un-proyecto-desde-nuestro-pc-directament-a-github" title="Para crear un proyecto desde nuestro PC directament a Github" class="md-nav__link">
+    Para crear un proyecto desde nuestro PC directament a Github
+  </a>
   
 </li>
       
@@ -585,13 +585,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-3-opcion-2-si-ya-existe-el-directorio-proyecto" title="Paso 3 (opcion 2). Si ya existe el directorio (proyecto)" class="md-nav__link">
-    Paso 3 (opcion 2). Si ya existe el directorio (proyecto)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#paso-4" title="Paso 4" class="md-nav__link">
     Paso 4
   </a>
@@ -650,6 +643,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-crear-un-proyecto-desde-nuestro-pc-directament-a-github" title="Para crear un proyecto desde nuestro PC directament a Github" class="md-nav__link">
+    Para crear un proyecto desde nuestro PC directament a Github
+  </a>
   
 </li>
       
@@ -723,29 +723,6 @@
 </pre></div>
 </td></tr></table>
 
-<h3 id="paso-3-opcion-2-si-ya-existe-el-directorio-proyecto">Paso 3 (opcion 2). Si ya existe el directorio (proyecto)</h3>
-<ul>
-<li>
-<p>Crearemos repo des de nuestro pc <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">Tutorial</a></p>
-</li>
-<li>
-<p>Nos situamos dentro del directorio <strong>geoweb</strong> de nuestro servidor y abrimos termial git (botón derecho mouse y Git Bash here)</p>
-</li>
-</ul>
-<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git init
-git add .
-git commit -m <span class="s2">&quot;proyecto geoweb&quot;</span>
-git remote add origin https://github.com/<span class="o">{</span>tu usuario git<span class="o">}</span>/geoweb.git
-git remote -v
-git push -u origin master
-</pre></div>
-</td></tr></table>
-Atentificamos con usuario y password  </p>
 <h3 id="paso-4">Paso 4</h3>
 <ul>
 <li>Abrimos VSCode  y añadimos directorio <strong>geoweb</strong>  <strong>File --&gt;Add folder to workspace</strong></li>
@@ -804,7 +781,49 @@ Atentificamos con usuario y password  </p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git push -u origin master
 </pre></div>
 </td></tr></table></p>
-<p>En total habríamos escrito estas 4 lineas</p>
+<div class="admonition warning">
+<p class="admonition-title">Si al hacer commit la primera vez tenemos este aviso</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Run 
+
+git config --global user.email <span class="s2">&quot;you@example.com&quot;</span>
+git config --global user.name <span class="s2">&quot;Your Name&quot;</span>
+
+to <span class="nb">set</span> your account<span class="s1">&#39;s default identity.</span>
+<span class="s1">Omit --global to set the identity only in this repository.</span>
+
+<span class="s1">fatal: unable to auto-detect email address (got &#39;</span>usuario@yourpc.<span class="o">(</span>none<span class="o">)</span><span class="err">&#39;</span><span class="o">)</span>
+</pre></div>
+</td></tr></table>
+
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Entramos nuestor usuario de git y volvemos a hacer push</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git config --global user.email micorreo@gmail.com
+git config --global user.name  misusuario
+
+git pull
+git add .
+git commit -m <span class="s2">&quot;change readme&quot;</span>
+git push -u origin master       
+</pre></div>
+</td></tr></table>
+
+</div>
+<p>Al final cada vez que subamos cambios debemos escribir estas 4 lineas</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -849,6 +868,29 @@ Botón derecho del mouse --&gt;"Git bash here"</p>
 </pre></div>
 </td></tr></table>
 
+<h3 id="para-crear-un-proyecto-desde-nuestro-pc-directament-a-github">Para crear un proyecto desde nuestro PC directament a Github</h3>
+<ul>
+<li>
+<p>Crearemos repo des de nuestro pc <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">Tutorial</a></p>
+</li>
+<li>
+<p>Nos situamos dentro del directorio <strong>geoweb</strong> de nuestro servidor y abrimos termial git (botón derecho mouse y Git Bash here)</p>
+</li>
+</ul>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git init
+git add .
+git commit -m <span class="s2">&quot;proyecto geoweb&quot;</span>
+git remote add origin https://github.com/<span class="o">{</span>tu usuario git<span class="o">}</span>/geoweb.git
+git remote -v
+git push -u origin master
+</pre></div>
+</td></tr></table>
+Atentificamos con usuario y password  </p>
 <hr>
 
 <h1 id="medium">Medium</h1>

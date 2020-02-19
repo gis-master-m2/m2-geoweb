@@ -18,6 +18,7 @@ Materiales para el módulo 2: Mapas y OpenData, Localización, Visualización y 
 * [9. Introducción a Cesium](introduccion_a_cesium)
 * [10. Mallas discretas y algoritmos en JS](mallas_discretas_algoritmos)
 * [11. Recursos OpenData](recursos_open_data)
+* [Preguntas frecuentes](faq.md)
 
 
 #### Recursos
