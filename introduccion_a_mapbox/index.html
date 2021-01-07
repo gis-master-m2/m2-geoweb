@@ -20,7 +20,7 @@
     
     
       
-        <title>10. Visor edificios Catastro - Módulo 2 - Mapas y OpenData</title>
+        <title>8. MapBox Studio y MapBox GL JS - Módulo 2 - Mapas y OpenData</title>
       
     
     
@@ -98,7 +98,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              10. Visor edificios Catastro
+              8. MapBox Studio y MapBox GL JS
             
           </span>
         </div>
@@ -378,34 +378,8 @@
 
 
   <li class="md-nav__item">
-    <a href="./" class="md-nav__link">
-      7. Introducción a Vector-Tiles y Mapbox Studio
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="./" class="md-nav__link">
-      8. MapBox Studio y MapBox GL JS
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="./" class="md-nav__link">
-      9. Práctica Cementerio
+    <a href="../introduccion_a_vector_tiles/" class="md-nav__link">
+      7. Introducción a Vector-Tiles y Mapbox Styles
     </a>
   </li>
 
@@ -424,12 +398,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        10. Visor edificios Catastro
+        8. MapBox Studio y MapBox GL JS
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      10. Visor edificios Catastro
+      8. MapBox Studio y MapBox GL JS
     </a>
     
       
@@ -606,6 +580,32 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../practica_cementerio/" class="md-nav__link">
+      9. Práctica Cementerio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../visor_catastro/" class="md-nav__link">
+      10. Visor edificios Catastro
+    </a>
   </li>
 
         
@@ -1100,7 +1100,7 @@
                   </a>
                 
                 
-                  <h1>10. Visor edificios Catastro</h1>
+                  <h1>8. MapBox Studio y MapBox GL JS</h1>
                 
                 <p><img src="https://c1.staticflickr.com/3/2863/33742461420_90c7cd525f_o.png" width="250"> </p>
 <h4 id="web">Web</h4>
@@ -1125,6 +1125,7 @@
 </ul>
 <h4 id="tutoriales">Tutoriales</h4>
 <ul>
+<li><a href="https://docs.mapbox.com/help/tutorials/?product=Mapbox+GL+JS">https://docs.mapbox.com/help/tutorials/?product=Mapbox+GL+JS</a></li>
 <li><a href="https://www.mapbox.com/mapbox-gl-js/example/simple-map/">https://www.mapbox.com/mapbox-gl-js/example/simple-map/</a></li>
 <li><a href="https://www.mapbox.com/help/tutorials/">https://www.mapbox.com/help/tutorials/</a></li>
 <li><a href="https://www.mapbox.com/help/studio-manual/">https://www.mapbox.com/help/studio-manual/</a></li>
@@ -1138,7 +1139,6 @@
 <li><a href="https://www.youtube.com/watch?v=YhynsA9_fPc">https://www.youtube.com/watch?v=YhynsA9_fPc</a></li>
 </ul>
 <h3 id="descripcion">Descripción</h3>
-<p><a href="../presentacion/vector-tiles.pptx">Ver presentación</a></p>
 <blockquote>
 <p>MapxBox es una empresa privada que ofrece una plataforma para la publicacón de mapas. Mapbox destaca por creado de forma abierta
 MBTiles
@@ -1146,18 +1146,21 @@ Vector Tiles
 MapBox GL</p>
 </blockquote>
 <ul>
-<li>MapBox Studio es una herramienta para personalizar y publicar estilos de mapa vector</li>
-<li>Maputnik es un editor libre (no de Mapbox) que también sirve para editar estilos de mapas vector</li>
+<li>MapBox Studio es un editor web para crear, personalizar y publicar estilos de mapa vector</li>
+<li>MapBox GL JS es una libreria para programas aplicaciones basadas en MapBox Styles</li>
 </ul>
 <h3 id="como-empezar">¿Cómo empezar?</h3>
 <blockquote>
-<p>Nos damos de alta en <a href="https://www.mapbox.com/signup/">MapBox</a></p>
+<p>Nos creamos usuario en <a href="https://www.mapbox.com/signup/">MapBox.com</a></p>
 </blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Cada usuario tiene un <strong>Access Token</strong> necessario para desarrollar y usar aplicaciones de Mapbox</p>
+</div>
 <h3 id="mapbox-studio">MapBox Studio</h3>
 <h3 id="1-creamos-nuestor-propio-estilo">1-Creamos nuestor propio estilo</h3>
 <ul>
 <li>
-<p>Entramos en MapBox.com  seleccionamos nuestro avatar <code>Studio</code> </p>
+<p>Entramos en MapBox.com  seleccionamos nuestro avatar (parte superior-derecha) --&gt; <code>Studio</code> </p>
 </li>
 <li>
 <p>Dentro de Studio tenemos tres opciones básicas</p>
@@ -1227,8 +1230,8 @@ Siempre que utilizemos algún estilo de Mapbox studio o algún servicio de Mapbo
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mapbox estilo<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
         <span class="nt">body</span> <span class="p">{</span>
             <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
@@ -1283,8 +1286,8 @@ Siempre que utilizemos algún estilo de Mapbox studio o algún servicio de Mapbo
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mapbox estilo<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
         <span class="nt">body</span> <span class="p">{</span>
             <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
@@ -1402,8 +1405,8 @@ o con opciones...</p>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mapbox estilo<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
         <span class="nt">body</span> <span class="p">{</span>
             <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
@@ -1476,8 +1479,8 @@ o con opciones...</p>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mapbox estilo<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
         <span class="nt">body</span> <span class="p">{</span>
             <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
@@ -1494,8 +1497,7 @@ o con opciones...</p>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
         <span class="c1">//Añadir vuestor token y vuestro estilo</span>
         <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span>
-                <span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
+            <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
             <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">Map</span><span class="p">({</span>
                 <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
                 <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;mapbox://styles/gismasterm2/ck4zvjxxs2b8m1cmjumqlru5i&#39;</span><span class="p">,</span>
@@ -1526,8 +1528,8 @@ o con opciones...</p>
             <span class="p">});</span>
 
 
-<span class="hll">             <span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="s1">&#39;viasciclables&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
-</span><span class="hll">
+             <span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="s1">&#39;viasciclables&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+<span class="hll">
 </span><span class="hll">                    <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
 </span><span class="hll">                    <span class="c1">//console.info(e);</span>
 </span><span class="hll">                    <span class="k">for</span> <span class="p">(</span><span class="nx">key</span> <span class="k">in</span> <span class="nx">e</span><span class="p">.</span><span class="nx">features</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">properties</span><span class="p">){</span>
@@ -1548,8 +1550,8 @@ o con opciones...</p>
 </span><span class="hll">                  <span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;mouseleave&#39;</span><span class="p">,</span> <span class="s1">&#39;viasciclables&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 </span><span class="hll">                     <span class="nx">map</span><span class="p">.</span><span class="nx">getCanvas</span><span class="p">().</span><span class="nx">style</span><span class="p">.</span><span class="nx">cursor</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>                    
 </span><span class="hll">                  <span class="p">});</span>
+</span><span class="hll">
 </span>
-
         <span class="p">}</span>
     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -1571,34 +1573,6 @@ o con opciones...</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <h3 id="practica-cementrio-puntuable">Práctica Cementrio. <strong>Puntuable!!</strong></h3>
-<p><h4>
-* Creamos nuevo estilo en Mapbox.com</p>
-<ul>
-<li>
-<p>Cargamos capas <a href="../datos/constru_cementerio.geojson">datos/constru_cementerio.geojson</a> y <a href="../datos/cementerio.geojson">datos/cementerio.geojson</a></p>
-</li>
-<li>
-<p>Añadimos como tileset en MapxBox</p>
-</li>
-<li>
-<p>Integramos el tileset dentro nuestro estilo creado 
-     <code>Studio</code> --&gt; <code>Styles</code> --&gt;<code>Mi estilo</code> --&gt; <code>Layers</code> --&gt; <code>Add Layer</code> --&gt;<code>Mi tileset</code></p>
-</li>
-<li>
-<p>Editamos estilo capas  publicamos</p>
-</li>
-<li>
-<p>Creamos visor ejemplo <strong>mapbox-cementerio.html</strong></p>
-</li>
-<li>
-<p>Subimos ejemplo al GitHUB</p>
-</li>
-</ul>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Truco</p>
-<p>Las capa de poligonos puedes ser añadidas a un estilo como tipo "Fill extrusion" y ser representados en 2.5D.</p>
-</h4>
 </div>
 <h3 id="preparamos-datos">Preparamos datos</h3>
 <ul>
@@ -1691,7 +1665,7 @@ o con opciones...</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Pie">
         
-          <a href="./" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../introduccion_a_vector_tiles/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1700,19 +1674,19 @@ o con opciones...</p>
                 <span class="md-footer-nav__direction">
                   Anterior
                 </span>
-                9. Práctica Cementerio
+                7. Introducción a Vector-Tiles y Mapbox Styles
               </div>
             </div>
           </a>
         
         
-          <a href="../introduccion_mapas_3d/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../practica_cementerio/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Siguiente
                 </span>
-                11. Introducción Mapas 3D
+                9. Práctica Cementerio
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
