@@ -349,7 +349,7 @@
       
         <li class="md-nav__item">
   <a href="#paso-7-subir-cambios-a-github" class="md-nav__link">
-    Paso 7 .Subir cambios a GitHub
+    Paso 7 -Subir cambios a GitHub
   </a>
   
 </li>
@@ -933,7 +933,7 @@
       
         <li class="md-nav__item">
   <a href="#paso-7-subir-cambios-a-github" class="md-nav__link">
-    Paso 7 .Subir cambios a GitHub
+    Paso 7 -Subir cambios a GitHub
   </a>
   
 </li>
@@ -1058,6 +1058,12 @@ Así por ejemplo podrías crear un usuario tipo vuestras iniciales más palabra 
 <p><img alt="alt text" src="../img/github-clone.png" title="github" /></p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/<span class="o">{</span>tu usuario git<span class="o">}</span>/geoweb.git
 </code></pre></div>
+<p>Si es la primera vez que utlizamos GIT en el ordenador necesitamos configurar tu nombre de usuario y dirección email</p>
+<p>En la misma consola dónde hemos hecho el clone escribimos</p>
+<div class="highlight"><pre><span></span><code>git config --global user.name <span class="s2">&quot;nuestro_usuario&quot;</span>
+
+git config --global user.email nuestro_correo@example.com
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Si no aparece "Git Bash Here", tienes que instalar el cliente GIT
@@ -1066,13 +1072,13 @@ Así por ejemplo podrías crear un usuario tipo vuestras iniciales más palabra 
 <p><sub> NOTA: Para más información ver VIDEO 3 <sub></p>
 <h3 id="paso-4-anadir-proyecto-a-vscode">Paso 4 -Añadir proyecto a VSCode</h3>
 <ul>
-<li>Abrimos VSCode  y añadimos directorio <strong>geoweb</strong>  <strong>File --&gt;Add folder to workspace</strong></li>
+<li>Abrimos VSCode  y añadimos directorio <strong>/geoweb</strong> <code>File --&gt;Add folder to workspace</code></li>
 </ul>
 <p><img alt="alt text" src="../img/vscode1.png" title="vscode" /></p>
 <h3 id="paso-5-creamos-pagina-html">Paso 5 - Creamos página html</h3>
 <ul>
 <li>
-<p>Situamos puntero encima de <strong>geoweb</strong> botón derecho del mouse --&gt; "New File" y creamos <strong>index.html</strong></p>
+<p>Situamos puntero encima de <strong>geoweb</strong> botón derecho del mouse --&gt; <code>New File</code> y creamos <strong>index.html</strong></p>
 </li>
 <li>
 <p>Copiamos el siguiente código HTML de la que será nuestra página de inicio </p>
@@ -1123,10 +1129,11 @@ Así por ejemplo podrías crear un usuario tipo vuestras iniciales más palabra 
 <p>Guardamos archivo <code>crtl + s</code></p>
 <h3 id="paso-6-visualizamos-archivo">Paso 6 - Visualizamos archivo</h3>
 <p>Para visualizar un archivo HTML No es recomendable hacerlo cómo si fuera un archivo local <strong>file://</strong>, es decir "doble-click" sobre el archivo, ya que podria contener código JavaScript que que no se ejecutara correctamente (por ejemplo todo aquello a cargar contenido a paritr de rutas relativas a un recurso web).
-Es mejor visualizar archivos HTML via <strong>http://</strong>. Para ello instalaremos una extensión de VSCode llamada LiveServer</p>
-<p>Si utlizamos VSCODE , instalamos extensión Live Server <strong>View --&gt;Extensions</strong></p>
+Es mejor visualizar archivos HTML via <strong>http://</strong>. </p>
+<p>Para ello instalaremos una extensión de VSCode llamada <strong>LiveServer</strong></p>
+<p>Si utlizamos VSCODE , instalamos extensión Live Server <code>View --&gt;Extensions</code></p>
 <p><img alt="alt text" src="../img/github-pas0.png" title="github" /></p>
-<h3 id="paso-7-subir-cambios-a-github">Paso 7 .Subir cambios a GitHub</h3>
+<h3 id="paso-7-subir-cambios-a-github">Paso 7 -Subir cambios a GitHub</h3>
 <ul>
 <li>Abrimos una terminal en VSCode  <strong>View --&gt; Terminal</strong> y dentro de la terminal escribimos (linea + tecla Enter)</li>
 </ul>
@@ -1135,7 +1142,7 @@ Es mejor visualizar archivos HTML via <strong>http://</strong>. Para ello instal
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>git add .
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>git commit -m <span class="s2">&quot;change readme&quot;</span>
+<div class="highlight"><pre><span></span><code>git commit -m <span class="s2">&quot;add index.html&quot;</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>git push -u origin main
 </code></pre></div></p>
@@ -1159,7 +1166,7 @@ git config --global user.name  misusuario
 
 git pull
 git add .
-git commit -m <span class="s2">&quot;change readme&quot;</span>
+git commit -m <span class="s2">&quot;add index.html&quot;</span>
 git push -u origin main       
 </code></pre></div>
 </div>
