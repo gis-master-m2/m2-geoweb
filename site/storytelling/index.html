@@ -1,0 +1,1274 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Mapas y OpenData, Localización, Visualización y Análisis de GeoDatos.">
+      
+      
+      
+        <meta name="author" content="geoweb">
+      
+      
+        <link rel="canonical" href="https://gis-master-m2.github.io/m2-geoweb/storytelling/">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+    
+    
+      
+        <title>13. StoryTelling - Módulo 2 - Mapas y OpenData</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3b61ea93.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduccion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Cabecera">
+    <a href="https://gis-master-m2.github.io/m2-geoweb/" title="Módulo 2 - Mapas y OpenData" class="md-header-nav__button md-logo" aria-label="Módulo 2 - Mapas y OpenData">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Módulo 2 - Mapas y OpenData
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              13. StoryTelling
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/gis-master-m2/m2-geoweb/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://gis-master-m2.github.io/m2-geoweb/" title="Módulo 2 - Mapas y OpenData" class="md-nav__button md-logo" aria-label="Módulo 2 - Mapas y OpenData">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Módulo 2 - Mapas y OpenData
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/gis-master-m2/m2-geoweb/" title="Ir al repositorio" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Inicio
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" data-md-state="indeterminate" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Sesión 1
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Sesión 1" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Sesión 1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_a_las_tecnologias_geoweb/" class="md-nav__link">
+      1. Introducción a la GeoWeb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_github/" class="md-nav__link">
+      2. La Plataforma GitHub y órdenes básicas Git.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../taller_github/" class="md-nav__link">
+      3. Mi primer proyecto en GitHub
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" data-md-state="indeterminate" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Sesión 2*
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Sesión 2*" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Sesión 2*
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_a_leaflet/" class="md-nav__link">
+      4. Introduccion a Leaflet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../plugins_leaflet/" class="md-nav__link">
+      5. Plugins Leaflet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../farmacias_leaflet/" class="md-nav__link">
+      6. Buscador de Farmacias con Leaflet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" data-md-state="indeterminate" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Sesión 3
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Sesión 3" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Sesión 3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_a_vector_tiles/" class="md-nav__link">
+      7. Introducción a Vector-Tiles y Mapbox Styles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_a_mapbox/" class="md-nav__link">
+      8. MapBox Studio y MapBox GL JS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../practica_cementerio/" class="md-nav__link">
+      9. Práctica Cementerio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../visor_catastro/" class="md-nav__link">
+      10. Visor edificios Catastro
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" data-md-state="indeterminate" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Sesión 4
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Sesión 4" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Sesión 4
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_mapas_3d/" class="md-nav__link">
+      11. Introducción Mapas 3D
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../visor_rutas/" class="md-nav__link">
+      12. Visor de rutas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Sesión 5*
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Sesión 5*" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Sesión 5*
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        13. StoryTelling
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      13. StoryTelling
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacion-y-templates" class="md-nav__link">
+    Información y templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-empezar" class="md-nav__link">
+    ¿Cómo empezar?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nuestro-storytelling" class="md-nav__link">
+    Nuestro StoryTelling
+  </a>
+  
+    <nav class="md-nav" aria-label="Nuestro StoryTelling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-visualizamos-storytellinghtml" class="md-nav__link">
+    Paso 1: Visualizamos storytelling.html
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-abrimos-configjs" class="md-nav__link">
+    Paso 2: Abrimos config.js
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#las-principales-opciones-del-documento-config-son" class="md-nav__link">
+    Las principales opciones del documento config son:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-anadimos-un-nuevo-volcan" class="md-nav__link">
+    Paso 3: Añadimos un nuevo volcan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-subimos-ejemplo-a-github" class="md-nav__link">
+    Paso 4: Subimos ejemplo a Github
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practicas-no-puntuables" class="md-nav__link">
+    Prácticas no puntuables
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" data-md-state="indeterminate" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      Sesión 6
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Sesión 6" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Sesión 6
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../introduccion_maputnik/" class="md-nav__link">
+      14. Mapas personalizados con Maputnik y MapBox GL JS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../mapbox_avanzado/" class="md-nav__link">
+      15. MapBox GL JS avanzado
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../visor_terremotos/" class="md-nav__link">
+      16. Visor de terremotos
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" data-md-state="indeterminate" type="checkbox" id="nav-8" checked>
+    
+    <label class="md-nav__link" for="nav-8">
+      Sesión 7*
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Sesión 7*" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        Sesión 7*
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../mallas_discretas_algoritmos/" class="md-nav__link">
+      17. Mallas discretas y algoritmos en JS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../visualizacion_con_kepler_gl/" class="md-nav__link">
+      18. Visualización y publicación con Kepler GL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" data-md-state="indeterminate" type="checkbox" id="nav-9" checked>
+    
+    <label class="md-nav__link" for="nav-9">
+      Sesión 8
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Sesión 8" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        Sesión 8
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../recursos_open_data/" class="md-nav__link">
+      19. Recursos OpenData
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../taller_medium/" class="md-nav__link">
+      20. Taller de Medium
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" class="md-nav__link">
+      Preguntas Frecuentes
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacion-y-templates" class="md-nav__link">
+    Información y templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-empezar" class="md-nav__link">
+    ¿Cómo empezar?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nuestro-storytelling" class="md-nav__link">
+    Nuestro StoryTelling
+  </a>
+  
+    <nav class="md-nav" aria-label="Nuestro StoryTelling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-visualizamos-storytellinghtml" class="md-nav__link">
+    Paso 1: Visualizamos storytelling.html
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-abrimos-configjs" class="md-nav__link">
+    Paso 2: Abrimos config.js
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#las-principales-opciones-del-documento-config-son" class="md-nav__link">
+    Las principales opciones del documento config son:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-anadimos-un-nuevo-volcan" class="md-nav__link">
+    Paso 3: Añadimos un nuevo volcan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-subimos-ejemplo-a-github" class="md-nav__link">
+    Paso 4: Subimos ejemplo a Github
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practicas-no-puntuables" class="md-nav__link">
+    Prácticas no puntuables
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/gis-master-m2/m2-geoweb/edit/master/docs/storytelling.md" title="Editar esta página" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>13. StoryTelling</h1>
+                
+                <h3 id="introduccion">Introducción</h3>
+<blockquote>
+<p>Los <strong>Storytelling</strong> o <strong>StoryMaps</strong> són una combinación de mapas con textos narrativos, imágenes y contenido multimedia que nos permite crear un hilo narrativo para contar una historia</p>
+<p>Es un recurso muy utilizado por ejemplo en  publicaciones digitales.</p>
+<p>Si tenemos una historia que contar con una mapa, nos serà una herramienta muy útil.</p>
+<p>Ejemplo de StoryTelling <a href="https://interactive.aljazeera.com/aje/2020/saving-the-nile/index.html" target="_blank">Save the Nile</a> publicado por AlJazeera</p>
+<p>Post <a href="https://blog.mapbox.com/8-compelling-stories-told-with-the-storytelling-solution-3d33ab7b34e1" target="_blank">8 compelling stories told with the Storytelling solution</a></p>
+</blockquote>
+<h3 id="informacion-y-templates">Información y templates</h3>
+<ul>
+<li>
+<p><a href="https://www.mapbox.com/solutions/interactive-storytelling" target="_blank">https://www.mapbox.com/solutions/interactive-storytelling</a></p>
+</li>
+<li>
+<p><a href="https://github.com/mapbox/storytelling" target="_blank">https://github.com/mapbox/storytelling</a></p>
+</li>
+</ul>
+<h3 id="como-empezar">¿Cómo empezar?</h3>
+<ul>
+<li>Mapbox ofrece un template para empezar a crear histórias sin apenas programación, básicamenten sólo habrá que editar un archivo de configuración.</li>
+<li>
+<p>Vamos descarganos <a href="../datos/storytelling.zip">datos/storytelling.zip</a> y descoprimiremos su contenido dentro del directorio de trabajo <strong>geoweb</strong></p>
+</li>
+<li>
+<p>Observaremos que tenemos tres nuevos archivos</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Archivos</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>storytelling.html</strong></td>
+<td>Archivo principal basado en template de mapbox</td>
+</tr>
+<tr>
+<td><strong>config.js</strong></td>
+<td>Archivo de configuracion</td>
+</tr>
+<tr>
+<td><strong>helper.html</strong></td>
+<td>Mapa de ayuda para capturar coordenadas i vistas</td>
+</tr>
+</tbody>
+</table>
+<p><sub>Para saber más: <a href="https://github.com/mapbox/storytelling#getting-started">https://github.com/mapbox/storytelling#getting-started</a></sub></p>
+<div class="admonition note videos">
+<p class="admonition-title">Note</p>
+</div>
+<p>Para ver toda la sesión 5 ver  Videos 8 y 9</p>
+<h3 id="nuestro-storytelling">Nuestro StoryTelling</h3>
+<ul>
+<li>Aprovechando que conocemos ya las propiedades 3D de Mapbox, vamos a crear un storyTelling sobre los <strong>principales volcanes en activos del mundo</strong></li>
+</ul>
+<h4 id="paso-1-visualizamos-storytellinghtml">Paso 1: Visualizamos storytelling.html</h4>
+<p><img alt="alt text" src="../img/storytelling.png" title="storytelling" /></p>
+<ul>
+<li>
+<p>Si hacemos scroll veremos que sólo tenemos un volcan</p>
+</li>
+<li>
+<p>Necesitamos entender y editar el archivo <strong>config.js</strong> para poder añadir más contenido</p>
+</li>
+</ul>
+<h4 id="paso-2-abrimos-configjs">Paso 2: Abrimos <strong>config.js</strong></h4>
+<ul>
+<li>Cambiamos el accesstoken y ponemos el nuestro</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;mapbox://styles/mapbox/satellite-v9&#39;</span><span class="p">,</span>
+<span class="hll">    <span class="nx">accessToken</span><span class="o">:</span> <span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">,</span>
+</span>    <span class="nx">showMarkers</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">markerColor</span><span class="o">:</span> <span class="s1">&#39;#3FB1CE&#39;</span><span class="p">,</span>
+    <span class="nx">theme</span><span class="o">:</span> <span class="s1">&#39;dark&#39;</span><span class="p">,</span>
+    <span class="nx">use3dTerrain</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Volcanes&#39;</span><span class="p">,</span>
+    <span class="nx">subtitle</span><span class="o">:</span> <span class="s1">&#39;Los principales volcanes activos del mundo&#39;</span><span class="p">,</span>
+    <span class="nx">byline</span><span class="o">:</span> <span class="s1">&#39;M2B &#39;</span><span class="p">,</span>
+    <span class="nx">footer</span><span class="o">:</span> <span class="s1">&#39;Source: Wikipedia&#39;</span><span class="p">,</span>
+    <span class="nx">chapters</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;volcan1&#39;</span><span class="p">,</span>
+            <span class="nx">alignment</span><span class="o">:</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span>
+            <span class="nx">hidden</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Eyjafjallajökull, Islandia&#39;</span><span class="p">,</span>
+            <span class="nx">image</span><span class="o">:</span> <span class="s1">&#39;https://upload.wikimedia.org/wikipedia/commons/e/e4/Eyjafjallaj%C3%B6kull_first_crater_20100329.jpg&#39;</span><span class="p">,</span>
+            <span class="nx">description</span><span class="o">:</span> <span class="s1">&#39;También conocido como Eyjafjöll,2​ o Eyjafjalla,3​ es un volcán situado al norte de Skógar, en la región de Suðurland, al sur de Islandia.4​ Tiene entre 1651 m y 1666 m de altitud,​ y ha estado moderadamente activo en los últimos 8000 años.&#39;</span><span class="p">,</span>
+            <span class="nx">location</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">19.62</span><span class="p">,</span> <span class="mf">63.63</span><span class="p">],</span>
+                <span class="nx">zoom</span><span class="o">:</span> <span class="mf">13.5</span><span class="p">,</span>
+                <span class="nx">pitch</span><span class="o">:</span> <span class="mf">60</span><span class="p">,</span>
+                <span class="nx">bearing</span><span class="o">:</span> <span class="mf">0</span>
+            <span class="p">},</span>
+            <span class="nx">mapAnimation</span><span class="o">:</span> <span class="s1">&#39;flyTo&#39;</span><span class="p">,</span>
+            <span class="nx">rotateAnimation</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nx">callback</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="nx">onChapterEnter</span><span class="o">:</span> <span class="p">[</span>
+                <span class="c1">// {</span>
+                <span class="c1">//     layer: &#39;layer-name&#39;,</span>
+                <span class="c1">//     opacity: 1,</span>
+                <span class="c1">//     duration: 5000</span>
+                <span class="c1">// }</span>
+            <span class="p">],</span>
+            <span class="nx">onChapterExit</span><span class="o">:</span> <span class="p">[</span>
+                <span class="c1">// {</span>
+                <span class="c1">//     layer: &#39;layer-name&#39;,</span>
+                <span class="c1">//     opacity: 0</span>
+                <span class="c1">// }</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">};</span>
+</code></pre></div>
+<h4 id="las-principales-opciones-del-documento-config-son">Las principales opciones del documento config son:</h4>
+<div class="admonition note">
+<p class="admonition-title">Items en negrita son <strong>obligatorios</strong>.</p>
+</div>
+<p><strong><code>style</code></strong>: Url estilo de MapBox , puede ser un nuestro propio</p>
+<p><strong><code>accessToken</code></strong>: Mapbox access token.</p>
+<p><strong><code>showMarkers</code></strong>: Mostrar un marker.</p>
+<p><strong><code>markerColor</code></strong>: Color hexadecimal del marker.</p>
+<p><strong><code>theme</code></strong>: Tema básico CSS (light o dark).</p>
+<p><code>use3dTerrain</code>: Activar 3D terrain. (Optional)</p>
+<p><code>title</code>: Título de la história. (Optional)</p>
+<p><code>subtitle</code>: Subtítulo (Optional)</p>
+<p><code>byline</code>: Créditos del autor. (Optional)</p>
+<p><code>footer</code>: Citatión de fuentes.</p>
+<p><strong><code>chapters</code></strong>: Es una matriz que contiene cada una de las visualizaciones (ítems) de la história</p>
+<ul>
+<li><strong><code>id</code></strong>: id único que se assigna a un HTML <code>id</code> de un <code>div</code> .</li>
+<li><strong><code>alignment</code></strong>: Define dónde va aparecer el texto de la história. Las opciones son; <code>center</code>, <code>left</code>, <code>right</code>, y <code>full</code>.</li>
+<li><code>title</code>: Título de la sección.</li>
+<li><code>image</code>: Imagen descriptiva.</li>
+<li><code>description</code>: Descripción de la sección. Puede contener texto en formato HTML.</li>
+<li><strong><code>location</code></strong>: Localización del mapa.<ul>
+<li><strong><code>center</code></strong>: Centro del mapa en coordenadads <code>longitude, latitude</code></li>
+<li><strong><code>zoom</code></strong>: Nivel de zoom.</li>
+<li><strong><code>pitch</code></strong>: Ángulo de inclinación de la cámara.</li>
+<li><strong><code>bearing</code></strong>: Rotación del mapa respeto al norte.</li>
+</ul>
+</li>
+<li><code>mapAnimation</code>: Define  <a href="https://docs.mapbox.com/mapbox-gl-js/api/#map#jumpto">el tipo de animación</a> para la transición entre lugares. Soportas 'flyTo', 'easeTo', y 'jumpTo' animations. Per defecto es  <code>flyTo</code>.</li>
+<li><code>rotateAnimation</code>: Si es  <code>true</code>. El mapa rotará 90 grados durante 24 segundos.</li>
+<li><code>callback</code>: pPuede ejcutar una función de Javascript para por ejemplo mostrar un gràfico.</li>
+<li><code>onChapterEnter</code>: Podemos cambiar partes del estilo de las capas al inciar la sección.<ul>
+<li><code>layer</code>: Nombre de la capa.</li>
+<li><code>opacity</code>: Opacidad. <code>0</code> transparente, <code>1</code> opaca.</li>
+<li><code>duration</code>: Duración de la transisción en milisegundos. Por defecto 300..</li>
+</ul>
+</li>
+<li><code>onChapterExit</code>: lo mismo <code>onChapterEnter</code> pero al salir de la sección.</li>
+</ul>
+<h4 id="paso-3-anadimos-un-nuevo-volcan">Paso 3: Añadimos un nuevo volcan</h4>
+<ul>
+<li>Para añadir nuevo contenido tenemos que añadir item dentro de <code>chapters</code>, cada item lo debmos separar por coma</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;mapbox://styles/mapbox/satellite-v9&#39;</span><span class="p">,</span>
+    <span class="nx">accessToken</span><span class="o">:</span> <span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">,</span>
+    <span class="nx">showMarkers</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">markerColor</span><span class="o">:</span> <span class="s1">&#39;#3FB1CE&#39;</span><span class="p">,</span>
+    <span class="nx">theme</span><span class="o">:</span> <span class="s1">&#39;dark&#39;</span><span class="p">,</span>
+    <span class="nx">use3dTerrain</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Volcanes&#39;</span><span class="p">,</span>
+    <span class="nx">subtitle</span><span class="o">:</span> <span class="s1">&#39;Los principales volcanes activos del mundo&#39;</span><span class="p">,</span>
+    <span class="nx">byline</span><span class="o">:</span> <span class="s1">&#39;M2B &#39;</span><span class="p">,</span>
+    <span class="nx">footer</span><span class="o">:</span> <span class="s1">&#39;Source: Wikipedia&#39;</span><span class="p">,</span>
+    <span class="nx">chapters</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;volcan1&#39;</span><span class="p">,</span>
+            <span class="nx">alignment</span><span class="o">:</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span>
+            <span class="nx">hidden</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Eyjafjallajökull, Islandia&#39;</span><span class="p">,</span>
+            <span class="nx">image</span><span class="o">:</span> <span class="s1">&#39;https://upload.wikimedia.org/wikipedia/commons/e/e4/Eyjafjallaj%C3%B6kull_first_crater_20100329.jpg&#39;</span><span class="p">,</span>
+            <span class="nx">description</span><span class="o">:</span> <span class="s1">&#39;También conocido como Eyjafjöll,2​ o Eyjafjalla,3​ es un volcán situado al norte de Skógar, en la región de Suðurland, al sur de Islandia.4​ Tiene entre 1651 m y 1666 m de altitud,​ y ha estado moderadamente activo en los últimos 8000 años.&#39;</span><span class="p">,</span>
+            <span class="nx">location</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">19.62</span><span class="p">,</span> <span class="mf">63.63</span><span class="p">],</span>
+                <span class="nx">zoom</span><span class="o">:</span> <span class="mf">13.5</span><span class="p">,</span>
+                <span class="nx">pitch</span><span class="o">:</span> <span class="mf">60</span><span class="p">,</span>
+                <span class="nx">bearing</span><span class="o">:</span> <span class="mf">0</span>
+            <span class="p">},</span>
+            <span class="nx">mapAnimation</span><span class="o">:</span> <span class="s1">&#39;flyTo&#39;</span><span class="p">,</span>
+            <span class="nx">rotateAnimation</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nx">callback</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="nx">onChapterEnter</span><span class="o">:</span> <span class="p">[</span>
+                <span class="c1">// {</span>
+                <span class="c1">//     layer: &#39;layer-name&#39;,</span>
+                <span class="c1">//     opacity: 1,</span>
+                <span class="c1">//     duration: 5000</span>
+                <span class="c1">// }</span>
+            <span class="p">],</span>
+            <span class="nx">onChapterExit</span><span class="o">:</span> <span class="p">[</span>
+                <span class="c1">// {</span>
+                <span class="c1">//     layer: &#39;layer-name&#39;,</span>
+                <span class="c1">//     opacity: 0</span>
+                <span class="c1">// }</span>
+            <span class="p">]</span>
+<span class="hll">       <span class="p">},{</span>
+</span><span class="hll">            <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;volcan2&#39;</span><span class="p">,</span>
+</span><span class="hll">            <span class="nx">alignment</span><span class="o">:</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span>
+</span><span class="hll">            <span class="nx">hidden</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span><span class="hll">            <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Monte Vesubio, Italia&#39;</span><span class="p">,</span>
+</span><span class="hll">            <span class="nx">image</span><span class="o">:</span> <span class="s1">&#39;https://upload.wikimedia.org/wikipedia/commons/2/24/Cr%C3%A1ter_del_Vesubio.jpg&#39;</span><span class="p">,</span>
+</span><span class="hll">            <span class="nx">description</span><span class="o">:</span> <span class="s1">&#39;Es un volcán activo del tipo vesubiano situado frente a la bahía de Nápoles y a unos nueve kilómetros de distancia de la ciudad de Nápoles. Se encuentra en la ciudad metropolitana de Nápoles, perteneciente a la región italiana de la Campania. Tiene una altura máxima de 1281 m s. n. m. y se alza al sur de la cadena principal de los Apeninos.&#39;</span><span class="p">,</span>
+</span><span class="hll">            <span class="nx">location</span><span class="o">:</span> <span class="p">{</span>
+</span><span class="hll">                <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">14.42555555</span><span class="p">,</span> <span class="mf">40.82138888</span><span class="p">],</span>
+</span><span class="hll">                <span class="nx">zoom</span><span class="o">:</span> <span class="mf">14.5</span><span class="p">,</span>
+</span><span class="hll">                <span class="nx">pitch</span><span class="o">:</span> <span class="mf">60</span><span class="p">,</span>
+</span><span class="hll">                <span class="nx">bearing</span><span class="o">:</span> <span class="o">-</span><span class="mf">43.2</span>
+</span><span class="hll">            <span class="p">},</span>
+</span><span class="hll">            <span class="nx">mapAnimation</span><span class="o">:</span> <span class="s1">&#39;flyTo&#39;</span><span class="p">,</span>
+</span><span class="hll">            <span class="nx">rotateAnimation</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class="hll">            <span class="nx">callback</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span class="hll">            <span class="nx">onChapterEnter</span><span class="o">:</span> <span class="p">[],</span>
+</span><span class="hll">            <span class="nx">onChapterExit</span><span class="o">:</span> <span class="p">[]</span>
+</span><span class="hll">        <span class="p">}</span>
+</span>    <span class="p">]</span>
+<span class="p">};</span>
+</code></pre></div>
+<p><img alt="alt text" src="../img/storytelling2.png" title="storytelling" /></p>
+<h4 id="paso-4-subimos-ejemplo-a-github">Paso 4: Subimos ejemplo a Github</h4>
+<div class="admonition tip">
+<p class="admonition-title">Editamos también index.html </p>
+<div class="highlight"><pre><span></span><code>    git pull
+    git add .
+    git commit -m <span class="s2">&quot;storytelling&quot;</span>
+    git push origin main
+</code></pre></div>
+</div>
+<h3 id="practicas-no-puntuables">Prácticas no puntuables</h3>
+<div class="admonition success">
+<p class="admonition-title">Intentamos añadir dos o más volcanes</p>
+<p>Buscamos en la wikipedia información e imagenes </p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Intentamos mejorar el texto de la descripcion de los volcanes</p>
+<p>Podemos añadir parte código HTML enla descripción cómo por ejemplo un hipervínculo o un embed de un vídeo</p>
+<p>Podemos intentar cambiar estilos CSS</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Volvemos a subir los cambios a GitHub</p>
+<div class="highlight"><pre><span></span><code>    git pull
+    git add .
+    git commit -m <span class="s2">&quot;añadidos más volcanes&quot;</span>
+    git push origin main
+</code></pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Un StoryTelling podría ser un buen ejemplo de práctica final!!</p>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Pie">
+        
+          <a href="../visor_rutas/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                12. Visor de rutas
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../introduccion_maputnik/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                14. Mapas personalizados con Maputnik y MapBox GL JS
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.expand'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

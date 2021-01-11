@@ -1,8 +1,8 @@
 
 # Recursos open data
 
-### [Ver presentación OpenData](presentacion/opendata.pptx)
-
+### [Ver presentación OpenData (pptx)](presentacion/opendata.pptx)
+### [Ver presentación OpenData (pdf)](presentacion/opendata.pdf)
 
 ### Ejemplo API CKAN
 

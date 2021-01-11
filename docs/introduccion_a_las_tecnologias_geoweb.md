@@ -6,17 +6,11 @@
 
 Temario
 
+* Presentación de módulo
 * Introducción a las tecnologías GeoWeb
-    * Conceptos geoweb
-    * Conceptos Open Data
-    * Conceptos linked Data
+    * Conceptos clave geoweb
     * Tecnologías geoweb
+    * ¿Cómo vamos a trabajar?
 
-### [Ver presentación](presentacion/Introduccion-geoweb.pptx)
-
-* Herramientas,Librerías y JavaScript
-    * Porque estas herramientas
-    * Porque estas herramientas
-    * JavaScript
-
-### [Ver presentación](presentacion/Herramientas-y-javascript.pptx)
+### [Ver presentación Introduccion-geoweb.pptx](presentacion/Introduccion-geoweb.pptx)
+### [Ver presentación Introduccion-geoweb.pdf](presentacion/Introduccion-geoweb.pdf)

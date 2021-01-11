@@ -1,52 +1,51 @@
 
 
-# GitHub
+# 3. Mi primer proyecto en GitHub
  
-###  Recursos GitHub
+### Descripción
+>Vamos a crear un proyecto en GitHub dónde vamos a subir todo nuestros ejemplos de módulo asó como las prácticas
+>Utlizaremos VisualStudio Code cómo editor web y también para , mediante órdenes GIT mantener nuestro repositorio
 
-* Web
-[https://github.com/](https://github.com/)
-
-* Tutorial
-[https://guides.github.com/activities/hello-world/](https://guides.github.com/activities/hello-world/)
-
-* Github Pages
-[https://guides.github.com/features/pages/](https://guides.github.com/features/pages/)
-
-* Tutorial
-[http://rogerdudler.github.io/git-guide/index.es.html](http://rogerdudler.github.io/git-guide/index.es.html)
-
-* Wikipedia
-[https://es.wikipedia.org/wiki/GitHub](https://es.wikipedia.org/wiki/GitHub)
-
-    
-
-
-    
-### Descripción 
->GitHub es un reporsitorio de código dónde podremos subir nuestros proyectos y también hosting de una pàgina web.
-
-### Ejemplo crear web site
-
-* Requisitos Instalar cliente GIT para windows [https://git-scm.com/download/win](https://git-scm.com/download/win)
  
-### Paso 1
+### Paso 1 - Crear usuario en GitHub
 
-* Crear usuario en: [https://github.com/](https://github.com/)
+* Crear usuario en: [https://github.com/](https://github.com/){target=_blank}
 
-### Paso 2
+!!! warning "Atencion!!"
+    El nombre de **usuario** debe ser único y NO debe tener espacios ni accentos y será el subdominio de nuestras páginas web.
+    Así por ejemplo podrías crear un usuario tipo vuestras iniciales más palabra descriptiva - ejemplo: **vpa_mapas** o **vpa_modulo2b**-
+
+![alt text](img/github-user.png "user github")
+
+<sub> NOTA: Para más información ver VIDEO 2 <sub>
+
+### Paso 2 - Crear repositorio
+
+* Una vez validado nuestro correo y creado el usuario, vamos al avatar de la parte superior-derecha y seleccionamos **Your repositories**
+
+![alt text](img/github-repo.png "github")
+
+* Nos mostrará que no tenemos repositorios y le damos al botón **New**
 
 * Creamos nuevo repo llamado **geoweb**
 
 ![alt text](img/github-pas2.png "github")
 
+<sub> NOTA: Para más información ver VIDEO 2 <sub>
 
-* Copiamos URL del proyecto
+### Paso 3 - Clonar proyecto en nuestro ordenador
+
+* Vamos al botón verde "Code" seleccionamos **HTTPS** y copiamos la URL del proyecto
+
 
 ![alt text](img/github-pas3.png "github")
 
-### Paso 3 (opcion 1 nuestro caso).Si el directorio (proyecto) no existe en mi PC. Voy a mi espacio de trabajo
-botón derecho del mouse -->"git bash here" y escribo en la consola ```git clone``` y pego la URL + Enter
+* Vamos a nuestro ordenador y nos situamos en el directorio dónde vamos a trabajar, por ejemplo **c:/MasterUPC/m2/**
+
+* Botón derecho del mouse -->"Git Bash Here" y escribo en la consola ```git clone``` y pego la URL + Enter
+
+![alt text](img/github-clone.png "github")
+
 
 ```sh
 
@@ -54,44 +53,101 @@ git clone https://github.com/{tu usuario git}/geoweb.git
 
 ```
 
+Si es la primera vez que utlizamos GIT en el ordenador necesitamos configurar tu nombre de usuario y dirección email
 
-### Paso 4
+En la misma consola dónde hemos hecho el clone escribimos
 
-* Abrimos VSCode  y añadimos directorio **geoweb**  **File -->Add folder to workspace**
+```sh
+git config --global user.name "nuestro_usuario"
+
+git config --global user.email nuestro_correo@example.com
+```
+
+
+
+!!! note
+    Si no aparece "Git Bash Here", tienes que instalar el cliente GIT
+    [https://git-scm.com/download/win](https://git-scm.com/download/win){target=_blank}
+
+
+<sub> NOTA: Para más información ver VIDEO 3 <sub>
+
+### Paso 4 -Añadir proyecto a VSCode
+
+* Abrimos VSCode  y añadimos directorio **/geoweb** ```File -->Add folder to workspace```
 
 ![alt text](img/vscode1.png "vscode")
 
-### Paso 5
-
-* Creamos y/o editamos archivo **readme.md**
-
-```sh 
-
-### Proyector Geoweb 
-
-### Documentación del curso
-
-[https://gis-master-m2.github.io/m2-geoweb/](https://gis-master-m2.github.io/m2-geoweb/)
-
-``` 
  
-### Paso 6
+### Paso 5 - Creamos página html
 
-* Añadimos y/o editamos archivo **hola.html**
+* Situamos puntero encima de **geoweb** botón derecho del mouse --> ```New File``` y creamos **index.html**
+
+* Copiamos el siguiente código HTML de la que será nuestra página de inicio 
+
 
 ```html 
 
 <html>
-    <head>
-    </head>
-    <body>
-        <h3>Hola</h3>
-    </body>
+<head>
+  <title>Mis mapas M2B</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="autor" />
+  <meta name="description" content="descripción página">
+  <meta name="robots" content="index,follow">
+</head>
+<body>
+  <h2>Mis mapas del módulo M2B</h2>
+  <h4>Leaflet</h4>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <hr />
+  <h4>MapBoxGL JS</h4>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <hr />
+  <h4>KeplerGL</h4>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <hr />
+  <h4>Prácticas</h4>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <hr />
+</body>
 </html>
 
 ``` 
      
-### Paso 7
+Guardamos archivo ```crtl + s```
+
+### Paso 6 - Visualizamos archivo
+
+Para visualizar un archivo HTML No es recomendable hacerlo cómo si fuera un archivo local **file://**, es decir "doble-click" sobre el archivo, ya que podria contener código JavaScript que que no se ejecutara correctamente (por ejemplo todo aquello a cargar contenido a paritr de rutas relativas a un recurso web).
+Es mejor visualizar archivos HTML via **http://**. 
+
+Para ello instalaremos una extensión de VSCode llamada **LiveServer**
+
+Si utlizamos VSCODE , instalamos extensión Live Server ```View -->Extensions```
+
+ ![alt text](img/github-pas0.png "github")
+
+
+
+### Paso 7 -Subir cambios a GitHub
 
  * Abrimos una terminal en VSCode  **View --> Terminal** y dentro de la terminal escribimos (linea + tecla Enter)
 
@@ -104,10 +160,10 @@ git pull
 git add .
 ```
 ```sh
-git commit -m "change readme"
+git commit -m "add index.html"
 ```
 ```sh
-git push -u origin master
+git push -u origin main
 ```
 
 !!! warning "Si al hacer commit la primera vez tenemos este aviso"
@@ -134,12 +190,16 @@ git push -u origin master
 
     git pull
     git add .
-    git commit -m "change readme"
-    git push -u origin master       
+    git commit -m "add index.html"
+    git push -u origin main       
 
    
     ```
 
+La primera vez puede ser que tengamos que autentificarnos en GitHub
+
+
+![alt text](img/github-aut.png "autenticate")
 
 
 Al final cada vez que subamos cambios debemos escribir estas 4 lineas
@@ -147,8 +207,8 @@ Al final cada vez que subamos cambios debemos escribir estas 4 lineas
 ```sh
 git pull
 git add .
-git commit -m "change readme"
-git push -u origin master
+git commit -m "mensaje commit"
+git push origin main
 
 ```
 
@@ -156,17 +216,45 @@ git push -u origin master
     Cada vez que editamos debemos hacer esta operación para subir código
 
 
+<sub> NOTA: Para más información ver VIDEO 4 <sub>
 
-
-### Paso 8
+### Paso 8 -GitHub como webhosting
 
 * Para convertir el repo en una página web, vamos al proyecto geoweb en github.com
 * Seleccionamos opción Settings
-* GitHub Pages  opción **master branch**
+* GitHub Pages -->Source opción **Branch main** -->Save
 ![alt text](img/github.png "github")
 ![alt text](img/github1.png "github")
 
-### Para recuperar (clonar) nuestro trabajo en casa, por ejemplo
+
+<sub> NOTA: Para más información ver VIDEO 4 <sub>
+
+### Paso 9 -Práctica no puntuable con GitHub
+
+
+!!! success "Editar index.html"
+
+    La pagina index.html no tiene estilo. ¿Podriás añadir css y divs para maquetar mejor la pàgina.
+    Puedes utlizar librerías com [Bootstrap](https://getbootstrap.com/) o [Materialize](https://materializecss.com/) para un mejor diseño
+
+   
+
+!!! tip "pista"
+
+     Recuerda que al final cada vez que subamos cambios debemos escribir estas 4 lineas
+
+    ```sh
+    git pull
+    git add .
+    git commit -m "mensaje commit"
+    git push origin main
+
+    ```
+
+
+### Anexos
+
+#### Para recuperar (clonar) nuestro trabajo en otro pc, por ejemplo
 
 Nos situamos en un directorio de nuestor PC.
 Botón derecho del mouse -->"Git bash here"
@@ -199,7 +287,7 @@ git pull
 
 
 
-### Para crear un proyecto desde nuestro PC directament a Github
+#### Para crear un proyecto desde nuestro PC directament a Github
 * Crearemos repo des de nuestro pc [Tutorial](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
 
 * Nos situamos dentro del directorio **geoweb** de nuestro servidor y abrimos termial git (botón derecho mouse y Git Bash here)
@@ -210,47 +298,10 @@ git add .
 git commit -m "proyecto geoweb"
 git remote add origin https://github.com/{tu usuario git}/geoweb.git
 git remote -v
-git push -u origin master
+git push -u origin main
 
 ```
 Atentificamos con usuario y password  
 
 <hr>
 
-# Medium
-        
-###  Recursos Medium
-
-* Web
-[https://medium.com//](https://medium.com/)
-
-* Tutorials
-[https://help.medium.com/hc/en-us/articles/225168768](https://help.medium.com/hc/en-us/articles/225168768)
-[https://help.medium.com/hc/en-us/articles/115004681607-Create-a-publication](https://help.medium.com/hc/en-us/articles/115004681607-Create-a-publication)
-
-* Tutorial
-[https://blog.hubspot.com/marketing/how-to-use-medium](https://blog.hubspot.com/marketing/how-to-use-medium)
-
-* Wikipedia
-[hhttps://es.wikipedia.org/wiki/Medium_(servicio)](https://es.wikipedia.org/wiki/Medium_(servicio))
-
-    
-
-
-    
-### Descripción 
->Medium es un servicio de publicación de blogs fundado por los cofundadores de Twitter Evan Williams y Biz Stone en agosto de 2012.1​ La plataforma ha evolucionado hacia un híbrido de contribuciones no profesionales, profesionales y pagadas.
-
-
-### Algunos artículos de Medium sobre Leaflet
-
-[https://medium.com/@Marseltov/how-good-is-leaflet-js-671b1bfe5505](https://medium.com/@Marseltov/how-good-is-leaflet-js-671b1bfe5505)
-
-[https://medium.com/@michaelcoleman19/getting-started-with-leaflet-a0c859a5f80](https://medium.com/@michaelcoleman19/getting-started-with-leaflet-a0c859a5f80)
-
-[https://medium.com/@dominicleung/first-try-with-leaflet-js-908bb04b5d95](https://medium.com/@dominicleung/first-try-with-leaflet-js-908bb04b5d95)
-
-
-!!! note
-    Nos damos de alta com usuarios en Medium
-    [https://medium.com/](https://medium.com/)

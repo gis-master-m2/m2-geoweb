@@ -2,115 +2,150 @@
 <img src="https://c1.staticflickr.com/3/2863/33742461420_90c7cd525f_o.png" width="250"> 
        
 #### Web
-* [https://www.mapbox.com/](https://www.mapbox.com/)
+* [https://www.mapbox.com/](https://www.mapbox.com/){target=_blank}
 
 #### Productos
-* [https://www.mapbox.com/products/](https://www.mapbox.com/products/)
+* [https://www.mapbox.com/products/](https://www.mapbox.com/products/){target=_blank}
 
 #### APIs
-* [https://www.mapbox.com/api-documentation/](https://www.mapbox.com/api-documentation/)
+* [https://www.mapbox.com/api-documentation/](https://www.mapbox.com/api-documentation/){target=_blank}
 
 #### **Página referéncia MapBox GL!!**
-* [https://www.mapbox.com/mapbox-gl-js/api/](https://www.mapbox.com/mapbox-gl-js/api/)
+* [https://www.mapbox.com/mapbox-gl-js/api/](https://www.mapbox.com/mapbox-gl-js/api/){target=_blank}
 
 #### GitHUB
-* [https://github.com/mapbox](https://github.com/mapbox)
+* [https://github.com/mapbox](https://github.com/mapbox){target=_blank}
 
 #### Tutoriales
-* [https://www.mapbox.com/mapbox-gl-js/example/simple-map/](https://www.mapbox.com/mapbox-gl-js/example/simple-map/)
-* [https://www.mapbox.com/help/tutorials/](https://www.mapbox.com/help/tutorials/)
-* [https://www.mapbox.com/help/studio-manual/](https://www.mapbox.com/help/studio-manual/)
-* [https://ovrdc.github.io/gis-tutorials/mapbox/](https://ovrdc.github.io/gis-tutorials/mapbox/)
+* [https://docs.mapbox.com/help/tutorials/?product=Mapbox+GL+JS](https://docs.mapbox.com/help/tutorials/?product=Mapbox+GL+JS){target=_blank}
+* [https://www.mapbox.com/mapbox-gl-js/example/simple-map/](https://www.mapbox.com/mapbox-gl-js/example/simple-map/){target=_blank}
+* [https://www.mapbox.com/help/tutorials/](https://www.mapbox.com/help/tutorials/){target=_blank}
+* [https://www.mapbox.com/help/studio-manual/](https://www.mapbox.com/help/studio-manual/){target=_blank}
+* [https://ovrdc.github.io/gis-tutorials/mapbox/](https://ovrdc.github.io/gis-tutorials/mapbox/){target=_blank}
 
 #### Videos
-* [https://www.youtube.com/watch?v=jrnoFU5Wkdo](https://www.youtube.com/watch?v=jrnoFU5Wkdo)
-* [https://www.youtube.com/watch?v=Zn3Xx-TSrM8](https://www.youtube.com/watch?v=Zn3Xx-TSrM8)
-* [https://www.youtube.com/watch?v=r6Ij_34xTD0](https://www.youtube.com/watch?v=r6Ij_34xTD0)
-* [https://www.youtube.com/watch?v=YhynsA9_fPc](https://www.youtube.com/watch?v=YhynsA9_fPc)
+* [https://www.youtube.com/watch?v=jrnoFU5Wkdo](https://www.youtube.com/watch?v=jrnoFU5Wkdo){target=_blank}
+* [https://www.youtube.com/watch?v=Zn3Xx-TSrM8](https://www.youtube.com/watch?v=Zn3Xx-TSrM8){target=_blank}
+* [https://www.youtube.com/watch?v=r6Ij_34xTD0](https://www.youtube.com/watch?v=r6Ij_34xTD0){target=_blank}
+* [https://www.youtube.com/watch?v=YhynsA9_fPc](https://www.youtube.com/watch?v=YhynsA9_fPc){target=_blank}
 
 
 
 
 ### Descripción 
 
-[Ver presentación](presentacion/vector-tiles.pptx)
-
 > MapxBox es una empresa privada que ofrece una plataforma para la publicacón de mapas. Mapbox destaca por creado de forma abierta
 > MBTiles
 > Vector Tiles
 > MapBox GL
 
-* MapBox Studio es una herramienta para personalizar y publicar estilos de mapa vector
-* Maputnik es un editor libre (no de Mapbox) que también sirve para editar estilos de mapas vector
+* MapBox Studio es un editor web para crear, personalizar y publicar estilos de mapa vector
+* MapBox GL JS es una libreria para programas aplicaciones basadas en MapBox Styles
 
-
-
-
+!!! note "Los colores y aspecto de nuestro mapa deben estar condicionados por aquello que querramos mostrar o para dar contexto a los datos que vamos a añadir"
      
 ###  ¿Cómo empezar?
 
-> Nos damos de alta en [MapBox](https://www.mapbox.com/signup/)
+> Nos creamos usuario en [MapBox.com](https://www.mapbox.com/signup/){target=_blank}
 
-### MapBox Studio
+!!! tip "Cada usuario tiene un **Access Token** necessario para desarrollar y usar aplicaciones de Mapbox"
+    De forma gratuita MapBox nos ofrece hasta 50.000 cargas cada mes
 
-### 1-Creamos nuestor propio estilo
+   ![alt text](img/mapbox-accesstoken.png "mapbox-accesstoken.png") 
 
-* Entramos en MapBox.com  seleccionamos nuestro avatar `Studio` 
+### Empezamos con MapBox Studio
+
+#### Paso 1-Creamos nuestro propio estilo
+
+* Entramos en https://account.mapbox.com/  seleccionamos nuestro avatar (parte superior-derecha) --> `Studio` 
+
+
+![alt text](img/mapbox-avatar.png "mapbox-avatar.png") 
 
 * Dentro de Studio tenemos tres opciones básicas
 
-    * **Styles**: Para crear nuestros estilos pròpios
-    * **Tilesets**: Para subir nuestros datos y convertirlos en Vector Tiles y/o integrarlos con nuestros estilos
-    * **Dataset**: Para subir capas GeoJson que pueden ser convertidas a Tilesets
+| Opciones     | Descripción                         |
+| ----------- | ------------------------------------ |
+| **Styles**     | Para crear nuestros estilos pròpios |
+| **Tilesets**       | Para subir nuestros datos y convertirlos en Vector Tiles y/o integrarlos con nuestros estilos |
+| **Dataset**    | Para subir capas GeoJson que pueden ser convertidas a Tilesets |
+
 
 * Seleccionamos -->`Styles` --> `New style`
 
 ![alt text](img/mapbox1.png "mapbox")
 
-* Seleccionamos un estilo como base y cambiamos colores `Customize`
+* Seleccionamos un estilo como base (Base) y cambiamos variación colores (Galaxy) --> `Customize`
 
 ![alt text](img/mapbox11.png "mapbox")
 
-* Cambiamos nombre del estilo "Bicing"
+* Cambiamos nombre del estilo --Parte superion izquierda- por  "Bicing"
 
 ![alt text](img/mapbox10.png "mapbox")
 
+
+#### Paso 2- Empezamos edición
+
+* Podemos editar a dos niveles
+
+    * Por components: Són agrupaciones de capas por temas, loas cambios afectarán a todas las capas del tema (edición rápida)
+    * Por capas: Editaremos capas de forma individual
+
+* Para editar click encima del nombre del componente y(o layer)
+
+![alt text](img/mapbox-edit.png "mapbox")
+
+ !!! tip "Dedicamos 30 minutos a explorar i editar nuestro estilo"
+
+
+ #### Paso 3- Publicación
+
+![alt text](img/mapbox-edit.png "mapbox")
+
 * Una vez hemos acabado -->`Publish your style` --> `Publish as new`
 
-* Share, develop, and use your style -- Copiamos `Style URL` y `Access token`  
+* Share, develop, and use your style
+
+  * Share style -->`Preview only` --> Pegamos  URL en navegador
+  * Developer resources --> `Style URL` y `Access token`  (copiamos para nuestras aplicaciones con Mapbox GL JS)
 
 ![alt text](img/mapbox12.png "mapbox")
 
 !!! tip "Truco"
     <h5>
-    Si seleccionamos "Third party" tambié podemos exponer el estilo com WMTS (Raster) en Leaflet!!
+    Si seleccionamos "Third party" también podemos consumir el estilo com WMTS (Raster) en Leaflet o QGIS!!
     </h5>
     ![alt text](img/mapbox30.png "mapbox")
 
 
+### Cartogram otra forma divertida de editar un estilo
 
-!!! tip "Nos divertimos con Cartogram!!"
-    [https://apps.mapbox.com/cartogram/](https://apps.mapbox.com/cartogram/)
+* Buscamos y descargamos una foto, logo, etc..
+
+ Nos vamos a  [https://apps.mapbox.com/cartogram/](https://apps.mapbox.com/cartogram/){target=_blank} y creamos otro estilo
 
 
+### Librería Mapbox GL JS
 
-### 2-Visualizar estilo propio con Mapbox Gl JS
-
-MapBox tiene una libreria JavaScript llamada *MapBox GL JS* para visualizar estilos entre otras muchas otras funcionalidades
+MapBox tiene una libreria JavaScript llamada *MapBox GL JS* para poder programas visores y visualizar estilos entre otras muchas otras funcionalidades
 
 **Página referéncia MapBox GL!!**
-* [https://www.mapbox.com/mapbox-gl-js/api/](https://www.mapbox.com/mapbox-gl-js/api/)
+
+* [https://www.mapbox.com/mapbox-gl-js/api/](https://www.mapbox.com/mapbox-gl-js/api/){target=_blank}
+
 
 !!! warning
     <h4>
-    Siempre que utilizemos algún estilo de Mapbox studio o algún servicio de Mapbox deberemos añadir nuestro Access Token
+    Siempre que utilizemos algún estilo de Mapbox studio o algún servicio de Mapbox  deberemos añadir nuestro Access Token
     </h4>
 
+#### 1-Visualizar estilo con Mapbox GL JS
 
+El objeto principal del mapa en Mapbox gl js se llama **mapboxgl.Map**
 
 !!! tip "mapboxgl.Map"
 
-        Es el constructor principal del mapa [https://docs.mapbox.com/mapbox-gl-js/api/#map](https://docs.mapbox.com/mapbox-gl-js/api/#map)
+        Es el constructor principal del mapa [https://docs.mapbox.com/mapbox-gl-js/api/#map](https://docs.mapbox.com/mapbox-gl-js/api/#map){target=_blank}
 
         ```javascript
             var map = new mapboxgl.Map({
@@ -121,16 +156,16 @@ MapBox tiene una libreria JavaScript llamada *MapBox GL JS* para visualizar esti
                 });
         ```
 
-Creamos **mapbox-basico.html**
+#### Paso 1 Abrimos VSCODE y creamos **mapbox-basico.html** dentro de nuestro directorio **geoweb**
 
 ```html
 <html>
 <head>
     <meta charset='utf-8' />
-    <title>Mapbox estilo</title>
+    <title>Mapbox básico</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
     <style>
         body {
             margin: 0;
@@ -151,7 +186,7 @@ Creamos **mapbox-basico.html**
                 'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
             var map = new mapboxgl.Map({
                 container: 'map',
-                style: 'mapbox://styles/gismasterm2/ck4zvjxxs2b8m1cmjumqlru5i',
+                style: 'mapbox://styles/mapbox/outdoors-v11',
                 center: [2.16859, 41.3954],
                 zoom: 13,
                 attributionControl: false
@@ -169,13 +204,66 @@ Creamos **mapbox-basico.html**
 
 ```
 
-Podemos añadir algunos controles
+
+#### Paso 2 Cambiamos el estilo outdoors por nuestro estilo
+
+```html hl_lines="28"
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Mapbox básico</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%
+        }
+    </style>
+    <script>
+        //Añadir vuestor token y vuestro estilo
+        function init() {
+            mapboxgl.accessToken =
+                'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/gismasterm2/ckjmupbtl28od19k9rmflcgxf',
+                center: [2.16859, 41.3954],
+                zoom: 13,
+                attributionControl: false
+            });
+
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="map"></div>
+</body>
+
+</html>  
+
+```
+
+
+
+!!! tip "¿Cómo añadiriamos la opción `hash` al mapa ?"
+
+
+#### Paso 3 - Podemos añadir algunos controles
 
 !!! example "Controles"
     
-    [https://docs.mapbox.com/mapbox-gl-js/api/#user%20interface](https://docs.mapbox.com/mapbox-gl-js/api/#user%20interface)
+    [https://docs.mapbox.com/mapbox-gl-js/api/markers/#navigationcontrol](https://docs.mapbox.com/mapbox-gl-js/api/markers/#navigationcontrol){target=_blank}
 
-    IControl
 
     NavigationControl
 
@@ -197,8 +285,8 @@ Podemos añadir algunos controles
     <meta charset='utf-8' />
     <title>Mapbox estilo</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
     <style>
         body {
             margin: 0;
@@ -214,12 +302,12 @@ Podemos añadir algunos controles
     </style>
     <script>
         //Añadir vuestor token y vuestro estilo
-        function init() {
+        function init(){
             mapboxgl.accessToken =
                 'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
             var map = new mapboxgl.Map({
                 container: 'map',
-                style: 'mapbox://styles/gismasterm2/ck4zvjxxs2b8m1cmjumqlru5i',
+                style: 'mapbox://styles/gismasterm2/ckjmupbtl28od19k9rmflcgxf',
                 center: [2.16859, 41.3954],
                 zoom: 13,
                 attributionControl: false
@@ -239,7 +327,7 @@ Podemos añadir algunos controles
 
 !!! tip "¿Añadimos control GeoLocalización?"
     
-    [https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol](https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
+    [https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol](https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol){target=_blank}
 
     ```javascript
     map.addControl(new mapboxgl.GeolocateControl());
@@ -262,35 +350,36 @@ Podemos añadir algunos controles
 
 !!! tip "¿Añadimos un marker?"
     
-    [https://docs.mapbox.com/mapbox-gl-js/api/#marker](https://docs.mapbox.com/mapbox-gl-js/api/#marker)
+    [https://docs.mapbox.com/mapbox-gl-js/api/markers/#marker](https://docs.mapbox.com/mapbox-gl-js/api/markers/#marker){target=_blank}
     
     ``` javascript
-        var marker = new mapboxgl.Marker()
-            .setLngLat([2.161648, 41.3977])
-            .addTo(map);
+       var marker = new mapboxgl.Marker()
+                .setLngLat([2.161648, 41.3977])
+                .setPopup(new mapboxgl.Popup().setHTML('<h3>Hola</h3>'))
+                .addTo(map);
 
     ```
 
 
-### 3-Añadir una capa nueva propia a un estilo
+### 3- Añadir una capa nueva (tileset) propia a un estilo con MapBox Studio
 
 Nos gustaria que en nuestro estilo estuvieran los carriles bici de Barcelona
 
 
-[https://opendata-ajuntament.barcelona.cat/data/es/dataset/carril-bici](https://opendata-ajuntament.barcelona.cat/data/es/dataset/carril-bici)
+[https://opendata-ajuntament.barcelona.cat/data/es/dataset/carril-bici](https://opendata-ajuntament.barcelona.cat/data/es/dataset/carril-bici){target=_blank}
 
 
 #### Paso 1
 
-* Descargamos en formato **GeoJson** los carriles bicicleta de barcelona en [https://opendata-ajuntament.barcelona.cat/data/es/dataset/carril-bici](https://opendata-ajuntament.barcelona.cat/data/es/dataset/carril-bici)
+* Descargamos el archivo [carril-bici.geojson][datos/carril-bici.geojson]{target=_blank}
   
 
-* Utilizamos QGIS para visualizar
+* Podemos utilizar QGIS o https://geojson.io/ para visualizarlo
 
      
-#### Paso 2 -Añadimos la capa a Mapbox.com 
+#### Paso 2 -Añadimos la capa a Mapbox Stuio
 
-* Entramos en MapBox.com `Studio` --> `Tilesets` -->`New tileset` Arrastramos **CARRIL_BICI.geojson**
+* Entramos en MapBox.com `Studio` --> `Tilesets` -->`New tileset` Arrastramos **carril-bici.geojson**
 
 * Añadimos TileSet a nuestro estilo
 
@@ -303,22 +392,25 @@ Nos gustaria que en nuestro estilo estuvieran los carriles bici de Barcelona
 
 * Publicamos
 
-* Visualizamos mapbox-basico.html  ¿Que ha pasado?
+* Visualizamos **mapbox-basico.html**  ¿Que ha pasado?
 
  
 
 ### 4- Visualizar nuestor propio Tileset como una capa independiente
 
 
+* Nos gustaría añadir también vias ciclables de Barcelona (vias que no son carriles bici pero se puede ir en bicicleta ) [https://opendata-ajuntament.barcelona.cat/data/es/dataset/vies-ciclables](https://opendata-ajuntament.barcelona.cat/data/es/dataset/vies-ciclables){target=_blank}
+
+
 #### Paso 1
 
-* Descargamos las vias ciclables de Barcelona (vias que no son carriles bici pero se puede ir en bicicleta ) [https://opendata-ajuntament.barcelona.cat/data/es/dataset/bicing](https://opendata-ajuntament.barcelona.cat/data/es/dataset/bicing)
-
-* En formato GeoJson **VIES_CICLABLES.geojson**
+* Descargamos el archivo [vias_ciclables.geojson][datos/vias_ciclables.geojson]{target=_blank}
+  
+* Podemos utilizar QGIS o https://geojson.io/ para visualizarlo
 
 #### Paso 2
 
-* Entramos en MapBox.com `Studio` --> `Tilesets` -->`New tileset` Arrastramos **VIES_CICLABLES.geojson**
+* Entramos en MapBox.com `Studio` --> `Tilesets` -->`New tileset` Arrastramos **vias_ciclables.geojson**
 
 *Copiamos ID y nombre de la capa
 
@@ -332,8 +424,8 @@ Editamos **mapbox-basico.html** y añadimos
     <meta charset='utf-8' />
     <title>Mapbox estilo</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
     <style>
         body {
             margin: 0;
@@ -354,7 +446,7 @@ Editamos **mapbox-basico.html** y añadimos
                 'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
             var map = new mapboxgl.Map({
                 container: 'map',
-                style: 'mapbox://styles/gismasterm2/ck4zvjxxs2b8m1cmjumqlru5i',
+                style: 'mapbox://styles/gismasterm2/ckjmupbtl28od19k9rmflcgxf',
                 center: [2.16859, 41.3954],
                 zoom: 13,
                 attributionControl: false
@@ -373,7 +465,7 @@ Editamos **mapbox-basico.html** y añadimos
                     id: "viasciclables",
                     type: "line",
                     source: "viasciclables_source",
-                    'source-layer': "VIES_CICLABLES-2smuz5", //poner vuestro titulo capa
+                    'source-layer': "vias_ciclables-2smuz5", //poner vuestro titulo capa
                     paint:{
                         'line-color':"#00ff00",
                         "line-width":3
@@ -394,26 +486,23 @@ Editamos **mapbox-basico.html** y añadimos
 
 ``` 
 
-!!! note "Probamos cambiar estilo de las vias ciclables"
-   
-    [https://docs.mapbox.com/mapbox-gl-js/style-spec/#layers-line](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layers-line)
 
-
-Añadimos un Popup al evento click
 
 !!! tip "Eventos del mapa"
     
-    [https://docs.mapbox.com/mapbox-gl-js/api/#map.event:click](https://docs.mapbox.com/mapbox-gl-js/api/#map.event:click)
+    [https://docs.mapbox.com/mapbox-gl-js/api/#map.event:click](https://docs.mapbox.com/mapbox-gl-js/api/#map.event:click){target=_blank}
     
-  
-```html hl_lines="56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77"
+
+ !!! success "Añadimos un Popup al evento click"
+
+```html hl_lines="55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76"
 <html>
 <head>
     <meta charset='utf-8' />
     <title>Mapbox estilo</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
     <style>
         body {
             margin: 0;
@@ -430,11 +519,10 @@ Añadimos un Popup al evento click
     <script>
         //Añadir vuestor token y vuestro estilo
         function init() {
-            mapboxgl.accessToken =
-                'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
+            mapboxgl.accessToken ='pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
             var map = new mapboxgl.Map({
                 container: 'map',
-                style: 'mapbox://styles/gismasterm2/ck4zvjxxs2b8m1cmjumqlru5i',
+                style: 'mapbox://styles/gismasterm2/ckjmupbtl28od19k9rmflcgxf',
                 center: [2.16859, 41.3954],
                 zoom: 13,
                 attributionControl: false
@@ -510,39 +598,6 @@ Añadimos un Popup al evento click
 
 	```   
 
-!!! warning
-    ### Práctica Cementrio. **Puntuable!!**
-    <h4>
-    * Creamos nuevo estilo en Mapbox.com
-
-    * Cargamos capas [datos/constru_cementerio.geojson](datos/constru_cementerio.geojson) y [datos/cementerio.geojson](datos/cementerio.geojson)
-
-    * Añadimos como tileset en MapxBox
-
-    * Integramos el tileset dentro nuestro estilo creado 
-         `Studio` --> `Styles` -->`Mi estilo` --> `Layers` --> `Add Layer` -->`Mi tileset`
-
-    * Editamos estilo capas  publicamos
-
-    * Creamos visor ejemplo **mapbox-cementerio.html**
-
-    * Subimos ejemplo al GitHUB
-
-!!! tip "Truco"
-   
-    Las capa de poligonos puedes ser añadidas a un estilo como tipo "Fill extrusion" y ser representados en 2.5D.
-    
-    </h4>
-
-
-### Preparamos datos
-
-   * La carga de datos dentro de Mapbox puede ser lenta sobretodo si tenemos algún dataset pesado
-   * Vamos cargar todas las construcciones de Barcelona que ofrece la Direccion General de Catastro [http://www.catastro.minhap.es/webinspire/index.html](http://www.catastro.minhap.es/webinspire/index.html) 
-   * Descargamos datos [http://www.catastro.minhap.es/INSPIRE/Buildings/08/08900-BARCELONA/A.ES.SDGC.BU.08900.zip](http://www.catastro.minhap.es/INSPIRE/Buildings/08/08900-BARCELONA/A.ES.SDGC.BU.08900.zip)
-   * Convertimos el archivo **A.ES.SDGC.BU.08900.buildingpart.gml** a  GeoJSON  "contrucciones.geojson" con QGIS
-   * Lo cargamos como Tileset dentro de MapBox.com
-
 
 
 ### Ejemplo Extra: Visualizar estilo Mapbox en Leaflet
@@ -557,8 +612,8 @@ Añadimos un Popup al evento click
     <meta name="author" content="autor" />
     <meta name="description" content="descripción página">
     <meta name="robots" content="index,follow">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <style>
         body {
             margin: 0;

@@ -7,6 +7,8 @@ theme:
   language: 'es'
   highlightjs: true
   suppress_nextprev: true
+  features:
+    - navigation.expand
 extra_css:
   - 'stylesheets/extra.css'
 markdown_extensions:
@@ -16,23 +18,39 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.superfences
   - footnotes
+  - attr_list
 repo_url: "https://github.com/gis-master-m2/m2-geoweb"
 
 nav:
 - Inicio: index.md
-- 1. Introducción a la GeoWeb,Herramientas, Servicios y Conceptos: introduccion_a_las_tecnologias_geoweb.md
-- 2. Plataformas GitHub y Medium.Lenguaje Git.: taller_github.md
-- 3. Introducción a Leaflet: introduccion_a_leaflet.md
-- 4. Plugins Leaflet: plugins_leaflet.md
-- 5. Mapas personalizados con MapBox Studio y MapBox GL JS: introduccion_a_mapbox.md
-- 6. Mapas personalizados con Maputnik y MapBox GL JS: introduccion_maputnik.md
-- 7. MapBox GL JS avanzado: mapbox_avanzado.md
-- 8. Visualización y publicación con Kepler GL: visualizacion_con_kepler_gl.md
-- 9. Introducción a Cesium: introduccion_a_cesium.md
-- 10. Mallas discretas y algoritmos en JS: mallas_discretas_algoritmos.md
-#- 11. Visualización y publicación con Kepler GL: visualizacion_con_kepler_gl.md
-#- 6. Introducción a Cesium: introduccion_a_cesium.md
-- 11. Recursos OpenData: recursos_open_data.md
+- 'Sesión 1':
+  - 1. Introducción a la GeoWeb: introduccion_a_las_tecnologias_geoweb.md
+  - 2. La Plataforma GitHub y órdenes básicas Git.: introduccion_github.md
+  - 3. Mi primer proyecto en GitHub: taller_github.md
+- 'Sesión 2*':  
+  - 4. Introduccion a Leaflet: introduccion_a_leaflet.md
+  - 5. Plugins Leaflet: plugins_leaflet.md
+  - 6. Buscador de Farmacias con Leaflet: farmacias_leaflet.md
+- 'Sesión 3':  
+  - 7. Introducción a Vector-Tiles y Mapbox Styles: introduccion_a_vector_tiles.md
+  - 8. MapBox Studio y MapBox GL JS  : introduccion_a_mapbox.md
+  - 9. Práctica Cementerio: practica_cementerio.md
+  - 10. Visor edificios Catastro: visor_catastro.md
+- 'Sesión 4':
+  - 11. Introducción Mapas 3D: introduccion_mapas_3d.md
+  - 12. Visor de rutas: visor_rutas.md
+- 'Sesión 5*':
+  - 13. StoryTelling: storytelling.md
+- 'Sesión 6':
+  - 14. Mapas personalizados con Maputnik y MapBox GL JS: introduccion_maputnik.md
+  - 15. MapBox GL JS avanzado: mapbox_avanzado.md
+  - 16. Visor de terremotos: visor_terremotos.md
+- 'Sesión 7*':
+  - 17. Mallas discretas y algoritmos en JS: mallas_discretas_algoritmos.md
+  - 18. Visualización y publicación con Kepler GL: visualizacion_con_kepler_gl.md
+- 'Sesión 8':
+  - 19. Recursos OpenData: recursos_open_data.md
+  - 20. Taller de Medium: taller_medium.md
 - Preguntas Frecuentes: faq.md
 
 

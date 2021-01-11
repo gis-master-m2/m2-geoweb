@@ -1,5 +1,18 @@
 ![alt text](img/kepler-logo.png "Kepler GL")
-       
+
+### Descripción 
+
+>Kepler.gl es una aplicación desarrollada por Uber, en un principio para uso interno, para analizar y visualizar sus propios datos.
+
+>Esta basada en WebGL y pensada para  la exploración visual de conjuntos de datos de geolocalizaciós a gran escala. 
+
+>Kepler.gl está construido en la parte superior de Deck.gl, la libreria de visualización también desarrollada por Uber.
+
+>kepler.gl puede representar millones de puntos que representan miles de viajes y realizar agregaciones espaciales, bsadas por ejemplo en hexágonos.
+
+>También es possible desarrollar sobre Kepler.gl ya que existe una API basada en el framework de JavaScript React + Redux
+
+
 #### Web
 * [https://kepler.gl/](https://kepler.gl/)
 
@@ -7,8 +20,8 @@
 * [https://kepler.gl/demo](https://kepler.gl/demo)
 
 
-#### **Página referéncia Kepler GL**
-* [https://github.com/keplergl/kepler.gl/blob/master/docs/user-guides/a-introduction.md](https://github.com/keplergl/kepler.gl/blob/master/docs/user-guides/a-introduction.md)
+#### **Página referéncia Kepler GL**(React JS + Redux)
+* [https://github.com/keplergl/kepler.gl/blob/master/docs/api-reference/README.md](https://github.com/keplergl/kepler.gl/blob/master/docs/api-reference/README.md)
 
 #### GitHUB
 * [https://github.com/keplergl](https://github.com/keplergl)
@@ -25,41 +38,39 @@
 
 
 
-### Descripción 
 
-Kepler.gl es una aplicación desrrollada por Uber, en un principio para uso interno, para analizar y visualizar sus propios datos.
-
-Esta basada en WebGL pensada para  la exploración visual de conjuntos de datos de geolocalización a gran escala. Construido en la parte superior de deck.gl, kepler.gl puede representar millones de puntos que representan miles de viajes y realizar agregaciones espaciales sobre la marcha.
 
 ![alt text](img/kepler.png "Kepler GL")
 
 
 ### Ejercicio de visualización con Kepler.gl
 
-!!! tip "Queremos analizar los accidentes de coche en la ciudad de Barcelona"
+* Queremos analizar los accidentes de coche en la ciudad de Barcelona en el año 2019
 
-    Hemos visto este post en Medium, sobre accidentes de Barcelona [https://towardsdatascience.com/analysis-of-car-accidents-in-barcelona-using-pandas-matplotlib-and-folium-73384240106b](https://towardsdatascience.com/analysis-of-car-accidents-in-barcelona-using-pandas-matplotlib-and-folium-73384240106b)
-    
+!!! note "Para más detalle ver Videos 11 y 12"
+
 ### Preparación datos
 
-* Origen dataset CSV de [Personas involucradas en accidentes gestionados por la Guardia Urbana en la ciudad de Barcelona](https://opendata-ajuntament.barcelona.cat/data/es/dataset/accidents-persones-gu-bcn)
+* Origen dataset CSV de [Personas involucradas en accidentes gestionados por la Guardia Urbana en la ciudad de Barcelona](https://opendata-ajuntament.barcelona.cat/data/es/dataset/accidents-tipus-gu-bcn) de OpenData BCN
 
-* Descargamos [2018_accidents_tipus_gu_bcn_.csv](datos/2018_accidents_tipus_gu_bcn_TIME.csv)
+* Este dataset contiene los accidentes, con coordenadas, de la ciudad de  Barcelona en el año 2019. 
 
-* En este archivo se han concatenado las fechas para añadir un nuevo campo tipo timestamp
+* Las fechas de los accidentes estan separadas por Año,  Mes, Dias y Horas en diferentes campos.Cómo Keplerg trabaja muy bien con fechas tipo TIMESTAMP, hemos decidido añadir un nuevo campo, llamado **timestamp**, dónde hemos concatenado los campos de Año, Mes, Día y Hora
 
 !!! Truco "Con LibreOffice seria"
     ```
-    =CONCATENATE(L2;"-";M2;"-";O2;"T";Q2;":00")
+    =CONCATENATE(L2;"-";M2;"-";O2;"T";P2;":00")
     ```
+
+* Descargamos el archivo editado [2019_accidents_tipus_gu_bcn_.csv](datos/2019_accidents_tipus_gu_bcn_TIME.csv)
 
 
 
 #### Paso1 : Añadir datos el mapa
 
-* Vamos a http://kepler.gl/#/demo 
+* Vamos a [https://kepler.gl/demo](https://kepler.gl/demo) 
 
-* Cargamos **2018_accidents_tipus_gu_bcn_TIME.csv**
+* Cargamos **2019_accidents_tipus_gu_bcn_TIME.csv**
 
 >  `Añadimos csv`
 
@@ -72,60 +83,100 @@ Esta basada en WebGL pensada para  la exploración visual de conjuntos de datos 
 
 `Base map` -->`add Map Style` --> `Paste style url` 
 
+* Podemos añadir un estilo de https://openicgc.github.io/ (Apartado:"Estils àmbit mundial per Vector Tiles")
+* Podemos añadir estilo propio de Mapbox + nuestro AccessToken
+
+   
 
 #### Paso2 : Añadir capas
 
+!!! note "Para más detalle ver Video 11"
+
 * Añadimos tres capas de tipo **Punto**,**Hexbin**, **HeatMap**
 
-* Ejemplo para HexBin
+* Ejemplo para Puntos -nombre capa "Accidentes"-
 
-    > `Add Layer: Type Hexbin`
-
-    > `Columns: Latitud Longuitud`
-
-    > `Color: Scale Quantize`
-
-    > `Hexagon radius 0.1`
-
-    > `Coverage 0.75`
-
-![alt text](img/step2-kepler.png "add dataset")
+![alt text](img/keplergl-puntos.png "puntos")
 
 
-* Visualizamos su capacidades y realizamos temàticos
+* Ejemplo para HexBin -nombre capa "Agrupación"-
 
-#### Paso1 : Añadir filtros
+![alt text](img/keplergl-hexbin.png "hexbin")
+
+* Ejemplo para HeatMap -nombre capa "Concentración"-
+
+![alt text](img/keplergl-heatmap.png "heatmap")
+
+
+* Dejamos solo visible capa "Agrupación" y utilizamos botón 3D para dar prespectiva al mapa 
+
+![alt text](img/step2-kepler.png "agrupacion")
+
+
+
+#### Paso3 : Añadir filtros
 
 * Permite filtrar los datos de todas las capa asociadas a un dataset
 
-![alt text](img/kepler3.png "add dataset")
+![alt text](img/kepler3.png "filtros")
 
-* Por dia de la semana
-* Por el campo **Time**
+* Por ejemplo por:
+
+    ** Por dia de la semana --> Campo "Dia_semana"
+    ** Por hora del dia  --> Campo "Hora_dia"
+    ** Por barra temporal  --> Campo "timestamp"
 
 
-#### Paso1 : Definir "tooltips"
+#### Paso4 : Definir "tooltips"
 
 ![alt text](img/kepler4.png "add dataset")
-#### Paso1 : Guardar y exporta a HTML
 
-![alt text](img/kepler5.png "add dataset")
+#### Paso5 : Guardar y exporta a HTML
+
+
 ![alt text](img/kepler6.png "add dataset")
-![alt text](img/kepler7.png "add dataset")
-* Exportamos nuestro mapa a formato HTML **accidentes.html** dentro de nuestro proyecto /geoweb
-#### Paso1 : Subir al GIT
 
-!!! success "¿Subimos el ejemplo al GitHub?"
+
+* Seleccionaremos 
+
+    * Map Format --> HTML
+
+    * Mapbox access token --> Pegaremos nuestro access token
+
+    * Map Mode --> Allow users to edit the map
+
+
+![alt text](img/kepler7.png "add dataset")
+
+* Guardaremos el archivo cómo **accidentes.html** dentro de nuestro proyecto **geoweb**
+
+
+!!! tip "Podemos también guardar en formato JSON, cómo si fuera un archivo de proyecto que podremos volver a cargar como "dataset" en https://kepler.gl/demo. Aquí teneis el mapa creado [accidentes.json](datos/accidentes.json)"
+
+#### Paso 6 : Subir a GitHub
+
+!!! success "Subimos el ejemplo y editamos **index.html** a GitHub"
 	
 	```bash
 
 		git pull
         git add .
-        git commit -m "Mapa Kepler"
-        git push
+        git commit -m "Mapa KeplerGl"
+        git push origin main
 
 	```    
 
-!!! success "Mirámos Medium"
-	
-    https://medium.com/
+
+#### Práctica no puntuable
+
+!!! success "Comparar accidentes años 2018-2019"
+
+    * Tenemos también los accidentes del **2018** [2018_accidents_tipus_gu_bcn_.csv](datos/2018_accidents_tipus_gu_bcn_TIME.csv)
+    * Podrias añadir este dataset a nuestro mapa y crear sus correspondientes capas para 2018
+    * Después puedes activar la vista Dual y comparar años
+    * Vuelve a exportar el mapa como **"accidentes-comparador.html"** y súbelo al GitHub
+
+    ![alt text](img/keplergl-dual.png "dual")
+
+   
+

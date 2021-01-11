@@ -1,14 +1,14 @@
-### Introducción a Vector Tiles y Mapbox (I)
+### Introducción a Vector Tiles
 
 Vector Tiles es un formato para almacenar datos geográficos en formato binario (Google Protobuf) y pensados para la visualización en navegadores web modernos que soporten webGL.
 
 Una tesela vectorial (vector tiles) contiene datos vectoriales georreferenciados (puede contener múltiples capas), recortados en teselas para facilitar su recuperación. Son equivalentes a las teselas raster tradicionales (XYZ,WMTS, TMS) pero retornan datos vectoriales en lugar de una imagen.
 
- Cada conjunto de teselas vectoriales tiene su propio esquema. Un esquema consiste en nombres de capas, atributos, selección de elementos.
+Cada conjunto de teselas vectoriales tiene su propio esquema. Un esquema consiste en nombres de capas, atributos, selección de elementos.
 
 #### Contexto
 
- En 2005 GoogleMaps introdujo una "nueva" forma de mostrar datos geográficos por la web, pregenerando el mapa por niveles de zoom y tiles (teselas) de 256x256 pixeles.
+ En 2005 Google Maps introdujo una "nueva" forma de mostrar datos geográficos por la web, pregenerando el mapa por niveles de zoom y tiles (teselas) de 256x256 pixeles.
 
 También creó una nueva proyección basada en mercator, llamada pseude-mercator o [web mercator](https://en.wikipedia.org/wiki/Web_Mercator_projection), cuyo código EPSG es 3857
 
@@ -16,7 +16,7 @@ También creó una nueva proyección basada en mercator, llamada pseude-mercator
 ![alt text](img/tile_pyramid_1.png "Pirámides")
 ![alt text](img/zoom.png "Zoom")
 
- Después de GoogleMaps, otros proveedores o plataformas cómo OpenStreetMap siguen esta misma forma de organizar la geoinformación.
+ Después de Google Maps, otros proveedores o plataformas cómo OpenStreetMap siguen esta misma forma de organizar la geoinformación.
 
 #### HTTP
 
@@ -55,19 +55,35 @@ Existen tres especificaciones para servir tiles
 
 #### Caracteristicas
 
-Las teselas vectoriales han sido utilizadas por el cliente Android de Google Maps desde diciembre de 2010 y en el cliente de escritorio desde 2013. Las teselas vectoriales para renderizar los datos de OpenStreetMap se propusieron por primera vez en marzo de 2013 y están soportadas por Mapnik, el renderizador de datos de OpenStreetMap más utilizado. 
-Mapbox, proveedor comercial de herramientas de cartografía personalizada y de hosting, es el máxini impulsor de esta tecnologia y ha centrado su herramienta de cartografía, Mapbox Studio, en torno a las teselas vectoriales.
+Las teselas vectoriales han sido utilizadas por el cliente Android de Google Maps desde diciembre de 2010 y en el cliente de escritorio desde 2013. 
+Las teselas vectoriales para renderizar los datos de OpenStreetMap se propusieron por primera vez en marzo de 2013 y están soportadas por Mapnik, el renderizador de datos de OpenStreetMap más utilizado. 
+Mapbox, proveedor comercial de herramientas de cartografía personalizada y de hosting, es el máximo impulsor de esta tecnologia y ha centrado su herramienta de cartografía, **Mapbox Studio**, en torno a las teselas vectoriales.
 
 
  * Cada tile es un contenedor de datos vectores y atributos
- * Los Tiles no tienen estilo, el estilo se aplica en cliente
+ * Los Tiles **no tienen estilo**, el estilo se aplica en cliente
  * Soporta rotación y orientación
  * Soporta extrusión y 3D
+ * Normalment los vectores encapsulan en archivos con formato MBTILES (basado en SQLITE)
 
 
+### Mapbox Style Specification
+
+Es especificación abierta  desarrollada por Mapbox, (**Mapbox Style Specification**)[https://docs.mapbox.com/mapbox-gl-js/style-spec/] para aplicar estilos (pintar) a los vector-tiles.
+
+![alt text](img/mapbox-style.png "Mapbox Style")
+
+La codificación de los estilos se entructura en el formato JSON mediante la sintáxis definida por la especificación y cómo veremos, esta   va más allá de aplicar colores simples a los vectores.
+
+Los filtros y expresiones permitn realizar tematización casi en tiempo real en los navegadores web.
 
 
-### Herramientas y recursos
+La especificación se ha convertido en un estandard "de facto" y ha sido adoptado por otras empresas cómo ESRI o OpenMapTiles
+
+[Ver presentación MapBox Styles (pptx)](presentacion/vector-tiles.pptx)
+[Ver presentación MapBox Styles (pdf)](presentacion/vector-tiles.pdf)
+
+### Anexo: Herramientas y recursos para Vector-Tiles
 
 Fuente:
 [https://github.com/mapbox/awesome-vector-tiles](https://github.com/mapbox/awesome-vector-tiles)
