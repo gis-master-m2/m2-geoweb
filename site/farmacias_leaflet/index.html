@@ -406,8 +406,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-6buscar-farmacias" class="md-nav__link">
-    Paso 6:Buscar Farmacias
+  <a href="#paso-6anadir-opcion-para-buscar-farmacias" class="md-nav__link">
+    Paso 6:Añadir opción para buscar Farmacias
   </a>
   
 </li>
@@ -425,16 +425,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practica-libre-no-puntuable-para-cargar-geojsons-con-plugin-geojson-ajax" class="md-nav__link">
-    Práctica libre no puntuable para cargar GeoJSONs con plugin GeoJSON AJAX
+  <a href="#anexos" class="md-nav__link">
+    Anexos
+  </a>
+  
+    <nav class="md-nav" aria-label="Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-geojsons-con-plugin-geojson-ajax" class="md-nav__link">
+    Ejemplos de GeoJSONs con plugin GeoJSON AJAX
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#plugin-geosearch-ejemplo-extra-buscador-de-callejero" class="md-nav__link">
-    Plugin Geosearch: Ejemplo extra  buscador de Callejero
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -885,8 +891,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-6buscar-farmacias" class="md-nav__link">
-    Paso 6:Buscar Farmacias
+  <a href="#paso-6anadir-opcion-para-buscar-farmacias" class="md-nav__link">
+    Paso 6:Añadir opción para buscar Farmacias
   </a>
   
 </li>
@@ -904,16 +910,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practica-libre-no-puntuable-para-cargar-geojsons-con-plugin-geojson-ajax" class="md-nav__link">
-    Práctica libre no puntuable para cargar GeoJSONs con plugin GeoJSON AJAX
+  <a href="#anexos" class="md-nav__link">
+    Anexos
+  </a>
+  
+    <nav class="md-nav" aria-label="Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-geojsons-con-plugin-geojson-ajax" class="md-nav__link">
+    Ejemplos de GeoJSONs con plugin GeoJSON AJAX
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#plugin-geosearch-ejemplo-extra-buscador-de-callejero" class="md-nav__link">
-    Plugin Geosearch: Ejemplo extra  buscador de Callejero
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -944,15 +956,21 @@
 <ul>
 <li>Los datos de farmacias son del web de Datos Abiertos de Barcelona</li>
 </ul>
-<p><a href="https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies">https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies</a></p>
+<p><a href="https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies" target="_blank">https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies</a> </p>
 <ul>
-<li>Existe un plugin de Leaflet llamado <strong>Leaflet-ajax</strong> que permite cargar capas GeoJSON ya sea en local o en remoto</li>
-</ul>
-<p>Leaflet-ajax <a href="https://github.com/calvinmetcalf/leaflet-ajax">https://github.com/calvinmetcalf/leaflet-ajax</a> </p>
+<li>
+<p>Existe un plugin de Leaflet llamado <strong>Leaflet-ajax</strong> que permite cargar capas GeoJSON ya sea en local o en remoto</p>
 <ul>
-<li>Existe un plugin de Leaflet llamado <strong>Leaflet-search</strong> que permite buscar dentro de atributos de un GeoJSON</li>
+<li>Leaflet-ajax <a href="https://github.com/calvinmetcalf/leaflet-ajax" target="_blank">https://github.com/calvinmetcalf/leaflet-ajax</a>  </li>
 </ul>
-<p>Leaflet-Search <a href="https://github.com/stefanocudini/leaflet-search">https://github.com/stefanocudini/leaflet-search</a> </p>
+</li>
+<li>
+<p>Existe un plugin de Leaflet llamado <strong>Leaflet-search</strong> que permite buscar dentro de atributos de un GeoJSON</p>
+<ul>
+<li>Leaflet-Search <a href="https://github.com/stefanocudini/leaflet-search" target="_blank">https://github.com/stefanocudini/leaflet-search</a>  </li>
+</ul>
+</li>
+</ul>
 </h3>
 </div>
 <h3 id="ejemplo-buscador-de-farmacias">Ejemplo buscador de Farmacias</h3>
@@ -962,8 +980,8 @@
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Convertir a GeoJson</p>
-<p>El archivo de faramacias lo hemos descargado del portal <a href="https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies">https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies</a>.
-Para ver cómo transformar y reproyectar un archivo CSV a GeoJson con Qgis mira el <strong>video 7</strong></p>
+<p>El archivo de farmacias lo hemos descargado del portal <a href="https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies" target="_blank">https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies</a> en formato CSV y lo hemos transformado a GeoJSON</p>
+<p>Para ver cómo transformar y reproyectar un archivo CSV a GeoJson con Qgis mira el <strong>video 7</strong></p>
 </div>
 <h4 id="paso-2-crear-archivo-farmaciashtml">Paso 2: Crear archivo farmacias.html</h4>
 <ul>
@@ -1004,7 +1022,7 @@ Para ver cómo transformar y reproyectar un archivo CSV a GeoJson con Qgis mira 
 </ul>
 <blockquote>
 <p>Podemos descargar plugins del directorio <strong>/dist</strong> y guardarlos en nuestros directorios <strong>/js</strong> o <strong>/css</strong></p>
-<p>También podemos utilizar la URL directamente (nuestro caso)</p>
+<p>También podemos utilizar la URL directamente (<strong>nuestro caso</strong>)</p>
 </blockquote>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -1069,7 +1087,7 @@ Para ver cómo transformar y reproyectar un archivo CSV a GeoJson con Qgis mira 
         <span class="nx">map</span><span class="p">.</span><span class="nx">setView</span><span class="p">([</span><span class="mf">41.399733</span><span class="p">,</span><span class="mf">2.168598</span><span class="p">],</span><span class="mf">13</span><span class="p">);</span>
         <span class="c1">// controlCapas.addOverlay(layerFarmacias,&quot;Farmacias&quot;);</span>
 
-<span class="p">}</span>
+<span class="p">}</span><span class="c1">//fin funcion</span>
 </code></pre></div>
 <h4 id="paso-5">Paso 5:</h4>
 <ul>
@@ -1108,9 +1126,10 @@ Para ver cómo transformar y reproyectar un archivo CSV a GeoJson con Qgis mira 
     <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <ul>
-<li>Miramos que funcione</li>
+<li>Visualizamos mapa
+<img alt="alt text" src="../img/leaflet-farmacias0.png" title="leaflet-farmacias0.png" /></li>
 </ul>
-<h4 id="paso-6buscar-farmacias">Paso 6:Buscar Farmacias</h4>
+<h4 id="paso-6anadir-opcion-para-buscar-farmacias">Paso 6:Añadir opción para buscar Farmacias</h4>
 <ul>
 <li>Miramos documentación Leaflet-Search plugin <a href="https://github.com/stefanocudini/leaflet-search">https://github.com/stefanocudini/leaflet-search</a></li>
 <li>Añadimos URL plugin</li>
@@ -1195,7 +1214,7 @@ Para ver cómo transformar y reproyectar un archivo CSV a GeoJson con Qgis mira 
 </span><span class="hll">        <span class="p">});</span>
 </span><span class="hll">        <span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="nx">searchControl</span><span class="p">);</span>
 </span>
-<span class="p">}</span>
+<span class="p">}</span> <span class="c1">//fin funcion</span>
 </code></pre></div>
 <ul>
 <li>Probamos visor y buscamos farmácias</li>
@@ -1205,7 +1224,7 @@ Para ver cómo transformar y reproyectar un archivo CSV a GeoJson con Qgis mira 
 <p>Este es uno de lo plugins más utilizados en Lealfte</p>
 <ul>
 <li>
-<p>Miramos documentación <a href="https://github.com/Leaflet/Leaflet.markercluster">https://github.com/Leaflet/Leaflet.markercluster</a></p>
+<p>Miramos documentación <a href="https://github.com/Leaflet/Leaflet.markercluster" target="_blank">https://github.com/Leaflet/Leaflet.markercluster</a></p>
 </li>
 <li>
 <p>Añadimos URL plugin</p>
@@ -1302,7 +1321,7 @@ Para ver cómo transformar y reproyectar un archivo CSV a GeoJson con Qgis mira 
         <span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="nx">searchControl</span><span class="p">);</span>
 
 
-<span class="p">}</span>
+<span class="p">}</span> <span class="c1">//fin funcion</span>
 </code></pre></div>
 <ul>
 <li>Probamos visualización
@@ -1318,14 +1337,14 @@ Para ver cómo transformar y reproyectar un archivo CSV a GeoJson con Qgis mira 
 </code></pre></div>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">Descargar ejemplos sesion 2</p>
-<p><a href="../ejemplos/ejemplos-sesion2.zip">ejemplos-sesion2.zip</a></p>
+<p class="admonition-title">Soluciones sesion 2</p>
+<p>Visualizar <a href="https://gis-master-m2.github.io/geoweb/" target="_blank">https://gis-master-m2.github.io/geoweb/</a></p>
+<p>Descargar <a href="https://github.com/gis-master-m2/geoweb/archive/main.zip" target="_blank">https://github.com/gis-master-m2/geoweb/archive/main.zip</a></p>
 </div>
-<h3 id="practica-libre-no-puntuable-para-cargar-geojsons-con-plugin-geojson-ajax">Práctica libre no puntuable para cargar GeoJSONs con plugin GeoJSON AJAX</h3>
+<h3 id="anexos">Anexos</h3>
+<h4 id="ejemplos-de-geojsons-con-plugin-geojson-ajax">Ejemplos de GeoJSONs con plugin GeoJSON AJAX</h4>
 <blockquote>
-<p>Abre <strong>mapabase.html</strong> --&gt; guardar cómo <strong>mapatest.html</strong></p>
-<p>Añade el plugin de GeoJSON AJAX</p>
-<p>Prueba las diferentes formas de trabajar con GeoJSONs y añádelas como <strong>overlayMaps</strong> en el control de capas</p>
+<p>diferentes formas de trabajar con GeoJSONs y el plugin de GeoJSON.AJAX</p>
 </blockquote>
 <div class="admonition example">
 <p class="admonition-title">GeoJson por defecto</p>
@@ -1441,44 +1460,6 @@ Para ver cómo transformar y reproyectar un archivo CSV a GeoJson con Qgis mira 
     <span class="p">}).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
 </code></pre></div>
 </div>
-<h3 id="plugin-geosearch-ejemplo-extra-buscador-de-callejero">Plugin Geosearch: Ejemplo extra  buscador de Callejero</h3>
-<blockquote>
-<p>Plugin que permite connectar con servicios de Geocodificación
- *  Plugin <a href="GeoSearch">https://github.com/MuellerMatthew/L.GeoSearch</a> </p>
-</blockquote>
-<div class="highlight"><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Callejero<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;autor&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;descripción página&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index,follow&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet-geosearch@2.7.0/assets/css/leaflet.css&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet-geosearch@2.7.0/dist/bundle.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;css/estilobase.css&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/mapabase.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-        <span class="kd">function</span> <span class="nx">initMapaCalles</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">init</span><span class="p">();</span>
-            <span class="k">new</span> <span class="nx">GeoSearch</span><span class="p">.</span><span class="nx">GeoSearchControl</span><span class="p">({</span>
-                <span class="c1">//  provider: new  GeoSearch.OpenStreetMapProvider()</span>
-                <span class="nx">provider</span><span class="o">:</span> <span class="k">new</span> <span class="nx">GeoSearch</span><span class="p">.</span><span class="nx">EsriProvider</span><span class="p">()</span>
-            <span class="p">}).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
-        <span class="p">}</span>         
-    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onLoad</span><span class="o">=</span><span class="s">&quot;initMapaCalles()&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>
                 
               
               

@@ -12,16 +12,16 @@
 
     * Los datos de farmacias son del web de Datos Abiertos de Barcelona
 
-    [https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies](https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies)
+    [https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies](https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies){target=_blank} 
 
     * Existe un plugin de Leaflet llamado **Leaflet-ajax** que permite cargar capas GeoJSON ya sea en local o en remoto
 
-    Leaflet-ajax [https://github.com/calvinmetcalf/leaflet-ajax](https://github.com/calvinmetcalf/leaflet-ajax) 
+        * Leaflet-ajax [https://github.com/calvinmetcalf/leaflet-ajax](https://github.com/calvinmetcalf/leaflet-ajax){target=_blank}  
 
 
     * Existe un plugin de Leaflet llamado **Leaflet-search** que permite buscar dentro de atributos de un GeoJSON
 
-    Leaflet-Search [https://github.com/stefanocudini/leaflet-search](https://github.com/stefanocudini/leaflet-search) 
+        * Leaflet-Search [https://github.com/stefanocudini/leaflet-search](https://github.com/stefanocudini/leaflet-search){target=_blank}  
 
     </h3>
 
@@ -32,7 +32,9 @@
  *  Visualizamos con QGIS para ver cómo es, el archivo de **/geoweb/datos/farmacias.geojson**
 
 !!! tip "Convertir a GeoJson"
-    El archivo de faramacias lo hemos descargado del portal [https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies](https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies).
+
+    El archivo de farmacias lo hemos descargado del portal [https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies](https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies){target=_blank} en formato CSV y lo hemos transformado a GeoJSON
+
     Para ver cómo transformar y reproyectar un archivo CSV a GeoJson con Qgis mira el **video 7**
  
 #### Paso 2: Crear archivo farmacias.html
@@ -76,7 +78,7 @@
 
    >Podemos descargar plugins del directorio **/dist** y guardarlos en nuestros directorios **/js** o **/css**
 
-   >También podemos utilizar la URL directamente (nuestro caso)
+   >También podemos utilizar la URL directamente (**nuestro caso**)
 
 ``` html hl_lines="12"
 
@@ -147,7 +149,7 @@ function addDatosFarmacias() {
         map.setView([41.399733,2.168598],13);
         // controlCapas.addOverlay(layerFarmacias,"Farmacias");
 
-}
+}//fin funcion
 
 ```
 
@@ -190,10 +192,11 @@ function addDatosFarmacias() {
     </html>
 ```
 
-* Miramos que funcione
+* Visualizamos mapa
+![alt text](img/leaflet-farmacias0.png "leaflet-farmacias0.png")
 
 
-#### Paso 6:Buscar Farmacias
+#### Paso 6:Añadir opción para buscar Farmacias
 
  * Miramos documentación Leaflet-Search plugin https://github.com/stefanocudini/leaflet-search
  * Añadimos URL plugin
@@ -281,7 +284,7 @@ function addDatosFarmacias() {
         });
         map.addControl(searchControl);
 
-}
+} //fin funcion
 
 ```
 
@@ -293,7 +296,7 @@ function addDatosFarmacias() {
 
 Este es uno de lo plugins más utilizados en Lealfte
 
-* Miramos documentación [https://github.com/Leaflet/Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster)
+* Miramos documentación [https://github.com/Leaflet/Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster){target=_blank}
 
 
  * Añadimos URL plugin
@@ -393,7 +396,7 @@ function addDatosFarmacias() {
         map.addControl(searchControl);
        
 
-}
+} //fin funcion
 
 ```
 
@@ -412,17 +415,17 @@ function addDatosFarmacias() {
 
 	```    
 
-!!! tip "Descargar ejemplos sesion 2"
-    [ejemplos-sesion2.zip](ejemplos/ejemplos-sesion2.zip)
+!!! tip "Soluciones sesion 2"
+    Visualizar [https://gis-master-m2.github.io/geoweb/](https://gis-master-m2.github.io/geoweb/){target=_blank}
+
+    Descargar [https://github.com/gis-master-m2/geoweb/archive/main.zip](https://github.com/gis-master-m2/geoweb/archive/main.zip){target=_blank}
 
 
-### Práctica libre no puntuable para cargar GeoJSONs con plugin GeoJSON AJAX
+### Anexos 
 
-> Abre **mapabase.html** --> guardar cómo **mapatest.html**
+#### Ejemplos de GeoJSONs con plugin GeoJSON AJAX
 
-> Añade el plugin de GeoJSON AJAX
-
-> Prueba las diferentes formas de trabajar con GeoJSONs y añádelas como **overlayMaps** en el control de capas
+> diferentes formas de trabajar con GeoJSONs y el plugin de GeoJSON.AJAX
 
 !!! example "GeoJson por defecto"
 
@@ -555,46 +558,6 @@ function addDatosFarmacias() {
 
  
 
-### Plugin Geosearch: Ejemplo extra  buscador de Callejero
-  > Plugin que permite connectar con servicios de Geocodificación
- *  Plugin [https://github.com/MuellerMatthew/L.GeoSearch](GeoSearch) 
- 
-
-```html
-  <html lang="es">
-
-<head>
-    <title>Callejero</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="autor" />
-    <meta name="description" content="descripción página" />
-    <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@2.7.0/assets/css/leaflet.css" />
-    <script src="https://unpkg.com/leaflet-geosearch@2.7.0/dist/bundle.min.js"></script>
-    <link rel="stylesheet" href="css/estilobase.css" />
-    <script src="js/mapabase.js"></script>
-    <script>
-        function initMapaCalles() {
-            init();
-            new GeoSearch.GeoSearchControl({
-                //  provider: new  GeoSearch.OpenStreetMapProvider()
-                provider: new GeoSearch.EsriProvider()
-            }).addTo(map);
-        }         
-    </script>
-
-</head>
-
-<body onLoad="initMapaCalles()">
-    <div id="map"> </div>
-</body>
-
-</html>
-```
-       
 
 
 

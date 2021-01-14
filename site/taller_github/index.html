@@ -349,7 +349,7 @@
       
         <li class="md-nav__item">
   <a href="#paso-7-subir-cambios-a-github" class="md-nav__link">
-    Paso 7 .Subir cambios a GitHub
+    Paso 7 -Subir cambios a GitHub
   </a>
   
 </li>
@@ -369,12 +369,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anexos" class="md-nav__link">
-    Anexos
+  <a href="#informacion-anexa" class="md-nav__link">
+    información anexa
   </a>
   
-    <nav class="md-nav" aria-label="Anexos">
+    <nav class="md-nav" aria-label="información anexa">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-tener-la-documentacion-del-curso-en-nuestro-repositorio" class="md-nav__link">
+    Para tener la documentación del curso en nuestro repositorio
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#para-recuperar-clonar-nuestro-trabajo-en-otro-pc-por-ejemplo" class="md-nav__link">
@@ -933,7 +940,7 @@
       
         <li class="md-nav__item">
   <a href="#paso-7-subir-cambios-a-github" class="md-nav__link">
-    Paso 7 .Subir cambios a GitHub
+    Paso 7 -Subir cambios a GitHub
   </a>
   
 </li>
@@ -953,12 +960,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#anexos" class="md-nav__link">
-    Anexos
+  <a href="#informacion-anexa" class="md-nav__link">
+    información anexa
   </a>
   
-    <nav class="md-nav" aria-label="Anexos">
+    <nav class="md-nav" aria-label="información anexa">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-tener-la-documentacion-del-curso-en-nuestro-repositorio" class="md-nav__link">
+    Para tener la documentación del curso en nuestro repositorio
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#para-recuperar-clonar-nuestro-trabajo-en-otro-pc-por-ejemplo" class="md-nav__link">
@@ -1058,6 +1072,12 @@ Así por ejemplo podrías crear un usuario tipo vuestras iniciales más palabra 
 <p><img alt="alt text" src="../img/github-clone.png" title="github" /></p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/<span class="o">{</span>tu usuario git<span class="o">}</span>/geoweb.git
 </code></pre></div>
+<p>Si es la primera vez que utlizamos GIT en el ordenador necesitamos configurar tu nombre de usuario y dirección email</p>
+<p>En la misma consola dónde hemos hecho el clone escribimos</p>
+<div class="highlight"><pre><span></span><code>git config --global user.name <span class="s2">&quot;nuestro_usuario&quot;</span>
+
+git config --global user.email nuestro_correo@example.com
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Si no aparece "Git Bash Here", tienes que instalar el cliente GIT
@@ -1066,13 +1086,13 @@ Así por ejemplo podrías crear un usuario tipo vuestras iniciales más palabra 
 <p><sub> NOTA: Para más información ver VIDEO 3 <sub></p>
 <h3 id="paso-4-anadir-proyecto-a-vscode">Paso 4 -Añadir proyecto a VSCode</h3>
 <ul>
-<li>Abrimos VSCode  y añadimos directorio <strong>geoweb</strong>  <strong>File --&gt;Add folder to workspace</strong></li>
+<li>Abrimos VSCode  y añadimos directorio <strong>/geoweb</strong> <code>File --&gt;Add folder to workspace</code></li>
 </ul>
 <p><img alt="alt text" src="../img/vscode1.png" title="vscode" /></p>
 <h3 id="paso-5-creamos-pagina-html">Paso 5 - Creamos página html</h3>
 <ul>
 <li>
-<p>Situamos puntero encima de <strong>geoweb</strong> botón derecho del mouse --&gt; "New File" y creamos <strong>index.html</strong></p>
+<p>Situamos puntero encima de <strong>geoweb</strong> botón derecho del mouse --&gt; <code>New File</code> y creamos <strong>index.html</strong></p>
 </li>
 <li>
 <p>Copiamos el siguiente código HTML de la que será nuestra página de inicio </p>
@@ -1123,10 +1143,11 @@ Así por ejemplo podrías crear un usuario tipo vuestras iniciales más palabra 
 <p>Guardamos archivo <code>crtl + s</code></p>
 <h3 id="paso-6-visualizamos-archivo">Paso 6 - Visualizamos archivo</h3>
 <p>Para visualizar un archivo HTML No es recomendable hacerlo cómo si fuera un archivo local <strong>file://</strong>, es decir "doble-click" sobre el archivo, ya que podria contener código JavaScript que que no se ejecutara correctamente (por ejemplo todo aquello a cargar contenido a paritr de rutas relativas a un recurso web).
-Es mejor visualizar archivos HTML via <strong>http://</strong>. Para ello instalaremos una extensión de VSCode llamada LiveServer</p>
-<p>Si utlizamos VSCODE , instalamos extensión Live Server <strong>View --&gt;Extensions</strong></p>
+Es mejor visualizar archivos HTML via <strong>http://</strong>. </p>
+<p>Para ello instalaremos una extensión de VSCode llamada <strong>LiveServer</strong></p>
+<p>Si utlizamos VSCODE , instalamos extensión Live Server <code>View --&gt;Extensions</code></p>
 <p><img alt="alt text" src="../img/github-pas0.png" title="github" /></p>
-<h3 id="paso-7-subir-cambios-a-github">Paso 7 .Subir cambios a GitHub</h3>
+<h3 id="paso-7-subir-cambios-a-github">Paso 7 -Subir cambios a GitHub</h3>
 <ul>
 <li>Abrimos una terminal en VSCode  <strong>View --&gt; Terminal</strong> y dentro de la terminal escribimos (linea + tecla Enter)</li>
 </ul>
@@ -1135,10 +1156,17 @@ Es mejor visualizar archivos HTML via <strong>http://</strong>. Para ello instal
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>git add .
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>git commit -m <span class="s2">&quot;change readme&quot;</span>
+<div class="highlight"><pre><span></span><code>git commit -m <span class="s2">&quot;add index.html&quot;</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>git push -u origin main
 </code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Si al hace git pull nos dice que no reconoce el comando GIT y hemos podido clonar el proyecto</p>
+</div>
+<ul>
+<li>Hay que cambiar la teminar de <strong>powershell</strong> a <strong>bash</strong> en VSCode</li>
+</ul>
+<p><img alt="alt text" src="../img/github-terminal.png" title="github" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Si al hacer commit la primera vez tenemos este aviso</p>
 <div class="highlight"><pre><span></span><code>Run 
@@ -1159,7 +1187,7 @@ git config --global user.name  misusuario
 
 git pull
 git add .
-git commit -m <span class="s2">&quot;change readme&quot;</span>
+git commit -m <span class="s2">&quot;add index.html&quot;</span>
 git push -u origin main       
 </code></pre></div>
 </div>
@@ -1200,7 +1228,168 @@ git commit -m <span class="s2">&quot;mensaje commit&quot;</span>
 git push origin main
 </code></pre></div>
 </div>
-<h3 id="anexos">Anexos</h3>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo con Bootstrap</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mis mapas M2B<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;autor&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;descripción página&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index,follow&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&quot;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&quot;anonymous&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;preconnect&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://fonts.gstatic.com&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://fonts.googleapis.com/css2?family=Inconsolata&amp;display=swap&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">.</span><span class="nc">seccion</span> <span class="p">{</span>
+      <span class="k">border-radius</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+      <span class="k">margin-top</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="p">.</span><span class="nc">mapbox</span> <span class="p">{</span>
+      <span class="k">background-color</span><span class="p">:</span> <span class="mh">#e7e7f1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="p">.</span><span class="nc">kepler</span> <span class="p">{</span>
+      <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f1e7ea</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="p">.</span><span class="nc">practicas</span> <span class="p">{</span>
+      <span class="k">background-color</span><span class="p">:</span> <span class="mh">#e7f0f1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="p">.</span><span class="nc">leaflet</span> <span class="p">{</span>
+      <span class="k">background-color</span><span class="p">:</span> <span class="mh">#e7f1e8</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="nt">small</span> <span class="p">{</span>
+      <span class="k">font-size</span><span class="p">:</span> <span class="mi">60</span><span class="kt">%</span> <span class="cp">!important</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="p">.</span><span class="nc">navbar</span> <span class="p">{</span>
+      <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f1e9e7</span> <span class="cp">!important</span><span class="p">;</span>
+      <span class="k">border-radius</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="p">.</span><span class="nc">row</span> <span class="p">{</span>     
+      <span class="k">margin-top</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+
+    <span class="p">}</span>
+
+
+    <span class="nt">body</span> <span class="p">{</span>
+      <span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;Inconsolata&#39;</span><span class="p">,</span> <span class="kc">sans-serif</span> <span class="cp">!important</span><span class="p">;</span>
+      <span class="k">font-size</span><span class="p">:</span><span class="mi">16</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+
+    <span class="p">}</span>
+
+    <span class="p">@</span><span class="k">media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">500px</span><span class="o">)</span> <span class="p">{</span>
+      <span class="nt">body</span> <span class="p">{</span>
+        <span class="k">font-size</span><span class="p">:</span> <span class="mi">80</span><span class="kt">%</span> <span class="cp">!important</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;navbar navbar-light bg-light&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>
+        Mis mapas módulo M2B
+        <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>
+          Mapas y OpenData, Localización, Visualización y Análisis de GeoDatos
+        <span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;alert seccion leaflet&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Mapas Leaflet<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;leaflet-basico.html&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>Leaflet Básico<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+              <span class="c">&lt;!--añadir aqui entrada--&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;alert seccion mapbox&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Mapas Mapbox GL JS<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+              <span class="c">&lt;!--añadir aqui entrada--&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+              <span class="c">&lt;!--añadir aqui entrada--&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;alert seccion kepler&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Kepler.Gl<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+              <span class="c">&lt;!--añadir aqui entrada--&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+              <span class="c">&lt;!--añadir aqui entrada--&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;alert seccion practicas&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Prácticas puntuables<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+              <span class="c">&lt;!--añadir aqui entrada--&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+              <span class="c">&lt;!--añadir aqui entrada--&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="informacion-anexa">información anexa</h3>
+<h4 id="para-tener-la-documentacion-del-curso-en-nuestro-repositorio">Para tener la documentación del curso en nuestro repositorio</h4>
+<ul>
+<li>
+<p>Entamos en <a href="https://github.com/gis-master-m2/m2-geoweb">https://github.com/gis-master-m2/m2-geoweb</a></p>
+</li>
+<li>
+<p>Pulsmos ociopn(superior-derecha) <strong>fork</strong></p>
+</li>
+</ul>
 <h4 id="para-recuperar-clonar-nuestro-trabajo-en-otro-pc-por-ejemplo">Para recuperar (clonar) nuestro trabajo en otro pc, por ejemplo</h4>
 <p>Nos situamos en un directorio de nuestor PC.
 Botón derecho del mouse --&gt;"Git bash here"</p>

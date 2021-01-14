@@ -459,8 +459,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#paso-2" class="md-nav__link">
-    Paso 2:
+  <a href="#paso-2crear-edificioshtml" class="md-nav__link">
+    Paso 2:Crear edificios.html
   </a>
   
 </li>
@@ -843,8 +843,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#paso-2" class="md-nav__link">
-    Paso 2:
+  <a href="#paso-2crear-edificioshtml" class="md-nav__link">
+    Paso 2:Crear edificios.html
   </a>
   
 </li>
@@ -920,7 +920,7 @@
 </li>
 <li>
 <p>OpenICGC tiene un estio mundial  que nos puede servir como fondo</p>
-<p><a href="https://geoserveis.icgc.cat/contextmaps/icgc.json">https://geoserveis.icgc.cat/contextmaps/icgc.json</a> {target=_blank}</p>
+<p><a href="https://geoserveis.icgc.cat/contextmaps/icgc.json" target="_blank">https://geoserveis.icgc.cat/contextmaps/icgc.json</a></p>
 </li>
 <li>
 <p>Mapbox tiene un estio mundial oscuro que también nos puede servir como fondo</p>
@@ -937,7 +937,7 @@
 <p>La carga de datos dentro de Mapbox puede ser lenta sobretodo si tenemos algún dataset pesado</p>
 </li>
 <li>
-<p>Vamos cargar todas las construcciones de Barcelona que ofrece la Direccion General de Catastro <a href="http://www.catastro.minhap.es/webinspire/index.html" target="_blank">http://www.catastro.minhap.es/webinspire/index.html</a>  </p>
+<p>Vamos cargar todas las construcciones de Barcelona (321 mil polígonos) que ofrece la Direccion General de Catastro <a href="http://www.catastro.minhap.es/webinspire/index.html" target="_blank">http://www.catastro.minhap.es/webinspire/index.html</a>  </p>
 </li>
 <li>
 <p>Descargaríamos datos directamente <a href="http://www.catastro.minhap.es/INSPIRE/Buildings/08/08900-BARCELONA/A.ES.SDGC.BU.08900.zip">http://www.catastro.minhap.es/INSPIRE/Buildings/08/08900-BARCELONA/A.ES.SDGC.BU.08900.zip</a> o utilizaríamos QGIS + complemento "Spanish Inspire Catastral Downloader"</p>
@@ -956,10 +956,22 @@
 </li>
 </ul>
 <p><img alt="alt text" src="../img/mapbox-catastro.png" title="mapbox-catastro.png" /></p>
-<h4 id="paso-2">Paso 2:</h4>
-<ul>
-<li>Vamos a VSCode y creamos el archivo <strong>edificios.html</strong> dentro de <strong>/geoweb</strong></li>
-</ul>
+<h4 id="paso-2crear-edificioshtml">Paso 2:Crear edificios.html</h4>
+<div class="admonition warning">
+<p class="admonition-title">En este ejemplo vamos a reutilizar el archivo creado en la seccion 2 <strong>/geoweb/css/estilobase.css</strong></p>
+<p>El archivo <strong>estilobase.css</strong> es este</p>
+</div>
+<p><div class="highlight"><pre><span></span><code>            <span class="nt">body</span> <span class="p">{</span>
+                <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
+                <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+                <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+                <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ffffff</span>
+            <span class="p">}</span>
+</code></pre></div>
+* Vamos a VSCode y creamos el archivo <strong>edificios.html</strong> dentro de <strong>/geoweb</strong></p>
 <div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>

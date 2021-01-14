@@ -166,6 +166,13 @@ git commit -m "add index.html"
 git push -u origin main
 ```
 
+!!! warning "Si al hace git pull nos dice que no reconoce el comando GIT y hemos podido clonar el proyecto"
+
+  * Hay que cambiar la teminar de **powershell** a **bash** en VSCode
+
+  ![alt text](img/github-terminal.png "github")
+
+
 !!! warning "Si al hacer commit la primera vez tenemos este aviso"
 
     ```sh
@@ -251,8 +258,170 @@ git push origin main
 
     ```
 
+!!! example "Ejemplo con Bootstrap"
 
-### Anexos
+``` html
+
+<html>
+
+<head>
+
+  <title>Mis mapas M2B</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="autor" />
+  <meta name="description" content="descripción página">
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <style>
+    .seccion {
+      border-radius: 0px !important;
+    }
+
+    .container {
+      margin-top: 5px;
+    }
+
+    .mapbox {
+      background-color: #e7e7f1;
+    }
+
+    .kepler {
+      background-color: #f1e7ea;
+    }
+
+    .practicas {
+      background-color: #e7f0f1;
+    }
+
+    .leaflet {
+      background-color: #e7f1e8;
+    }
+
+
+    small {
+      font-size: 60% !important;
+    }
+
+
+    .navbar {
+      background-color: #f1e9e7 !important;
+      border-radius: 0px !important;
+    }
+
+    .row {     
+      margin-top: 10px;
+      
+    }
+
+
+    body {
+      font-family: 'Inconsolata', sans-serif !important;
+      font-size:16px !important;
+
+    }
+
+    @media screen and (max-width: 500px) {
+      body {
+        font-size: 80% !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-light bg-light">
+      <h4>
+        Mis mapas módulo M2B
+        <br>
+        <small>
+          Mapas y OpenData, Localización, Visualización y Análisis de GeoDatos
+        </small>
+      </h4>
+    </nav>
+    <br>
+    <div class="alert seccion leaflet">
+      <h5>Mapas Leaflet</h5>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li><a href="leaflet-basico.html" target="_blank">Leaflet Básico</a>
+            </li>
+            <li>
+              <!--añadir aqui entrada-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="alert seccion mapbox">
+      <h5>Mapas Mapbox GL JS</h5>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>
+              <!--añadir aqui entrada-->
+            </li>
+            <li>
+              <!--añadir aqui entrada-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert seccion kepler">
+      <h5>Kepler.Gl</h5>
+
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>
+              <!--añadir aqui entrada-->
+            </li>
+            <li>
+              <!--añadir aqui entrada-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert seccion practicas">
+      <h5>Prácticas puntuables</h5>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>
+              <!--añadir aqui entrada-->
+            </li>
+            <li>
+              <!--añadir aqui entrada-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
+
+```
+
+
+
+### información anexa
+
+#### Para tener la documentación del curso en nuestro repositorio
+
+* Entamos en https://github.com/gis-master-m2/m2-geoweb
+
+* Pulsmos ociopn(superior-derecha) **fork**
 
 #### Para recuperar (clonar) nuestro trabajo en otro pc, por ejemplo
 

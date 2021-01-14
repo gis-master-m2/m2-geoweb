@@ -12,7 +12,7 @@
 
 * OpenICGC tiene un estio mundial  que nos puede servir como fondo
 
-    [https://geoserveis.icgc.cat/contextmaps/icgc.json](https://geoserveis.icgc.cat/contextmaps/icgc.json) {target=_blank}
+    [https://geoserveis.icgc.cat/contextmaps/icgc.json](https://geoserveis.icgc.cat/contextmaps/icgc.json){target=_blank}
 
 * Mapbox tiene un estio mundial oscuro que también nos puede servir como fondo
 
@@ -28,7 +28,7 @@
 
    * La carga de datos dentro de Mapbox puede ser lenta sobretodo si tenemos algún dataset pesado
 
-   * Vamos cargar todas las construcciones de Barcelona que ofrece la Direccion General de Catastro [http://www.catastro.minhap.es/webinspire/index.html](http://www.catastro.minhap.es/webinspire/index.html){target=_blank}  
+   * Vamos cargar todas las construcciones de Barcelona (321 mil polígonos) que ofrece la Direccion General de Catastro [http://www.catastro.minhap.es/webinspire/index.html](http://www.catastro.minhap.es/webinspire/index.html){target=_blank}  
 
    * Descargaríamos datos directamente [http://www.catastro.minhap.es/INSPIRE/Buildings/08/08900-BARCELONA/A.ES.SDGC.BU.08900.zip](http://www.catastro.minhap.es/INSPIRE/Buildings/08/08900-BARCELONA/A.ES.SDGC.BU.08900.zip) o utilizaríamos QGIS + complemento "Spanish Inspire Catastral Downloader"
 
@@ -42,10 +42,26 @@
 
    ![alt text](img/mapbox-catastro.png "mapbox-catastro.png")
 
-#### Paso 2:
+#### Paso 2:Crear edificios.html
 
- * Vamos a VSCode y creamos el archivo **edificios.html** dentro de **/geoweb**
 
+!!! warning "En este ejemplo vamos a reutilizar el archivo creado en la seccion 2 **/geoweb/css/estilobase.css**"
+
+    El archivo **estilobase.css** es este
+
+```css
+            body {
+                margin: 0;
+            }
+
+            #map {
+                height: 100%;
+                width: 100%;
+                background-color: #ffffff
+            }
+
+```
+* Vamos a VSCode y creamos el archivo **edificios.html** dentro de **/geoweb**
 
 ```html
     <html>

@@ -415,11 +415,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#leaflet-basico" class="md-nav__link">
-    Leaflet básico
+  <a href="#leaflet-basico-final" class="md-nav__link">
+    Leaflet básico final
   </a>
   
-    <nav class="md-nav" aria-label="Leaflet básico">
+    <nav class="md-nav" aria-label="Leaflet básico final">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -444,11 +444,24 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#copiamos-y-pegamos-codigo" class="md-nav__link">
+    Copiamos y pegamos código
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#baselayer-y-overlays" class="md-nav__link">
     BaseLayer y Overlays
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="BaseLayer y Overlays">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#ejemplo-2-provider" class="md-nav__link">
@@ -457,15 +470,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#mapa-base" class="md-nav__link">
-    Mapa base
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#crear-un-mapa-base" class="md-nav__link">
+    Crear un mapa base
+  </a>
   
 </li>
         
@@ -989,11 +1002,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#leaflet-basico" class="md-nav__link">
-    Leaflet básico
+  <a href="#leaflet-basico-final" class="md-nav__link">
+    Leaflet básico final
   </a>
   
-    <nav class="md-nav" aria-label="Leaflet básico">
+    <nav class="md-nav" aria-label="Leaflet básico final">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1018,11 +1031,24 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#copiamos-y-pegamos-codigo" class="md-nav__link">
+    Copiamos y pegamos código
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#baselayer-y-overlays" class="md-nav__link">
     BaseLayer y Overlays
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="BaseLayer y Overlays">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#ejemplo-2-provider" class="md-nav__link">
@@ -1031,15 +1057,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#mapa-base" class="md-nav__link">
-    Mapa base
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#crear-un-mapa-base" class="md-nav__link">
+    Crear un mapa base
+  </a>
   
 </li>
         
@@ -1247,7 +1273,7 @@ Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiq
 <p>Llamaremos a la función desde el evento onload del <code>&lt;body&gt;</code></p>
 <div class="highlight"><pre><span></span><code> <span class="p">&lt;</span><span class="nt">body</span> <span class="na">onLoad</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-<h3 id="leaflet-basico"><strong>Leaflet básico</strong></h3>
+<h3 id="leaflet-basico-final"><strong>Leaflet básico final</strong></h3>
 <div class="highlight"><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Leaflet básico<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1354,8 +1380,9 @@ Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiq
      <span class="p">});</span>
 </code></pre></div>
 </div>
+<p><img alt="alt text" src="../img/leaflet-basico.png" title="github" /></p>
 <div class="admonition success">
-<p class="admonition-title">¿Subimos el ejemplo al GitHub?</p>
+<p class="admonition-title">Visualizamos , editamos index.html y subimos el ejemplo al GitHub</p>
 <div class="highlight"><pre><span></span><code>    git pull
     git add .
     git commit -m <span class="s2">&quot;primer ejemplo leaflet&quot;</span>
@@ -1370,14 +1397,15 @@ Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiq
 <div class="admonition abstract">
 <p class="admonition-title">L.control.layers</p>
 <h4 id="lcontrollayers"><strong>L.control.layers</strong></h4>
-<p>Es un control que nos permite activar y desactivar capas base (baseLayers) y "overlays"
-<strong>baseLayers</strong>: són capas de referéncia y sólo puede haber una activa
-<strong>overlays</strong>:són capas que aparcen encimas de las de referéncia y pueden haber una o varias activas</p>
+<p>Es un control que nos permite activar y desactivar capas base (baseLayers) y "overlays"</p>
+<p><strong>baseLayers</strong>: són capas de referéncia y sólo puede haber una activa</p>
+<p><strong>overlays</strong>:són capas que aparcen encima de las de referéncia (baseLayers) y puede haber una o varias activas</p>
 <p>Referencia: <a target="_blank"  rel="noopener"  href="https://leafletjs.com/reference-1.7.1.html#control-layers"><a href="https://leafletjs.com/reference-1.7.1.html#control-layers">https://leafletjs.com/reference-1.7.1.html#control-layers</a></a></p>
 <h4 id="lcontrolscale"><strong>L.control.scale</strong></h4>
 <p>Es un control añade un escala gráfica del mapa</p>
 <p>Referencia: <a target="_blank"  rel="noopener"  href="https://leafletjs.com/reference-1.7.1.html#control-scale"><a href="https://leafletjs.com/reference-1.7.1.html#control-scale">https://leafletjs.com/reference-1.7.1.html#control-scale</a></a></p>
 </div>
+<h4 id="copiamos-y-pegamos-codigo">Copiamos y pegamos código</h4>
 <div class="highlight"><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo 1 Leaflet-controles<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1455,14 +1483,34 @@ Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiq
 <div class="admonition question">
 <p class="admonition-title">Pregunta</p>
 <p><h4>¿Como lo haríamos para ver el control de capas abierto por defecto?</h4>
-Respuesta:Miramos opciones del control-layers
-<code>controlCapas = L.control.layers(baseMaps, overlayMaps,{collapsed:false});</code></p>
+Respuesta:Miramos opciones del control-layers</p>
+<div class="highlight"><pre><span></span><code>controlCapas = L.control.layers(baseMaps, overlayMaps,{collapsed:false}); 
+</code></pre></div>
 </div>
-<h4 id="baselayer-y-overlays">BaseLayer y Overlays</h4>
+<p><img alt="alt text" src="../img/leaflet-controles.png" title="github" /></p>
+<h3 id="baselayer-y-overlays">BaseLayer y Overlays</h3>
+<table>
+<thead>
+<tr>
+<th>tipo</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BaseLayer</td>
+<td>són capas de referéncia (fondo) y sólo puede haber una activa (Ejemplo:Fondo satélite)</td>
+</tr>
+<tr>
+<td>Overlay</td>
+<td>són capas que aparcen encima de las de referéncia (baseLayers) y puede haber una o varias activas (Ejemplo:Capa puntos)</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
 <p>¿Que mapas de fondo puedo añadir?
-Existem muchas fuentes que ofrecen fondos de referencia que podemos utilizar en Leaflet
-Algunas de ellas nos piden un previo registro y accestoken que podemos añadir a la url de servicio</p>
+Existem muchas fuentes que ofrecen fondos de referencia que podemos utilizar en Leaflet</p>
+<p>Algunas de ellas nos piden un previo registro y accestoken que podemos añadir a la url de servicio</p>
 </blockquote>
 <div class="admonition tip">
 <p class="admonition-title">Miramos los ejemplos de fondos de esta web</p>
@@ -1471,8 +1519,9 @@ Algunas de ellas nos piden un previo registro y accestoken que podemos añadir a
 <h4 id="ejemplo-2-provider"><strong>Ejemplo 2 Provider</strong></h4>
 <ul>
 <li>Creamos la página <strong>leaflet-provider.html</strong> dentro directorio geoweb</li>
+<li>Copiamos pegamos código</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
 
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo Leaflet provider<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1585,13 +1634,136 @@ Algunas de ellas nos piden un previo registro y accestoken que podemos añadir a
 
     <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
+* Visualizamos mapa</p>
 <div class="admonition question">
 <p class="admonition-title">Pregunta</p>
 <p><h3>¿Cómo añadiriamos una capa de tipo "overlay"?</h3></p>
 </div>
-<h4 id="mapa-base"><strong>Mapa base</strong></h4>
-<p>!!! question ¿ Cómo crearíamos un nuevo ejemplo llamado <strong>mapabase.html</strong> con tres capas "baseLayers" de fondo: 
-    Mapa, Orto, Híbrido</p>
+<p>*Solución</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo Leaflet provider<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;autor&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;descripción página&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index,follow&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+        <span class="nt">body</span> <span class="p">{</span>
+            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
+            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+            <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ffffff</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="kd">var</span> <span class="nx">map</span><span class="p">,</span> <span class="nx">osm</span><span class="p">,</span> <span class="nx">controlCapas</span><span class="p">;</span>
+
+        <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">map</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">,</span> <span class="p">{</span>
+                <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">39.6863</span><span class="p">,</span> <span class="mf">2.8382</span><span class="p">],</span>
+                <span class="nx">zoom</span><span class="o">:</span> <span class="mf">8</span>
+            <span class="p">});</span>
+            <span class="nx">osm</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
+                <span class="nx">maxZoom</span><span class="o">:</span> <span class="mf">19</span><span class="p">,</span>
+                <span class="nx">minZoom</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+                <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;/&gt;OpenStreetMap&lt;/a&gt;&#39;</span>
+            <span class="p">}).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+
+            <span class="kd">var</span> <span class="nx">OpenStreetMap_DE</span> <span class="o">=</span>
+                <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
+                    <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;/&gt;OpenStreetMap&lt;/a&gt;&#39;</span>
+                <span class="p">});</span>
+            <span class="kd">var</span> <span class="nx">OpenStreetMap_HOT</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
+                <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;/&gt;OpenStreetMap&lt;/a&gt;, Tiles courtesy of &lt;a href=&quot;http://hot.openstreetmap.org/&quot; target=&quot;_blank&quot;/&gt;Humanitarian OpenStreetMapTeam&lt;/a&gt;&#39;</span>
+            <span class="p">});</span>
+
+            <span class="kd">var</span> <span class="nx">Stamen_Toner</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
+                <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Map tiles by &lt;a href=&quot;http://stamen.com&quot;/&gt;Stamen Design&lt;/a&gt;, &lt;a href=&quot;http://creativecommons.org/licenses/by/3.0&quot;/&gt;CC BY 3.0&lt;/a&gt; &amp;mdash; Map data &amp;copy;&lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;/&gt;OpenStreetMap&lt;/a&gt;&#39;</span><span class="p">,</span>
+                <span class="nx">subdomains</span><span class="o">:</span> <span class="s1">&#39;abcd&#39;</span><span class="p">,</span>
+                <span class="nx">minZoom</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+                <span class="nx">maxZoom</span><span class="o">:</span> <span class="mf">20</span>
+            <span class="p">});</span>
+            <span class="kd">var</span> <span class="nx">Stamen_Watercolor</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
+                <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Map tiles by &lt;a href=&quot;http://stamen.com&quot;/&gt;Stamen Design&lt;/a&gt;, &lt;a href=&quot;http://creativecommons.org/licenses/by/3.0&quot;/&gt;CC BY 3.0&lt;/a&gt; &amp;mdash; Map data &amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;/&gt;OpenStreetMap&lt;/a&gt;&#39;</span><span class="p">,</span>
+                <span class="nx">subdomains</span><span class="o">:</span> <span class="s1">&#39;abcd&#39;</span><span class="p">,</span>
+                <span class="nx">minZoom</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+                <span class="nx">maxZoom</span><span class="o">:</span> <span class="mf">16</span>
+            <span class="p">});</span>
+            <span class="kd">var</span> <span class="nx">Esri_WorldStreetMap</span> <span class="o">=</span>
+                <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
+                    <span class="s1">&#39;http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}&#39;</span><span class="p">,</span> <span class="p">{</span>
+                        <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Tiles &amp;copy; Esri &amp;mdash; Source: Esri, DeLorme, NAVTEQ, USGS,Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom,2012&#39;</span>
+                    <span class="p">});</span>
+
+            <span class="kd">var</span> <span class="nx">Esri_WorldTopoMap</span> <span class="o">=</span>
+                <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
+                    <span class="s1">&#39;http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}&#39;</span><span class="p">,</span> <span class="p">{</span>
+                        <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Tiles &amp;copy; Esri &amp;mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap,iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, EsriChina (Hong Kong), and the GIS User Community&#39;</span>
+                    <span class="p">});</span>
+            <span class="kd">var</span> <span class="nx">Esri_WorldImagery</span> <span class="o">=</span>
+                <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
+                    <span class="s1">&#39;http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&#39;</span><span class="p">,</span> <span class="p">{</span>
+                        <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Tiles &amp;copy; Esri &amp;mdash; Source: Esri, i-cubed, USDA, USGS, AEX,GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community&#39;</span>
+                    <span class="p">});</span>
+            <span class="kd">var</span> <span class="nx">Esri_WorldShadedRelief</span> <span class="o">=</span>
+                <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
+                    <span class="s1">&#39;http://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}&#39;</span><span class="p">,</span> <span class="p">{</span>
+                        <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Tiles &amp;copy; Esri &amp;mdash; Source: Esri&#39;</span><span class="p">,</span>
+                        <span class="nx">maxZoom</span><span class="o">:</span> <span class="mf">13</span>
+                    <span class="p">});</span>
+            <span class="kd">var</span> <span class="nx">Esri_OceanBasemap</span> <span class="o">=</span>
+                <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
+                    <span class="s1">&#39;http://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer/tile/{z}/{y}/{x}&#39;</span><span class="p">,</span> <span class="p">{</span>
+                        <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Tiles &amp;copy; Esri &amp;mdash; Sources: GEBCO, NOAA, CHS, OSU, UNH,CSUMB, National Geographic, DeLorme, NAVTEQ, and Esri&#39;</span><span class="p">,</span>
+                        <span class="nx">maxZoom</span><span class="o">:</span> <span class="mf">13</span>
+                    <span class="p">});</span>
+
+
+
+            <span class="kd">var</span> <span class="nx">mapaBase</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s1">&#39;OSM&#39;</span><span class="o">:</span> <span class="nx">osm</span><span class="p">,</span>
+                <span class="s1">&#39;OpenStreetMap_DE&#39;</span><span class="o">:</span> <span class="nx">OpenStreetMap_DE</span><span class="p">,</span>
+                <span class="s1">&#39;OpenStreetMap_HOT&#39;</span><span class="o">:</span> <span class="nx">OpenStreetMap_HOT</span><span class="p">,</span>
+                <span class="s1">&#39;Stamen_Toner&#39;</span><span class="o">:</span> <span class="nx">Stamen_Toner</span><span class="p">,</span>
+                <span class="s1">&#39;Stamen_Watercolor&#39;</span><span class="o">:</span> <span class="nx">Stamen_Watercolor</span><span class="p">,</span>
+                <span class="s1">&#39;Esri_WorldStreetMap&#39;</span><span class="o">:</span> <span class="nx">Esri_WorldStreetMap</span><span class="p">,</span>
+                <span class="s1">&#39;Esri_WorldTopoMap&#39;</span><span class="o">:</span> <span class="nx">Esri_WorldTopoMap</span><span class="p">,</span>
+                <span class="s1">&#39;Esri_WorldImagery&#39;</span><span class="o">:</span> <span class="nx">Esri_WorldImagery</span><span class="p">,</span>
+                <span class="s1">&#39;Esri_WorldShadedRelief&#39;</span><span class="o">:</span> <span class="nx">Esri_WorldShadedRelief</span><span class="p">,</span>
+                <span class="s1">&#39;Esri_OceanBasemap&#39;</span><span class="o">:</span> <span class="nx">Esri_OceanBasemap</span>
+            <span class="p">};</span>
+
+<span class="hll">            <span class="kd">var</span> <span class="nx">SafeCast</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;https://s3.amazonaws.com/te512.safecast.org/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class="hll">                <span class="nx">maxZoom</span><span class="o">:</span> <span class="mf">16</span><span class="p">,</span>
+</span><span class="hll">                <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Map data: &amp;copy; &lt;a href=&quot;https://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt; contributors | Map style: &amp;copy; &lt;a href=&quot;https://blog.safecast.org/about/&quot;&gt;SafeCast&lt;/a&gt; (&lt;a href=&quot;https://creativecommons.org/licenses/by-sa/3.0/&quot;&gt;CC-BY-SA&lt;/a&gt;)&#39;</span>
+</span><span class="hll">            <span class="p">});</span>
+</span><span class="hll">            <span class="kd">var</span> <span class="nx">overlay</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Safecat&quot;</span><span class="o">:</span><span class="nx">SafeCast</span><span class="p">}</span>
+</span><span class="hll">
+</span><span class="hll">            <span class="nx">controlCapas</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">control</span><span class="p">.</span><span class="nx">layers</span><span class="p">(</span><span class="nx">mapaBase</span><span class="p">,</span> <span class="nx">overlay</span><span class="p">,</span> <span class="p">{</span><span class="nx">collapsed</span><span class="o">:</span><span class="kc">false</span><span class="p">});</span>
+</span>            <span class="nx">controlCapas</span><span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+            <span class="nx">controlEscala</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">control</span><span class="p">.</span><span class="nx">scale</span><span class="p">();</span>
+            <span class="nx">controlEscala</span><span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onLoad</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<img alt="alt text" src="../img/leaflet-providers.png" title="github" />     </p>
+<h3 id="crear-un-mapa-base"><strong>Crear un mapa base</strong></h3>
+<p>!!!question "¿ Cómo crearíamos un nuevo ejemplo llamado <strong>mapabase.html</strong> con tres capas "baseLayers" de fondo: 
+    Mapa, Orto, Híbrido"</p>
 <div class="admonition tip">
 <p class="admonition-title">Truco</p>
 <p><h4>
@@ -1616,88 +1788,88 @@ Podemos agrupar capas utilizando L.LayerGroup <a href="https://leafletjs.com/exa
 </div>
 <div class="admonition success">
 <p class="admonition-title">Respuesta</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo Leaflet mapa base<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;autor&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;descripción página&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index,follow&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-        <span class="nt">body</span> <span class="p">{</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span>
+</div>
+<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo Leaflet mapa base<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;autor&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;descripción página&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index,follow&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+            <span class="nt">body</span> <span class="p">{</span>
+                <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="p">}</span>
 
-        <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ffffff</span>
-        <span class="p">}</span>
-    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+            <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
+                <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+                <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+                <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ffffff</span>
+            <span class="p">}</span>
+        <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 
-    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-        <span class="kd">var</span> <span class="nx">map</span><span class="p">,</span> <span class="nx">osm</span><span class="p">,</span> <span class="nx">controlCapas</span><span class="p">;</span>
+        <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+            <span class="kd">var</span> <span class="nx">map</span><span class="p">,</span> <span class="nx">osm</span><span class="p">,</span> <span class="nx">controlCapas</span><span class="p">;</span>
 
-        <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">map</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">,</span> <span class="p">{</span>
-                <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">42.6863</span><span class="p">,</span> <span class="mf">2.8382</span><span class="p">],</span>
-                <span class="nx">zoom</span><span class="o">:</span> <span class="mf">7</span>
-            <span class="p">});</span>
-            <span class="nx">osm</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
-                <span class="nx">maxZoom</span><span class="o">:</span> <span class="mf">19</span><span class="p">,</span>
-                <span class="nx">minZoom</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
-                <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;/&gt;OpenStreetMap&lt;/a&gt;&#39;</span>
-            <span class="p">});</span>
-
-            <span class="kd">var</span> <span class="nx">Esri_WorldImagery</span> <span class="o">=</span>
-                <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
-                    <span class="s1">&#39;http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&#39;</span><span class="p">,</span> <span class="p">{</span>
-                    <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Tiles &amp;copy; Esri &amp;mdash; Source: Esri, i-cubed, USDA, USGS, AEX,GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community&#39;</span>
+            <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
+                <span class="nx">map</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">,</span> <span class="p">{</span>
+                    <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">42.6863</span><span class="p">,</span> <span class="mf">2.8382</span><span class="p">],</span>
+                    <span class="nx">zoom</span><span class="o">:</span> <span class="mf">7</span>
+                <span class="p">});</span>
+                <span class="nx">osm</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
+                    <span class="nx">maxZoom</span><span class="o">:</span> <span class="mf">19</span><span class="p">,</span>
+                    <span class="nx">minZoom</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+                    <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;/&gt;OpenStreetMap&lt;/a&gt;&#39;</span>
                 <span class="p">});</span>
 
+                <span class="kd">var</span> <span class="nx">Esri_WorldImagery</span> <span class="o">=</span>
+                    <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
+                        <span class="s1">&#39;http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&#39;</span><span class="p">,</span> <span class="p">{</span>
+                        <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Tiles &amp;copy; Esri &amp;mdash; Source: Esri, i-cubed, USDA, USGS, AEX,GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community&#39;</span>
+                    <span class="p">});</span>
 
-            <span class="kd">var</span> <span class="nx">hibrid</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">layerGroup</span><span class="p">();</span>
 
-            <span class="kd">var</span> <span class="nx">Esri_WorldImagery2</span> <span class="o">=</span>
-                <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
-                    <span class="s1">&#39;http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&#39;</span><span class="p">,</span> <span class="p">{</span>
-                    <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Tiles &amp;copy; Esri &amp;mdash; Source: Esri, i-cubed, USDA, USGS, AEX,GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community&#39;</span>
+                <span class="kd">var</span> <span class="nx">hibrid</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">layerGroup</span><span class="p">();</span>
+
+                <span class="kd">var</span> <span class="nx">Esri_WorldImagery2</span> <span class="o">=</span>
+                    <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
+                        <span class="s1">&#39;http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&#39;</span><span class="p">,</span> <span class="p">{</span>
+                        <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Tiles &amp;copy; Esri &amp;mdash; Source: Esri, i-cubed, USDA, USGS, AEX,GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community&#39;</span>
+                    <span class="p">}).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">hibrid</span><span class="p">);</span>
+
+                <span class="kd">var</span> <span class="nx">Stamen_TonerHybrid</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
+                    <span class="s1">&#39;https://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{r}.{ext}&#39;</span><span class="p">,</span> <span class="p">{</span>
+                    <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Map tiles by &lt;a href=&quot;http://stamen.com&quot;&gt;Stamen Design&lt;/a&gt;, &lt;a href=&quot;http://creativecommons.org/licenses/by/3.0&quot;&gt;CC BY 3.0&lt;/a&gt; &amp;mdash; Map data &amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;&#39;</span><span class="p">,</span>
+                    <span class="nx">subdomains</span><span class="o">:</span> <span class="s1">&#39;abcd&#39;</span><span class="p">,</span>
+                    <span class="nx">minZoom</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+                    <span class="nx">maxZoom</span><span class="o">:</span> <span class="mf">20</span><span class="p">,</span>
+                    <span class="nx">ext</span><span class="o">:</span> <span class="s1">&#39;png&#39;</span>
                 <span class="p">}).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">hibrid</span><span class="p">);</span>
 
-            <span class="kd">var</span> <span class="nx">Stamen_TonerHybrid</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
-                <span class="s1">&#39;https://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{r}.{ext}&#39;</span><span class="p">,</span> <span class="p">{</span>
-                <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Map tiles by &lt;a href=&quot;http://stamen.com&quot;&gt;Stamen Design&lt;/a&gt;, &lt;a href=&quot;http://creativecommons.org/licenses/by/3.0&quot;&gt;CC BY 3.0&lt;/a&gt; &amp;mdash; Map data &amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;&#39;</span><span class="p">,</span>
-                <span class="nx">subdomains</span><span class="o">:</span> <span class="s1">&#39;abcd&#39;</span><span class="p">,</span>
-                <span class="nx">minZoom</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-                <span class="nx">maxZoom</span><span class="o">:</span> <span class="mf">20</span><span class="p">,</span>
-                <span class="nx">ext</span><span class="o">:</span> <span class="s1">&#39;png&#39;</span>
-            <span class="p">}).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">hibrid</span><span class="p">);</span>
+                <span class="nx">hibrid</span><span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
 
-            <span class="nx">hibrid</span><span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+                <span class="kd">var</span> <span class="nx">mapaBase</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s1">&#39;Mapa&#39;</span><span class="o">:</span> <span class="nx">osm</span><span class="p">,</span>
+                    <span class="s1">&#39;Foto&#39;</span><span class="o">:</span> <span class="nx">Esri_WorldImagery</span><span class="p">,</span>
+                    <span class="s1">&#39;Hibrid&#39;</span><span class="o">:</span> <span class="nx">hibrid</span>
+                <span class="p">};</span>
+                <span class="nx">controlCapas</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">control</span><span class="p">.</span><span class="nx">layers</span><span class="p">(</span><span class="nx">mapaBase</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="p">{</span> <span class="nx">collapsed</span><span class="o">:</span> <span class="kc">false</span> <span class="p">});</span>
+                <span class="nx">controlCapas</span><span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+                <span class="nx">controlEscala</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">control</span><span class="p">.</span><span class="nx">scale</span><span class="p">();</span>
+                <span class="nx">controlEscala</span><span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 
-            <span class="kd">var</span> <span class="nx">mapaBase</span> <span class="o">=</span> <span class="p">{</span>
-                <span class="s1">&#39;Mapa&#39;</span><span class="o">:</span> <span class="nx">osm</span><span class="p">,</span>
-                <span class="s1">&#39;Foto&#39;</span><span class="o">:</span> <span class="nx">Esri_WorldImagery</span><span class="p">,</span>
-                <span class="s1">&#39;Hibrid&#39;</span><span class="o">:</span> <span class="nx">hibrid</span>
-            <span class="p">};</span>
-            <span class="nx">controlCapas</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">control</span><span class="p">.</span><span class="nx">layers</span><span class="p">(</span><span class="nx">mapaBase</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="p">{</span> <span class="nx">collapsed</span><span class="o">:</span> <span class="kc">false</span> <span class="p">});</span>
-            <span class="nx">controlCapas</span><span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
-            <span class="nx">controlEscala</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">control</span><span class="p">.</span><span class="nx">scale</span><span class="p">();</span>
-            <span class="nx">controlEscala</span><span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span> <span class="na">onLoad</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onLoad</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</div>
 <p><img alt="alt text" src="../img/mapabase.png" title="github" /></p>
 <h3 id="reutilizar-codigo"><strong>Reutilizar código !!!</strong></h3>
 <p>Cuando programamos debemos intentar <strong>NO</strong> escribir el mismo código dos veces y siempre que podamos debemos reutilizarlo.

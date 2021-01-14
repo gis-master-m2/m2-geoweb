@@ -62,7 +62,7 @@ Materiales para el módulo 2: Mapas y OpenData, Localización, Visualización y 
 [https://github.com/gis-master-m2/](https://github.com/gis-master-m2/){target=_blank}
 
 #### Soluciones ejercicios
-[https://github.com/gis-master-m2/m2-geoweb](https://github.com/gis-master-m2/m2-geoweb){target=_blank}
+[https://github.com/gis-master-m2/geoweb](https://github.com/gis-master-m2/geoweb){target=_blank}
 
 ##### Autor
 * Victor Pascual Ayats sfggeogis@gmail.com

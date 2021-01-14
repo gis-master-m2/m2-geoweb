@@ -371,7 +371,7 @@ Nos gustaria que en nuestro estilo estuvieran los carriles bici de Barcelona
 
 #### Paso 1
 
-* Descargamos el archivo [carril-bici.geojson][datos/carril-bici.geojson]{target=_blank}
+* Descargamos el archivo [carril-bici.geojson](datos/carril-bici.geojson){target=_blank}
   
 
 * Podemos utilizar QGIS o https://geojson.io/ para visualizarlo
@@ -404,7 +404,7 @@ Nos gustaria que en nuestro estilo estuvieran los carriles bici de Barcelona
 
 #### Paso 1
 
-* Descargamos el archivo [vias_ciclables.geojson][datos/vias_ciclables.geojson]{target=_blank}
+* Descargamos el archivo [vias_ciclables.geojson](datos/vias_ciclables.geojson){target=_blank}
   
 * Podemos utilizar QGIS o https://geojson.io/ para visualizarlo
 
@@ -493,7 +493,7 @@ Editamos **mapbox-basico.html** y añadimos
     [https://docs.mapbox.com/mapbox-gl-js/api/#map.event:click](https://docs.mapbox.com/mapbox-gl-js/api/#map.event:click){target=_blank}
     
 
- !!! success "Añadimos un Popup al evento click"
+!!! success "Añadimos un Popup al evento click"
 
 ```html hl_lines="55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76"
 <html>

@@ -8,7 +8,7 @@ Leaflet tiene más de 250 plugins o "pequeñas aplicaciones" que añaden funcion
  
 * 
  Plugins
-  [http://leafletjs.com/plugins.html](http://leafletjs.com/plugins.html)
+  [http://leafletjs.com/plugins.html](http://leafletjs.com/plugins.html){target=_blank}
 
 
 !!! success página de plugins
@@ -32,8 +32,10 @@ Leaflet tiene más de 250 plugins o "pequeñas aplicaciones" que añaden funcion
 
 ### Ejemplo añadir plugin OSM Geocoder
   > Plugin que permite connectar con servicios de Geocodificaciónde OSM
+
  *  Plugin [https://github.com/k4r573n/leaflet-control-osm-geocoder](Leaflet Control OSM Geocoder){target=_blank}  
  
+*Creamos archivo **leaflet-plugin.html** dentro de nuestro directorio **/geoweb**
 
 ```html
   <html lang="es">
@@ -94,7 +96,16 @@ Leaflet tiene más de 250 plugins o "pequeñas aplicaciones" que añaden funcion
     </html>
 ```
        
+![alt text](img/leaflet-plugins.png "vscode")
 
 
+!!! success "¿Editamos index.html Subimos el ejemplo al GitHub?"
+	
+	```bash
 
- 
+		git pull
+        git add .
+        git commit -m "plugins leaflet"
+        git push
+
+	```    

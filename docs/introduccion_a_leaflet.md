@@ -206,7 +206,7 @@ Llamaremos a la función desde el evento onload del ```<body>```
 ```
 
 
-### **Leaflet básico**
+### **Leaflet básico final**
 ```html
   <html lang="es">
   <head>
@@ -325,9 +325,9 @@ Llamaremos a la función desde el evento onload del ```<body>```
          });
 	```
 
+![alt text](img/leaflet-basico.png "github")
 
-
-!!! success "¿Subimos el ejemplo al GitHub?"
+!!! success "Visualizamos , editamos index.html y subimos el ejemplo al GitHub"
 	
 
 	```bash
@@ -349,8 +349,10 @@ Llamaremos a la función desde el evento onload del ```<body>```
 !!! abstract "L.control.layers"
     #### **L.control.layers**
     Es un control que nos permite activar y desactivar capas base (baseLayers) y "overlays"
+
     **baseLayers**: són capas de referéncia y sólo puede haber una activa
-    **overlays**:són capas que aparcen encimas de las de referéncia y pueden haber una o varias activas
+
+    **overlays**:són capas que aparcen encima de las de referéncia (baseLayers) y puede haber una o varias activas
 
     Referencia: <a target="_blank"  rel="noopener"  href="https://leafletjs.com/reference-1.7.1.html#control-layers">https://leafletjs.com/reference-1.7.1.html#control-layers</a>
 
@@ -360,6 +362,7 @@ Llamaremos a la función desde el evento onload del ```<body>```
     Referencia: <a target="_blank"  rel="noopener"  href="https://leafletjs.com/reference-1.7.1.html#control-scale">https://leafletjs.com/reference-1.7.1.html#control-scale</a>
 
 
+#### Copiamos y pegamos código
 
 ```html
   <html lang="es">
@@ -442,14 +445,24 @@ Llamaremos a la función desde el evento onload del ```<body>```
 !!! question "Pregunta" 
 	<h4>¿Como lo haríamos para ver el control de capas abierto por defecto?</h4>
     Respuesta:Miramos opciones del control-layers
-    ``` controlCapas = L.control.layers(baseMaps, overlayMaps,{collapsed:false}); ```
+
+    ``` 
+    controlCapas = L.control.layers(baseMaps, overlayMaps,{collapsed:false}); 
+    ```
+
+![alt text](img/leaflet-controles.png "github")
+
+### BaseLayer y Overlays
 
 
-
-#### BaseLayer y Overlays
+| tipo     | Description                          |
+| ----------- | ------------------------------------ |
+| BaseLayer       | són capas de referéncia (fondo) y sólo puede haber una activa (Ejemplo:Fondo satélite) |
+| Overlay       | són capas que aparcen encima de las de referéncia (baseLayers) y puede haber una o varias activas (Ejemplo:Capa puntos) |
 
 > ¿Que mapas de fondo puedo añadir?
 >Existem muchas fuentes que ofrecen fondos de referencia que podemos utilizar en Leaflet
+
 >Algunas de ellas nos piden un previo registro y accestoken que podemos añadir a la url de servicio
 
 !!! tip "Miramos los ejemplos de fondos de esta web"
@@ -459,6 +472,7 @@ Llamaremos a la función desde el evento onload del ```<body>```
 #### **Ejemplo 2 Provider**
 
 * Creamos la página **leaflet-provider.html** dentro directorio geoweb
+* Copiamos pegamos código
 
 ```html
   
@@ -575,17 +589,143 @@ Llamaremos a la función desde el evento onload del ```<body>```
     
     </html>
 ```
+* Visualizamos mapa
 
 !!! question "Pregunta"
 
     <h3>¿Cómo añadiriamos una capa de tipo "overlay"?</h3>
  
-       
 
-#### **Mapa base**
+*Solución
 
-!!! question ¿ Cómo crearíamos un nuevo ejemplo llamado **mapabase.html** con tres capas "baseLayers" de fondo: 
-    Mapa, Orto, Híbrido
+```html hl_lines="101-107"
+<html lang="es">
+
+<head>
+    <title>Ejemplo Leaflet provider</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="autor" />
+    <meta name="description" content="descripción página" />
+    <meta name="robots" content="index,follow" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #map {
+            height: 100%;
+            width: 100%;
+            background-color: #ffffff
+        }
+    </style>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map, osm, controlCapas;
+
+        function init() {
+            map = L.map('map', {
+                center: [39.6863, 2.8382],
+                zoom: 8
+            });
+            osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                minZoom: 1,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright"/>OpenStreetMap</a>'
+            }).addTo(map);
+
+            var OpenStreetMap_DE =
+                L.tileLayer('http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright"/>OpenStreetMap</a>'
+                });
+            var OpenStreetMap_HOT = L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright"/>OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank"/>Humanitarian OpenStreetMapTeam</a>'
+            });
+
+            var Stamen_Toner = L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {
+                attribution: 'Map tiles by <a href="http://stamen.com"/>Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0"/>CC BY 3.0</a> &mdash; Map data &copy;<a href="http://www.openstreetmap.org/copyright"/>OpenStreetMap</a>',
+                subdomains: 'abcd',
+                minZoom: 0,
+                maxZoom: 20
+            });
+            var Stamen_Watercolor = L.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png', {
+                attribution: 'Map tiles by <a href="http://stamen.com"/>Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0"/>CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright"/>OpenStreetMap</a>',
+                subdomains: 'abcd',
+                minZoom: 1,
+                maxZoom: 16
+            });
+            var Esri_WorldStreetMap =
+                L.tileLayer(
+                    'http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+                        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS,Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom,2012'
+                    });
+
+            var Esri_WorldTopoMap =
+                L.tileLayer(
+                    'http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+                        attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap,iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, EsriChina (Hong Kong), and the GIS User Community'
+                    });
+            var Esri_WorldImagery =
+                L.tileLayer(
+                    'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX,GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+                    });
+            var Esri_WorldShadedRelief =
+                L.tileLayer(
+                    'http://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}', {
+                        attribution: 'Tiles &copy; Esri &mdash; Source: Esri',
+                        maxZoom: 13
+                    });
+            var Esri_OceanBasemap =
+                L.tileLayer(
+                    'http://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer/tile/{z}/{y}/{x}', {
+                        attribution: 'Tiles &copy; Esri &mdash; Sources: GEBCO, NOAA, CHS, OSU, UNH,CSUMB, National Geographic, DeLorme, NAVTEQ, and Esri',
+                        maxZoom: 13
+                    });
+
+
+
+            var mapaBase = {
+                'OSM': osm,
+                'OpenStreetMap_DE': OpenStreetMap_DE,
+                'OpenStreetMap_HOT': OpenStreetMap_HOT,
+                'Stamen_Toner': Stamen_Toner,
+                'Stamen_Watercolor': Stamen_Watercolor,
+                'Esri_WorldStreetMap': Esri_WorldStreetMap,
+                'Esri_WorldTopoMap': Esri_WorldTopoMap,
+                'Esri_WorldImagery': Esri_WorldImagery,
+                'Esri_WorldShadedRelief': Esri_WorldShadedRelief,
+                'Esri_OceanBasemap': Esri_OceanBasemap
+            };
+
+            var SafeCast = L.tileLayer('https://s3.amazonaws.com/te512.safecast.org/{z}/{x}/{y}.png', {
+                maxZoom: 16,
+                attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Map style: &copy; <a href="https://blog.safecast.org/about/">SafeCast</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+            });
+            var overlay = {"Safecat":SafeCast}
+
+            controlCapas = L.control.layers(mapaBase, overlay, {collapsed:false});
+            controlCapas.addTo(map);
+            controlEscala = L.control.scale();
+            controlEscala.addTo(map);
+        }
+    </script>
+</head>
+
+<body onLoad="init()">
+    <div id="map"> </div>
+</body>
+
+</html>
+
+```
+![alt text](img/leaflet-providers.png "github")     
+
+### **Crear un mapa base**
+
+!!!question "¿ Cómo crearíamos un nuevo ejemplo llamado **mapabase.html** con tres capas "baseLayers" de fondo: 
+    Mapa, Orto, Híbrido"
  
 
 !!! tip "Truco"
@@ -613,7 +753,8 @@ Llamaremos a la función desde el evento onload del ```<body>```
 
 
 !!! success "Respuesta"
-    ```html
+
+```html
     <html lang="es">
     <head>
         <title>Ejemplo Leaflet mapa base</title>
@@ -694,7 +835,7 @@ Llamaremos a la función desde el evento onload del ```<body>```
     </body>
 
     </html>
-    ```
+```
 
 ![alt text](img/mapabase.png "github")
 
