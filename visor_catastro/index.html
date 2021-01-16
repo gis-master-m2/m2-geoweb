@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://gis-master-m2.github.io/m2-geoweb/visor_catastro/">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -24,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.75751829.min.css">
         
       
     
@@ -1340,6 +1340,18 @@
 <div class="highlight"><pre><span></span><code>    <span class="nx">map</span><span class="p">.</span><span class="nx">setLayoutProperty</span><span class="p">(</span><span class="s2">&quot;edificios&quot;</span><span class="p">,</span> <span class="s2">&quot;visibility&quot;</span><span class="p">,</span> <span class="s2">&quot;visible&quot;</span><span class="p">);</span>
     <span class="nx">map</span><span class="p">.</span><span class="nx">setLayoutProperty</span><span class="p">(</span><span class="s2">&quot;edificios&quot;</span><span class="p">,</span> <span class="s2">&quot;visibility&quot;</span><span class="p">,</span> <span class="s2">&quot;none&quot;</span><span class="p">);</span>
 </code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">desactivar capas cuyo id contenga 'label'</p>
+</div>
+<div class="highlight"><pre><span></span><code>            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">map</span><span class="p">.</span><span class="nx">getStyle</span><span class="p">().</span><span class="nx">layers</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+
+                    <span class="k">if</span><span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">getStyle</span><span class="p">().</span><span class="nx">layers</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">id</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;label&quot;</span><span class="p">)</span><span class="o">!=-</span><span class="mf">1</span><span class="p">){</span>
+
+                        <span class="nx">map</span><span class="p">.</span><span class="nx">setLayoutProperty</span><span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">getStyle</span><span class="p">().</span><span class="nx">layers</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">id</span><span class="p">,</span> <span class="s2">&quot;visibility&quot;</span><span class="p">,</span> <span class="s2">&quot;none&quot;</span><span class="p">);</span>
+                    <span class="p">}</span>
+
+                <span class="p">}</span>
+</code></pre></div>
 <div class="admonition success">
 <p class="admonition-title">Añadir funcion Popup personalizado dentro de edificios.js</p>
 </div>
@@ -1452,7 +1464,11 @@
 
     <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<div class="admonition tip">
+<div class="admonition question">
+<p class="admonition-title">Miramos opciones de Geocoder. ¿Limitámos búsquedas del geocoder por caja de coordenadas de Barcelona?</p>
+<p><code>[2.2536 , 41.3000 , 2.1066 , 41.4468]</code></p>
+</div>
+<div class="admonition question">
 <p class="admonition-title">¿Ponemos título?</p>
 </div>
 <div class="admonition success">
@@ -1529,8 +1545,8 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta"}</script>
+      <script src="../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta"}</script>
       
       <script>
         app = initialize({
