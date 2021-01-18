@@ -543,6 +543,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#paso-6llamamos-a-la-funcion-en-el-html-solo-un-de-las-dos-puede-ser-llamada" class="md-nav__link">
+    Paso 6:Llamamos a la función en el HTML (solo un de las dos puede ser llamada)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -891,6 +898,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#paso-6llamamos-a-la-funcion-en-el-html-solo-un-de-las-dos-puede-ser-llamada" class="md-nav__link">
+    Paso 6:Llamamos a la función en el HTML (solo un de las dos puede ser llamada)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -934,11 +948,13 @@
 <h2 id="algunos-formatos-3d-geo">Algunos formatos 3D geo</h2>
 <p><strong>3D-Tiles</strong>: Especificación estándar OGC creada por Cesium para la creación de piràmides de datos vectores con información 3D .</p>
 <p><strong>3D Scene Layers (I3S)</strong>:Especificación estándar OGC creada por ESRI para la creación de piràmides de datos vectores con información 3D</p>
-<p><strong>Terrain-RGB</strong>: Datos de elevación codificados en teselas PNG rasterizadas como valores de color que pueden ser decodificados a alturas en metros</p>
+<p><strong>Terrain-RGB</strong>: Datos de elevación codificados en teselas PNG rasterizadas como valores de color que pueden ser decodificados a alturas en metros
+ Formula para pasar el color a metros :
+ <code>height = -10000 + ((R * 256 * 256 + G * 256 + B) * 0.1)</code></p>
 <blockquote>
-<p>Mapbox puede extrudir polígonos
-Mostrar el terreno en 3D
-Mostar objectos y textura 3D <a href="https://openicgc.github.io/icgc-model3d.html" target="_blank">https://openicgc.github.io/icgc-model3d.html</a></p>
+<p>Mapbox puede extrudir polígonos</p>
+<p>Mostrar el terreno en 3D</p>
+<p>Mostar objectos y textura 3D <a href="https://openicgc.github.io/icgc-model3d.html" target="_blank">https://openicgc.github.io/icgc-model3d.html</a></p>
 </blockquote>
 <h3 id="como-ver-un-mapa-3d-en-mapbox-gl">Cómo ver un mapa 3D en Mapbox GL</h3>
 <div class="admonition note">
@@ -1117,17 +1133,64 @@ Mostar objectos y textura 3D <a href="https://openicgc.github.io/icgc-model3d.ht
 
 <span class="p">}</span> <span class="c1">//fin funcion</span>
 </code></pre></div>
+<h4 id="paso-6llamamos-a-la-funcion-en-el-html-solo-un-de-las-dos-puede-ser-llamada">Paso 6:Llamamos a la función en el HTML (solo un de las dos puede ser llamada)</h4>
+<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mapa 3D<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/3d.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="c1">//Añadir vuestor token!!</span>
+        <span class="kd">var</span> <span class="nx">map</span><span class="p">;</span>
+        <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span>
+                <span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
+             <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">Map</span><span class="p">({</span>
+                <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
+                <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;mapbox://styles/mapbox/satellite-streets-v10&#39;</span><span class="p">,</span>
+                <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span> <span class="mf">41.3954</span><span class="p">],</span>
+                <span class="nx">zoom</span><span class="o">:</span> <span class="mf">12</span><span class="p">,</span>
+                <span class="nx">attributionControl</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="nx">pitch</span><span class="o">:</span> <span class="mf">45</span><span class="p">,</span>
+                <span class="nx">hash</span><span class="o">:</span> <span class="kc">true</span>
+            <span class="p">});</span>
+
+            <span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span> <span class="nx">compact</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}));</span>
+            <span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span>
+
+            <span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="hll">             <span class="c1">//add3D();</span>
+</span><span class="hll">             <span class="nx">add3DICGC</span><span class="p">();</span>
+</span>            <span class="p">});</span> <span class="c1">//fin onload</span>
+
+        <span class="p">}</span> <span class="c1">// final init</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
 <div class="admonition success">
 <p class="admonition-title">Comparamos zona Montserrat</p>
 </div>
-<div class="admonition success">
-<p class="admonition-title">Cambiamos el estilo del mapa</p>
+<div class="admonition question">
+<p class="admonition-title">¿Cómo haríamos para poner una opción para activar/desactivar vista 3D?</p>
+<p>Sabémos que  <code>map.setTerrain(null)</code> desactiva el 3D</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">¿Podríamos pasar a 3D el visor de edificios de Catastro?¿Cómo?</p>
 </div>
 <div class="admonition success">
-<p class="admonition-title">¿Subimos el ejemplo al GitHub?</p>
+<p class="admonition-title">Editamos index.html y subimos el ejemplo al GitHub</p>
 <div class="highlight"><pre><span></span><code>    git pull
     git add .
     git commit -m <span class="s2">&quot;visor 3d&quot;</span>
