@@ -1189,13 +1189,108 @@
 <div class="admonition question">
 <p class="admonition-title">¿Podríamos pasar a 3D el visor de edificios de Catastro?¿Cómo?</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Para trabajar con 3D hay que cambir un poco la función de popup</p>
+<p>```javascript</p>
+</div>
+<p>function addPopupToMapEdificios3D(nombreCapa) {</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">map</span><span class="p">.</span><span class="k">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="nf">var</span><span class="w"> </span><span class="nc">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nf">var</span><span class="w"> </span><span class="n">bbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">[e.point.x - 5, e.point.y - 5</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">e.point.x + 5, e.point.y + 5</span><span class="o">]</span><span class="err">]</span><span class="p">;</span><span class="w"></span>
+<span class="nf">var</span><span class="w"> </span><span class="n">features</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">map</span><span class="p">.</span><span class="n">queryRenderedFeatures</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="nl">layers</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">nombreCapa</span><span class="o">]</span><span class="w"> </span><span class="err">}</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</td></tr></table>
+<p>if(features.length &gt; 0){
+        for (key in features[0].properties) {</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;numberOfFl&quot;</span><span class="p">)</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<span class="w">            </span><span class="nc">text</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="ss">&quot;&lt;b&gt;Numero de plantas&lt;/b&gt;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">features</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">.</span><span class="n">properties</span><span class="o">[</span><span class="n">key</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="ss">&quot;&lt;br&gt;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="err">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;localId&quot;</span><span class="p">)</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<span class="w">            </span><span class="o">//</span><span class="n">localId</span><span class="w"> </span><span class="mi">0004702</span><span class="n">DF3800C_part1</span><span class="w"></span>
+<span class="w">            </span><span class="o">//</span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">ovc</span><span class="p">.</span><span class="n">catastro</span><span class="p">.</span><span class="n">meh</span><span class="p">.</span><span class="n">es</span><span class="o">/</span><span class="n">OVCServWeb</span><span class="o">/</span><span class="n">OVCWcfLibres</span><span class="o">/</span><span class="n">OVCFotoFachada</span><span class="p">.</span><span class="n">svc</span><span class="o">/</span><span class="n">RecuperarFotoFachadaGet</span><span class="vm">?</span><span class="n">ReferenciaCatastral</span><span class="o">=</span><span class="mi">0004701</span><span class="n">DF3800C</span><span class="w"></span>
+<span class="w">            </span><span class="o">//</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">www1</span><span class="p">.</span><span class="n">sedecatastro</span><span class="p">.</span><span class="n">gob</span><span class="p">.</span><span class="n">es</span><span class="o">/</span><span class="n">CYCBienInmueble</span><span class="o">/</span><span class="n">OVCListaBienes</span><span class="p">.</span><span class="n">aspx</span><span class="vm">?</span><span class="n">rc1</span><span class="o">=</span><span class="mi">0004701</span><span class="o">&amp;</span><span class="n">rc2</span><span class="o">=</span><span class="n">DF3800C</span><span class="w"></span>
+
+<span class="w">            </span><span class="nf">var</span><span class="w"> </span><span class="n">localId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">features</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">.</span><span class="n">properties</span><span class="o">[</span><span class="n">key</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">            </span><span class="nf">var</span><span class="w"> </span><span class="n">localIdSplit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">localId</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="ss">&quot;_&quot;</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="mi">0004702</span><span class="n">DF3800C</span><span class="w">  </span><span class="n">part1</span><span class="w"></span>
+<span class="w">            </span><span class="nf">var</span><span class="w"> </span><span class="n">parte1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">localIdSplit</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">.</span><span class="nf">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="nf">var</span><span class="w"> </span><span class="n">parte2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">localIdSplit</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">.</span><span class="nf">substring</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="n">localIdSplit</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">.</span><span class="n">length</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="nc">text</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="ss">&quot;&lt;img width=200 src=http://ovc.catastro.meh.es/OVCServWeb/OVCWcfLibres/OVCFotoFachada.svc/RecuperarFotoFachadaGet?ReferenciaCatastral=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">localId</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="ss">&quot;&gt;&lt;br&gt;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nc">text</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="ss">&quot;&lt;a target=blank href=https://www1.sedecatastro.gob.es/CYCBienInmueble/OVCListaBienes.aspx?rc1=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">parte1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="ss">&quot;&amp;rc2=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">parte2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="ss">&quot;&gt;Ficha&lt;/a&gt;&lt;br&gt;&quot;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="err">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">mapboxgl</span><span class="p">.</span><span class="n">Popup</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="n">setLngLat</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">lngLat</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="n">setHTML</span><span class="p">(</span><span class="nc">text</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="n">addTo</span><span class="p">(</span><span class="k">map</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</td></tr></table>
+<p>}</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">}</span><span class="p">);</span>
+
+<span class="k">map</span><span class="p">.</span><span class="k">on</span><span class="p">(</span><span class="s1">&#39;mouseenter&#39;</span><span class="p">,</span> <span class="n">nombreCapa</span><span class="p">,</span> <span class="k">function</span> <span class="p">()</span> <span class="err">{</span>
+    <span class="k">map</span><span class="p">.</span><span class="n">getCanvas</span><span class="p">().</span><span class="n">style</span><span class="p">.</span><span class="k">cursor</span> <span class="o">=</span> <span class="s1">&#39;pointer&#39;</span><span class="p">;</span>
+<span class="err">}</span><span class="p">);</span>
+
+<span class="k">map</span><span class="p">.</span><span class="k">on</span><span class="p">(</span><span class="s1">&#39;mouseleave&#39;</span><span class="p">,</span> <span class="n">nombreCapa</span><span class="p">,</span> <span class="k">function</span> <span class="p">()</span> <span class="err">{</span>
+    <span class="k">map</span><span class="p">.</span><span class="n">getCanvas</span><span class="p">().</span><span class="n">style</span><span class="p">.</span><span class="k">cursor</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="err">}</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table>
+<p>}</p>
+<p>```</p>
 <div class="admonition success">
 <p class="admonition-title">Editamos index.html y subimos el ejemplo al GitHub</p>
-<div class="highlight"><pre><span></span><code>    git pull
-    git add .
-    git commit -m <span class="s2">&quot;visor 3d&quot;</span>
-    git push
+<p>```bash</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">git pull</span>
+<span class="err">git add .</span>
+<span class="err">git commit -m &quot;visor 3d&quot;</span>
+<span class="err">git push</span>
 </code></pre></div>
+</td></tr></table>
+<p>``` </p>
 </div>
                 
               
