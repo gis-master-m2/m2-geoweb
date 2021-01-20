@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://gis-master-m2.github.io/m2-geoweb/introduccion_maputnik/">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -24,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.15aa0b43.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.3b61ea93.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.75751829.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
         
       
     
@@ -598,8 +598,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cuando-utilizar-los-servicios-de-mapbox_1" class="md-nav__link">
-    ¿ Cuando utilizar los servicios de MapBox?
+  <a href="#cuando-no-utilizar-los-servicios-de-mapbox" class="md-nav__link">
+    ¿ Cuando NO utilizar los servicios de MapBox?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donde-podemos-encontrar-estilos-vector-tiles" class="md-nav__link">
+    ¿Dónde podemos encontrar estilos vector-tiles?
   </a>
   
 </li>
@@ -611,22 +618,22 @@
       
         <li class="md-nav__item">
   <a href="#openicgc" class="md-nav__link">
-    OpenICGC
+    OpenICGC.
   </a>
   
-    <nav class="md-nav" aria-label="OpenICGC">
+    <nav class="md-nav" aria-label="OpenICGC.">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mapa-estilo-hibrido" class="md-nav__link">
-    Mapa estilo Híbrido
+  <a href="#mapa-estilo-icgc" class="md-nav__link">
+    Mapa estilo ICGC
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#crear-nuestro-propio-estilo" class="md-nav__link">
-    Crear nuestro propio estilo
+  <a href="#editar-estilo-con-maputnik" class="md-nav__link">
+    Editar estilo con Maputnik
   </a>
   
 </li>
@@ -634,6 +641,13 @@
           <li class="md-nav__item">
   <a href="#mapa-estilo-propio" class="md-nav__link">
     Mapa estilo propio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-datos-propios-sin-crear-tilesets-en-mapboxstudio" class="md-nav__link">
+    Añadir datos propios sin crear tilesets en MapboxStudio
   </a>
   
 </li>
@@ -842,8 +856,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cuando-utilizar-los-servicios-de-mapbox_1" class="md-nav__link">
-    ¿ Cuando utilizar los servicios de MapBox?
+  <a href="#cuando-no-utilizar-los-servicios-de-mapbox" class="md-nav__link">
+    ¿ Cuando NO utilizar los servicios de MapBox?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donde-podemos-encontrar-estilos-vector-tiles" class="md-nav__link">
+    ¿Dónde podemos encontrar estilos vector-tiles?
   </a>
   
 </li>
@@ -855,22 +876,22 @@
       
         <li class="md-nav__item">
   <a href="#openicgc" class="md-nav__link">
-    OpenICGC
+    OpenICGC.
   </a>
   
-    <nav class="md-nav" aria-label="OpenICGC">
+    <nav class="md-nav" aria-label="OpenICGC.">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mapa-estilo-hibrido" class="md-nav__link">
-    Mapa estilo Híbrido
+  <a href="#mapa-estilo-icgc" class="md-nav__link">
+    Mapa estilo ICGC
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#crear-nuestro-propio-estilo" class="md-nav__link">
-    Crear nuestro propio estilo
+  <a href="#editar-estilo-con-maputnik" class="md-nav__link">
+    Editar estilo con Maputnik
   </a>
   
 </li>
@@ -878,6 +899,13 @@
           <li class="md-nav__item">
   <a href="#mapa-estilo-propio" class="md-nav__link">
     Mapa estilo propio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-datos-propios-sin-crear-tilesets-en-mapboxstudio" class="md-nav__link">
+    Añadir datos propios sin crear tilesets en MapboxStudio
   </a>
   
 </li>
@@ -908,15 +936,16 @@
                 
                 <h3 id="introduccion">Introducción</h3>
 <blockquote>
-<p>Podemos trabajar con la libreria MapBox GL JS sin utilizar los estilos , servicios ni app Tokens de Mapbox</p>
+<p>Podemos trabajar con la libreria MapBox GL JS sin utilizar los estilos de Mapbox</p>
+<p>Si la versión de la libreria és anterior a la v2 tampoco haria falta especificar el Access Token</p>
 <p>Podemos editar estilos sin utilizar MapBox Studio, directamente con Maputnik</p>
 </blockquote>
 <p><img alt="alt text" src="../img/maputnik.png" title="Maputnik" /></p>
-<p><a href="https://maputnik.github.io//">https://maputnik.github.io/</a></p>
+<p><a href="https://maputnik.github.io//" target="_blank">https://maputnik.github.io/</a></p>
 <h4 id="cuando-utilizar-los-servicios-de-mapbox">¿ Cuando utilizar los servicios de MapBox?</h4>
 <ul>
 <li>
-<p>Cuando tenemos un dataset grande.Mapbox nos ofrece hasta 50 GB gratis</p>
+<p>Cuando tenemos un dataset grande.Mapbox nos ofrece hasta 300mb por archivo</p>
 </li>
 <li>
 <p>Cuando necesitamos utilitzar alguno de sus servicios (geocoding, routing) o sus estilos</p>
@@ -925,13 +954,25 @@
 <p>Cuando necesitamos alta disponibilidad</p>
 </li>
 </ul>
-<h4 id="cuando-utilizar-los-servicios-de-mapbox_1">¿ Cuando utilizar los servicios de MapBox?</h4>
+<h4 id="cuando-no-utilizar-los-servicios-de-mapbox">¿ Cuando NO utilizar los servicios de MapBox?</h4>
 <ul>
 <li>Cuando necesito trabajor con cartografia oficial</li>
 <li>Cuando tengo dataset pequeños (&lt; 50.000 geometrias)</li>
-<li>Cuando solos visualizo terceros servicios</li>
+<li>Cuando solo visualizo terceros servicios</li>
 </ul>
-<h3 id="openicgc">OpenICGC</h3>
+<h4 id="donde-podemos-encontrar-estilos-vector-tiles">¿Dónde podemos encontrar estilos vector-tiles?</h4>
+<ul>
+<li><a href="https://openicgc.github.io/" target="_blank">https://openicgc.github.io/</a></li>
+<li><a href="https://cloud.maptiler.com/maps/" target="_blank">https://cloud.maptiler.com/maps/</a></li>
+<li><a href="https://www.ordnancesurvey.co.uk/business-government/products/open-zoomstack" target="_blank">https://www.ordnancesurvey.co.uk/business-government/products/open-zoomstack</a></li>
+<li>
+<p><a href="https://www.thunderforest.com/docs/vector-maps-api/" target="_blank">https://www.thunderforest.com/docs/vector-maps-api/</a></p>
+</li>
+<li>
+<p><a href="https://github.com/klokantech/roman-empire" target="_blank">https://github.com/klokantech/roman-empire</a></p>
+</li>
+</ul>
+<h3 id="openicgc">OpenICGC.</h3>
 <ul>
 <li>
 <p>Es un web con recursos y servicios open del Institut Cartográfic i Geològic de Catalunya</p>
@@ -941,16 +982,16 @@
 </li>
 </ul>
 <blockquote>
-<p><a href="https://openicgc.github.io/">https://openicgc.github.io/</a></p>
+<p><a href="https://openicgc.github.io/" target="_blank">https://openicgc.github.io/</a></p>
 </blockquote>
 <p><img alt="alt text" src="../img/openicgc1.png" title="OpenIcgc" /></p>
-<h4 id="mapa-estilo-hibrido">Mapa estilo Híbrido</h4>
+<h4 id="mapa-estilo-icgc">Mapa estilo ICGC</h4>
 <ul>
 <li>
-<p>Seleccionaremos el estilo Hibrid de OpenICGC</p>
+<p>Seleccionaremos el estilo ICGC de OpenICGC</p>
 </li>
 <li>
-<p><a href="https://geoserveis.icgc.cat/contextmaps/hibrid.json">https://geoserveis.icgc.cat/contextmaps/hibrid.json</a></p>
+<p><a href="https://geoserveis.icgc.cat/contextmaps/icgc.json">https://geoserveis.icgc.cat/contextmaps/icgc.json</a></p>
 </li>
 <li>
 <p>Creamos archivo <strong>mapbox-icgc.html</strong></p>
@@ -959,30 +1000,18 @@
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hibrido<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Topogáfico<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-        <span class="nt">body</span> <span class="p">{</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
-            <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span>
-        <span class="p">}</span>
-    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-        <span class="kd">function</span> <span class="nx">Init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
 
             <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
             <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">Map</span><span class="p">({</span>
                 <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
-                <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;https://geoserveis.icgc.cat/contextmaps/hibrid.json&#39;</span><span class="p">,</span>
+                <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;https://geoserveis.icgc.cat/contextmaps/icgc.json&#39;</span><span class="p">,</span>
                 <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span> <span class="mf">41.3954</span><span class="p">],</span>
                 <span class="nx">zoom</span><span class="o">:</span> <span class="mf">13</span><span class="p">,</span>
                 <span class="nx">hash</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -998,12 +1027,12 @@
         <span class="p">}</span>
     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;Init()&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;map&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<h4 id="crear-nuestro-propio-estilo">Crear nuestro propio estilo</h4>
+<h4 id="editar-estilo-con-maputnik">Editar estilo con Maputnik</h4>
 <ul>
 <li>
 <p>Seleccionaremos el estilo Full dark de OpenICGC</p>
@@ -1026,12 +1055,12 @@
 </ul>
 <div class="admonition success">
 <p class="admonition-title">¿Subimos el estilo al GitHub?</p>
-<div class="highlight"><pre><span></span><code>    git pull
-    git add .
-    git commit -m <span class="s2">&quot;mi estilo&quot;</span>
-    git push
-</code></pre></div>
 </div>
+<div class="highlight"><pre><span></span><code>        git pull
+        git add .
+        git commit -m <span class="s2">&quot;mi estilo&quot;</span>
+        git push
+</code></pre></div>
 <h4 id="mapa-estilo-propio">Mapa estilo propio</h4>
 <ul>
 <li>Creamos archivo <strong>mapbox-miestilo2.html</strong></li>
@@ -1043,26 +1072,14 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-        <span class="nt">body</span> <span class="p">{</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
-            <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span>
-        <span class="p">}</span>
-    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-        <span class="kd">function</span> <span class="nx">Init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
 
             <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
             <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">Map</span><span class="p">({</span>
                 <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
-                <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;https://gis-master-m2.github.io/geoweb/datos/miestilo.json&#39;</span><span class="p">,</span>
+                <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;https://gis-master-m2.github.io/geoweb/datos/miestilo.json&#39;</span><span class="p">,</span> <span class="c1">// o &#39;datos/miestilo.json&#39;</span>
                 <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span> <span class="mf">41.3954</span><span class="p">],</span>
                 <span class="nx">zoom</span><span class="o">:</span> <span class="mf">13</span><span class="p">,</span>
                 <span class="nx">hash</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -1078,11 +1095,15 @@
         <span class="p">}</span>
     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;Init()&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;map&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
+<h4 id="anadir-datos-propios-sin-crear-tilesets-en-mapboxstudio">Añadir datos propios sin crear tilesets en MapboxStudio</h4>
+<div class="admonition note">
+<p class="admonition-title">Para archivos muy grandes no es recomendable</p>
+</div>
 <ul>
 <li>Añadimos un GeoJson local , como un nuevo source</li>
 </ul>
@@ -1097,21 +1118,9 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-        <span class="nt">body</span> <span class="p">{</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
-            <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span>
-        <span class="p">}</span>
-    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-        <span class="kd">function</span> <span class="nx">Init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
 
             <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
             <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">Map</span><span class="p">({</span>
@@ -1153,7 +1162,7 @@
         <span class="p">}</span>
     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;Init()&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;map&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
@@ -1162,7 +1171,7 @@
 <p class="admonition-title">¿Subimos el ejemplo al GitHub?</p>
 <div class="highlight"><pre><span></span><code>    git pull
     git add .
-    git commit -m <span class="s2">&quot;mi estilo&quot;</span>
+    git commit -m <span class="s2">&quot;mi mapa bàsico&quot;</span>
     git push
 </code></pre></div>
 </div>
@@ -1232,8 +1241,8 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.93c04032.min.js"></script>
-      <script src="../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta"}</script>
+      <script src="../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta"}</script>
       
       <script>
         app = initialize({
