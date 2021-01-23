@@ -456,6 +456,18 @@
     map.setLayoutProperty("edificios", "visibility", "none");
 ```
 
+!!! example "desactivar capas cuyo id contenga 'label'"
+
+```javascript
+            for (var i=0; i < map.getStyle().layers.length;i++){
+
+                    if(map.getStyle().layers[i].id.indexOf("label")!=-1){
+
+                        map.setLayoutProperty(map.getStyle().layers[i].id, "visibility", "none");
+                    }
+
+                }
+```
 
 !!! success "Añadir funcion Popup personalizado dentro de edificios.js"
 
@@ -508,6 +520,66 @@ function addPopupToMapEdificios(nombreCapa) {
 
 ```
  ![alt text](img/mapbox-catastro-mapa.png "mapbox-catastro-mapa.png")
+
+ #### Paso 8: Llamamos función addPopupToMapEdificios
+
+* LLamamos a la función de desde el evento `onChange` del objeto input de HTML
+
+
+```html hl_lines="46"
+    <html>
+
+    <head>
+    <meta charset='utf-8' />
+    <title>Edificios</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+    <link href='css/estilobase.css' rel='stylesheet' />
+    <script src='js/utils.js'></script>
+    <script src='js/edificios.js'></script>
+    <script>
+        //Añadir vuestor token y/o estilo !!
+        var map;
+        function init() {
+            mapboxgl.accessToken =
+                'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
+             map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/dark-v10',
+                center: [2.16859, 41.3954],
+                zoom: 15,
+                attributionControl: false,
+                pitch: 45,
+                hash: true
+            });
+
+            map.addControl(new mapboxgl.AttributionControl({ compact: true }));
+            map.addControl(new mapboxgl.NavigationControl());
+           
+            map.on('load', function () {
+                
+                addEdificiosCapa();
+
+                addPopupToMapEdificios("edificios");
+             }); //fin onload
+            
+        } // final init
+    </script>
+    </head>
+
+    <body onload="init()">
+    <div class="panelTopIzquierda">
+
+       <label id="altura">Más de 0 pisos</label>
+        <input  onChange="filtrarEdificios(this.value)" id="slider" type="range" min="1" max="50" step="1" value="0" />
+    </div>
+    <div id="map"></div>
+    </body>
+
+    </html>
+
+```
 
 !!! tip "Geocodificador Mapbox GL  https://github.com/mapbox/mapbox-gl-geocoder/blob/master/API.md"
 
@@ -574,10 +646,11 @@ function addPopupToMapEdificios(nombreCapa) {
 
 ```
 
+!!! question "Miramos opciones de Geocoder. ¿Limitámos búsquedas del geocoder por caja de coordenadas de Barcelona?"
+    ```[2.1066 , 41.3000 , 2.2536 , 41.4468]```
 
- 
+!!! question "¿Ponemos título?"
 
-!!! tip "¿Ponemos título?"
 
 
 !!! success "¿Subimos el ejemplo al GitHub?"

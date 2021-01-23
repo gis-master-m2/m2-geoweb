@@ -95,10 +95,10 @@
 
 ![alt text](img/mapbox-edit.png "mapbox")
 
- !!! tip "Dedicamos 30 minutos a explorar i editar nuestro estilo"
+!!! tip "Dedicamos 30 minutos a explorar i editar nuestro estilo"
 
 
- #### Paso 3- Publicación
+#### Paso 3- Publicación
 
 ![alt text](img/mapbox-edit.png "mapbox")
 

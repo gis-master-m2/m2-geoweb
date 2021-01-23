@@ -9,16 +9,16 @@
 
     * Sabemos que GeoNames.org tiene un servicio JSON para interrogar los terremotos
 
-        [https://www.geonames.org/](https://www.geonames.org/)
+        [https://www.geonames.org/](https://www.geonames.org/){target=_blank}
 
-    * OpenICGC tiene un estio mundial  que nos puede servir como fondo
+    * Podemos utilizar el estilo dark de fondo
 
-        [https://geoserveis.icgc.cat/contextmaps/positron.json](https://geoserveis.icgc.cat/contextmaps/positron.json) 
+        [mapbox://styles/mapbox/dark-v10](mapbox://styles/mapbox/dark-v10) 
 
 
     * El estilo de Mapbox tiene un tipo "circle" que puedo cambiar de color y tamaño
 
-        [https://docs.mapbox.com/mapbox-gl-js/style-spec/#layers-circle](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layers-circle) 
+        [https://docs.mapbox.com/mapbox-gl-js/style-spec/#layers-circle](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layers-circle){target=_blank} 
 
     </h4>
 
@@ -26,16 +26,16 @@
 
 #### Paso 1: Servicio GeoNames
 
-* [Geonames.org](https://www.geonames.org/) Buscamos el servicio de terremotos y cuál es su implementación
+* [Geonames.org](https://www.geonames.org/){target=_blank} Buscamos el servicio de terremotos y cuál es su implementación
 
-* [https://www.geonames.org/export/JSON-webservices.html#earthquakesJSON](https://www.geonames.org/export/JSON-webservices.html#earthquakesJSON)
+* [https://www.geonames.org/export/JSON-webservices.html#earthquakesJSON](https://www.geonames.org/export/JSON-webservices.html#earthquakesJSON){target=_blank}
 
 
 #### Paso 2:
 
  * Crearemos el archivo **terremotos.html**
 
- * Añadimos código con mapa base "positron" ICGC
+ * Añadimos código con mapa base "dark"
 
 ```html
     <html>
@@ -50,10 +50,10 @@
         var map;
         function init() {
 
-            mapboxgl.accessToken = "";
+            mapboxgl.accessToken = "pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA";
             map = new mapboxgl.Map({
                 container: 'map',
-                style: 'https://geoserveis.icgc.cat/contextmaps/positron.json',
+                style: 'mapbox://styles/mapbox/dark-v10',
                 center: [9.746, 40.473],
                 zoom: 5.5,
                 hash: true,
@@ -104,10 +104,10 @@
         var map;
         function init() {
 
-            mapboxgl.accessToken = "";
+            mapboxgl.accessToken = "pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA";
             map = new mapboxgl.Map({
                 container: 'map',
-                style: 'https://geoserveis.icgc.cat/contextmaps/positron.json',
+                style: 'mapbox://styles/mapbox/dark-v10',
                 center: [9.746, 40.473],
                 zoom: 5.5,
                 hash: true,
@@ -134,7 +134,11 @@
 
 #### Paso 5: función genérica GET
 
- * Creamos una función genérica para enviar y recibir respuesta de cualquier servicio GET que retorne un JSON  dentro de **utils.js**
+ * Dentro del archivo **js/utils.js**  vamos a crear una función asíconcrona genérica para enviar y recibir respuesta de cualquier servicio GET que retorne un JSON 
+
+ * ``` async function ```: Es un funcion en JavaScript que retornará  un valor sólo cuando haya recibido la respuesta
+
+ * ``` fetch ```: La API Fetch proporciona una interfaz JavaScript para acceder y manipular partes del canal HTTP, tales como peticiones y respuestas https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Utilizando_Fetch. Para hacer peticiones tipo Ajax
 
 ```javascript
 
@@ -160,7 +164,51 @@
 #### Paso 6 :convertir la respuesta de JSON GeoNames al formato GeoJSON
 
  * Creamos una función para convertir la respuesta de JSON GeoNames al formato GeoJSON en **terremotos.js**
- * Miramos web [https://geojson.io](https://geojson.io)
+
+
+ * Ejemplo peticion: [https://secure.geonames.org/earthquakesJSON?north=44.1&south=-9.9&east=-22.4&west=55.2&username=masterupc](https://secure.geonames.org/earthquakesJSON?north=44.1&south=-9.9&east=-22.4&west=55.2&username=masterupc){target=_blank}
+
+* Estructura respuesta GeoNames
+
+```json
+{
+   "earthquakes":[
+      {
+         "datetime":"2011-03-11 04:46:23",
+         "depth":24.4,
+         "lng":142.369,
+         "src":"us",
+         "eqid":"c0001xgp",
+         "magnitude":8.8,
+         "lat":38.322
+      },
+      {
+         "datetime":"2012-04-11 06:38:37",
+         "depth":22.9,
+         "lng":93.0632,
+         "src":"us",
+         "eqid":"c000905e",
+         "magnitude":8.6,
+         "lat":2.311
+      },
+      {
+         "datetime":"2007-09-12 09:10:26",
+         "depth":30,
+         "lng":101.3815,
+         "src":"us",
+         "eqid":"2007hear",
+         "magnitude":8.4,
+         "lat":-4.5172
+      }
+     
+   ]
+} 
+```
+
+
+ * Miramos web [https://geojson.io](https://geojson.io){target=_blank} cómo és un GeoJSON
+
+* Creamos dentro de **/js/terremotos.js** la funcion terremotosGeonamesToGeoJSON
 
 ```javascript
 
@@ -219,18 +267,15 @@
         'maxRows=50&' +
         'minMagnitude=5&' +
         'username=masterupc&';
+        //date : 'yyyy-MM-d
 
     enviarPeticion(peticion).then(function (respuestaGeonames) {
 
         var geoJSON = terremotosGeonamesToGeoJSON(respuestaGeonames);
 
-        if (map.getSource("terremotos_source")) {
+        if (!map.getSource("terremotos_source")) {
 
-            map.getSource("terremotos_source").setData(geoJSON);
-
-        } else {
-
-            map.addSource("terremotos_source", {
+    map.addSource("terremotos_source", {
                 type: "geojson",
                 data: geoJSON
             });
@@ -267,15 +312,17 @@
                     'text-field': [                            
                         'format', ['get', 'magnitude'],                               
                     ],
-                    "text-font": [
-                        "FiraSans-Italic"
-                    ],
                     'text-size': 10
                 },
                 'paint': {
-                    'text-color': 'rgba(0,0,0,1)'
+                    'text-color': 'rgba(255,255,255,1)'
                 }
             });
+           
+
+        } else {
+
+            map.getSource("terremotos_source").setData(geoJSON);
 
         }
 
@@ -290,7 +337,7 @@
 * La función **generarPeticionTerremotos()** és la función principal que necesitamos que se ejecute:
 
     * Al cargar el mapa (evento `load`)
-    * Cada vex que me muevo por el mapa (eventos `moveend` y `zoomend`)
+    * Cada vez que me muevo por el mapa (eventos `moveend` y `zoomend`)
 
 ```html hl_lines="30 31 32 33 34 35 36 37 38 39 40 41 42 43 44"
 
@@ -311,7 +358,7 @@
             mapboxgl.accessToken ='pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
             map = new mapboxgl.Map({
                 container: 'map',
-                style: 'https://geoserveis.icgc.cat/contextmaps/positron.json',
+                style: 'mapbox://styles/mapbox/dark-v10',
                 center: [9.746, 40.473],
                 zoom: 5.5,
                 hash: true,
@@ -355,37 +402,43 @@
 
 #### Paso 9:función para generar popups
 
-* Dentro del archivo  **utils.js**  añadimos una función para generar popups:
+* Dentro del archivo  **utils.js**  añadimos una función para enseñar popup, pero NO al hacer click sino simplemente al passar por encima
 
 
 ```javascript
 
+var popup = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: false
+    });
+
 function addPopupToMap(nombreCapa) {
 
-  map.on('click', nombreCapa, function (e) {
-
-    var text = "";
-    //console.info(e);
-    for (key in e.features[0].properties) {
-
-      text += "<b>" + key + "</b>:" + e.features[0].properties[key] + "<br>";
-    }
-    new mapboxgl.Popup()
-      .setLngLat(e.lngLat)
-      .setHTML(text)
-      .addTo(map);
-
-  });
-
-  map.on('mouseenter', nombreCapa, function () {
-    map.getCanvas().style.cursor = 'pointer';
-  });
-
-  map.on('mouseleave', nombreCapa, function () {
-    map.getCanvas().style.cursor = '';
-  });
-
-}
+    map.on('mousemove', nombreCapa, function (e) {
+  
+      var text = "";
+      //console.info(e);
+      for (key in e.features[0].properties) {
+  
+        text += "<b>" + key + "</b>:" + e.features[0].properties[key] + "<br>";
+      }
+      
+      popup.setLngLat(e.lngLat)
+        .setHTML(text)
+        .addTo(map);
+  
+    });
+  
+    map.on('mouseenter', nombreCapa, function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+  
+    map.on('mouseleave', nombreCapa, function () {
+      map.getCanvas().style.cursor = '';
+      popup.remove();
+    });
+  
+  }// fin funcion
 
 ```
 
@@ -413,7 +466,7 @@ function addPopupToMap(nombreCapa) {
             mapboxgl.accessToken ='pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
             map = new mapboxgl.Map({
                 container: 'map',
-                style: 'https://geoserveis.icgc.cat/contextmaps/positron.json',
+                style: 'mapbox://styles/mapbox/dark-v10',
                 center: [9.746, 40.473],
                 zoom: 5.5,
                 hash: true,
@@ -455,7 +508,7 @@ function addPopupToMap(nombreCapa) {
     </html>
 
 ```
-
+![alt text](img/terremotos.png "terremotos.png")
 
 !!! tip "¿Añadimos Titulo?"
 

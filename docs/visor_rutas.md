@@ -9,9 +9,10 @@
 
 #### Paso 1: Con VSCODE abrimos mapa3d.html i lo guardamos cómo mapa-rutas3d.html
 
-* Cambiamos el titulo
+* Cambiamos el título
+* Cambiamos center y zoom para abrir mapa sobre una ruta
 
-```html hl_lines="4"
+```html hl_lines="4 20 21"
 
     <html>
     <head>
@@ -32,8 +33,8 @@
              map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/satellite-streets-v10',
-                center: [2.16859, 41.3954],
-                zoom: 12,
+                center: [1.77878, 41.60044],
+                zoom: 14,,
                 attributionControl: false,
                 pitch: 45,
                 hash: true
@@ -62,7 +63,7 @@
 
 #### Paso 2: Creamos archivo rutas.js
 
- * Dentro de nuestro directorio **/geoweb/js/** creamos el archivo **ruta.js**, dónde crearemos funciones especificas de nuestro proyecto  
+ * Dentro de nuestro directorio **/geoweb/js/** creamos el archivo **rutas.js**, dónde crearemos funciones especificas de nuestro proyecto  
 
  * Creamos la función **addRutas()**
 
@@ -215,6 +216,8 @@
 #### Paso 6: Función de zoomToRutas
 
  * Añadimos a  **rutas.js** la funcion **zoomToRutas()**
+
+ * Utilizamos método [https://docs.mapbox.com/mapbox-gl-js/api/map/#map#flyto](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#flyto)
 
 ``` javascript
    function zoomToRutas(valores) {

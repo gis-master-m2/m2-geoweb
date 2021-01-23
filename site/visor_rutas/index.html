@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://gis-master-m2.github.io/m2-geoweb/visor_rutas/">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -24,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.75751829.min.css">
         
       
     
@@ -914,7 +914,8 @@
 <h3 id="visor-de-rutas">Visor de rutas</h3>
 <h4 id="paso-1-con-vscode-abrimos-mapa3dhtml-i-lo-guardamos-como-mapa-rutas3dhtml">Paso 1: Con VSCODE abrimos mapa3d.html i lo guardamos cómo mapa-rutas3d.html</h4>
 <ul>
-<li>Cambiamos el titulo</li>
+<li>Cambiamos el título</li>
+<li>Cambiamos center y zoom para abrir mapa sobre una ruta</li>
 </ul>
 <div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -935,9 +936,9 @@
              <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">Map</span><span class="p">({</span>
                 <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
                 <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;mapbox://styles/mapbox/satellite-streets-v10&#39;</span><span class="p">,</span>
-                <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span> <span class="mf">41.3954</span><span class="p">],</span>
-                <span class="nx">zoom</span><span class="o">:</span> <span class="mf">12</span><span class="p">,</span>
-                <span class="nx">attributionControl</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+<span class="hll">                <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">1.77878</span><span class="p">,</span> <span class="mf">41.60044</span><span class="p">],</span>
+</span><span class="hll">                <span class="nx">zoom</span><span class="o">:</span> <span class="mf">14</span><span class="p">,,</span>
+</span>                <span class="nx">attributionControl</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
                 <span class="nx">pitch</span><span class="o">:</span> <span class="mf">45</span><span class="p">,</span>
                 <span class="nx">hash</span><span class="o">:</span> <span class="kc">true</span>
             <span class="p">});</span>
@@ -964,7 +965,7 @@
 <h4 id="paso-2-creamos-archivo-rutasjs">Paso 2: Creamos archivo rutas.js</h4>
 <ul>
 <li>
-<p>Dentro de nuestro directorio <strong>/geoweb/js/</strong> creamos el archivo <strong>ruta.js</strong>, dónde crearemos funciones especificas de nuestro proyecto  </p>
+<p>Dentro de nuestro directorio <strong>/geoweb/js/</strong> creamos el archivo <strong>rutas.js</strong>, dónde crearemos funciones especificas de nuestro proyecto  </p>
 </li>
 <li>
 <p>Creamos la función <strong>addRutas()</strong></p>
@@ -1109,7 +1110,12 @@
 </code></pre></div>
 <h4 id="paso-6-funcion-de-zoomtorutas">Paso 6: Función de zoomToRutas</h4>
 <ul>
-<li>Añadimos a  <strong>rutas.js</strong> la funcion <strong>zoomToRutas()</strong></li>
+<li>
+<p>Añadimos a  <strong>rutas.js</strong> la funcion <strong>zoomToRutas()</strong></p>
+</li>
+<li>
+<p>Utilizamos método <a href="https://docs.mapbox.com/mapbox-gl-js/api/map/#map#flyto">https://docs.mapbox.com/mapbox-gl-js/api/map/#map#flyto</a></p>
+</li>
 </ul>
 <div class="highlight"><pre><span></span><code>   <span class="kd">function</span> <span class="nx">zoomToRutas</span><span class="p">(</span><span class="nx">valores</span><span class="p">)</span> <span class="p">{</span>
 
@@ -1197,8 +1203,8 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta"}</script>
+      <script src="../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta"}</script>
       
       <script>
         app = initialize({
