@@ -500,8 +500,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#paso-8-llamamos-funcion-addpopuptomapedificios" class="md-nav__link">
+    Paso 8: Llamamos función addPopupToMapEdificios
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexo" class="md-nav__link">
+    Anexo
+  </a>
   
 </li>
       
@@ -884,8 +898,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#paso-8-llamamos-funcion-addpopuptomapedificios" class="md-nav__link">
+    Paso 8: Llamamos función addPopupToMapEdificios
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexo" class="md-nav__link">
+    Anexo
+  </a>
   
 </li>
       
@@ -1400,8 +1428,8 @@
 
 <span class="p">}</span>
 </code></pre></div>
- <img alt="alt text" src="../img/mapbox-catastro-mapa.png" title="mapbox-catastro-mapa.png" /></p>
-<p>#### Paso 8: Llamamos función addPopupToMapEdificios</p>
+<img alt="alt text" src="../img/mapbox-catastro-mapa.png" title="mapbox-catastro-mapa.png" /></p>
+<h4 id="paso-8-llamamos-funcion-addpopuptomapedificios">Paso 8: Llamamos función addPopupToMapEdificios</h4>
 <ul>
 <li>LLamamos a la función de desde el evento <code>onChange</code> del objeto input de HTML</li>
 </ul>
@@ -1535,6 +1563,60 @@
     git push
 </code></pre></div>
 </div>
+<h3 id="anexo">Anexo</h3>
+<ul>
+<li>Si trabajamos con 3D el evento click sobre la capa no funciona muy bien , podríamos programar el evento click sobre el mapa, obtener los vectores de todas las capas y filtrar por la capa que nos interesa.</li>
+<li>La función <strong>addPopupToMapEdificios</strong> quedaria así y funcionaria en 2d cómo en 3d</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="kd">function</span> <span class="nx">addPopupToMapEdificios</span><span class="p">(</span><span class="nx">nombreCapa</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">bbox</span> <span class="o">=</span> <span class="p">[[</span><span class="nx">e</span><span class="p">.</span><span class="nx">point</span><span class="p">.</span><span class="nx">x</span> <span class="o">-</span> <span class="mf">10</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">point</span><span class="p">.</span><span class="nx">y</span> <span class="o">-</span> <span class="mf">10</span><span class="p">],</span> <span class="p">[</span><span class="nx">e</span><span class="p">.</span><span class="nx">point</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="mf">10</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">point</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="mf">10</span><span class="p">]];</span>
+        <span class="kd">var</span> <span class="nx">features</span> <span class="o">=</span> <span class="nx">map</span><span class="p">.</span><span class="nx">queryRenderedFeatures</span><span class="p">(</span><span class="nx">bbox</span><span class="p">,</span> <span class="p">{</span> <span class="nx">layers</span><span class="o">:</span> <span class="p">[</span><span class="nx">nombreCapa</span><span class="p">]</span> <span class="p">});</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nx">features</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="nx">key</span> <span class="k">in</span> <span class="nx">features</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">properties</span><span class="p">)</span> <span class="p">{</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="nx">key</span> <span class="o">==</span> <span class="s2">&quot;numberOfFl&quot;</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">text</span> <span class="o">+=</span> <span class="s2">&quot;&lt;b&gt;Numero de plantas&lt;/b&gt;:&quot;</span> <span class="o">+</span> <span class="nx">features</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">properties</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">key</span> <span class="o">==</span> <span class="s2">&quot;localId&quot;</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="c1">//localId 0004702DF3800C_part1</span>
+                    <span class="c1">//http://ovc.catastro.meh.es/OVCServWeb/OVCWcfLibres/OVCFotoFachada.svc/RecuperarFotoFachadaGet?ReferenciaCatastral=0004701DF3800C</span>
+                    <span class="c1">//https://www1.sedecatastro.gob.es/CYCBienInmueble/OVCListaBienes.aspx?rc1=0004701&amp;rc2=DF3800C</span>
+
+                    <span class="kd">var</span> <span class="nx">localId</span> <span class="o">=</span> <span class="nx">features</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">properties</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+
+                    <span class="kd">var</span> <span class="nx">localIdSplit</span> <span class="o">=</span> <span class="nx">localId</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">);</span> <span class="c1">// 0004702DF3800C  part1</span>
+                    <span class="kd">var</span> <span class="nx">parte1</span> <span class="o">=</span> <span class="nx">localIdSplit</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">substring</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">7</span><span class="p">);</span>
+                    <span class="kd">var</span> <span class="nx">parte2</span> <span class="o">=</span> <span class="nx">localIdSplit</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">substring</span><span class="p">(</span><span class="mf">7</span><span class="p">,</span> <span class="nx">localIdSplit</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">length</span><span class="p">);</span>
+                    <span class="nx">text</span> <span class="o">+=</span> <span class="s2">&quot;&lt;img width=200 src=http://ovc.catastro.meh.es/OVCServWeb/OVCWcfLibres/OVCFotoFachada.svc/RecuperarFotoFachadaGet?ReferenciaCatastral=&quot;</span> <span class="o">+</span> <span class="nx">localId</span> <span class="o">+</span> <span class="s2">&quot;&gt;&lt;br&gt;&quot;</span><span class="p">;</span>
+                    <span class="nx">text</span> <span class="o">+=</span> <span class="s2">&quot;&lt;a target=blank href=https://www1.sedecatastro.gob.es/CYCBienInmueble/OVCListaBienes.aspx?rc1=&quot;</span> <span class="o">+</span> <span class="nx">parte1</span> <span class="o">+</span> <span class="s2">&quot;&amp;rc2=&quot;</span> <span class="o">+</span> <span class="nx">parte2</span> <span class="o">+</span> <span class="s2">&quot;&gt;Ficha&lt;/a&gt;&lt;br&gt;&quot;</span><span class="p">;</span>
+
+                <span class="p">}</span>
+
+
+            <span class="p">}</span>
+            <span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">Popup</span><span class="p">()</span>
+                <span class="p">.</span><span class="nx">setLngLat</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">lngLat</span><span class="p">)</span>
+                <span class="p">.</span><span class="nx">setHTML</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span>
+                <span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+        <span class="p">}</span>
+
+    <span class="p">});</span>
+
+    <span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;mouseenter&#39;</span><span class="p">,</span> <span class="nx">nombreCapa</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">map</span><span class="p">.</span><span class="nx">getCanvas</span><span class="p">().</span><span class="nx">style</span><span class="p">.</span><span class="nx">cursor</span> <span class="o">=</span> <span class="s1">&#39;pointer&#39;</span><span class="p">;</span>
+    <span class="p">});</span>
+
+    <span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;mouseleave&#39;</span><span class="p">,</span> <span class="nx">nombreCapa</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">map</span><span class="p">.</span><span class="nx">getCanvas</span><span class="p">().</span><span class="nx">style</span><span class="p">.</span><span class="nx">cursor</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="p">});</span>
+
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
