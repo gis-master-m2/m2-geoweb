@@ -402,7 +402,7 @@
 
 #### Paso 9:función para generar popups
 
-* Dentro del archivo  **utils.js**  añadimos una función para enseñar popup, pero NO al hacer click sino simplemente al passar por encima
+* Dentro del archivo  **terremotos.js**  añadimos una función para enseñar popup, pero NO al hacer click sino simplemente al passar por encima
 
 
 ```javascript

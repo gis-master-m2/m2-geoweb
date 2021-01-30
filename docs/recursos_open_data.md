@@ -4,224 +4,137 @@
 ### [Ver presentación OpenData (pptx)](presentacion/opendata.pptx)
 ### [Ver presentación OpenData (pdf)](presentacion/opendata.pdf)
 
-### Ejemplo API CKAN
-
-El API de CKAN http://docs.ckan.org/en/latest/api/index.html no ofrece diferetes niveles y métodos para poder buscar y filtrar datasets.
-
- 
-En este ejemplo utilizaremos el método [resource_search](http://docs.ckan.org/en/latest/api/index.html#ckan.logic.action.get.resource_search) para buscar datasets en cualquier portal de CKAN
-
-  
-
-Para buscar en portales CKAN necesitamos saber la URL del portal , exemplo http://demo.ckan.org y añadir el path del método a utilizar **/api/3/action/resource_search?**
-
- 
-http://demo.ckan.org/api/3/action/resource_search?
-
- 
- 
-#### Creación de un buscador
-
-  
-* Dentro de nuestor espacio de trabajo creamos un archivo con el nombre de *ckan.html*.
-
-* Abrimos el archivo *ckan.html* con un editor de texto y copiamos el siguiente código.
 
 
-```html
- <!DOCTYPE html>
-  <html>
-<head>
-    <meta charset="UTF-8">
-    <title>
-            Bàsic sample Resource Search API CKAN
-    </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-            #results {
-                    width: 100%;
-                    background-color: #f2f2f2;
-                    margin: 5px;
-            }
-    </style>
-</head>
-<body>
-</body>
-</html>
+### El MetaMapa: Ejemplo de mapificació de resultados de Sócrata
 
-```
+>Buscaremos mapas en formato geojson con la api discovery de Sócrata
+>[https://api.us.socrata.com/api/catalog/v1?q=chicago%20crime&only=maps](https://api.us.socrata.com/api/catalog/v1?q=chicago%20crime&only=maps){target=_blank}
 
-*  Abrimos el archivo *ckan.html* en el navegador.
 
-*  Añadimos dentro del tag  ```<body>``` la maquetación HTML
+* Para ir de la API Global hasta el recurso local debemos realizar 3 peticiones
+
+* Peticio 1 API Global : ```https://api.us.socrata.com/api/catalog/v1?q=chicago%20crime&only=maps```
+
+* Peticio dos obtener url recurso ```https://{dominio/api/views.json?method=getByResourceName&name={id recurso}```
+
+* Petición 3  obterner el recurso ```https://{dminio}/api/geospatial/{recurso}?method=export&format=GeoJSON```
+
+
+
+#### Paso 1 
+
+* Creamos un archivo con el nombre de **metamapa.html** en  **/geoweb**.
+
+* Creamos un archivo con el nombre de **socrata.js**. dentro de **/geoweb/js**
+
+* Abrimos el archivo metamapa.html con VSCode y copiamos el siguiente código.
 
   
 ```html
-
-<div class="container">
-  <h3>Resource Search example </h3>
-  <p> Package Search <br>
-    <a target="_blank" href="http://docs.ckan.org/en/latest/api/">http://docs.ckan.org/en/latest/api/</a>
-  </p>
-     <form id="_form">
-    <div class="form-group">
-      <label for="url_ckan">Url:</label>
-
-      <select id="url_ckan">
-        <option value="http://demo.ckan.org/api/3/action/resource_search?">ckan.org</option>
-				<option value="http://old.datahub.io/api/3/action/resource_search?">old.datahub.io</option>
-				 <option value="http://dadesobertes.seu-e.cat/api/action/resource_search?">Dades Obertes aoc</option>
-				<!-- añadimos BCN opendata -->
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="text_filter_ckan"> Filter <u>(name, descripton, format )</u></label>
-      <input type="text" class="form-control" id="text_filter_ckan" value="name:wifi" placeholder="text filter">
-    </div>
-  </form>
-  <form class="form-inline">
-    <div class="form-group">
-      <label for="num_results_ckan">Num results</label>
-      <input type="number" size="3" class="form-control" id="num_results_ckan" value="5">
-    </div>
-
-  </form>
-  <form>
-    <div class="form-group">
-      <button id="bt_send" type="button" class="btn btn-default btn-success">Send</button>
-    </div>
-  </form>
-  <hr>
-  <div id="results"></div>
-  <div id="mygrid" style="height: 500px"></div>
-</div>
-
-```
-  
-
-* Abrimos el archivo *ckan.html* en el navegador.
-  
-
-* Añadimos just encima del tag ```</head>``` el siguiente código javascript
-
-  
-```javascript
-<script>
-    $.ajaxSetup({
-    cache: true
-  });
-  $(document).ready(function () {
-    $('#bt_send').on('click', function () {
-      sendRequest();
-    });
-
-    $( "#_form" ).submit(function( event ) {
-      sendRequest();
-      event.preventDefault();
-    });
-
-
-    function sendRequest(){
-      var data = {
-        rows: $('#num_results_ckan').val(),
-        query: $('#text_filter_ckan').val()
-      };
-$.ajax({
-url: $('#url_ckan').val(),
-data: data,
-dataType: 'jsonp',
-success: function (data) {
-  if (data.success) {
-    $('#results').html('Total results found: ' + data.result.count);
-    $('#mygrid').html('');
-
-    if (data.result.count >= 1) {
-      $('#mygrid').append('<ul>');
-      $.each(data.result.results, function (index, value) {
-        $('#mygrid').append('<li>' + value.name + ': <a href="' + value.url + '">' + value.url +
-          '</a>');
-
-        $('#mygrid').append('</li>');
-      });
-      $('#mygrid').append('</ul>');
-
-    }
-
-  } else {
-    $('#results').html("An error occured: " + data.error.message);
-  }
-},
-error: function (xhr) {
-  $('#results').html("An error occured: " + xhr.status + " " + xhr.statusText);
-}
-
-});
-    }
-
-});
-</script>
-
-```
-  
-
-* Abrimos pàgina *ckan.html* y lanzamos búsquedas
-
-  
-!!! note
-    **Ejercicio 1**: Añadir una o más URLs de otros portales de CKAN, por ejemplo OpenDataBCN
-  
-!!! note
-    **Ejercicio 2**: ¿Cómo haríamos para qué en los resultados apareciera la fecha de creación del dato?
-
-!!! note
-    **Ejercicio 3**: Descargamos CSV accidentes
-  
-
-### Ejemplos API SOCRATA
-
-
-El API de Socrata https://dev.socrata.com no ofrece diferetes niveles y métodos para poder buscar y filtra datasets.
-
-  
-
-En este primer ejemplo utilizaremos la **Discovery API** https://socratadiscovery.docs.apiary.io/ para buscar datasets en cualquier portal de Socrata
-
-
-
-#### Creación de un buscador
-  
-
-* Creamos un archivo con el nombre de **socrata.html**.
-
-* Abrimos el archivo *socrata.html* con un editor de texto y copiamos el siguiente código.
-
-  
-```html
-<!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <title>
-        Basic sample API Discovery SOCRATA
-    </title>
+    <meta charset='utf-8' />
+    <title>MetaMapa</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <link href='css/estilobase.css' rel='stylesheet' />
+    <script src='js/utils.js'></script>
+    <script src='js/socrata.js'></script>
     <style>
         #results {
             width: 100%;
             background-color: #f2f2f2;
             margin: 5px;
         }
+        #mygrid{
+            height: 340px;
+            overflow:auto
+        }
+
+        #panelContainer {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 350px;
+            background-color: white;
+            height: 95%;
+            opacity: 0.9;
+        }
+        #num_results_socrata{
+            width: 70px !important;
+        }
+        
     </style>
+    <script>
+        function init() {
+
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/dark-v10',
+                center: [9.746, 40.473],
+                zoom: 5.5,
+                hash: true,
+                pitch: 45,
+                attributionControl: false
+            });
+            map.addControl(new mapboxgl.AttributionControl({
+                compact: true
+            }));
+            map.addControl(new mapboxgl.NavigationControl());
+
+
+        }
+    </script>
 </head>
 
-<body>
+<body onload="init()">
+    <div id='map'></div>
+    <div id="panelContainer">             
+            <div class="col-md-12">
+                <h4>MetaMapa </h4>
+                <p>Discovery API <br>
+                    <a target="_blank"
+                        href="https://docs.socratadiscovery.apiary.io">https://docs.socratadiscovery.apiary.io</a>
+                </p>             
+                    <div class="form-group">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1"
+                                    value="https://api.eu.socrata.com/api/catalog/v1?" checked>
+                                EU API Discovery
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2"
+                                    value="https://api.us.socrata.com/api/catalog/v1?">
+                                US API Discovery
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="text_filter_socrata"> Buscar {q=} <u></u></label>
+                        <input type="text" class="form-control" id="text_filter_socrata" value=""
+                            placeholder="Entrar cerca">
 
+                    </div>             
+                    <div class="form-group">
+                        <label for="num_results_socrata">Num results:{limit=}</label>
+                        <input type="number" class="form-control" id="num_results_socrata" value="100">
+                    </div>               
+                    <div class="form-group">
+                        <button id="bt_send" type="button" class="btn btn-default btn-success">Enviar</button>
+                    </div>
+              
+                <hr>
+                <div id="results"></div>
+                <div id="mygrid"></div>
+            </div>
+        </div>
 </body>
 
 </html>
@@ -229,481 +142,301 @@ En este primer ejemplo utilizaremos la **Discovery API** https://socratadiscover
 ```
   
 
-* Abrimos el archivo socrata.html en el navegador.
+
+* Añadimos dentro del tag  **socrata.js** la funcion **buscarMapas**
 
   
+```js
+function buscarMapas() {
 
-* Añadimos dentro del tag * ```<body>```* la maquetación HTML.
+    var options = document.getElementsByName("optionsRadios");
+    var url_servidor;
+    for (var i = 0; i < options.length; i++) {
+        if (options[i].checked) {
+            url_servidor = options[i].value;
+        }
+    }
+    var textoBuscar = document.getElementById("text_filter_socrata").value; //encodeURI()
+    var limiteResultados = document.getElementById("num_results_socrata").value;
+    var peticion1 = url_servidor + "q=" + textoBuscar + "&limit=" + limiteResultados + "&only=map";
+    // console.log(peticion1);
 
-  
-```html
+    enviarPeticion(peticion1).then(function (respuestaSocrata) {
 
-<div class="container">
-<h3>SOCRATA Resource Search example </h3>
-<p>Discovery API <br>
-  <a target="_blank" href="http://docs.socratadiscovery.apiary.io">http://docs.socratadiscovery.apiary.io</a>
-</p>
-<form>
-  <div class="form-group">
-	<div class="radio">
-	  <label>
-			<input type="radio" name="optionsRadios" id="optionsRadios1" value="https://api.eu.socrata.com/api/catalog/v1" checked>
-			EU API Discovery
-	  </label>
-	</div>
-	<div class="radio">
-	  <label>
-			<input type="radio" name="optionsRadios" id="optionsRadios2" value="https://api.us.socrata.com/api/catalog/v1">
-		   US API Discovery
-	  </label>
-	</div>
-  </div>
-  <div class="form-group">
-	<label for="text_filter_socrata"> Filter <u></u></label>
-	<input type="text" class="form-control" id="text_filter_socrata" value="Contracts" placeholder="text filter">
-  </div>
-</form>
-<form class="form-inline">
-  <div class="form-group">
-	<label for="num_results_socrata">Num results</label>
-	<input type="number" size="3" class="form-control" id="num_results_socrata" value="25">
-  </div>
+        if (respuestaSocrata) {
+           // console.info(respuestaSocrata);
+            document.getElementById("results").innerHTML = "Resultados encontrados:<b>" + respuestaSocrata.resultSetSize + "</b>";
+            //$('#mygrid').html('');
 
-</form>
-<form>
-  <div class="form-group">
-	<button id="bt_send" type="button" class="btn btn-default btn-success">Send</button>
-  </div>
-</form>
-<hr>
-<div id="results"></div>
-<div id="mygrid" style="height: 500px"></div>
-</div>
+            var resultadosHTML;
+            var contarGeojson = 0;
+            if (respuestaSocrata.resultSetSize >= 1) {
+                resultadosHTML = "<ul>";
+                for (var i = 0; i < respuestaSocrata.results.length; i++) {
+
+                    if (respuestaSocrata.results[i].resource["lens_view_type"] == "geo") {
+                        contarGeojson = contarGeojson + 1;
+                        resultadosHTML = resultadosHTML + '<li class="li"><b>' + respuestaSocrata.results[i].resource.name + ': </b>' +
+                            '<a target="_blank" title="' + respuestaSocrata.results[i].resource.attribution + '" href="' + respuestaSocrata.results[i].link + '"> Link </a> ' +
+                            '<a class="btn btn-success btn-xs" onClick="obtenerGeoJson(this.id)" title="' + respuestaSocrata.results[i].resource.attribution + '" href="#" id="' + respuestaSocrata.results[i].resource.id + '#' + respuestaSocrata.results[i].metadata.domain + '">Ver mapa</a>';
+                    }
+                }
+                resultadosHTML = resultadosHTML + "</ul>";
+                document.getElementById("mygrid").innerHTML = resultadosHTML;
+                document.getElementById("results").innerHTML = "Resultados: Mapa:<b>" + respuestaSocrata.resultSetSize + "</b>, Geo:<b>" + contarGeojson + "</b>";
+
+            } else {
+
+                document.getElementById("results").innerHTML = "Error";
+            }
+        }
+    });//fin peticion
+
+
+} //finfuncion
+
 
 ```
   
 
-* Abrimos el archivo **socrata.html** en el navegador.
+* Llamamos a la funcion **buscaMapa()** desde  **metamapa.html** 
 
-  
-
-* Añadimos just encima del tag ```</head>``` el siguiente código javascript
-
-  
-```javascript
-
-<script>
-$.ajaxSetup({
-  cache: true
-});
-$(document).ready(function() {
-  $('#bt_send').on('click', function() {
-	sendRequest();
-  });
-
-  $('#text_filter_socrata').on('keypress', function(event) {
-	if (event.which == 13) {
-	  sendRequest();
-	  event.preventDefault();
-	}
-  });
-
-  function sendRequest() {
-	var _data = {
-	  q: $('#text_filter_socrata').val(),
-	  limit: $('#num_results_socrata').val()
-	};
-	$.ajax({
-	  url: $('input:radio[name=optionsRadios]:checked').val(),
-	  data: _data,
-	  method: 'GET',
-	  dataType: 'json',
-	  success: function(data) {
-		console.info(data);
-		if (data) {
-		  $('#results').html('Total results found: ' + data.resultSetSize);
-		  $('#mygrid').html('');
-
-		  if (data.resultSetSize >= 1) {
-			$('#mygrid').append('<ul>');
-			$.each(data.results, function(index, value) {
-			  $('#mygrid').append('<li><b>' + value.resource.name + '</b>(' + value.resource.type + '): <a target="_blank" href="' + value.link + '">' + value.link + '</a>');
-			  $('#mygrid').append('</li>');
-			});
-			$('#mygrid').append('</ul>');
-		  }
-		} else {
-		  $('#results').html("An error occured:");
-		}
-	  },
-	  error: function(xhr) {
-		$('#results').html("An error occured: " + xhr.status + " " + xhr.statusText);
-	  }
-	});
-  }
-});
-</script>
-
-```
-  
-
-* Abrimos pàgina socrata.html y lanzamos búsquedas
-
-  
-!!! note
-    **Ejercicio 1**: ¿Cómo filtraríamos para qué sólo enseñara "assets" de tipo "map", **only:map**?
-
-
-  
-  
-
-#### Socrata y Leaflet: Mapificación de resultados
-
-
-* Creamos un archivo con el nombre de **socrata_mapa.html**.
-
-* Abrimos el archivo socrata_mapa.html con un editor de texto y copiamos el siguiente código.
-
-  
-```html
-
-<!DOCTYPE html>
+``` html hl_lines="96"
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>
-		Basic Leaflet Map sample API Discovery SOCRATA
-	</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.Spin/1.1.0/leaflet.spin.min.js"></script>
-	<style>
-		#results {
-			width: 100%;
-			background-color: #f2f2f2;
-			margin: 5px;
-		}
-	</style>
-</head>
-<body>
+    <meta charset='utf-8' />
+    <title>MetaMapa</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link href='css/estilobase.css' rel='stylesheet' />
+    <script src='js/utils.js'></script>
+    <script src='js/socrata.js'></script>
+    <style>
+        #results {
+            width: 100%;
+            background-color: #f2f2f2;
+            margin: 5px;
+        }
+        #mygrid{
+            height: 340px;
+            overflow:auto
+        }
 
+        #panelContainer {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 350px;
+            background-color: white;
+            height: 95%;
+            opacity: 0.9;
+        }
+        #num_results_socrata{
+            width: 70px !important;
+        }
+        
+    </style>
+    <script>
+        function init() {
+
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/dark-v10',
+                center: [9.746, 40.473],
+                zoom: 5.5,
+                hash: true,
+                pitch: 45,
+                attributionControl: false
+            });
+            map.addControl(new mapboxgl.AttributionControl({
+                compact: true
+            }));
+            map.addControl(new mapboxgl.NavigationControl());
+
+
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id='map'></div>
+    <div id="panelContainer">             
+            <div class="col-md-12">
+                <h4>MetaMapa </h4>
+                <p>Discovery API <br>
+                    <a target="_blank"
+                        href="https://docs.socratadiscovery.apiary.io">https://docs.socratadiscovery.apiary.io</a>
+                </p>             
+                    <div class="form-group">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1"
+                                    value="https://api.eu.socrata.com/api/catalog/v1?" checked>
+                                EU API Discovery
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2"
+                                    value="https://api.us.socrata.com/api/catalog/v1?">
+                                US API Discovery
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="text_filter_socrata"> Buscar {q=} <u></u></label>
+                        <input type="text" class="form-control" id="text_filter_socrata" value=""
+                            placeholder="Entrar cerca">
+
+                    </div>             
+                    <div class="form-group">
+                        <label for="num_results_socrata">Num results:{limit=}</label>
+                        <input type="number" class="form-control" id="num_results_socrata" value="100">
+                    </div>               
+                    <div class="form-group">
+                        <button id="bt_send" onClick="buscarMapas()" type="button" class="btn btn-default btn-success">Enviar</button>
+                    </div>
+              
+                <hr>
+                <div id="results"></div>
+                <div id="mygrid"></div>
+            </div>
+        </div>
 </body>
+
 </html>
 
 ```
-  
 
+!!! Note "Realizamos algunas búsquedas"
 
-* Añadimos dentro del tag  ```<body>``` la maquetación HTML
+#### Paso 2
 
-  
-```html
-
-<div class="container">
-<h3>SOCRATA Maps Resources </h3>
-<div class="row">
-<div class="col-md-6">
-<p>Discovery API <br>
-<a target="_blank" href="http://docs.socratadiscovery.apiary.io">http://docs.socratadiscovery.apiary.io</a>
-</p>
-<form>
-<div class="form-group">
-<div class="radio">
-	<label>
-<input type="radio" name="optionsRadios" id="optionsRadios1" value="https://api.eu.socrata.com/api/catalog/v1" checked>
-EU API Discovery
-</label>
-</div>
-<div class="radio">
-	<label>
-<input type="radio" name="optionsRadios" id="optionsRadios2" value="https://api.us.socrata.com/api/catalog/v1">
-US API Discovery
-</label>
-	</div>
-</div>
-<div class="form-group">
-	<label for="text_filter_socrata"> Filter <u></u></label>
-	<input type="text" class="form-control" id="text_filter_socrata" value="" placeholder="text filter">
-
-	<div class="checkbox">
-		<label><input type="checkbox" id="chk_transparencia" value="analisi.transparenciacatalunya.cat" >Only https://analisi.transparenciacatalunya.cat</label>
-	</div>
-	<div> Filter : only=maps</div>
-</div>
-
-	</form>
-	<form class="form-inline">
-		<div class="form-group">
-			<label for="num_results_socrata">Num results</label>
-			<input type="number" size="3" class="form-control" id="num_results_socrata" value="25">
-		</div>
-
-	</form>
-	<form>
-		<div class="form-group">
-			<button id="bt_send" type="button" class="btn btn-default btn-success">Send</button>
-		</div>
-	</form>
-	<hr>
-	<div id="results"></div>
-	<div id="mygrid" style="height: 365px;overflow:auto">
-	</div>
-</div>
-<div class="col-md-6">
-	<div id="map" style="width:100%;height:700px"></div>
-</div>
-</div>
-
-```
-  
-
-* Abrimos el archivo *socrata_mapa.html* en el navegador.
-
-  
-
-* Añadimos just encima del tag ```</head>``` el siguiente código javascript
+* Añadimos a **socrata.js** la funcion **obtenerGeoJson()**
 
   
 ```javascript
+function obtenerGeoJson(data) {
 
-<script>
-$.ajaxSetup({
-cache: true
-});
-var map;
-var geojsonLayer;
-var _LL;
-$(document).ready(function() {
-map = L.map('map').setView([41.6863, 1.8382], 8);
-esri = L.tileLayer(
-'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-maxZoom: 17,
-minZoom: 1,
-attribution: 'Tiles © Esri',
-})
+    var params = data.split("#");
+    var peticion2 = 'https://' + params[1] + '/api/views.json?method=getByResourceName&name=' + params[0];
 
-osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-maxZoom: 19,
-minZoom: 1,
-attribution: 'OSM'
-}).addTo(map);
+    enviarPeticion(peticion2).then(function (respuestaNodoSocrata) {
 
-Stamen_Toner = L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {
-attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-subdomains: 'abcd',
-minZoom: 0,
-maxZoom: 20
-})
+        //antes '/api/geospatial/' +respuestaNodoSocrata.childViews[0]
 
-var baseMaps = {
-"Orto": esri,
-"Mapa": osm,
-"Toner": Stamen_Toner
-};
+        var peticion3 = 'https://' + params[1] +  respuestaNodoSocrata.metadata.geo.owsUrl + '?method=export&format=GeoJSON';
 
-L.control.layers(baseMaps, null).addTo(map);
-L.control.scale().addTo(map);
+           //console.info(respuestaNodoSocrata);
 
 
-$('#bt_send').on('click', function() {
-sendRequest();
-});
+        enviarPeticion(peticion3).then(function (respuestaGeoJson) {
 
-$('#text_filter_socrata').on('keypress', function(event) {
-if (event.which == 13) {
-sendRequest();
-event.preventDefault();
-}
-});
+           // console.info(respuestaNodoSocrata.metadata.geo.bbox);
+           /// console.info(respuestaGeoJson);
 
-$(document).on('click', '.btn-xs', function() {
+        });// fin peticion 2 
 
-var attr = $(this).attr('data');
-if (attr && attr.indexOf('#') != -1) {
-var params = attr.split("#");
-var _url = 'https://' + params[1] + '/api/views.json?method=getByResourceName&name=' + params[0];
-$.ajax({
-	url: _url,
-	method: 'GET',
-	dataType: 'json',
-	success: function(data) {
+    });// fin peticion 2 
 
-			if (data.childViews) {
-					//var _url2 = 'https://' + params[1] + '/resource/' + data.childViews[0] + '.json?$limit=30';
-					var _url2 = 'https://' + params[1] + '/api/geospatial/' + data.childViews[0] + '?method=export&format=GeoJSON';
-					sendRequestGEOJSON(_url2, true);
-			} else {
-					var _url2 = 'http://' + params[1] + '/resource/' + params[0] + '.json?$limit=30';
-					sendRequestGEOJSON(_url2, false);
-			}
-	},
-	error: function(xhr) {
-			$('#results').html("An error occured: " + xhr.status + " " + xhr.statusText);
-	}
-
-});
-
-} else {
-alert("No resource available");
-}
-});
-
-function clearLayers() {
-if (map.hasLayer(geojsonLayer)) {
-map.removeLayer(geojsonLayer);
-};
-if (map.hasLayer(_LL)) {
-map.removeLayer(_LL);
-};
-}
-
-function sendRequestGEOJSON(_url2, isGeoJson) {
-map.spin(true);
-var stylePoint = {
-radius: 8,
-fillColor: "#ff7800",
-color: "#000",
-weight: 1,
-opacity: 1,
-fillOpacity: 0.8
-};
-clearLayers();
-$.ajax({
-type: "GET",
-url: _url2,
-// jsonp: "$jsonp",
-//  dataType: "jsonp",
-success: function(response) {
-if (isGeoJson) {
-
-geojsonLayer = L.geoJson(response, {
-	style: function(feature) {
-		return {
-			weight: 2,
-			color: "#999",
-			opacity: 1,
-			fillColor: "#B0DE5C",
-			fillOpacity: 0.8
-		};
-	},
-
-	onEachFeature: popUp
-}).addTo(map);
-map.fitBounds(geojsonLayer.getBounds());
-map.spin(false);
-} else {
-_LL = L.featureGroup()
-
-for (var i = 0; i < response.length; i++) {
-	var marker = response[i];
-
-	if (response[i].location_1) {
-		L.circleMarker([response[i].location_1.latitude, response[i].location_1.longitude], stylePoint).addTo(_LL);
-	} else if (response[i].location) {
-		L.circleMarker([response[i].location.latitude, response[i].location.longitude], stylePoint).addTo(_LL);
-	} else {
-		$('#results').html("ERROR no locations found");
-		map.spin(false);
-
-	}
-}
-
-_LL.addTo(map);
-map.panTo(_LL.getBounds().getCenter());
-map.spin(false);
-
-}
-},
-error: function(xhr) {
-$('#results').html("An error occured: " + xhr.status + " " + xhr.statusText);
-map.spin(false);
-}
-});
-}
-
-function popUp(f, l) {
-var out = [];
-if (f.properties) {
-for (key in f.properties) {
-	out.push(key + ": " + f.properties[key]);
-}
-l.bindPopup(out.join("<br />"));
-}
-}
-
-function sendRequest() {
-var _data = {
-limit: $('#num_results_socrata').val(),
-only: 'maps'
-};
-console.info($('#chk_transparencia').attr('checked'));
-if ($('#chk_transparencia').attr('checked')) {
-_data.domains = $('#chk_transparencia').val();
-}
-if ($('#text_filter_socrata').val() != "") {
-_data.q = $('#text_filter_socrata').val();
-}
-
-$.ajax({
-url: $('input:radio[name=optionsRadios]:checked').val(),
-data: _data,
-method: 'GET',
-dataType: 'json',
-success: function(data) {
-console.info(data);
-if (data) {
-$('#results').html('Total results found: ' + data.resultSetSize);
-$('#mygrid').html('');
-
-if (data.resultSetSize >= 1) {
-	var cList = $('<ul>').appendTo('#mygrid');
-	$.each(data.results, function(index, value) {
-		$('<li class="li"><b>' + value.resource.name + ': </b>' +
-			'<a target="_blank" href="' + value.link + '"> Link </a> ' +
-			'<a class="btn btn-success btn-xs"  href="#" data="' + value.resource.id + '#' + value.metadata.domain + '">Map it</a>').appendTo(cList);
-
-	});
-}
-
-} else {
-console.info(data);
-$('#results').html("An error occured:");
-}
-},
-error: function(xhr) {
-$('#results').html("An error occured: " + xhr.status + " " + xhr.statusText);
-}
-});
-}
-});
-</script>
+} //finfuncion
 
 
 ```  
 
-*  Abrimos pàgina socrat_mapa.html y lanzamos búsquedas
-
-  
-!!! note
-    **Ejercicio 1**: Añadimos **attribution** y **download_count** a los resultados
-
-!!! note
-    **Ejercicio 2**: ¿Cambiamos colores y estilos de los puntos del mapa?
+!!! Note "Realizamos algunas búsquedas y descomentamos /comentamos consoles"
 
 
 
+#### Paso 3
 
-Referencias
-  
-> http://docs.ckan.org/en/latest/api/
+* Creamos funcion para ver los geojson ** verMapa** dentro de **socrata.js**
 
-> http://ckan.org
+```js
+function verMapa(geoJSON, bbox) {
 
-> https://www.socrata.com
 
-> http://docs.socratadiscovery.apiary.io
+    if (!map.getSource("datossocrata_source")) {
+
+        map.addSource("datossocrata_source", {
+            type: "geojson",
+            data: geoJSON
+        });
+
+        map.addLayer({
+            'id': 'socrata',
+            'type': 'line',
+            'source': 'datossocrata_source',
+            'layout': {
+                'line-join': 'round',
+                'line-cap': 'round'
+            },
+            'paint': {
+                'line-color': '#ff0000',
+                'line-width': 3
+            }
+        });
+
+
+    } else {
+
+        map.getSource("datossocrata_source").setData(geoJSON);
+
+    }
+
+    var bounds = bbox.split(",")
+
+    map.fitBounds([[bounds[0], bounds[1]], [bounds[2], bounds[3]]]);
+
+
+}
+```
+
+* Llamamos a la funcion  ** verMapa** desde  **obtenerGeoJson**
+```js hl_lines="19"
+
+function obtenerGeoJson(data) {
+
+    var params = data.split("#");
+    var peticion2 = 'https://' + params[1] + '/api/views.json?method=getByResourceName&name=' + params[0];
+
+    enviarPeticion(peticion2).then(function (respuestaNodoSocrata) {
+
+        //antes '/api/geospatial/' +respuestaNodoSocrata.childViews[0]
+
+        var peticion3 = 'https://' + params[1] + '/api/geospatial/' +respuestaNodoSocrata.childViews[0] + '?method=export&format=GeoJSON';
+
+        //console.info(respuestaNodoSocrata);
+
+
+        enviarPeticion(peticion3).then(function (respuestaGeoJson) {
+
+            // console.info(respuestaNodoSocrata.metadata.geo.bbox);
+            // console.info(respuestaGeoJson);
+            verMapa(respuestaGeoJson, respuestaNodoSocrata.metadata.geo.bbox)
+
+        });// fin peticion 2 
+
+    });// fin peticion 2 
+
+} //finfuncion
+
+```
+
+![alt text](img/socrata.png "socrata.png")
+
+
+
+!!! success "¿Subimos el ejemplo al GitHub?"
+	
+```bash
+
+		git pull
+        git add .
+        git commit -m "socrata"
+        git push
+
+```   

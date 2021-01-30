@@ -35,6 +35,46 @@
 [https://medium.com/master-upc-sig/taller-de-la-asignatura-introducci%C3%B3-a-la-programaci%C3%B3-sig-en-entorn-web-cf39862c954f](https://medium.com/master-upc-sig/taller-de-la-asignatura-introducci%C3%B3-a-la-programaci%C3%B3-sig-en-entorn-web-cf39862c954f)
 
 
+#### Para escribir un buen artículo técnico podriamos dividir en estas secciones
+
+
+<h2>Título</h2>
+
+<h4>Inspiración</h4>
+
+``` Como persona / usuario /  interesada en.....```    
+
+ <h4>Qué hace</h4>
+
+``` El mapa muestra .... ``` 
+
+<h4>Cómo está hecho</h4>
+
+``` Con KeplerGl y datos  .... ```
+
+<h4>Retos futuros</h4>
+
+``` en un futuro  .... ```
+
+<h4>Fuentes</h4>
+
+``` urls  .... ```
+
 !!! note
     Nos damos de alta com usuarios en Medium
     [https://medium.com/](https://medium.com/)
+
+
+
+* Entramos en Medium , vamos a nuestro Avatar  dónde podemos:
+
+* En ```Settings``` : Editar nuestro perfil
+
+* En ```Design your profile``` : Editar la plantilla de los artículos
+
+* En ```Write a story``` : Empezar a escribir una história
+
+
+
+
+
