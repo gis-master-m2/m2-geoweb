@@ -518,13 +518,15 @@ function verMapa(geoJSON, bbox) {
 
     map.fitBounds([[bounds[0], bounds[1]], [bounds[2], bounds[3]]]);
 
-
+        //addPopupToMap("socrata");
 
 }
 
 ```
 
 !!! success "Buscamos datos"
+
+!!! success "descomentamos ```addPopupToMap("socrata")```"
 
 ![alt text](img/socrata.png "socrata.png")
 
