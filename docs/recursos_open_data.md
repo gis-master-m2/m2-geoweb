@@ -69,10 +69,12 @@
         
     </style>
     <script>
-        function init() {
 
+        var map;
+        function init() {
+            
             mapboxgl.accessToken = 'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
-            var map = new mapboxgl.Map({
+                 map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/dark-v10',
                 center: [9.746, 40.473],
@@ -238,10 +240,11 @@ function buscarMapas() {
         
     </style>
     <script>
+    var map;
         function init() {
-
+            
             mapboxgl.accessToken = 'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
-            var map = new mapboxgl.Map({
+             map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/dark-v10',
                 center: [9.746, 40.473],
@@ -346,7 +349,7 @@ function obtenerGeoJson(data) {
 
             // console.info(respuestaNodoSocrata.metadata.geo.bbox);
             console.info(respuestaRecurso);
-            //prepararDatos(respuestaRecurso, bbox, isGeojson)
+            prepararDatos(respuestaRecurso, bbox, isGeojson);
 
         });// fin peticion 2 
 
