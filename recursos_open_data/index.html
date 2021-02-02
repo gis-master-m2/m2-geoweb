@@ -955,10 +955,12 @@
 
     <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+
+        <span class="kd">var</span> <span class="nx">map</span><span class="p">;</span>
         <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
 
             <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span> <span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
-            <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">Map</span><span class="p">({</span>
+                 <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">Map</span><span class="p">({</span>
                 <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
                 <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span>
                 <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">9.746</span><span class="p">,</span> <span class="mf">40.473</span><span class="p">],</span>
@@ -1115,10 +1117,11 @@
 
     <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kd">var</span> <span class="nx">map</span><span class="p">;</span>
         <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
 
             <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span> <span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
-            <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">Map</span><span class="p">({</span>
+             <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">Map</span><span class="p">({</span>
                 <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
                 <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span>
                 <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">9.746</span><span class="p">,</span> <span class="mf">40.473</span><span class="p">],</span>
@@ -1172,9 +1175,9 @@
                         <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;num_results_socrata&quot;</span><span class="p">&gt;</span>Num results:{limit=}<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
                         <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;num_results_socrata&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;100&quot;</span><span class="p">&gt;</span>
                     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>               
-                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
-<span class="hll">                        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;bt_send&quot;</span> <span class="na">onClick</span><span class="o">=</span><span class="s">&quot;buscarMapas()&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-default btn-success&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span>                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="hll">                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+</span>                        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;bt_send&quot;</span> <span class="na">onClick</span><span class="o">=</span><span class="s">&quot;buscarMapas()&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-default btn-success&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
                 <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>
                 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;results&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -1220,7 +1223,7 @@
 
             <span class="c1">// console.info(respuestaNodoSocrata.metadata.geo.bbox);</span>
             <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="nx">respuestaRecurso</span><span class="p">);</span>
-            <span class="c1">//prepararDatos(respuestaRecurso, bbox, isGeojson)</span>
+            <span class="nx">prepararDatos</span><span class="p">(</span><span class="nx">respuestaRecurso</span><span class="p">,</span> <span class="nx">bbox</span><span class="p">,</span> <span class="nx">isGeojson</span><span class="p">);</span>
 
         <span class="p">});</span><span class="c1">// fin peticion 2 </span>
 
