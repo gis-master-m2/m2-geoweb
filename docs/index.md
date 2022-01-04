@@ -2,6 +2,8 @@
 
 Materiales para el módulo 2: Mapas y OpenData, Localización, Visualización y Análisis de GeoDatos
 
+#### Guía rápida de recursos, fechas y entregas:
+[Guía rápida M2B](presentacion/guiarapida.pdf){target=_blank}
 
 #### Temario
 
@@ -27,12 +29,13 @@ Materiales para el módulo 2: Mapas y OpenData, Localización, Visualización y 
   * [14. Mapas personalizados con Maputnik y MapBox GL JS](introduccion_maputnik)
   * [15. MapBox GL JS con recursos externos](mapbox_avanzado)
   * [16. Visor de terremotos](mapbox_avanzado)
-* Sesión 7 (Asíncrona videos 10, 11 y 12)
-  * [17. Mallas discretas y algoritmos en JS](mallas_discretas_algoritmos)
-  * [18. Visualización y publicación con Kepler GL](visualizacion_con_kepler_gl)
-* Sesión 8
-  * [19. Recursos OpenData](recursos_open_data)
-  * [20. Publicación en Medium](visualizacion_con_kepler_gl)
+* Sesión 7 
+  * [17. Recursos OpenData](recursos_open_data)
+  * [18. Publicación en Medium](visualizacion_con_kepler_gl) 
+* Sesión 8 (Asíncrona videos 10, 11 y 12)
+  * [19. Mallas discretas y algoritmos en JS](mallas_discretas_algoritmos)
+  * [20. Visualización y publicación con Kepler GL](visualizacion_con_kepler_gl)
+ 
 * [Preguntas Frecuentes](faq)
 
 
@@ -51,11 +54,6 @@ Materiales para el módulo 2: Mapas y OpenData, Localización, Visualización y 
 * GitHub [https://github.com/](https://github.com/){target=_blank}
 * MapBox [https://www.mapbox.com/](https://www.mapbox.com/){target=_blank}
 * Medium [https://medium.com/](https://medium.com/){target=_blank}
-
-
-#### Guía rápida de recursos, fechas y entregas:
-[Descargar pdf](presentacion/guiarapida.pdf){target=_blank}
-
 
 
 #### Repositorio:

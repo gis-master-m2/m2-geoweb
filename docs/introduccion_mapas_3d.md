@@ -56,8 +56,8 @@ La visualización 3D no sólo se limita a la extrusión del terreno síno que va
     <meta charset='utf-8' />
     <title>Mapa 3D</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
     <link href='css/estilobase.css' rel='stylesheet' />
  
     <script src='js/3d.js'></script>
@@ -142,8 +142,8 @@ La visualización 3D no sólo se limita a la extrusión del terreno síno que va
     <meta charset='utf-8' />
     <title>Mapa 3D</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
     <link href='css/estilobase.css' rel='stylesheet' />
  
     <script src='js/3d.js'></script>
@@ -238,8 +238,8 @@ La visualización 3D no sólo se limita a la extrusión del terreno síno que va
     <meta charset='utf-8' />
     <title>Mapa 3D</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
     <link href='css/estilobase.css' rel='stylesheet' />
  
     <script src='js/3d.js'></script>

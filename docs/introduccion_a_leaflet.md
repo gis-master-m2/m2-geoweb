@@ -76,7 +76,7 @@ Vamos a crear un mapa con Leaflet, para ello incluiremos en la cabecera
       <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 ``` 
 
-Dentro de la etiqueta `<body>` encontramos el marcado para el mapa, que genera un único elemento de documento. También damos al contenedor un atributo id para que podamos hacer referencia a él en nuestro código:
+Dentro de la etiqueta **`<body>`** encontramos el marcado para el mapa, que genera un único elemento de documento. También damos al contenedor un atributo id para que podamos hacer referencia a él en nuestro código:
 
 ```html
 <body>
@@ -103,7 +103,7 @@ Nuestra página tendria este aspecto
 </body>
 </html>
 ``` 
-Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiqueta ``` <style/>``` dentro del ```<head>```
+Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiqueta  **```<style/>```** dentro del **```<head>```**
 
 ```html
 <style>
@@ -152,11 +152,12 @@ Ahora nuestra página tendria este aspecto
 </html>
 ``` 
 
-Ahora crearemos y empezaremos a programar dentro del tag ``` <script> ```  justo encima de ```</head>```
-   Crearemos la función **Init** para crear un Mapa
-  y añadir una capa de OSM **L.map** es la clase central de la API.
-   Se usa para crear y manipular el mapa. 
-   El mapa por defecto tiene dos controles: uno de zoom y uno de atribución.
+
+Crearemos la función **init()** para crear un Mapa -**L.map**-  y añadir una capa -**L.tileLayer**- de OSM 
+
+**L.map** es la clase central de la API de Leaflet.Se usa para crear y manipular el mapa. 
+
+El mapa por defecto tiene dos controles: uno de zoom y uno de atribución.
 
 !!! summary "L.map"
    
@@ -177,7 +178,7 @@ Ahora crearemos y empezaremos a programar dentro del tag ``` <script> ```  justo
     Referencia: <a target="_blank"  rel="noopener"  href="https://leafletjs.com/reference-1.7.1.html#tilelayer">https://leafletjs.com/reference-1.7.1.html#tilelayer</a>
 
    
-
+Ahora crearemos el tag **```<script>```**  justo encima de **```</head>```** y empezaremos a programar dentro del él
 
 
 ```html
@@ -199,12 +200,13 @@ Ahora crearemos y empezaremos a programar dentro del tag ``` <script> ```  justo
   </script>
 ```
 
-Llamaremos a la función desde el evento onload del ```<body>```
+Llamaremos a la función **init()** desde el evento **onLoad** del **```<body>```**
 
 ```html
  <body onLoad="init()">
 ```
 
+La página final nos quedaría así
 
 ### **Leaflet básico final**
 ```html
@@ -257,7 +259,9 @@ Llamaremos a la función desde el evento onload del ```<body>```
 
  * Hemos creado la variable global **map**
  * Usamos **L.map()** para instanciar el objeto mapa, pasando el id del ```<div>``` dónde irá el mapa
- * Utilizamos las opciones center y zoom iniciar el mapa También podríamos utilizar el método
+ * Utilizamos las opciones **center** y **zoom** iniciar el mapa 
+ 
+ También podríamos utilizar el método
  **setView **
 
 ```
@@ -327,7 +331,143 @@ Llamaremos a la función desde el evento onload del ```<body>```
 
 ![alt text](img/leaflet-basico.png "github")
 
-!!! success "Visualizamos , editamos index.html y subimos el ejemplo al GitHub"
+#### **Subimos nuestro primer ejemplo a Github**
+
+!!! success "Editamos index.html"
+
+```html hl_lines="71"
+<html>
+<head>
+  <title>Mis mapas M2B</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="autor" />
+  <meta name="description" content="descripción página">
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <style>
+    .seccion {
+      border-radius: 0px !important;
+    }
+    .container {
+      margin-top: 5px;
+    }
+    .mapbox {
+      background-color: #e7e7f1;
+    }
+    .kepler {
+      background-color: #f1e7ea;
+    }
+    .practicas {
+      background-color: #e7f0f1;
+    }
+    .leaflet {
+      background-color: #e7f1e8;
+    }
+    small {
+      font-size: 60% !important;
+    }
+    .navbar {
+      background-color: #f1e9e7 !important;
+      border-radius: 0px !important;
+    }
+    .row {
+      margin-top: 10px;
+    }
+    body {
+      font-family: 'Inconsolata', sans-serif !important;
+      font-size: 16px !important;
+    }
+    @media screen and (max-width: 500px) {
+      body {
+        font-size: 80% !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-light bg-light">
+      <h4>
+        Mis mapas módulo M2B
+        <br>
+        <small>
+          Mapas y OpenData, Localización, Visualización y Análisis de GeoDatos
+        </small>
+      </h4>
+    </nav>
+    <br>
+    <div class="alert seccion leaflet">
+      <h5>Mapas Leaflet</h5>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>
+             <a href="leaflet-basico.html" target="_blank">Leaflet Básico</a>
+            </li>
+            <li>
+              <!--añadir aqui entrada-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="alert seccion mapbox">
+      <h5>Mapas Mapbox GL JS</h5>
+      <div class="row">
+        <div class="col">
+          <ul>
+           <li>
+              <!--añadir aqui entrada-->
+            </li>
+            <li>
+              <!--añadir aqui entrada-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="alert seccion kepler">
+      <h5>Kepler.Gl</h5>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>
+              <!--añadir aqui entrada-->
+            </li>
+            <li>
+              <!--añadir aqui entrada-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="alert seccion practicas">
+      <h5>Prácticas puntuables</h5>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>
+              <!--añadir aqui entrada-->
+            </li>
+            <li>
+              <!--añadir aqui entrada-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+```
+
+
+
+!!! success "Subimos el ejemplo y cambios al GitHub"
 	
 
 	```bash
@@ -341,7 +481,7 @@ Llamaremos a la función desde el evento onload del ```<body>```
 
 
 
-#### **Ejemplo 1 Controles**
+### **Ejemplo 1 Controles**
   Añadimos controles de capas y escala.
 
 * Creamos la página **leaflet-controles.html** dentro directorio geoweb
@@ -469,7 +609,7 @@ Llamaremos a la función desde el evento onload del ```<body>```
 
   [https://leaflet-extras.github.io/leaflet-providers/preview/](https://leaflet-extras.github.io/leaflet-providers/preview/){target=_blank} 
 
-#### **Ejemplo 2 Provider**
+### **Ejemplo 2 Provider**
 
 * Creamos la página **leaflet-provider.html** dentro directorio geoweb
 * Copiamos pegamos código

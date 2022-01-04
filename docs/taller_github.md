@@ -53,7 +53,7 @@ git clone https://github.com/{tu usuario git}/geoweb.git
 
 ```
 
-Si es la primera vez que utlizamos GIT en el ordenador necesitamos configurar tu nombre de usuario y dirección email
+Si es la primera vez que utilizamos GIT en el ordenador necesitamos configurar tu nombre de usuario y dirección email
 
 En la misma consola dónde hemos hecho el clone escribimos
 
@@ -166,16 +166,16 @@ git commit -m "add index.html"
 git push -u origin main
 ```
 
-!!! warning "Si al hace git pull nos dice que no reconoce el comando GIT y hemos podido clonar el proyecto"
+!!! warning "Si al hacer *git pull* nos dice que no reconoce el comando GIT y hemos podido clonar el proyecto"
 
-  * Hay que cambiar la teminar de **powershell** a **bash** en VSCode
+    * Hay que cambiar el tipo de teminal de **powershell** a **bash** en VSCode
 
-  ![alt text](img/github-terminal.png "github")
+![alt text](img/github-terminal.png "github")
 
 
 !!! warning "Si al hacer commit la primera vez tenemos este aviso"
 
-    ```sh
+    ```bash 
     Run 
 
     git config --global user.email "you@example.com"
@@ -261,68 +261,51 @@ git push origin main
 !!! example "Ejemplo con Bootstrap"
 
 ``` html
-
 <html>
-
 <head>
-
   <title>Mis mapas M2B</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="autor" />
   <meta name="description" content="descripción página">
   <meta name="robots" content="index,follow">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
   <style>
     .seccion {
       border-radius: 0px !important;
     }
-
     .container {
       margin-top: 5px;
     }
-
     .mapbox {
       background-color: #e7e7f1;
     }
-
     .kepler {
       background-color: #f1e7ea;
     }
-
     .practicas {
       background-color: #e7f0f1;
     }
-
     .leaflet {
       background-color: #e7f1e8;
     }
-
-
     small {
       font-size: 60% !important;
     }
-
-
     .navbar {
       background-color: #f1e9e7 !important;
       border-radius: 0px !important;
     }
-
-    .row {     
+    .row {
       margin-top: 10px;
-      
     }
-
-
     body {
       font-family: 'Inconsolata', sans-serif !important;
-      font-size:16px !important;
-
+      font-size: 16px !important;
     }
-
     @media screen and (max-width: 500px) {
       body {
         font-size: 80% !important;
@@ -330,7 +313,6 @@ git push origin main
     }
   </style>
 </head>
-
 <body>
   <div class="container">
     <nav class="navbar navbar-light bg-light">
@@ -348,7 +330,8 @@ git push origin main
       <div class="row">
         <div class="col">
           <ul>
-            <li><a href="leaflet-basico.html" target="_blank">Leaflet Básico</a>
+            <li>
+              <!--añadir aqui entrada-->
             </li>
             <li>
               <!--añadir aqui entrada-->
@@ -362,7 +345,7 @@ git push origin main
       <div class="row">
         <div class="col">
           <ul>
-            <li>
+           <li>
               <!--añadir aqui entrada-->
             </li>
             <li>
@@ -372,10 +355,8 @@ git push origin main
         </div>
       </div>
     </div>
-
     <div class="alert seccion kepler">
       <h5>Kepler.Gl</h5>
-
       <div class="row">
         <div class="col">
           <ul>
@@ -389,7 +370,6 @@ git push origin main
         </div>
       </div>
     </div>
-
     <div class="alert seccion practicas">
       <h5>Prácticas puntuables</h5>
       <div class="row">
@@ -405,17 +385,15 @@ git push origin main
         </div>
       </div>
     </div>
-
   </div>
 </body>
-
 </html>
 
 ```
 
 
 
-### información anexa
+### Información anexa
 
 #### Para tener la documentación del curso en nuestro repositorio
 
