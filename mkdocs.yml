@@ -46,13 +46,11 @@ nav:
   - 15. MapBox GL JS avanzado: mapbox_avanzado.md
   - 16. Visor de terremotos: visor_terremotos.md
 - 'Sesión 7':
-  - 17. Recursos OpenData: recursos_open_data.md
-  - 18. Taller de Medium: taller_medium.md
+  - 17. Mallas discretas y algoritmos en JS: mallas_discretas_algoritmos.md
+  - 18. Visualización y publicación con Kepler GL: visualizacion_con_kepler_gl.md
 - 'Sesión 8*':
-  - 19. Mallas discretas y algoritmos en JS: mallas_discretas_algoritmos.md
-  - 20. Visualización y publicación con Kepler GL: visualizacion_con_kepler_gl.md
+  - 19. Recursos OpenData: recursos_open_data.md
+  - 20. Taller de Medium: taller_medium.md  
 - Preguntas Frecuentes: faq.md
-
-
 plugins:
     - search

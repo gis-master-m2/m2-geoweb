@@ -30,11 +30,11 @@ Materiales para el módulo 2: Mapas y OpenData, Localización, Visualización y 
   * [15. MapBox GL JS con recursos externos](mapbox_avanzado)
   * [16. Visor de terremotos](mapbox_avanzado)
 * Sesión 7 
-  * [17. Recursos OpenData](recursos_open_data)
-  * [18. Publicación en Medium](visualizacion_con_kepler_gl) 
+  * [17. Mallas discretas y algoritmos en JS](mallas_discretas_algoritmos)
+  * [18. Visualización y publicación con Kepler GL](visualizacion_con_kepler_gl)
 * Sesión 8 (Asíncrona videos 10, 11 y 12)
-  * [19. Mallas discretas y algoritmos en JS](mallas_discretas_algoritmos)
-  * [20. Visualización y publicación con Kepler GL](visualizacion_con_kepler_gl)
+  * [19. Recursos OpenData](recursos_open_data)
+  * [20. Publicación en Medium](taller_medium) 
  
 * [Preguntas Frecuentes](faq)
 
