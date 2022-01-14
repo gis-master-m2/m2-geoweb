@@ -35,7 +35,7 @@ Leaflet tiene más de 250 plugins o "pequeñas aplicaciones" que añaden funcion
 
  *  Plugin [https://github.com/k4r573n/leaflet-control-osm-geocoder](Leaflet Control OSM Geocoder){target=_blank}  
  
-*Creamos archivo **leaflet-plugin.html** dentro de nuestro directorio **/geoweb**
+*  Creamos archivo **leaflet-plugin.html** dentro de nuestro directorio **/geoweb**
 
 ```html
   <html lang="es">

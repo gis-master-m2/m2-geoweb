@@ -189,7 +189,7 @@ Ahora crearemos el tag **```<script>```**  justo encima de **```</head>```** y e
       center:[41.6863, 1.8382],
       zoom:8
       });
-      capa1= L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      capa1= L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
       {
       maxZoom : 19,
       minZoom : 1,
@@ -238,7 +238,7 @@ La página final nos quedaría así
       center:[41.6863, 1.8382],
       zoom:8
       });
-      capa1= L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      capa1= L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
       {
       maxZoom : 19,
       minZoom : 1,
@@ -537,13 +537,13 @@ La página final nos quedaría así
             map = L.map('map').setView([41.6863, 1.8382], 8);
 
             esri = L.tileLayer(
-                'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
                 maxZoom: 17,
                 minZoom: 1,
                 attribution: 'Tiles © Esri',
             }).addTo(map);
 
-            osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
                 minZoom: 1,
                 attribution: 'OSM'
@@ -601,7 +601,7 @@ La página final nos quedaría así
 | Overlay       | són capas que aparcen encima de las de referéncia (baseLayers) y puede haber una o varias activas (Ejemplo:Capa puntos) |
 
 > ¿Que mapas de fondo puedo añadir?
->Existem muchas fuentes que ofrecen fondos de referencia que podemos utilizar en Leaflet
+>Existen muchas fuentes que ofrecen fondos de referencia que podemos utilizar en Leaflet
 
 >Algunas de ellas nos piden un previo registro y accestoken que podemos añadir a la url de servicio
 
@@ -649,15 +649,15 @@ La página final nos quedaría así
                 osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     maxZoom: 19,
                     minZoom: 1,
-                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright"/>OpenStreetMap</a>'
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright"/>OpenStreetMap</a>'
                 }).addTo(map);
     
                 var OpenStreetMap_DE =
-                    L.tileLayer('http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-                        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright"/>OpenStreetMap</a>'
+                    L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright"/>OpenStreetMap</a>'
                     });
-                var OpenStreetMap_HOT = L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright"/>OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank"/>Humanitarian OpenStreetMapTeam</a>'
+                var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright"/>OpenStreetMap</a>, Tiles courtesy of <a href="https://hot.openstreetmap.org/" target="_blank"/>Humanitarian OpenStreetMapTeam</a>'
                 });
     
                 var Stamen_Toner = L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {
@@ -864,7 +864,7 @@ La página final nos quedaría así
 
 ### **Crear un mapa base**
 
-!!!question "¿ Cómo crearíamos un nuevo ejemplo llamado **mapabase.html** con tres capas "baseLayers" de fondo: 
+!!! question "¿ Cómo crearíamos un nuevo ejemplo llamado **mapabase.html** con tres capas **baseLayers** de fondo: 
     Mapa, Orto, Híbrido"
  
 
@@ -882,7 +882,7 @@ La página final nos quedaría así
                     attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX,GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
                 }).addTo(hibrid);
 
-            var Stamen_TonerHybrid = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{r}.{ext}', {
+            var Stamen_TonerHybrid = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{r}.{ext}', {
             attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
             subdomains: 'abcd',
             minZoom: 0,
@@ -947,7 +947,7 @@ La página final nos quedaría así
                     }).addTo(hibrid);
 
                 var Stamen_TonerHybrid = L.tileLayer(
-                    'https://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{r}.{ext}', {
+                    'http://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{r}.{ext}', {
                     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
                     subdomains: 'abcd',
                     minZoom: 0,
@@ -1036,7 +1036,7 @@ El archivo **mapabase.js** quedaría así
                     }).addTo(hibrid);
 
                 var Stamen_TonerHybrid = L.tileLayer(
-                    'https://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{r}.{ext}', {
+                    'http://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{r}.{ext}', {
                     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
                     subdomains: 'abcd',
                     minZoom: 0,

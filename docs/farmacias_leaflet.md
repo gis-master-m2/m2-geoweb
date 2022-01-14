@@ -294,7 +294,7 @@ function addDatosFarmacias() {
 
 #### Paso 7: ¿Añadimos el plugin de Cluster?
 
-Este es uno de lo plugins más utilizados en Lealfte
+Este es uno de lo plugins más utilizados en Leaflet
 
 * Miramos documentación [https://github.com/Leaflet/Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster){target=_blank}
 
