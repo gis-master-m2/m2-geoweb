@@ -1457,7 +1457,7 @@
 <div class="admonition success">
 <p class="admonition-title">Añadir funcion Popup personalizado dentro de edificios.js</p>
 </div>
-<p><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">addPopupToMapEdificios</span><span class="p">(</span><span class="nx">nombreCapa</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">addPopupToMapEdificios</span><span class="p">(</span><span class="nx">nombreCapa</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">nombreCapa</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
 
@@ -1502,10 +1502,9 @@
 
 <span class="p">}</span>
 </code></pre></div>
-<img alt="alt text" src="../img/mapbox-catastro-mapa.png" title="mapbox-catastro-mapa.png" /></p>
 <h4 id="paso-8-llamamos-funcion-addpopuptomapedificios">Paso 8: Llamamos función addPopupToMapEdificios</h4>
 <ul>
-<li>LLamamos a la función de desde el evento <code>onChange</code> del objeto input de HTML</li>
+<li>LLamamos a la función de desde el evento <code>load</code> del mapa</li>
 </ul>
 <div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 
@@ -1541,8 +1540,8 @@
 
                 <span class="nx">addEdificiosCapa</span><span class="p">();</span>
 
-                <span class="nx">addPopupToMapEdificios</span><span class="p">(</span><span class="s2">&quot;edificios&quot;</span><span class="p">);</span>
-             <span class="p">});</span> <span class="c1">//fin onload</span>
+<span class="hll">                <span class="nx">addPopupToMapEdificios</span><span class="p">(</span><span class="s2">&quot;edificios&quot;</span><span class="p">);</span>
+</span>             <span class="p">});</span> <span class="c1">//fin onload</span>
 
         <span class="p">}</span> <span class="c1">// final init</span>
     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -1552,13 +1551,15 @@
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;panelTopIzquierda&quot;</span><span class="p">&gt;</span>
 
        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;altura&quot;</span><span class="p">&gt;</span>Más de 0 pisos<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-<span class="hll">        <span class="p">&lt;</span><span class="nt">input</span>  <span class="na">onChange</span><span class="o">=</span><span class="s">&quot;filtrarEdificios(this.value)&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;slider&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;range&quot;</span> <span class="na">min</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;50&quot;</span> <span class="na">step</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="p">/&gt;</span>
-</span>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span>  <span class="na">onChange</span><span class="o">=</span><span class="s">&quot;filtrarEdificios(this.value)&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;slider&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;range&quot;</span> <span class="na">min</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;50&quot;</span> <span class="na">step</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 
     <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
+<p><strong>Visualizamos mapa</strong></p>
+<p><img alt="alt text" src="../img/mapbox-catastro-mapa.png" title="mapbox-catastro-mapa.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Geocodificador Mapbox GL  <a href="https://github.com/mapbox/mapbox-gl-geocoder/blob/master/API.md">https://github.com/mapbox/mapbox-gl-geocoder/blob/master/API.md</a></p>
 </div>
