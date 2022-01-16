@@ -519,14 +519,14 @@ function addPopupToMapEdificios(nombreCapa) {
 }
 
 ```
-![alt text](img/mapbox-catastro-mapa.png "mapbox-catastro-mapa.png")
+
 
 #### Paso 8: Llamamos función addPopupToMapEdificios
 
-* LLamamos a la función de desde el evento `onChange` del objeto input de HTML
+* LLamamos a la función de desde el evento `load` del mapa
 
 
-```html hl_lines="46"
+```html hl_lines="35"
     <html>
 
     <head>
@@ -580,6 +580,10 @@ function addPopupToMapEdificios(nombreCapa) {
     </html>
 
 ```
+
+**Visualizamos mapa**
+
+![alt text](img/mapbox-catastro-mapa.png "mapbox-catastro-mapa.png")
 
 !!! tip "Geocodificador Mapbox GL  https://github.com/mapbox/mapbox-gl-geocoder/blob/master/API.md"
 
