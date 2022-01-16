@@ -1282,17 +1282,17 @@ Vamos a crear un mapa con Leaflet, para ello incluiremos en la cabecera
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiqueta  <strong><code>&lt;style/&gt;</code></strong> dentro del <strong><code>&lt;head&gt;</code></strong></p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-  <span class="nt">body</span> <span class="p">{</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-  <span class="p">}</span>
- <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">#</span><span class="nn">map</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w"> </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Ahora nuestra página tendria este aspecto</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
@@ -1305,17 +1305,17 @@ Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiq
   <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index,follow&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
   <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-  <span class="nt">body</span> <span class="p">{</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-  <span class="p">}</span>
- <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">#</span><span class="nn">map</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w"> </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -1347,7 +1347,7 @@ Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiq
       <span class="nx">center</span><span class="o">:</span><span class="p">[</span><span class="mf">41.6863</span><span class="p">,</span> <span class="mf">1.8382</span><span class="p">],</span>
       <span class="nx">zoom</span><span class="o">:</span><span class="mf">8</span>
       <span class="p">});</span>
-      <span class="nx">capa1</span><span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s2">&quot;http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;</span><span class="p">,</span>
+      <span class="nx">capa1</span><span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s2">&quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;</span><span class="p">,</span>
       <span class="p">{</span>
       <span class="nx">maxZoom</span> <span class="o">:</span> <span class="mf">19</span><span class="p">,</span>
       <span class="nx">minZoom</span> <span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
@@ -1372,17 +1372,17 @@ Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiq
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index,follow&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-  <span class="nt">body</span> <span class="p">{</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">#</span><span class="nn">map</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
   <span class="kd">var</span> <span class="nx">map</span><span class="p">,</span><span class="nx">capa1</span><span class="p">;</span>
   <span class="kd">function</span> <span class="nx">init</span><span class="p">(){</span>
@@ -1390,7 +1390,7 @@ Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiq
       <span class="nx">center</span><span class="o">:</span><span class="p">[</span><span class="mf">41.6863</span><span class="p">,</span> <span class="mf">1.8382</span><span class="p">],</span>
       <span class="nx">zoom</span><span class="o">:</span><span class="mf">8</span>
       <span class="p">});</span>
-      <span class="nx">capa1</span><span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s2">&quot;http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;</span><span class="p">,</span>
+      <span class="nx">capa1</span><span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s2">&quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;</span><span class="p">,</span>
       <span class="p">{</span>
       <span class="nx">maxZoom</span> <span class="o">:</span> <span class="mf">19</span><span class="p">,</span>
       <span class="nx">minZoom</span> <span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
@@ -1486,45 +1486,45 @@ Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiq
     <span class="na">integrity</span><span class="o">=</span><span class="s">&quot;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&quot;anonymous&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;preconnect&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://fonts.gstatic.com&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://fonts.googleapis.com/css2?family=Inconsolata&amp;display=swap&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-    <span class="p">.</span><span class="nc">seccion</span> <span class="p">{</span>
-      <span class="k">border-radius</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
-      <span class="k">margin-top</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="p">.</span><span class="nc">mapbox</span> <span class="p">{</span>
-      <span class="k">background-color</span><span class="p">:</span> <span class="mh">#e7e7f1</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="p">.</span><span class="nc">kepler</span> <span class="p">{</span>
-      <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f1e7ea</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="p">.</span><span class="nc">practicas</span> <span class="p">{</span>
-      <span class="k">background-color</span><span class="p">:</span> <span class="mh">#e7f0f1</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="p">.</span><span class="nc">leaflet</span> <span class="p">{</span>
-      <span class="k">background-color</span><span class="p">:</span> <span class="mh">#e7f1e8</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nt">small</span> <span class="p">{</span>
-      <span class="k">font-size</span><span class="p">:</span> <span class="mi">60</span><span class="kt">%</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="p">.</span><span class="nc">navbar</span> <span class="p">{</span>
-      <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f1e9e7</span> <span class="cp">!important</span><span class="p">;</span>
-      <span class="k">border-radius</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="p">.</span><span class="nc">row</span> <span class="p">{</span>
-      <span class="k">margin-top</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nt">body</span> <span class="p">{</span>
-      <span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;Inconsolata&#39;</span><span class="p">,</span> <span class="kc">sans-serif</span> <span class="cp">!important</span><span class="p">;</span>
-      <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="p">@</span><span class="k">media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">500px</span><span class="o">)</span> <span class="p">{</span>
-      <span class="nt">body</span> <span class="p">{</span>
-        <span class="k">font-size</span><span class="p">:</span> <span class="mi">80</span><span class="kt">%</span> <span class="cp">!important</span><span class="p">;</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nc">seccion</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="kt">px</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nc">mapbox</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#e7e7f1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nc">kepler</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f1e7ea</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nc">practicas</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#e7f0f1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nc">leaflet</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#e7f1e8</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nt">small</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="kt">%</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nc">navbar</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f1e9e7</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="kt">px</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nc">row</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Inconsolata&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="nt">screen</span><span class="w"> </span><span class="nt">and</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">500px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="kt">%</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
@@ -1547,7 +1547,7 @@ Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiq
 <span class="hll">             <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;leaflet-basico.html&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>Leaflet Básico<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span>            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
-              <span class="c">&lt;!--añadir aqui entrada--&gt;</span>
+              <span class="cm">&lt;!--añadir aqui entrada--&gt;</span>
             <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
           <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -1559,10 +1559,10 @@ Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiq
         <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>
           <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
-              <span class="c">&lt;!--añadir aqui entrada--&gt;</span>
+              <span class="cm">&lt;!--añadir aqui entrada--&gt;</span>
             <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
-              <span class="c">&lt;!--añadir aqui entrada--&gt;</span>
+              <span class="cm">&lt;!--añadir aqui entrada--&gt;</span>
             <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
           <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -1574,10 +1574,10 @@ Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiq
         <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>
           <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
-              <span class="c">&lt;!--añadir aqui entrada--&gt;</span>
+              <span class="cm">&lt;!--añadir aqui entrada--&gt;</span>
             <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
-              <span class="c">&lt;!--añadir aqui entrada--&gt;</span>
+              <span class="cm">&lt;!--añadir aqui entrada--&gt;</span>
             <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
           <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -1589,10 +1589,10 @@ Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiq
         <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col&quot;</span><span class="p">&gt;</span>
           <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
-              <span class="c">&lt;!--añadir aqui entrada--&gt;</span>
+              <span class="cm">&lt;!--añadir aqui entrada--&gt;</span>
             <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
-              <span class="c">&lt;!--añadir aqui entrada--&gt;</span>
+              <span class="cm">&lt;!--añadir aqui entrada--&gt;</span>
             <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
           <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -1637,18 +1637,18 @@ Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiq
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index,follow&quot;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-        <span class="nt">body</span> <span class="p">{</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-        <span class="p">}</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-        <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">#</span><span class="nn">map</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
         <span class="kd">var</span> <span class="nx">map</span><span class="p">,</span> <span class="nx">osm</span><span class="p">,</span> <span class="nx">esri</span><span class="p">,</span> <span class="nx">terreno</span><span class="p">;</span>
@@ -1659,13 +1659,13 @@ Añadiremos un estilo al mapa para que ocupe toda la página web, dentro la etiq
             <span class="nx">map</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">).</span><span class="nx">setView</span><span class="p">([</span><span class="mf">41.6863</span><span class="p">,</span> <span class="mf">1.8382</span><span class="p">],</span> <span class="mf">8</span><span class="p">);</span>
 
             <span class="nx">esri</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
-                <span class="s1">&#39;http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&#39;</span><span class="p">,</span> <span class="p">{</span>
+                <span class="s1">&#39;https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&#39;</span><span class="p">,</span> <span class="p">{</span>
                 <span class="nx">maxZoom</span><span class="o">:</span> <span class="mf">17</span><span class="p">,</span>
                 <span class="nx">minZoom</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
                 <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Tiles © Esri&#39;</span><span class="p">,</span>
             <span class="p">}).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
 
-            <span class="nx">osm</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
+            <span class="nx">osm</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
                 <span class="nx">maxZoom</span><span class="o">:</span> <span class="mf">19</span><span class="p">,</span>
                 <span class="nx">minZoom</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
                 <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;OSM&#39;</span>
@@ -1730,7 +1730,7 @@ Respuesta:Miramos opciones del control-layers</p>
 </table>
 <blockquote>
 <p>¿Que mapas de fondo puedo añadir?
-Existem muchas fuentes que ofrecen fondos de referencia que podemos utilizar en Leaflet</p>
+Existen muchas fuentes que ofrecen fondos de referencia que podemos utilizar en Leaflet</p>
 <p>Algunas de ellas nos piden un previo registro y accestoken que podemos añadir a la url de servicio</p>
 </blockquote>
 <div class="admonition tip">
@@ -1752,17 +1752,17 @@ Existem muchas fuentes que ofrecen fondos de referencia que podemos utilizar en 
         <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;descripción página&quot;</span> <span class="p">/&gt;</span>
         <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index,follow&quot;</span> <span class="p">/&gt;</span>
         <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
-        <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-            <span class="nt">body</span> <span class="p">{</span>
-                <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="p">}</span>
+        <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">            </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
 
-            <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-                <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-                <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-                <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ffffff</span>
-            <span class="p">}</span>
-        <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">#</span><span class="nn">map</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ffffff</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
             <span class="kd">var</span> <span class="nx">map</span><span class="p">,</span> <span class="nx">osm</span><span class="p">,</span> <span class="nx">controlCapas</span><span class="p">;</span>
@@ -1775,15 +1775,15 @@ Existem muchas fuentes que ofrecen fondos de referencia que podemos utilizar en 
                 <span class="nx">osm</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
                     <span class="nx">maxZoom</span><span class="o">:</span> <span class="mf">19</span><span class="p">,</span>
                     <span class="nx">minZoom</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
-                    <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;/&gt;OpenStreetMap&lt;/a&gt;&#39;</span>
+                    <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;&amp;copy; &lt;a href=&quot;https://www.openstreetmap.org/copyright&quot;/&gt;OpenStreetMap&lt;/a&gt;&#39;</span>
                 <span class="p">}).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
 
                 <span class="kd">var</span> <span class="nx">OpenStreetMap_DE</span> <span class="o">=</span>
-                    <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
-                        <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;/&gt;OpenStreetMap&lt;/a&gt;&#39;</span>
+                    <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
+                        <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;&amp;copy; &lt;a href=&quot;https://www.openstreetmap.org/copyright&quot;/&gt;OpenStreetMap&lt;/a&gt;&#39;</span>
                     <span class="p">});</span>
-                <span class="kd">var</span> <span class="nx">OpenStreetMap_HOT</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
-                    <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;/&gt;OpenStreetMap&lt;/a&gt;, Tiles courtesy of &lt;a href=&quot;http://hot.openstreetmap.org/&quot; target=&quot;_blank&quot;/&gt;Humanitarian OpenStreetMapTeam&lt;/a&gt;&#39;</span>
+                <span class="kd">var</span> <span class="nx">OpenStreetMap_HOT</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
+                    <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;&amp;copy; &lt;a href=&quot;https://www.openstreetmap.org/copyright&quot;/&gt;OpenStreetMap&lt;/a&gt;, Tiles courtesy of &lt;a href=&quot;https://hot.openstreetmap.org/&quot; target=&quot;_blank&quot;/&gt;Humanitarian OpenStreetMapTeam&lt;/a&gt;&#39;</span>
                 <span class="p">});</span>
 
                 <span class="kd">var</span> <span class="nx">Stamen_Toner</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png&#39;</span><span class="p">,</span> <span class="p">{</span>
@@ -1871,17 +1871,17 @@ Existem muchas fuentes que ofrecen fondos de referencia que podemos utilizar en 
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;descripción página&quot;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index,follow&quot;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-        <span class="nt">body</span> <span class="p">{</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-        <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ffffff</span>
-        <span class="p">}</span>
-    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">#</span><span class="nn">map</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ffffff</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
         <span class="kd">var</span> <span class="nx">map</span><span class="p">,</span> <span class="nx">osm</span><span class="p">,</span> <span class="nx">controlCapas</span><span class="p">;</span>
@@ -1983,7 +1983,7 @@ Existem muchas fuentes que ofrecen fondos de referencia que podemos utilizar en 
 </code></pre></div>
 <img alt="alt text" src="../img/leaflet-providers.png" title="github" />     </p>
 <h3 id="crear-un-mapa-base"><strong>Crear un mapa base</strong></h3>
-<p>!!!question "¿ Cómo crearíamos un nuevo ejemplo llamado <strong>mapabase.html</strong> con tres capas "baseLayers" de fondo: 
+<p>!!! question "¿ Cómo crearíamos un nuevo ejemplo llamado <strong>mapabase.html</strong> con tres capas <strong>baseLayers</strong> de fondo: 
     Mapa, Orto, Híbrido"</p>
 <div class="admonition tip">
 <p class="admonition-title">Truco</p>
@@ -1998,7 +1998,7 @@ Podemos agrupar capas utilizando L.LayerGroup <a href="https://leafletjs.com/exa
                 <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Tiles &amp;copy; Esri &amp;mdash; Source: Esri, i-cubed, USDA, USGS, AEX,GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community&#39;</span>
             <span class="p">}).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">hibrid</span><span class="p">);</span>
 
-        <span class="kd">var</span> <span class="nx">Stamen_TonerHybrid</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;https://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{r}.{ext}&#39;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">Stamen_TonerHybrid</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;http://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{r}.{ext}&#39;</span><span class="p">,</span> <span class="p">{</span>
         <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Map tiles by &lt;a href=&quot;http://stamen.com&quot;&gt;Stamen Design&lt;/a&gt;, &lt;a href=&quot;http://creativecommons.org/licenses/by/3.0&quot;&gt;CC BY 3.0&lt;/a&gt; &amp;mdash; Map data &amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;&#39;</span><span class="p">,</span>
         <span class="nx">subdomains</span><span class="o">:</span> <span class="s1">&#39;abcd&#39;</span><span class="p">,</span>
         <span class="nx">minZoom</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
@@ -2020,17 +2020,17 @@ Podemos agrupar capas utilizando L.LayerGroup <a href="https://leafletjs.com/exa
         <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index,follow&quot;</span> <span class="p">/&gt;</span>
         <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
         <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-            <span class="nt">body</span> <span class="p">{</span>
-                <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="p">}</span>
+        <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">            </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
 
-            <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-                <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-                <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-                <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ffffff</span>
-            <span class="p">}</span>
-        <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">#</span><span class="nn">map</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ffffff</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 
         <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
             <span class="kd">var</span> <span class="nx">map</span><span class="p">,</span> <span class="nx">osm</span><span class="p">,</span> <span class="nx">controlCapas</span><span class="p">;</span>
@@ -2062,7 +2062,7 @@ Podemos agrupar capas utilizando L.LayerGroup <a href="https://leafletjs.com/exa
                     <span class="p">}).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">hibrid</span><span class="p">);</span>
 
                 <span class="kd">var</span> <span class="nx">Stamen_TonerHybrid</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
-                    <span class="s1">&#39;https://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{r}.{ext}&#39;</span><span class="p">,</span> <span class="p">{</span>
+                    <span class="s1">&#39;http://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{r}.{ext}&#39;</span><span class="p">,</span> <span class="p">{</span>
                     <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Map tiles by &lt;a href=&quot;http://stamen.com&quot;&gt;Stamen Design&lt;/a&gt;, &lt;a href=&quot;http://creativecommons.org/licenses/by/3.0&quot;&gt;CC BY 3.0&lt;/a&gt; &amp;mdash; Map data &amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;&#39;</span><span class="p">,</span>
                     <span class="nx">subdomains</span><span class="o">:</span> <span class="s1">&#39;abcd&#39;</span><span class="p">,</span>
                     <span class="nx">minZoom</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
@@ -2142,7 +2142,7 @@ Algunas técnicas serían:</p>
                     <span class="p">}).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">hibrid</span><span class="p">);</span>
 
                 <span class="kd">var</span> <span class="nx">Stamen_TonerHybrid</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span>
-                    <span class="s1">&#39;https://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{r}.{ext}&#39;</span><span class="p">,</span> <span class="p">{</span>
+                    <span class="s1">&#39;http://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}{r}.{ext}&#39;</span><span class="p">,</span> <span class="p">{</span>
                     <span class="nx">attribution</span><span class="o">:</span> <span class="s1">&#39;Map tiles by &lt;a href=&quot;http://stamen.com&quot;&gt;Stamen Design&lt;/a&gt;, &lt;a href=&quot;http://creativecommons.org/licenses/by/3.0&quot;&gt;CC BY 3.0&lt;/a&gt; &amp;mdash; Map data &amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;&#39;</span><span class="p">,</span>
                     <span class="nx">subdomains</span><span class="o">:</span> <span class="s1">&#39;abcd&#39;</span><span class="p">,</span>
                     <span class="nx">minZoom</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
@@ -2164,15 +2164,15 @@ Algunas técnicas serían:</p>
             <span class="p">}</span> <span class="c1">// fin funcion init</span>
 </code></pre></div>
 <p>El archivo <strong>estilobase.css</strong> quedaría así</p>
-<div class="highlight"><pre><span></span><code>            <span class="nt">body</span> <span class="p">{</span>
-                <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="w">            </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
 
-            <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-                <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-                <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-                <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ffffff</span>
-            <span class="p">}</span>
+<span class="w">            </span><span class="p">#</span><span class="nn">map</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ffffff</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Añadimos los archivos creados a nuestro <strong>mapabase.html</strong> de la siguiente forma.</p>
 <div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>

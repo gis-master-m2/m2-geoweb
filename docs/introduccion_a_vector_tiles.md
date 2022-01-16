@@ -56,7 +56,8 @@ Existen tres especificaciones para servir tiles
 #### Caracteristicas
 
 Las teselas vectoriales han sido utilizadas por el cliente Android de Google Maps desde diciembre de 2010 y en el cliente de escritorio desde 2013. 
-Las teselas vectoriales para renderizar los datos de OpenStreetMap se propusieron por primera vez en marzo de 2013 y están soportadas por Mapnik, el renderizador de datos de OpenStreetMap más utilizado. 
+Las teselas vectoriales para renderizar los datos de OpenStreetMap se propusieron por primera vez en marzo de 2013 y están soportadas por Mapnik, el renderizador de datos de OpenStreetMap más utilizado.
+
 Mapbox, proveedor comercial de herramientas de cartografía personalizada y de hosting, es el máximo impulsor de esta tecnologia y ha centrado su herramienta de cartografía, **Mapbox Studio**, en torno a las teselas vectoriales.
 
 
@@ -64,7 +65,7 @@ Mapbox, proveedor comercial de herramientas de cartografía personalizada y de h
  * Los Tiles **no tienen estilo**, el estilo se aplica en cliente
  * Soporta rotación y orientación
  * Soporta extrusión y 3D
- * Normalment los vectores encapsulan en archivos con formato MBTILES (basado en SQLITE)
+ * Normalmente los vectores encapsulan en archivos con formato MBTILES (basado en SQLITE)
 
 
 ### Mapbox Style Specification
@@ -75,12 +76,13 @@ Es especificación abierta  desarrollada por Mapbox, (**Mapbox Style Specificati
 
 La codificación de los estilos se entructura en el formato JSON mediante la sintáxis definida por la especificación y cómo veremos, esta   va más allá de aplicar colores simples a los vectores.
 
-Los filtros y expresiones permitn realizar tematización casi en tiempo real en los navegadores web.
+Los filtros y expresiones permiten realizar tematización en tiempo real en los navegadores web.
 
 
 La especificación se ha convertido en un estandard "de facto" y ha sido adoptado por otras empresas cómo ESRI o OpenMapTiles
 
 [Ver presentación MapBox Styles (pptx)](presentacion/vector-tiles.pptx)
+
 [Ver presentación MapBox Styles (pdf)](presentacion/vector-tiles.pdf)
 
 ### Anexo: Herramientas y recursos para Vector-Tiles

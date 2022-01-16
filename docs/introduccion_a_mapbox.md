@@ -79,7 +79,7 @@
 
 ![alt text](img/mapbox11.png "mapbox")
 
-* Cambiamos nombre del estilo --Parte superion izquierda- por  "Bicing"
+* Cambiamos nombre del estilo --Parte superior izquierda- por  "Bicing"
 
 ![alt text](img/mapbox10.png "mapbox")
 
@@ -88,7 +88,7 @@
 
 * Podemos editar a dos niveles
 
-    * Por components: Són agrupaciones de capas por temas, loas cambios afectarán a todas las capas del tema (edición rápida)
+    * Por components: Són agrupaciones de capas por temas, los cambios afectarán a todas las capas del tema (edición rápida)
     * Por capas: Editaremos capas de forma individual
 
 * Para editar click encima del nombre del componente y(o layer)
@@ -102,7 +102,7 @@
 
 ![alt text](img/mapbox-edit.png "mapbox")
 
-* Una vez hemos acabado -->`Publish your style` --> `Publish as new`
+* Una vez hemos acabado -->`Publish your style` --> `Publish`
 
 * Share, develop, and use your style
 
@@ -135,9 +135,9 @@ MapBox tiene una libreria JavaScript llamada *MapBox GL JS* para poder programas
 
 
 !!! warning
-    <h4>
+    <h2>
     Siempre que utilizemos algún estilo de Mapbox studio o algún servicio de Mapbox  deberemos añadir nuestro Access Token
-    </h4>
+    </h2>
 
 #### 1-Visualizar estilo con Mapbox GL JS
 
@@ -156,7 +156,7 @@ El objeto principal del mapa en Mapbox gl js se llama **mapboxgl.Map**
                 });
         ```
 
-#### Paso 1 Abrimos VSCODE y creamos **mapbox-basico.html** dentro de nuestro directorio **geoweb**
+#### Paso 1 Abrimos VSCODE y creamos **mapbox-basico.html** dentro de nuestro directorio **/geoweb**
 
 ```html
 <html>
@@ -205,9 +205,9 @@ El objeto principal del mapa en Mapbox gl js se llama **mapboxgl.Map**
 ```
 
 
-#### Paso 2 Cambiamos el estilo outdoors por nuestro estilo
+#### Paso 2 Cambiamos el estilo outdoors por nuestro estilo y cambiamos nuestro token (hay que hacerlo siempre!!)
 
-```html hl_lines="28"
+```html hl_lines="25 28"
 <html>
 <head>
     <meta charset='utf-8' />
@@ -235,7 +235,7 @@ El objeto principal del mapa en Mapbox gl js se llama **mapboxgl.Map**
                 'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
             var map = new mapboxgl.Map({
                 container: 'map',
-                style: 'mapbox://styles/gismasterm2/ckjmupbtl28od19k9rmflcgxf',
+                style: 'mapbox://styles/gismasterm2/ckyhjwjdf31rz14qiskf2uzlj',
                 center: [2.16859, 41.3954],
                 zoom: 13,
                 attributionControl: false
@@ -377,7 +377,7 @@ Nos gustaria que en nuestro estilo estuvieran los carriles bici de Barcelona
 * Podemos utilizar QGIS o https://geojson.io/ para visualizarlo
 
      
-#### Paso 2 -Añadimos la capa a Mapbox Stuio
+#### Paso 2 -Añadimos la capa a Mapbox Studio
 
 * Entramos en MapBox.com `Studio` --> `Tilesets` -->`New tileset` Arrastramos **carril-bici.geojson**
 
@@ -405,6 +405,7 @@ Nos gustaria que en nuestro estilo estuvieran los carriles bici de Barcelona
 #### Paso 1
 
 * Descargamos el archivo [vias_ciclables.geojson](datos/vias_ciclables.geojson){target=_blank}
+
   
 * Podemos utilizar QGIS o https://geojson.io/ para visualizarlo
 
