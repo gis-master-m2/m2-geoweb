@@ -5,8 +5,6 @@ Gracias a la poténcia de WebGL y los nuevos navegadores , cada vez hay más lib
 La visualización 3D no sólo se limita a la extrusión del terreno síno que va más allá, como por ejemplo visualización de nubes de puntos [lidar](http://betaserver.icgc.cat/potree/examples/gironaen3d.html){target=_blank} , visión hiperrealista de [ciudades](http://betaserver.icgc.cat/cesium/Girona3D.html){target=_blank}
 
 
-
-
 ## Algunas librerías geo con capacidades 3D
 
 [MapBox GL JS](https://www.mapbox.com/blog/mapbox-gl-js-v2-3d-maps-camera-api-sky-api-launch){target=_blank}
@@ -29,16 +27,18 @@ La visualización 3D no sólo se limita a la extrusión del terreno síno que va
 
  **3D Scene Layers (I3S)**:Especificación estándar OGC creada por ESRI para la creación de piràmides de datos vectores con información 3D
 
- **Terrain-RGB**: Datos de elevación codificados en teselas PNG rasterizadas como valores de color que pueden ser decodificados a alturas en metros
+ **Terrain-RGB**: Datos de elevación codificados en teselas PNG rasterizadas como valores de color que pueden ser decodificados a alturas en metros.
+
  Formula para pasar el color a metros :
  ``` height = -10000 + ((R * 256 * 256 + G * 256 + B) * 0.1)  ```
 
+### Capacidades 3D de MapBox GLS 
 
 >Mapbox puede extrudir polígonos
 
 >Mostrar el terreno en 3D
 
->Mostar objectos y textura 3D [https://openicgc.github.io/icgc-model3d.html](https://openicgc.github.io/icgc-model3d.html){target=_blank}
+>Mostar objectos y textura 3D [https://openicgc.github.io/exemples/maplibre/icgc-model3d-maplibre-code.html](https://openicgc.github.io/exemples/maplibre/icgc-model3d-maplibre-code.html){target=_blank}
 
 
 ### Cómo ver un mapa 3D en Mapbox GL
@@ -49,6 +49,7 @@ La visualización 3D no sólo se limita a la extrusión del terreno síno que va
 
 * Vamos a VSCode y creamos el archivo **mapa3d.html** dentro de **/geoweb**
 
+!!! tip "Utilizamos opcion ```pitch``` para inclinar el mapa al inicio"
 
 ```html
     <html>
@@ -109,13 +110,7 @@ La visualización 3D no sólo se limita a la extrusión del terreno síno que va
         'tileSize': 512,
         'maxzoom': 14
     });
-    
-    map.setTerrain({
-        'source': 'mapbox-dem',
-        'exaggeration': 1.5
-    });
 
-    
     map.addLayer({
         'id': 'sky',
         'type': 'sky',
@@ -125,6 +120,13 @@ La visualización 3D no sólo se limita a la extrusión del terreno síno que va
             'sky-atmosphere-sun-intensity': 15
         }
     });
+
+
+    map.setTerrain({
+        'source': 'mapbox-dem',
+        'exaggeration': 1.5
+    });
+ 
 
 } //fin funcion
 
@@ -187,17 +189,26 @@ La visualización 3D no sólo se limita a la extrusión del terreno síno que va
 ![alt text](img/mapbox-3d.png "mapbox-3d.png")
 
 
-#### Paso 5: Añadimos función add3DICGC() a 3d.js
+#### Paso 5: Añadimos DEM externo a 3d.js
 
  * Mapbox utiliza un DEM de 10m y de 30 m según zonas del mundo
 
- * El ICGC publica uno de 2m para Catalunya  
+ * El ICGC publica uno de 2m para Catalunya  [https://openicgc.github.io/](https://openicgc.github.io/)
 
- * Creamos la función **add3DICGC()** con el DEM de 2M
+ * Modificamos la función ```add3D()``` 
 
-```javascript
+ * Añadimos nueva función ```changeTerrain()``` para poder recibir un valor y acticar el terreno de MapBox, el del ICGC o ninguno.
 
-   function add3DICGC() {
+```javascript hl_lines="1 10-17 29-35 40-51"
+
+  function add3D(terreno) {
+
+    map.addSource('mapbox-dem', {
+        'type': 'raster-dem',
+        'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
+        'tileSize': 512,
+        'maxzoom': 14
+    });
 
     map.addSource('icgc-dem', {
         'type': 'raster-dem',
@@ -207,12 +218,6 @@ La visualización 3D no sólo se limita a la extrusión del terreno síno que va
         'tileSize': 512,
         'maxzoom': 14
     });
-
-    map.setTerrain({
-        'source': 'icgc-dem',
-        'exaggeration': 1.5
-    });
-
 
     map.addLayer({
         'id': 'sky',
@@ -224,15 +229,37 @@ La visualización 3D no sólo se limita a la extrusión del terreno síno que va
         }
     });
 
+   /* codigo comentado
+    map.setTerrain({
+        'source': 'mapbox-dem',
+        'exaggeration': 1.5
+    });
+    */
+   changeTerrain(terreno);
+
+
+} //fin funcion
+
+function changeTerrain(terreno){
+
+    if(terreno){
+        map.setTerrain({
+            'source': terreno,
+            'exaggeration': 1.5
+        });
+    }else{
+        map.setTerrain(null);
+    }
+
 } //fin funcion
 
 ```
 
 
-#### Paso 6:Llamamos a la función en el HTML (solo un de las dos puede ser llamada)
+#### Paso 6:Llamamos a la función en el HTML , pasando el parámetro
 
 
-``` html hl_lines="31 32"
+``` html hl_lines="31"
     <html>
     <head>
     <meta charset='utf-8' />
@@ -263,8 +290,8 @@ La visualización 3D no sólo se limita a la extrusión del terreno síno que va
             map.addControl(new mapboxgl.NavigationControl());
 
             map.on('load', function () {
-             //add3D();
-             add3DICGC();
+             add3D('icgc-dem'); //mapbox-dem  o null
+            
             }); //fin onload
 
         } // final init
@@ -282,65 +309,16 @@ La visualización 3D no sólo se limita a la extrusión del terreno síno que va
 
 !!! success "Comparamos zona Montserrat"
 
-!!! question "¿Cómo haríamos para poner una opción para activar/desactivar vista 3D?"
+!!! question "¿Cómo haríamos para poner una opción para activar/desactivar vista 3D y seleccionar el DEM Mapbox i el ICGC?"
     Sabémos que  ```map.setTerrain(null)``` desactiva el 3D
 
-!!! question "¿Podríamos pasar a 3D el visor de edificios de Catastro?¿Cómo?"
-
-!!! warning "Para trabajar con 3D hay que cambir un poco la función de popup"
-
-    ```javascript
-
-function addPopupToMapEdificios3D(nombreCapa) {
-
-    map.on('click', function (e) {
-
-        var text = "";
-        var bbox = [[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]];
-    var features = map.queryRenderedFeatures(bbox, { layers: [nombreCapa] });
-        
-if(features.length > 0){
-        for (key in features[0].properties) {
-
-            if (key == "numberOfFl") {
-                text += "<b>Numero de plantas</b>:" + features[0].properties[key] + "<br>";
-            }
-            if (key == "localId") {
-                //localId 0004702DF3800C_part1
-                //http://ovc.catastro.meh.es/OVCServWeb/OVCWcfLibres/OVCFotoFachada.svc/RecuperarFotoFachadaGet?ReferenciaCatastral=0004701DF3800C
-                //https://www1.sedecatastro.gob.es/CYCBienInmueble/OVCListaBienes.aspx?rc1=0004701&rc2=DF3800C
-
-                var localId = features[0].properties[key];
-
-                var localIdSplit = localId.split("_"); // 0004702DF3800C  part1
-                var parte1 = localIdSplit[0].substring(0, 7);
-                var parte2 = localIdSplit[0].substring(7, localIdSplit[0].length);
-                text += "<img width=200 src=http://ovc.catastro.meh.es/OVCServWeb/OVCWcfLibres/OVCFotoFachada.svc/RecuperarFotoFachadaGet?ReferenciaCatastral=" + localId + "><br>";
-                text += "<a target=blank href=https://www1.sedecatastro.gob.es/CYCBienInmueble/OVCListaBienes.aspx?rc1=" + parte1 + "&rc2=" + parte2 + ">Ficha</a><br>";
-
-            }
-
-
-        }
-        new mapboxgl.Popup()
-            .setLngLat(e.lngLat)
-            .setHTML(text)
-            .addTo(map);
-}
-
-    });
-
-    map.on('mouseenter', nombreCapa, function () {
-        map.getCanvas().style.cursor = 'pointer';
-    });
-
-    map.on('mouseleave', nombreCapa, function () {
-        map.getCanvas().style.cursor = '';
-    });
-
-}
-
-```
+    ```
+        <div class="panelTopIzquierda">
+            <input type="radio" onClick="changeTerrain(this.value)" checked  name="dem" value="mapbox-dem">Mapbox <br>
+            <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="icgc-dem">ICGC <br>
+            <input type="radio"  onClick="changeTerrain(null)"  name="dem" >2D
+          </div>  
+    ```
 
 !!! success "Editamos index.html y subimos el ejemplo al GitHub"
 	
@@ -352,3 +330,51 @@ if(features.length > 0){
         git push
 
 	``` 
+
+
+## ANEXO
+
+!!! question "¿Podríamos pasar a 3D el visor de edificios de Catastro?¿Cómo?"
+
+!!! warning "Para trabajar con 3D hay que cambir un poco la función de popup"
+
+```javascript
+function addPopupToMapEdificios3D(nombreCapa) {
+    map.on('click', function (e) {
+        var text = "";
+        var bbox = [[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]];
+        var features = map.queryRenderedFeatures(bbox, { layers: [nombreCapa] });
+        if (features.length > 0) {
+            for (key in features[0].properties) {
+                if (key == "numberOfFl") {
+                    text += "<b>Numero de plantas</b>:" + features[0].properties[key] + "<br>";
+                }
+                if (key == "localId") {
+                    //localId 0004702DF3800C_part1
+                    //http://ovc.catastro.meh.es/OVCServWeb/OVCWcfLibres/OVCFotoFachada.svc/RecuperarFotoFachadaGet?ReferenciaCatastral=0004701DF3800C
+                    //https://www1.sedecatastro.gob.es/CYCBienInmueble/OVCListaBienes.aspx?rc1=0004701&rc2=DF3800C
+                    var localId = features[0].properties[key];
+                    var localIdSplit = localId.split("_"); // 0004702DF3800C  part1
+                    var parte1 = localIdSplit[0].substring(0, 7);
+                    var parte2 = localIdSplit[0].substring(7, localIdSplit[0].length);
+                    text += "<img width=200 src=http://ovc.catastro.meh.es/OVCServWeb/OVCWcfLibres/OVCFotoFachada.svc/RecuperarFotoFachadaGet?ReferenciaCatastral=" + localId + "><br>";
+                    text += "<a target=blank href=https://www1.sedecatastro.gob.es/CYCBienInmueble/OVCListaBienes.aspx?rc1=" + parte1 + "&rc2=" + parte2 + ">Ficha</a><br>";
+                }
+            }
+            new mapboxgl.Popup()
+                .setLngLat(e.lngLat)
+                .setHTML(text)
+                .addTo(map);
+        }
+    });
+    map.on('mouseenter', nombreCapa, function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+    map.on('mouseleave', nombreCapa, function () {
+        map.getCanvas().style.cursor = '';
+    });
+}
+
+```
+
+

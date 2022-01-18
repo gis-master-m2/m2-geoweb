@@ -48,7 +48,7 @@
 
 * Seleccionaremos el estilo ICGC de OpenICGC
 
-* https://geoserveis.icgc.cat/contextmaps/icgc.json
+* https://geoserveis.icgc.cat/contextmaps/icgc_mapa_base_gris_simplificat.json
 
 * Creamos archivo **mapbox-icgc.html**
 
@@ -67,7 +67,7 @@
             mapboxgl.accessToken ='pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
             var map = new mapboxgl.Map({
                 container: 'map',
-                style: 'https://geoserveis.icgc.cat/contextmaps/icgc.json',
+                style: 'https://geoserveis.icgc.cat/contextmaps/icgc_mapa_base_gris_simplificat.json',
                 center: [2.16859, 41.3954],
                 zoom: 13,
                 hash: true,
@@ -93,7 +93,7 @@
 
 * Seleccionaremos el estilo Full dark de OpenICGC
 
-* https://geoserveis.icgc.cat/contextmaps/fulldark.json
+* https://geoserveis.icgc.cat/contextmaps/icgc_mapa_base_gris_simplificat.json
 
 * Vamos al editor de Maputnik [https://maputnik.github.io/editor/](https://maputnik.github.io/editor/)
 
@@ -105,16 +105,7 @@
 
 * `Export`-->`Download`--> Guardamos en **/geoweb/datos/miestilo.json**
 
-!!! success "¿Subimos el estilo al GitHub?"
-	
-```bash
-
-		git pull
-        git add .
-        git commit -m "mi estilo"
-        git push
-
-```      
+   
  
 
 #### Mapa estilo propio
@@ -137,7 +128,7 @@
             mapboxgl.accessToken ='pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
             var map = new mapboxgl.Map({
                 container: 'map',
-                style: 'https://gis-master-m2.github.io/geoweb/datos/miestilo.json', // o 'datos/miestilo.json'
+                style: 'datos/miestilo.json', // o 'datos/miestilo.json'
                 center: [2.16859, 41.3954],
                 zoom: 13,
                 hash: true,
@@ -187,7 +178,7 @@
             mapboxgl.accessToken ='pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
             var map = new mapboxgl.Map({
                 container: 'map',
-                style: 'https://gis-master-m2.github.io/geoweb/datos/miestilo.json',
+                style: 'datos/miestilo.json',
                 center: [2.16859, 41.3954],
                 zoom: 13,
                 hash: true,

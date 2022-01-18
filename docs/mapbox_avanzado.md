@@ -90,7 +90,7 @@ Vamos a ver algunos ejemplos más avanzados y complejos
             map.addControl(new mapboxgl.NavigationControl());
 
             map.on('load', function () {
-             add3D();
+             add3D('mapbox-dem');
              addRutas();
             rotarCamara(0);
 

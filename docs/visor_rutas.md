@@ -44,7 +44,7 @@
             map.addControl(new mapboxgl.NavigationControl());
 
             map.on('load', function () {
-             add3D();
+             add3D('mapbox-dem');
 
             }); //fin onload         
 
@@ -129,7 +129,7 @@
             map.addControl(new mapboxgl.NavigationControl());
 
             map.on('load', function () {
-             add3D();
+             add3D('mapbox-dem');
              addRutas();
 
             }); //fin onload         
@@ -189,7 +189,7 @@
             map.addControl(new mapboxgl.NavigationControl());
 
             map.on('load', function () {
-             add3D();
+             add3D('mapbox-dem');
              addRutas();
 
             }); //fin onload         
