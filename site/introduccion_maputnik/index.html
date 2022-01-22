@@ -1066,7 +1066,7 @@
 <p>Seleccionaremos el estilo ICGC de OpenICGC</p>
 </li>
 <li>
-<p><a href="https://geoserveis.icgc.cat/contextmaps/icgc.json">https://geoserveis.icgc.cat/contextmaps/icgc.json</a></p>
+<p><a href="https://geoserveis.icgc.cat/contextmaps/icgc_mapa_base_gris_simplificat.json">https://geoserveis.icgc.cat/contextmaps/icgc_mapa_base_gris_simplificat.json</a></p>
 </li>
 <li>
 <p>Creamos archivo <strong>mapbox-icgc.html</strong></p>
@@ -1086,7 +1086,7 @@
             <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
             <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span>
                 <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
-                <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;https://geoserveis.icgc.cat/contextmaps/icgc.json&#39;</span><span class="p">,</span>
+                <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;https://geoserveis.icgc.cat/contextmaps/icgc_mapa_base_gris_simplificat.json&#39;</span><span class="p">,</span>
                 <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span> <span class="mf">41.3954</span><span class="p">],</span>
                 <span class="nx">zoom</span><span class="o">:</span> <span class="mf">13</span><span class="p">,</span>
                 <span class="nx">hash</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -1113,7 +1113,7 @@
 <p>Seleccionaremos el estilo Full dark de OpenICGC</p>
 </li>
 <li>
-<p><a href="https://geoserveis.icgc.cat/contextmaps/fulldark.json">https://geoserveis.icgc.cat/contextmaps/fulldark.json</a></p>
+<p><a href="https://geoserveis.icgc.cat/contextmaps/icgc_mapa_base_gris_simplificat.json">https://geoserveis.icgc.cat/contextmaps/icgc_mapa_base_gris_simplificat.json</a></p>
 </li>
 <li>
 <p>Vamos al editor de Maputnik <a href="https://maputnik.github.io/editor/">https://maputnik.github.io/editor/</a></p>
@@ -1128,14 +1128,6 @@
 <p><code>Export</code>--&gt;<code>Download</code>--&gt; Guardamos en <strong>/geoweb/datos/miestilo.json</strong></p>
 </li>
 </ul>
-<div class="admonition success">
-<p class="admonition-title">¿Subimos el estilo al GitHub?</p>
-</div>
-<div class="highlight"><pre><span></span><code>        git pull
-        git add .
-        git commit -m <span class="s2">&quot;mi estilo&quot;</span>
-        git push
-</code></pre></div>
 <h4 id="mapa-estilo-propio">Mapa estilo propio</h4>
 <ul>
 <li>Creamos archivo <strong>mapbox-miestilo2.html</strong></li>
@@ -1154,7 +1146,7 @@
             <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
             <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span>
                 <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
-                <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;https://gis-master-m2.github.io/geoweb/datos/miestilo.json&#39;</span><span class="p">,</span> <span class="c1">// o &#39;datos/miestilo.json&#39;</span>
+                <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;datos/miestilo.json&#39;</span><span class="p">,</span> <span class="c1">// o &#39;datos/miestilo.json&#39;</span>
                 <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span> <span class="mf">41.3954</span><span class="p">],</span>
                 <span class="nx">zoom</span><span class="o">:</span> <span class="mf">13</span><span class="p">,</span>
                 <span class="nx">hash</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -1200,7 +1192,7 @@
             <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
             <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span>
                 <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
-                <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;https://gis-master-m2.github.io/geoweb/datos/miestilo.json&#39;</span><span class="p">,</span>
+                <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;datos/miestilo.json&#39;</span><span class="p">,</span>
                 <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span> <span class="mf">41.3954</span><span class="p">],</span>
                 <span class="nx">zoom</span><span class="o">:</span> <span class="mf">13</span><span class="p">,</span>
                 <span class="nx">hash</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>

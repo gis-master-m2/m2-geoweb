@@ -62,10 +62,11 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
      <link href='css/estilobase.css' rel='stylesheet' />
     <script>
+        var map;
         function init() {
 
             mapboxgl.accessToken ='pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
-            var map = new mapboxgl.Map({
+               map = new mapboxgl.Map({
                 container: 'map',
                 style: 'https://geoserveis.icgc.cat/contextmaps/icgc_mapa_base_gris_simplificat.json',
                 center: [2.16859, 41.3954],
@@ -123,10 +124,11 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
      <link href='css/estilobase.css' rel='stylesheet' />
     <script>
+        var map;
         function init() {
 
             mapboxgl.accessToken ='pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
-            var map = new mapboxgl.Map({
+             map = new mapboxgl.Map({
                 container: 'map',
                 style: 'datos/miestilo.json', // o 'datos/miestilo.json'
                 center: [2.16859, 41.3954],
@@ -173,10 +175,12 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
      <link href='css/estilobase.css' rel='stylesheet' />
     <script>
+
+        var map;
         function init() {
 
             mapboxgl.accessToken ='pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
-            var map = new mapboxgl.Map({
+             map = new mapboxgl.Map({
                 container: 'map',
                 style: 'datos/miestilo.json',
                 center: [2.16859, 41.3954],

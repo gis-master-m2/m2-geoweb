@@ -208,6 +208,57 @@
 
  * Miramos web [https://geojson.io](https://geojson.io){target=_blank} cómo és un GeoJSON
 
+ * Deberíamos convertir con código el JSON de GeoNames a un GeoJSon de puntos
+
+```json
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {"datetime":"2011-03-11 04:46:23", "magnitude":8.8},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.369,
+          38.322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"datetime":"2012-04-11 06:38:37","magnitude":8.6},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         93.0632,
+         2.311
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {"datetime":"2007-09-12 09:10:26","magnitude":8.4},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         101.3815,
+          -4.5172
+        ]
+      }
+    }
+  ]
+}
+```
+
+!!! Note "Si tuvieramos que realizar reproyecciones o operaciones espaciales"
+
+> http://proj4js.org/
+
+> https://turfjs.org/
+
+
+#### Paso 6.1 : Función terremotosGeonamesToGeoJSON()
 * Creamos dentro de **/js/terremotos.js** la funcion terremotosGeonamesToGeoJSON
 
 ```javascript
@@ -246,7 +297,7 @@
 
 #### Paso 7 : Función generarPeticionTerremotos()
 
- * Vamos a añadir otra funcion dentro **terremotos.js** de para: 
+ * Vamos a añadir otra funcion dentro de **terremotos.js**  para: 
     * Capturar las coordenadas de mapa (BoundigBox)
     * Crear la petición a Geonames
     * Enviar petición
@@ -510,7 +561,16 @@ function addPopupToMap(nombreCapa) {
 ```
 ![alt text](img/terremotos.png "terremotos.png")
 
-!!! tip "¿Añadimos Titulo?"
+
+
+!!! question "¿Podemos añadir un color más para terremotos de más 8 magnitud?"
+
+!!! question "¿Podemos cambiar dinamicamente el valor minMagnitude de la petición a GeoNames?"
+
+!!! question "Sabrías añadir este geojson de placas tectónicas como una capa más"
+ [placas.geojson](datos/placas.geojson){target=_blank}
+
+!!! question "¿Añadimos Titulo?"
 
 
 !!! success "¿Subimos el ejemplo al GitHub?"

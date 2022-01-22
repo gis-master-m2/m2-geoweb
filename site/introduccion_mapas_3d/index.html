@@ -546,6 +546,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#capacidades-3d-de-mapbox-gls" class="md-nav__link">
+    Capacidades 3D de MapBox GLS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#como-ver-un-mapa-3d-en-mapbox-gl" class="md-nav__link">
     Cómo ver un mapa 3D en Mapbox GL
   </a>
@@ -575,15 +582,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-5-anadimos-funcion-add3dicgc-a-3djs" class="md-nav__link">
-    Paso 5: Añadimos función add3DICGC() a 3d.js
+  <a href="#paso-5-anadimos-dem-externo-a-3djs" class="md-nav__link">
+    Paso 5: Añadimos DEM externo a 3d.js
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-6llamamos-a-la-funcion-en-el-html-solo-un-de-las-dos-puede-ser-llamada" class="md-nav__link">
-    Paso 6:Llamamos a la función en el HTML (solo un de las dos puede ser llamada)
+  <a href="#paso-6llamamos-a-la-funcion-en-el-html-pasando-el-parametro" class="md-nav__link">
+    Paso 6:Llamamos a la función en el HTML , pasando el parámetro
   </a>
   
 </li>
@@ -595,6 +602,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexo" class="md-nav__link">
+    ANEXO
+  </a>
   
 </li>
       
@@ -937,6 +951,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#capacidades-3d-de-mapbox-gls" class="md-nav__link">
+    Capacidades 3D de MapBox GLS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#como-ver-un-mapa-3d-en-mapbox-gl" class="md-nav__link">
     Cómo ver un mapa 3D en Mapbox GL
   </a>
@@ -966,15 +987,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-5-anadimos-funcion-add3dicgc-a-3djs" class="md-nav__link">
-    Paso 5: Añadimos función add3DICGC() a 3d.js
+  <a href="#paso-5-anadimos-dem-externo-a-3djs" class="md-nav__link">
+    Paso 5: Añadimos DEM externo a 3d.js
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-6llamamos-a-la-funcion-en-el-html-solo-un-de-las-dos-puede-ser-llamada" class="md-nav__link">
-    Paso 6:Llamamos a la función en el HTML (solo un de las dos puede ser llamada)
+  <a href="#paso-6llamamos-a-la-funcion-en-el-html-pasando-el-parametro" class="md-nav__link">
+    Paso 6:Llamamos a la función en el HTML , pasando el parámetro
   </a>
   
 </li>
@@ -986,6 +1007,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexo" class="md-nav__link">
+    ANEXO
+  </a>
   
 </li>
       
@@ -1022,13 +1050,14 @@
 <h2 id="algunos-formatos-3d-geo">Algunos formatos 3D geo</h2>
 <p><strong>3D-Tiles</strong>: Especificación estándar OGC creada por Cesium para la creación de piràmides de datos vectores con información 3D .</p>
 <p><strong>3D Scene Layers (I3S)</strong>:Especificación estándar OGC creada por ESRI para la creación de piràmides de datos vectores con información 3D</p>
-<p><strong>Terrain-RGB</strong>: Datos de elevación codificados en teselas PNG rasterizadas como valores de color que pueden ser decodificados a alturas en metros
- Formula para pasar el color a metros :
+<p><strong>Terrain-RGB</strong>: Datos de elevación codificados en teselas PNG rasterizadas como valores de color que pueden ser decodificados a alturas en metros.</p>
+<p>Formula para pasar el color a metros :
  <code>height = -10000 + ((R * 256 * 256 + G * 256 + B) * 0.1)</code></p>
+<h3 id="capacidades-3d-de-mapbox-gls">Capacidades 3D de MapBox GLS</h3>
 <blockquote>
 <p>Mapbox puede extrudir polígonos</p>
 <p>Mostrar el terreno en 3D</p>
-<p>Mostar objectos y textura 3D <a href="https://openicgc.github.io/icgc-model3d.html" target="_blank">https://openicgc.github.io/icgc-model3d.html</a></p>
+<p>Mostar objectos y textura 3D <a href="https://openicgc.github.io/exemples/maplibre/icgc-model3d-maplibre-code.html" target="_blank">https://openicgc.github.io/exemples/maplibre/icgc-model3d-maplibre-code.html</a></p>
 </blockquote>
 <h3 id="como-ver-un-mapa-3d-en-mapbox-gl">Cómo ver un mapa 3D en Mapbox GL</h3>
 <div class="admonition note">
@@ -1038,6 +1067,9 @@
 <ul>
 <li>Vamos a VSCode y creamos el archivo <strong>mapa3d.html</strong> dentro de <strong>/geoweb</strong></li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Utilizamos opcion <code>pitch</code> para inclinar el mapa al inicio</p>
+</div>
 <div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
@@ -1096,12 +1128,6 @@
         <span class="s1">&#39;maxzoom&#39;</span><span class="o">:</span> <span class="mf">14</span>
     <span class="p">});</span>
 
-    <span class="nx">map</span><span class="p">.</span><span class="nx">setTerrain</span><span class="p">({</span>
-        <span class="s1">&#39;source&#39;</span><span class="o">:</span> <span class="s1">&#39;mapbox-dem&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;exaggeration&#39;</span><span class="o">:</span> <span class="mf">1.5</span>
-    <span class="p">});</span>
-
-
     <span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">({</span>
         <span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;sky&#39;</span><span class="p">,</span>
         <span class="s1">&#39;type&#39;</span><span class="o">:</span> <span class="s1">&#39;sky&#39;</span><span class="p">,</span>
@@ -1111,6 +1137,13 @@
             <span class="s1">&#39;sky-atmosphere-sun-intensity&#39;</span><span class="o">:</span> <span class="mf">15</span>
         <span class="p">}</span>
     <span class="p">});</span>
+
+
+    <span class="nx">map</span><span class="p">.</span><span class="nx">setTerrain</span><span class="p">({</span>
+        <span class="s1">&#39;source&#39;</span><span class="o">:</span> <span class="s1">&#39;mapbox-dem&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;exaggeration&#39;</span><span class="o">:</span> <span class="mf">1.5</span>
+    <span class="p">});</span>
+
 
 <span class="p">}</span> <span class="c1">//fin funcion</span>
 </code></pre></div>
@@ -1166,35 +1199,39 @@
 <p class="admonition-title">visualizamos el mapa</p>
 </div>
 <p><img alt="alt text" src="../img/mapbox-3d.png" title="mapbox-3d.png" /></p>
-<h4 id="paso-5-anadimos-funcion-add3dicgc-a-3djs">Paso 5: Añadimos función add3DICGC() a 3d.js</h4>
+<h4 id="paso-5-anadimos-dem-externo-a-3djs">Paso 5: Añadimos DEM externo a 3d.js</h4>
 <ul>
 <li>
 <p>Mapbox utiliza un DEM de 10m y de 30 m según zonas del mundo</p>
 </li>
 <li>
-<p>El ICGC publica uno de 2m para Catalunya  </p>
+<p>El ICGC publica uno de 2m para Catalunya  <a href="https://openicgc.github.io/">https://openicgc.github.io/</a></p>
 </li>
 <li>
-<p>Creamos la función <strong>add3DICGC()</strong> con el DEM de 2M</p>
+<p>Modificamos la función <code>add3D()</code> </p>
+</li>
+<li>
+<p>Añadimos nueva función <code>changeTerrain()</code> para poder recibir un valor y acticar el terreno de MapBox, el del ICGC o ninguno.</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code>   <span class="kd">function</span> <span class="nx">add3DICGC</span><span class="p">()</span> <span class="p">{</span>
-
-    <span class="nx">map</span><span class="p">.</span><span class="nx">addSource</span><span class="p">(</span><span class="s1">&#39;icgc-dem&#39;</span><span class="p">,</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="hll">  <span class="kd">function</span> <span class="nx">add3D</span><span class="p">(</span><span class="nx">terreno</span><span class="p">)</span> <span class="p">{</span>
+</span>
+    <span class="nx">map</span><span class="p">.</span><span class="nx">addSource</span><span class="p">(</span><span class="s1">&#39;mapbox-dem&#39;</span><span class="p">,</span> <span class="p">{</span>
         <span class="s1">&#39;type&#39;</span><span class="o">:</span> <span class="s1">&#39;raster-dem&#39;</span><span class="p">,</span>
-        <span class="s2">&quot;tiles&quot;</span><span class="o">:</span> <span class="p">[</span>
-        <span class="s2">&quot;https://tilemaps.icgc.cat/tileserver/tileserver.php/terreny_icgc_2m_rgb/{z}/{x}/{y}.png&quot;</span>
-      <span class="p">],</span>
+        <span class="s1">&#39;url&#39;</span><span class="o">:</span> <span class="s1">&#39;mapbox://mapbox.mapbox-terrain-dem-v1&#39;</span><span class="p">,</span>
         <span class="s1">&#39;tileSize&#39;</span><span class="o">:</span> <span class="mf">512</span><span class="p">,</span>
         <span class="s1">&#39;maxzoom&#39;</span><span class="o">:</span> <span class="mf">14</span>
     <span class="p">});</span>
 
-    <span class="nx">map</span><span class="p">.</span><span class="nx">setTerrain</span><span class="p">({</span>
-        <span class="s1">&#39;source&#39;</span><span class="o">:</span> <span class="s1">&#39;icgc-dem&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;exaggeration&#39;</span><span class="o">:</span> <span class="mf">1.5</span>
-    <span class="p">});</span>
-
-
+<span class="hll">    <span class="nx">map</span><span class="p">.</span><span class="nx">addSource</span><span class="p">(</span><span class="s1">&#39;icgc-dem&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class="hll">        <span class="s1">&#39;type&#39;</span><span class="o">:</span> <span class="s1">&#39;raster-dem&#39;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;tiles&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class="hll">        <span class="s2">&quot;https://tilemaps.icgc.cat/tileserver/tileserver.php/terreny_icgc_2m_rgb/{z}/{x}/{y}.png&quot;</span>
+</span><span class="hll">      <span class="p">],</span>
+</span><span class="hll">        <span class="s1">&#39;tileSize&#39;</span><span class="o">:</span> <span class="mf">512</span><span class="p">,</span>
+</span><span class="hll">        <span class="s1">&#39;maxzoom&#39;</span><span class="o">:</span> <span class="mf">14</span>
+</span><span class="hll">    <span class="p">});</span>
+</span>
     <span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">({</span>
         <span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;sky&#39;</span><span class="p">,</span>
         <span class="s1">&#39;type&#39;</span><span class="o">:</span> <span class="s1">&#39;sky&#39;</span><span class="p">,</span>
@@ -1205,9 +1242,31 @@
         <span class="p">}</span>
     <span class="p">});</span>
 
+<span class="hll">   <span class="cm">/* codigo comentado</span>
+</span><span class="hll"><span class="cm">    map.setTerrain({</span>
+</span><span class="hll"><span class="cm">        &#39;source&#39;: &#39;mapbox-dem&#39;,</span>
+</span><span class="hll"><span class="cm">        &#39;exaggeration&#39;: 1.5</span>
+</span><span class="hll"><span class="cm">    });</span>
+</span><span class="hll"><span class="cm">    */</span>
+</span><span class="hll">   <span class="nx">changeTerrain</span><span class="p">(</span><span class="nx">terreno</span><span class="p">);</span>
+</span>
+
 <span class="p">}</span> <span class="c1">//fin funcion</span>
-</code></pre></div>
-<h4 id="paso-6llamamos-a-la-funcion-en-el-html-solo-un-de-las-dos-puede-ser-llamada">Paso 6:Llamamos a la función en el HTML (solo un de las dos puede ser llamada)</h4>
+
+<span class="hll"><span class="kd">function</span> <span class="nx">changeTerrain</span><span class="p">(</span><span class="nx">terreno</span><span class="p">){</span>
+</span><span class="hll">
+</span><span class="hll">    <span class="k">if</span><span class="p">(</span><span class="nx">terreno</span><span class="p">){</span>
+</span><span class="hll">        <span class="nx">map</span><span class="p">.</span><span class="nx">setTerrain</span><span class="p">({</span>
+</span><span class="hll">            <span class="s1">&#39;source&#39;</span><span class="o">:</span> <span class="nx">terreno</span><span class="p">,</span>
+</span><span class="hll">            <span class="s1">&#39;exaggeration&#39;</span><span class="o">:</span> <span class="mf">1.5</span>
+</span><span class="hll">        <span class="p">});</span>
+</span><span class="hll">    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span><span class="hll">        <span class="nx">map</span><span class="p">.</span><span class="nx">setTerrain</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</span><span class="hll">    <span class="p">}</span>
+</span><span class="hll">
+</span><span class="hll"><span class="p">}</span> <span class="c1">//fin funcion</span>
+</span></code></pre></div>
+<h4 id="paso-6llamamos-a-la-funcion-en-el-html-pasando-el-parametro">Paso 6:Llamamos a la función en el HTML , pasando el parámetro</h4>
 <div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
@@ -1238,9 +1297,9 @@
             <span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span>
 
             <span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-<span class="hll">             <span class="c1">//add3D();</span>
-</span><span class="hll">             <span class="nx">add3DICGC</span><span class="p">();</span>
-</span>            <span class="p">});</span> <span class="c1">//fin onload</span>
+<span class="hll">             <span class="nx">add3D</span><span class="p">(</span><span class="s1">&#39;icgc-dem&#39;</span><span class="p">);</span> <span class="c1">//mapbox-dem  o null</span>
+</span>
+            <span class="p">});</span> <span class="c1">//fin onload</span>
 
         <span class="p">}</span> <span class="c1">// final init</span>
     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -1257,115 +1316,66 @@
 <p class="admonition-title">Comparamos zona Montserrat</p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">¿Cómo haríamos para poner una opción para activar/desactivar vista 3D?</p>
+<p class="admonition-title">¿Cómo haríamos para poner una opción para activar/desactivar vista 3D y seleccionar el DEM Mapbox i el ICGC?</p>
 <p>Sabémos que  <code>map.setTerrain(null)</code> desactiva el 3D</p>
+<div class="highlight"><pre><span></span><code>    &lt;div class=&quot;panelTopIzquierda&quot;&gt;
+        &lt;input type=&quot;radio&quot; onClick=&quot;changeTerrain(this.value)&quot; checked  name=&quot;dem&quot; value=&quot;mapbox-dem&quot;&gt;Mapbox &lt;br&gt;
+        &lt;input type=&quot;radio&quot; onClick=&quot;changeTerrain(this.value)&quot; name=&quot;dem&quot; value=&quot;icgc-dem&quot;&gt;ICGC &lt;br&gt;
+        &lt;input type=&quot;radio&quot;  onClick=&quot;changeTerrain(null)&quot;  name=&quot;dem&quot; &gt;2D
+      &lt;/div&gt;  
+</code></pre></div>
 </div>
+<div class="admonition success">
+<p class="admonition-title">Editamos index.html y subimos el ejemplo al GitHub</p>
+<div class="highlight"><pre><span></span><code>    git pull
+    git add .
+    git commit -m <span class="s2">&quot;visor 3d&quot;</span>
+    git push
+</code></pre></div>
+</div>
+<h2 id="anexo">ANEXO</h2>
 <div class="admonition question">
 <p class="admonition-title">¿Podríamos pasar a 3D el visor de edificios de Catastro?¿Cómo?</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Para trabajar con 3D hay que cambir un poco la función de popup</p>
-<p>```javascript</p>
 </div>
-<p>function addPopupToMapEdificios3D(nombreCapa) {</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">map</span><span class="p">.</span><span class="k">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="nf">var</span><span class="w"> </span><span class="nc">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="nf">var</span><span class="w"> </span><span class="n">bbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">[e.point.x - 5, e.point.y - 5</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">e.point.x + 5, e.point.y + 5</span><span class="o">]</span><span class="err">]</span><span class="p">;</span><span class="w"></span>
-<span class="nf">var</span><span class="w"> </span><span class="n">features</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">map</span><span class="p">.</span><span class="n">queryRenderedFeatures</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="nl">layers</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">nombreCapa</span><span class="o">]</span><span class="w"> </span><span class="err">}</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">addPopupToMapEdificios3D</span><span class="p">(</span><span class="nx">nombreCapa</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">bbox</span> <span class="o">=</span> <span class="p">[[</span><span class="nx">e</span><span class="p">.</span><span class="nx">point</span><span class="p">.</span><span class="nx">x</span> <span class="o">-</span> <span class="mf">5</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">point</span><span class="p">.</span><span class="nx">y</span> <span class="o">-</span> <span class="mf">5</span><span class="p">],</span> <span class="p">[</span><span class="nx">e</span><span class="p">.</span><span class="nx">point</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="mf">5</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">point</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="mf">5</span><span class="p">]];</span>
+        <span class="kd">var</span> <span class="nx">features</span> <span class="o">=</span> <span class="nx">map</span><span class="p">.</span><span class="nx">queryRenderedFeatures</span><span class="p">(</span><span class="nx">bbox</span><span class="p">,</span> <span class="p">{</span> <span class="nx">layers</span><span class="o">:</span> <span class="p">[</span><span class="nx">nombreCapa</span><span class="p">]</span> <span class="p">});</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">features</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="nx">key</span> <span class="ow">in</span> <span class="nx">features</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">properties</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">key</span> <span class="o">==</span> <span class="s2">&quot;numberOfFl&quot;</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">text</span> <span class="o">+=</span> <span class="s2">&quot;&lt;b&gt;Numero de plantas&lt;/b&gt;:&quot;</span> <span class="o">+</span> <span class="nx">features</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">properties</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">key</span> <span class="o">==</span> <span class="s2">&quot;localId&quot;</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="c1">//localId 0004702DF3800C_part1</span>
+                    <span class="c1">//http://ovc.catastro.meh.es/OVCServWeb/OVCWcfLibres/OVCFotoFachada.svc/RecuperarFotoFachadaGet?ReferenciaCatastral=0004701DF3800C</span>
+                    <span class="c1">//https://www1.sedecatastro.gob.es/CYCBienInmueble/OVCListaBienes.aspx?rc1=0004701&amp;rc2=DF3800C</span>
+                    <span class="kd">var</span> <span class="nx">localId</span> <span class="o">=</span> <span class="nx">features</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">properties</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+                    <span class="kd">var</span> <span class="nx">localIdSplit</span> <span class="o">=</span> <span class="nx">localId</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">);</span> <span class="c1">// 0004702DF3800C  part1</span>
+                    <span class="kd">var</span> <span class="nx">parte1</span> <span class="o">=</span> <span class="nx">localIdSplit</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">substring</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">7</span><span class="p">);</span>
+                    <span class="kd">var</span> <span class="nx">parte2</span> <span class="o">=</span> <span class="nx">localIdSplit</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">substring</span><span class="p">(</span><span class="mf">7</span><span class="p">,</span> <span class="nx">localIdSplit</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">length</span><span class="p">);</span>
+                    <span class="nx">text</span> <span class="o">+=</span> <span class="s2">&quot;&lt;img width=200 src=http://ovc.catastro.meh.es/OVCServWeb/OVCWcfLibres/OVCFotoFachada.svc/RecuperarFotoFachadaGet?ReferenciaCatastral=&quot;</span> <span class="o">+</span> <span class="nx">localId</span> <span class="o">+</span> <span class="s2">&quot;&gt;&lt;br&gt;&quot;</span><span class="p">;</span>
+                    <span class="nx">text</span> <span class="o">+=</span> <span class="s2">&quot;&lt;a target=blank href=https://www1.sedecatastro.gob.es/CYCBienInmueble/OVCListaBienes.aspx?rc1=&quot;</span> <span class="o">+</span> <span class="nx">parte1</span> <span class="o">+</span> <span class="s2">&quot;&amp;rc2=&quot;</span> <span class="o">+</span> <span class="nx">parte2</span> <span class="o">+</span> <span class="s2">&quot;&gt;Ficha&lt;/a&gt;&lt;br&gt;&quot;</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">Popup</span><span class="p">()</span>
+                <span class="p">.</span><span class="nx">setLngLat</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">lngLat</span><span class="p">)</span>
+                <span class="p">.</span><span class="nx">setHTML</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span>
+                <span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+    <span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;mouseenter&#39;</span><span class="p">,</span> <span class="nx">nombreCapa</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">map</span><span class="p">.</span><span class="nx">getCanvas</span><span class="p">().</span><span class="nx">style</span><span class="p">.</span><span class="nx">cursor</span> <span class="o">=</span> <span class="s1">&#39;pointer&#39;</span><span class="p">;</span>
+    <span class="p">});</span>
+    <span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;mouseleave&#39;</span><span class="p">,</span> <span class="nx">nombreCapa</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">map</span><span class="p">.</span><span class="nx">getCanvas</span><span class="p">().</span><span class="nx">style</span><span class="p">.</span><span class="nx">cursor</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="p">});</span>
+<span class="p">}</span>
 </code></pre></div>
-</td></tr></table>
-<p>if(features.length &gt; 0){
-        for (key in features[0].properties) {</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;numberOfFl&quot;</span><span class="p">)</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
-<span class="w">            </span><span class="nc">text</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="ss">&quot;&lt;b&gt;Numero de plantas&lt;/b&gt;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">features</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">.</span><span class="n">properties</span><span class="o">[</span><span class="n">key</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="ss">&quot;&lt;br&gt;&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="err">}</span><span class="w"></span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;localId&quot;</span><span class="p">)</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
-<span class="w">            </span><span class="o">//</span><span class="n">localId</span><span class="w"> </span><span class="mi">0004702</span><span class="n">DF3800C_part1</span><span class="w"></span>
-<span class="w">            </span><span class="o">//</span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">ovc</span><span class="p">.</span><span class="n">catastro</span><span class="p">.</span><span class="n">meh</span><span class="p">.</span><span class="n">es</span><span class="o">/</span><span class="n">OVCServWeb</span><span class="o">/</span><span class="n">OVCWcfLibres</span><span class="o">/</span><span class="n">OVCFotoFachada</span><span class="p">.</span><span class="n">svc</span><span class="o">/</span><span class="n">RecuperarFotoFachadaGet</span><span class="vm">?</span><span class="n">ReferenciaCatastral</span><span class="o">=</span><span class="mi">0004701</span><span class="n">DF3800C</span><span class="w"></span>
-<span class="w">            </span><span class="o">//</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">www1</span><span class="p">.</span><span class="n">sedecatastro</span><span class="p">.</span><span class="n">gob</span><span class="p">.</span><span class="n">es</span><span class="o">/</span><span class="n">CYCBienInmueble</span><span class="o">/</span><span class="n">OVCListaBienes</span><span class="p">.</span><span class="n">aspx</span><span class="vm">?</span><span class="n">rc1</span><span class="o">=</span><span class="mi">0004701</span><span class="o">&amp;</span><span class="n">rc2</span><span class="o">=</span><span class="n">DF3800C</span><span class="w"></span>
-
-<span class="w">            </span><span class="nf">var</span><span class="w"> </span><span class="n">localId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">features</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">.</span><span class="n">properties</span><span class="o">[</span><span class="n">key</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">            </span><span class="nf">var</span><span class="w"> </span><span class="n">localIdSplit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">localId</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="ss">&quot;_&quot;</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="mi">0004702</span><span class="n">DF3800C</span><span class="w">  </span><span class="n">part1</span><span class="w"></span>
-<span class="w">            </span><span class="nf">var</span><span class="w"> </span><span class="n">parte1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">localIdSplit</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">.</span><span class="nf">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="nf">var</span><span class="w"> </span><span class="n">parte2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">localIdSplit</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">.</span><span class="nf">substring</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="n">localIdSplit</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">.</span><span class="n">length</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="nc">text</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="ss">&quot;&lt;img width=200 src=http://ovc.catastro.meh.es/OVCServWeb/OVCWcfLibres/OVCFotoFachada.svc/RecuperarFotoFachadaGet?ReferenciaCatastral=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">localId</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="ss">&quot;&gt;&lt;br&gt;&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="nc">text</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="ss">&quot;&lt;a target=blank href=https://www1.sedecatastro.gob.es/CYCBienInmueble/OVCListaBienes.aspx?rc1=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">parte1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="ss">&quot;&amp;rc2=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">parte2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="ss">&quot;&gt;Ficha&lt;/a&gt;&lt;br&gt;&quot;</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">        </span><span class="err">}</span><span class="w"></span>
-
-
-<span class="w">    </span><span class="err">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">mapboxgl</span><span class="p">.</span><span class="n">Popup</span><span class="p">()</span><span class="w"></span>
-<span class="w">        </span><span class="p">.</span><span class="n">setLngLat</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">lngLat</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="p">.</span><span class="n">setHTML</span><span class="p">(</span><span class="nc">text</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="p">.</span><span class="n">addTo</span><span class="p">(</span><span class="k">map</span><span class="p">);</span><span class="w"></span>
-</code></pre></div>
-</td></tr></table>
-<p>}</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>});
-
-map.on(&#39;mouseenter&#39;, nombreCapa, function () {
-    map.getCanvas().style.cursor = &#39;pointer&#39;;
-});
-
-map.on(&#39;mouseleave&#39;, nombreCapa, function () {
-    map.getCanvas().style.cursor = &#39;&#39;;
-});
-</code></pre></div>
-</td></tr></table>
-<p>}</p>
-<p>```</p>
-<div class="admonition success">
-<p class="admonition-title">Editamos index.html y subimos el ejemplo al GitHub</p>
-<p>```bash</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>git pull
-git add .
-git commit -m &quot;visor 3d&quot;
-git push
-</code></pre></div>
-</td></tr></table>
-<p>``` </p>
-</div>
 
               
             </article>

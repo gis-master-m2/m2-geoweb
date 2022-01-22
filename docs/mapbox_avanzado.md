@@ -201,11 +201,16 @@ WMS Ortos Históricas
                 attributionControl: false,
             });
 
+            /* ejemplos capas
+            ortofoto_blanc_i_negre_1945,
+            ortofoto_blanc_i_negre_1956,
+            ortofoto_blanc_i_negre_1970-1977
+            */
             mapa2.on('load', function () {
                 mapa2.addSource("orto1945", {
                     type: "raster",
                     tiles: [ 
-                        "https://geoserveis.icgc.cat/icc_ortohistorica/wms/service?layers=ovaa10m&bbox={bbox-epsg-3857}&format=image/png&styles=&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=512&height=512",
+                        "https://geoserveis.icgc.cat/servei/catalunya/orto-territorial/wms?layers=ortofoto_blanc_i_negre_1945&bbox={bbox-epsg-3857}&format=image/png&styles=&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=512&height=512",
                     ],
                     tileSize: 512,
                     maxzoom: 19,
@@ -252,7 +257,7 @@ WMS Ortos Históricas
             orto1945: {
                 type: "raster",
                 tiles: [
-                    "https://geoserveis.icgc.cat/icc_ortohistorica/wms/service?bbox={bbox-epsg-3857}&format=image/png&styles=&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=512&height=512&layers=ovaa10m",
+                     "https://geoserveis.icgc.cat/servei/catalunya/orto-territorial/wms?layers=ortofoto_blanc_i_negre_1945&bbox={bbox-epsg-3857}&format=image/png&styles=&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=512&height=512",
                 ],
                 tileSize: 512,
                 maxzoom: 19,
@@ -276,6 +281,100 @@ WMS Ortos Históricas
     };
 ```
 
+* Creamos página **mapbox-compare2.html** y tendria este aspecto
+
+```html
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Comparador 2</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.js"></script>
+    <link rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.css"
+        type="text/css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden
+        }
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        var map;
+        var miestilo = {
+            version: 8,
+            center: [1.537786, 41.837539],
+            zoom: 12,
+            bearing: 0,
+            pitch: 0,
+            sources: {
+                orto1945: {
+                    type: "raster",
+                    tiles: [
+                        "https://geoserveis.icgc.cat/servei/catalunya/orto-territorial/wms?layers=ortofoto_blanc_i_negre_1945&bbox={bbox-epsg-3857}&format=image/png&styles=&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=512&height=512",
+                    ],
+                    tileSize: 512,
+                    maxzoom: 19,
+                    minZoom: 7.5,
+                },
+            },
+            sprite: "https://tilemaps.icgc.cat/tileserver/sprites/geologic/sprite",
+            glyphs:
+                "https://tilemaps.icgc.cat/tileserver/glyphs/{fontstack}/{range}.pbf",
+            layers: [
+                {
+                    id: "orto1945",
+                    source: "orto1945",
+                    type: "raster",
+                    maxzoom: 18
+                },
+            ],
+        };
+        function init() {
+            //Añadir vuestor token!!
+            mapboxgl.accessToken =
+                'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
+            var mapa1 = new mapboxgl.Map({
+                container: 'mapa1',
+                style: 'mapbox://styles/mapbox/satellite-v9',
+                center: [2.16859, 41.3954],
+                zoom: 13,
+                attributionControl: false,
+            });
+            var mapa2 = new mapboxgl.Map({
+                container: 'mapa2',
+                style: miestilo,
+                center: [2.16859, 41.3954],
+                zoom: 13,
+                attributionControl: false,
+            });
+            var map = new mapboxgl.Compare(mapa1, mapa2, "#comparador");
+        } // final init
+    </script>
+</head>
+<body onload="init()">
+    <div id="comparador">
+        <div id="mapa1" class="map"></div>
+        <div id="mapa2" class="map"></div>
+    </div>
+</body>
+</html>
+```
 
 !!! success "¿Subimos el ejemplo al GitHub?"
 	
