@@ -1081,10 +1081,11 @@
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
      <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="kd">var</span> <span class="nx">map</span><span class="p">;</span>
         <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
 
             <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
-            <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span>
+               <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span>
                 <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
                 <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;https://geoserveis.icgc.cat/contextmaps/icgc_mapa_base_gris_simplificat.json&#39;</span><span class="p">,</span>
                 <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span> <span class="mf">41.3954</span><span class="p">],</span>
@@ -1141,10 +1142,11 @@
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
      <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="kd">var</span> <span class="nx">map</span><span class="p">;</span>
         <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
 
             <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
-            <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span>
+             <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span>
                 <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
                 <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;datos/miestilo.json&#39;</span><span class="p">,</span> <span class="c1">// o &#39;datos/miestilo.json&#39;</span>
                 <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span> <span class="mf">41.3954</span><span class="p">],</span>
@@ -1187,10 +1189,12 @@
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
      <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+
+        <span class="kd">var</span> <span class="nx">map</span><span class="p">;</span>
         <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
 
             <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
-            <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span>
+             <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span>
                 <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
                 <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;datos/miestilo.json&#39;</span><span class="p">,</span>
                 <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span> <span class="mf">41.3954</span><span class="p">],</span>
@@ -1202,9 +1206,9 @@
             <span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span>
                 <span class="nx">compact</span><span class="o">:</span> <span class="kc">true</span>
             <span class="p">}));</span>
-            <span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span>
-
-<span class="hll">            <span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="hll">            <span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span>
+</span><span class="hll">
+</span><span class="hll">            <span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
 </span><span class="hll">                <span class="nx">map</span><span class="p">.</span><span class="nx">addSource</span><span class="p">(</span><span class="s2">&quot;carrils-bici&quot;</span><span class="p">,</span> <span class="p">{</span>
 </span><span class="hll">                    <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;geojson&quot;</span><span class="p">,</span>
 </span><span class="hll">                    <span class="nx">data</span><span class="o">:</span> <span class="s2">&quot;datos/carrils-bici.geojson&quot;</span>
@@ -1222,9 +1226,9 @@
 </span><span class="hll">                        <span class="s2">&quot;line-color&quot;</span><span class="o">:</span> <span class="s2">&quot;#FF0000&quot;</span><span class="p">,</span>
 </span><span class="hll">                        <span class="s2">&quot;line-width&quot;</span><span class="o">:</span> <span class="mf">8</span>
 </span><span class="hll">                    <span class="p">}</span>
-</span><span class="hll">                <span class="p">});</span> <span class="c1">//fin add layers</span>
-</span><span class="hll">            <span class="p">});</span> <span class="c1">//Fin load mapa</span>
-</span>
+</span>                <span class="p">});</span> <span class="c1">//fin add layers</span>
+            <span class="p">});</span> <span class="c1">//Fin load mapa</span>
+
 
         <span class="p">}</span>
     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
