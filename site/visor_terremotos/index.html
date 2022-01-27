@@ -712,6 +712,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#paso-61-funcion-terremotosgeonamestogeojson" class="md-nav__link">
+    Paso 6.1 : Función terremotosGeonamesToGeoJSON()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#paso-7-funcion-generarpeticionterremotos" class="md-nav__link">
     Paso 7 : Función generarPeticionTerremotos()
   </a>
@@ -968,6 +975,13 @@
           <li class="md-nav__item">
   <a href="#paso-6-convertir-la-respuesta-de-json-geonames-al-formato-geojson" class="md-nav__link">
     Paso 6 :convertir la respuesta de JSON GeoNames al formato GeoJSON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-61-funcion-terremotosgeonamestogeojson" class="md-nav__link">
+    Paso 6.1 : Función terremotosGeonamesToGeoJSON()
   </a>
   
 </li>
@@ -1230,8 +1244,58 @@
 <p>Miramos web <a href="https://geojson.io" target="_blank">https://geojson.io</a> cómo és un GeoJSON</p>
 </li>
 <li>
-<p>Creamos dentro de <strong>/js/terremotos.js</strong> la funcion terremotosGeonamesToGeoJSON</p>
+<p>Deberíamos convertir con código el JSON de GeoNames a un GeoJSon de puntos</p>
 </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FeatureCollection&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Feature&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;datetime&quot;</span><span class="p">:</span><span class="s2">&quot;2011-03-11 04:46:23&quot;</span><span class="p">,</span> <span class="nt">&quot;magnitude&quot;</span><span class="p">:</span><span class="mf">8.8</span><span class="p">},</span>
+      <span class="nt">&quot;geometry&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="mf">142.369</span><span class="p">,</span>
+          <span class="mf">38.322</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Feature&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;datetime&quot;</span><span class="p">:</span><span class="s2">&quot;2012-04-11 06:38:37&quot;</span><span class="p">,</span><span class="nt">&quot;magnitude&quot;</span><span class="p">:</span><span class="mf">8.6</span><span class="p">},</span>
+      <span class="nt">&quot;geometry&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span>
+         <span class="mf">93.0632</span><span class="p">,</span>
+         <span class="mf">2.311</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Feature&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;datetime&quot;</span><span class="p">:</span><span class="s2">&quot;2007-09-12 09:10:26&quot;</span><span class="p">,</span><span class="nt">&quot;magnitude&quot;</span><span class="p">:</span><span class="mf">8.4</span><span class="p">},</span>
+      <span class="nt">&quot;geometry&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span>
+         <span class="mf">101.3815</span><span class="p">,</span>
+          <span class="mf">-4.5172</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Si tuvieramos que realizar reproyecciones o operaciones espaciales</p>
+</div>
+<blockquote>
+<p><a href="http://proj4js.org/">http://proj4js.org/</a></p>
+<p><a href="https://turfjs.org/">https://turfjs.org/</a></p>
+</blockquote>
+<h4 id="paso-61-funcion-terremotosgeonamestogeojson">Paso 6.1 : Función terremotosGeonamesToGeoJSON()</h4>
+<ul>
+<li>Creamos dentro de <strong>/js/terremotos.js</strong> la funcion terremotosGeonamesToGeoJSON</li>
 </ul>
 <div class="highlight"><pre><span></span><code> <span class="kd">function</span> <span class="nx">terremotosGeonamesToGeoJSON</span><span class="p">(</span><span class="nx">respuestaGeonames</span><span class="p">){</span>
 
@@ -1265,7 +1329,7 @@
 </code></pre></div>
 <h4 id="paso-7-funcion-generarpeticionterremotos">Paso 7 : Función generarPeticionTerremotos()</h4>
 <ul>
-<li>Vamos a añadir otra funcion dentro <strong>terremotos.js</strong> de para: <ul>
+<li>Vamos a añadir otra funcion dentro de <strong>terremotos.js</strong>  para: <ul>
 <li>Capturar las coordenadas de mapa (BoundigBox)</li>
 <li>Crear la petición a Geonames</li>
 <li>Enviar petición</li>
@@ -1517,7 +1581,17 @@
     <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <img alt="alt text" src="../img/terremotos.png" title="terremotos.png" /></p>
-<div class="admonition tip">
+<div class="admonition question">
+<p class="admonition-title">¿Podemos añadir un color más para terremotos de más 8 magnitud?</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">¿Podemos cambiar dinamicamente el valor minMagnitude de la petición a GeoNames?</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Sabrías añadir este geojson de placas tectónicas como una capa más</p>
+</div>
+<p><a href="../datos/placas.geojson" target="_blank">placas.geojson</a></p>
+<div class="admonition question">
 <p class="admonition-title">¿Añadimos Titulo?</p>
 </div>
 <div class="admonition success">
