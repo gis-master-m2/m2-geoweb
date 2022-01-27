@@ -790,30 +790,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-metamapa-ejemplo-de-mapificacio-de-resultados-de-socrata" class="md-nav__link">
-    El MetaMapa: Ejemplo de mapificació de resultados de Sócrata
+  <a href="#el-metamapa-ejemplo-de-mapificacion-de-resultados-de-socrata" class="md-nav__link">
+    El MetaMapa: Ejemplo de mapificación de resultados de Sócrata
   </a>
   
-    <nav class="md-nav" aria-label="El MetaMapa: Ejemplo de mapificació de resultados de Sócrata">
+    <nav class="md-nav" aria-label="El MetaMapa: Ejemplo de mapificación de resultados de Sócrata">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#paso-1" class="md-nav__link">
-    Paso 1
+  <a href="#paso-1-crear-archivo-metamapa" class="md-nav__link">
+    Paso 1 crear archivo metamapa
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-2" class="md-nav__link">
-    Paso 2
+  <a href="#paso-2-reutilizamos-codigo-y-opciones-html" class="md-nav__link">
+    Paso 2 reutilizamos código y opciones html
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-3" class="md-nav__link">
-    Paso 3
+  <a href="#paso-3-funcion-buscarmapas" class="md-nav__link">
+    Paso 3 Función buscarMapas()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-peticion-2-localizar-y-obtener-el-recurso" class="md-nav__link">
+    Paso 4 Petición 2 localizar y obtener el recurso
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-5-obtenr-i-pintar-datos" class="md-nav__link">
+    Paso 5 Obtenr i pintar datos
   </a>
   
 </li>
@@ -908,30 +922,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-metamapa-ejemplo-de-mapificacio-de-resultados-de-socrata" class="md-nav__link">
-    El MetaMapa: Ejemplo de mapificació de resultados de Sócrata
+  <a href="#el-metamapa-ejemplo-de-mapificacion-de-resultados-de-socrata" class="md-nav__link">
+    El MetaMapa: Ejemplo de mapificación de resultados de Sócrata
   </a>
   
-    <nav class="md-nav" aria-label="El MetaMapa: Ejemplo de mapificació de resultados de Sócrata">
+    <nav class="md-nav" aria-label="El MetaMapa: Ejemplo de mapificación de resultados de Sócrata">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#paso-1" class="md-nav__link">
-    Paso 1
+  <a href="#paso-1-crear-archivo-metamapa" class="md-nav__link">
+    Paso 1 crear archivo metamapa
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-2" class="md-nav__link">
-    Paso 2
+  <a href="#paso-2-reutilizamos-codigo-y-opciones-html" class="md-nav__link">
+    Paso 2 reutilizamos código y opciones html
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-3" class="md-nav__link">
-    Paso 3
+  <a href="#paso-3-funcion-buscarmapas" class="md-nav__link">
+    Paso 3 Función buscarMapas()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-peticion-2-localizar-y-obtener-el-recurso" class="md-nav__link">
+    Paso 4 Petición 2 localizar y obtener el recurso
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-5-obtenr-i-pintar-datos" class="md-nav__link">
+    Paso 5 Obtenr i pintar datos
   </a>
   
 </li>
@@ -961,7 +989,7 @@
 <h1 id="recursos-open-data">Recursos open data</h1>
 <h3 id="ver-presentacion-opendata-pptx"><a href="../presentacion/opendata.pptx">Ver presentación OpenData (pptx)</a></h3>
 <h3 id="ver-presentacion-opendata-pdf"><a href="../presentacion/opendata.pdf">Ver presentación OpenData (pdf)</a></h3>
-<h3 id="el-metamapa-ejemplo-de-mapificacio-de-resultados-de-socrata">El MetaMapa: Ejemplo de mapificació de resultados de Sócrata</h3>
+<h3 id="el-metamapa-ejemplo-de-mapificacion-de-resultados-de-socrata">El MetaMapa: Ejemplo de mapificación de resultados de Sócrata</h3>
 <blockquote>
 <p>Buscaremos mapas en formato geojson con la api discovery de Sócrata
 <a href="https://api.us.socrata.com/api/catalog/v1?q=chicago%20crime&amp;only=maps" target="_blank">https://api.us.socrata.com/api/catalog/v1?q=chicago%20crime&amp;only=maps</a></p>
@@ -980,7 +1008,7 @@
 <p>Petición 3  obterner el recurso <code>https://{dminio}/api/geospatial/{recurso}?method=export&amp;format=GeoJSON</code></p>
 </li>
 </ul>
-<h4 id="paso-1">Paso 1</h4>
+<h4 id="paso-1-crear-archivo-metamapa">Paso 1 crear archivo metamapa</h4>
 <ul>
 <li>
 <p>Creamos un archivo con el nombre de <strong>metamapa.html</strong> en  <strong>/geoweb</strong>.</p>
@@ -999,42 +1027,13 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/utils.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/socrata.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-        <span class="p">#</span><span class="nn">results</span> <span class="p">{</span>
-            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f2f2f2</span><span class="p">;</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="p">#</span><span class="nn">mygrid</span><span class="p">{</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">340</span><span class="kt">px</span><span class="p">;</span>
-            <span class="k">overflow</span><span class="p">:</span><span class="kc">auto</span>
-        <span class="p">}</span>
-
-        <span class="p">#</span><span class="nn">panelContainer</span> <span class="p">{</span>
-            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
-            <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
-            <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
-            <span class="k">width</span><span class="p">:</span> <span class="mi">350</span><span class="kt">px</span><span class="p">;</span>
-            <span class="k">background-color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">95</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">opacity</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="p">#</span><span class="nn">num_results_socrata</span><span class="p">{</span>
-            <span class="k">width</span><span class="p">:</span> <span class="mi">70</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-        <span class="p">}</span>
-
-    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-
         <span class="kd">var</span> <span class="nx">map</span><span class="p">;</span>
         <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
-
             <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span> <span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
-                 <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span>
+            <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span>
                 <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
                 <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span>
                 <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">9.746</span><span class="p">,</span> <span class="mf">40.473</span><span class="p">],</span>
@@ -1047,63 +1046,132 @@
                 <span class="nx">compact</span><span class="o">:</span> <span class="kc">true</span>
             <span class="p">}));</span>
             <span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span>
-
-
         <span class="p">}</span>
     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-
 <span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;map&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;panelContainer&quot;</span><span class="p">&gt;</span>             
-            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-12&quot;</span><span class="p">&gt;</span>
-                <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>MetaMapa <span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Discovery API <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span>
-                        <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://docs.socratadiscovery.apiary.io&quot;</span><span class="p">&gt;</span>https://docs.socratadiscovery.apiary.io<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-                <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>             
-                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
-                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;radio&quot;</span><span class="p">&gt;</span>
-                            <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
-                                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;optionsRadios&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;optionsRadios1&quot;</span>
-                                    <span class="na">value</span><span class="o">=</span><span class="s">&quot;https://api.eu.socrata.com/api/catalog/v1?&quot;</span> <span class="na">checked</span><span class="p">&gt;</span>
-                                EU API Discovery
-                            <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;radio&quot;</span><span class="p">&gt;</span>
-                            <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
-                                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;optionsRadios&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;optionsRadios2&quot;</span>
-                                    <span class="na">value</span><span class="o">=</span><span class="s">&quot;https://api.us.socrata.com/api/catalog/v1?&quot;</span><span class="p">&gt;</span>
-                                US API Discovery
-                            <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
-                        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;text_filter_socrata&quot;</span><span class="p">&gt;</span> Buscar {q=} <span class="p">&lt;</span><span class="nt">u</span><span class="p">&gt;&lt;/</span><span class="nt">u</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-                        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;text_filter_socrata&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span>
-                            <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Entrar cerca&quot;</span><span class="p">&gt;</span>
-
-                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>             
-                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
-                        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;num_results_socrata&quot;</span><span class="p">&gt;</span>Num results:{limit=}<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-                        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;num_results_socrata&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;100&quot;</span><span class="p">&gt;</span>
-                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>               
-                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
-                        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;bt_send&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-default btn-success&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-
-                <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>
-                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;results&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mygrid&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
+<h4 id="paso-2-reutilizamos-codigo-y-opciones-html">Paso 2 reutilizamos código y opciones html</h4>
 <ul>
-<li>Añadimos dentro del tag  <strong>socrata.js</strong> la funcion <strong>buscarMapas</strong></li>
+<li>
+<p>Tendremos que enviar peticiones json a las Api's de Socrata , por lo tanto añadimos <strong>js/utils.js</strong> a nuestra aplicación</p>
+</li>
+<li>
+<p>Añadimos css de estilos bootstarp <strong><a href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css</a> </strong></p>
+</li>
+<li>
+<p>Añadimos controles HTML dentro del <code>&lt;body&gt;</code></p>
+</li>
 </ul>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>MetaMapa<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;</span> <span class="p">/&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/utils.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/socrata.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span><span class="hll">        <span class="p">#</span><span class="nn">results</span> <span class="p">{</span>
+</span><span class="hll">            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span><span class="hll">            <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f2f2f2</span><span class="p">;</span>
+</span><span class="hll">            <span class="k">margin</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+</span><span class="hll">        <span class="p">}</span>
+</span><span class="hll">        <span class="p">#</span><span class="nn">mygrid</span> <span class="p">{</span>
+</span><span class="hll">            <span class="k">height</span><span class="p">:</span> <span class="mi">340</span><span class="kt">px</span><span class="p">;</span>
+</span><span class="hll">            <span class="k">overflow</span><span class="p">:</span> <span class="kc">auto</span>
+</span><span class="hll">        <span class="p">}</span>
+</span><span class="hll">        <span class="p">#</span><span class="nn">panelContainer</span> <span class="p">{</span>
+</span><span class="hll">            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span><span class="hll">            <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+</span><span class="hll">            <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+</span><span class="hll">            <span class="k">width</span><span class="p">:</span> <span class="mi">350</span><span class="kt">px</span><span class="p">;</span>
+</span><span class="hll">            <span class="k">background-color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+</span><span class="hll">            <span class="k">height</span><span class="p">:</span> <span class="mi">95</span><span class="kt">%</span><span class="p">;</span>
+</span><span class="hll">            <span class="k">opacity</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">;</span>
+</span><span class="hll">        <span class="p">}</span>
+</span><span class="hll">        <span class="p">#</span><span class="nn">num_results_socrata</span> <span class="p">{</span>
+</span><span class="hll">            <span class="k">width</span><span class="p">:</span> <span class="mi">70</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+</span><span class="hll">        <span class="p">}</span>
+</span><span class="hll">    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="kd">var</span> <span class="nx">map</span><span class="p">;</span>
+        <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span> <span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
+            <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span>
+                <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
+                <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span>
+                <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">9.746</span><span class="p">,</span> <span class="mf">40.473</span><span class="p">],</span>
+                <span class="nx">zoom</span><span class="o">:</span> <span class="mf">5.5</span><span class="p">,</span>
+                <span class="nx">hash</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nx">pitch</span><span class="o">:</span> <span class="mf">45</span><span class="p">,</span>
+                <span class="nx">attributionControl</span><span class="o">:</span> <span class="kc">false</span>
+            <span class="p">});</span>
+            <span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span>
+                <span class="nx">compact</span><span class="o">:</span> <span class="kc">true</span>
+            <span class="p">}));</span>
+            <span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;map&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;panelContainer&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-12&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>MetaMapa <span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Discovery API <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span>
+</span><span class="hll">                    <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://docs.socratadiscovery.apiary.io&quot;</span><span class="p">&gt;</span>https://docs.socratadiscovery.apiary.io<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;radio&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">                    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
+</span><span class="hll">                        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;optionsRadios&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;optionsRadios1&quot;</span>
+</span><span class="hll">                            <span class="na">value</span><span class="o">=</span><span class="s">&quot;https://api.eu.socrata.com/api/catalog/v1?&quot;</span> <span class="na">checked</span><span class="p">&gt;</span>
+</span><span class="hll">                        EU API Discovery
+</span><span class="hll">                    <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;radio&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">                    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
+</span><span class="hll">                        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;optionsRadios&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;optionsRadios2&quot;</span>
+</span><span class="hll">                            <span class="na">value</span><span class="o">=</span><span class="s">&quot;https://api.us.socrata.com/api/catalog/v1?&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">                        US API Discovery
+</span><span class="hll">                    <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;text_filter_socrata&quot;</span><span class="p">&gt;</span> Buscar {q=} <span class="p">&lt;</span><span class="nt">u</span><span class="p">&gt;&lt;/</span><span class="nt">u</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;text_filter_socrata&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Entrar cerca&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;num_results_socrata&quot;</span><span class="p">&gt;</span>Num results:{limit=}<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;num_results_socrata&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;100&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+</span><span class="hll">                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;bt_send&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-default btn-success&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;results&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span class="hll">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mygrid&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span class="hll">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span class="hll">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="paso-3-funcion-buscarmapas">Paso 3 Función buscarMapas()</h4>
+<ul>
+<li>Añadimos dentro de <strong>js/socrata.js</strong> la funcion <strong>buscarMapas()</strong></li>
+</ul>
+<blockquote>
+<p>Para enviar la primera petición a la API global de Sócrata</p>
+</blockquote>
+<p><a href="https://api.eu.socrata.com/api/catalog/v1?q=wifi&limit=1&only=map"><a href="https://api.eu.socrata.com/api/catalog/v1?q=wifi&amp;limit=1&amp;only=map">https://api.eu.socrata.com/api/catalog/v1?q=wifi&amp;limit=1&amp;only=map</a></a></p>
 <div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">buscarMapas</span><span class="p">()</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByName</span><span class="p">(</span><span class="s2">&quot;optionsRadios&quot;</span><span class="p">);</span>
@@ -1133,7 +1201,7 @@
 
                     <span class="nx">resultadosHTML</span> <span class="o">=</span> <span class="nx">resultadosHTML</span> <span class="o">+</span> <span class="s1">&#39;&lt;li class=&quot;li&quot;&gt;&lt;b&gt;&#39;</span> <span class="o">+</span> <span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">resource</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39;: &lt;b&gt;&#39;</span> <span class="o">+</span>
                         <span class="s1">&#39;&lt;a target=&quot;_blank&quot; title=&quot;&#39;</span> <span class="o">+</span> <span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">resource</span><span class="p">.</span><span class="nx">attribution</span> <span class="o">+</span> <span class="s1">&#39;&quot; href=&quot;&#39;</span> <span class="o">+</span> <span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">link</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt; Link &lt;/a&gt; &#39;</span> <span class="o">+</span>
-                        <span class="s1">&#39;&lt;a class=&quot;btn btn-success btn-xs&quot; onClick=&quot;obtenerGeoJson(this.id)&quot; title=&quot;&#39;</span> <span class="o">+</span> <span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">resource</span><span class="p">.</span><span class="nx">attribution</span> <span class="o">+</span> <span class="s1">&#39;&quot; href=&quot;#&quot; id=&quot;&#39;</span> <span class="o">+</span> <span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">resource</span><span class="p">.</span><span class="nx">id</span> <span class="o">+</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">metadata</span><span class="p">.</span><span class="nx">domain</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;Ver mapa&lt;/a&gt;&#39;</span><span class="p">;</span>
+                        <span class="s1">&#39;&lt;a class=&quot;btn btn-success btn-xs&quot; onClick=&quot;obtenerRecurso(this.id)&quot; title=&quot;&#39;</span> <span class="o">+</span> <span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">resource</span><span class="p">.</span><span class="nx">attribution</span> <span class="o">+</span> <span class="s1">&#39;&quot; href=&quot;#&quot; id=&quot;&#39;</span> <span class="o">+</span> <span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">resource</span><span class="p">.</span><span class="nx">id</span> <span class="o">+</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">metadata</span><span class="p">.</span><span class="nx">domain</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;Ver mapa&lt;/a&gt;&#39;</span><span class="p">;</span>
 
                 <span class="p">}</span>
                 <span class="nx">resultadosHTML</span> <span class="o">=</span> <span class="nx">resultadosHTML</span> <span class="o">+</span> <span class="s2">&quot;&lt;/ul&gt;&quot;</span><span class="p">;</span>
@@ -1171,11 +1239,10 @@
             <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f2f2f2</span><span class="p">;</span>
             <span class="k">margin</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="p">#</span><span class="nn">mygrid</span><span class="p">{</span>
+        <span class="p">#</span><span class="nn">mygrid</span> <span class="p">{</span>
             <span class="k">height</span><span class="p">:</span> <span class="mi">340</span><span class="kt">px</span><span class="p">;</span>
-            <span class="k">overflow</span><span class="p">:</span><span class="kc">auto</span>
+            <span class="k">overflow</span><span class="p">:</span> <span class="kc">auto</span>
         <span class="p">}</span>
-
         <span class="p">#</span><span class="nn">panelContainer</span> <span class="p">{</span>
             <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
             <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
@@ -1185,17 +1252,15 @@
             <span class="k">height</span><span class="p">:</span> <span class="mi">95</span><span class="kt">%</span><span class="p">;</span>
             <span class="k">opacity</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="p">#</span><span class="nn">num_results_socrata</span><span class="p">{</span>
+        <span class="p">#</span><span class="nn">num_results_socrata</span> <span class="p">{</span>
             <span class="k">width</span><span class="p">:</span> <span class="mi">70</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
         <span class="p">}</span>
-
     <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="kd">var</span> <span class="nx">map</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">map</span><span class="p">;</span>
         <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
-
             <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span> <span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span>
-             <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span>
+            <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span>
                 <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span>
                 <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span>
                 <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">9.746</span><span class="p">,</span> <span class="mf">40.473</span><span class="p">],</span>
@@ -1208,98 +1273,87 @@
                 <span class="nx">compact</span><span class="o">:</span> <span class="kc">true</span>
             <span class="p">}));</span>
             <span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span>
-
-
         <span class="p">}</span>
     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-
 <span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;map&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;panelContainer&quot;</span><span class="p">&gt;</span>             
-            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-12&quot;</span><span class="p">&gt;</span>
-                <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>MetaMapa <span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Discovery API <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span>
-                        <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://docs.socratadiscovery.apiary.io&quot;</span><span class="p">&gt;</span>https://docs.socratadiscovery.apiary.io<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-                <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>             
-                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
-                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;radio&quot;</span><span class="p">&gt;</span>
-                            <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
-                                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;optionsRadios&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;optionsRadios1&quot;</span>
-                                    <span class="na">value</span><span class="o">=</span><span class="s">&quot;https://api.eu.socrata.com/api/catalog/v1?&quot;</span> <span class="na">checked</span><span class="p">&gt;</span>
-                                EU API Discovery
-                            <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-                        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;radio&quot;</span><span class="p">&gt;</span>
-                            <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
-                                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;optionsRadios&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;optionsRadios2&quot;</span>
-                                    <span class="na">value</span><span class="o">=</span><span class="s">&quot;https://api.us.socrata.com/api/catalog/v1?&quot;</span><span class="p">&gt;</span>
-                                US API Discovery
-                            <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-                        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
-                        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;text_filter_socrata&quot;</span><span class="p">&gt;</span> Buscar {q=} <span class="p">&lt;</span><span class="nt">u</span><span class="p">&gt;&lt;/</span><span class="nt">u</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-                        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;text_filter_socrata&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span>
-                            <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Entrar cerca&quot;</span><span class="p">&gt;</span>
-
-                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>             
-                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
-                        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;num_results_socrata&quot;</span><span class="p">&gt;</span>Num results:{limit=}<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-                        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;num_results_socrata&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;100&quot;</span><span class="p">&gt;</span>
-                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>               
-<span class="hll">                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
-</span>                        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;bt_send&quot;</span> <span class="na">onClick</span><span class="o">=</span><span class="s">&quot;buscarMapas()&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-default btn-success&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-
-                <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>
-                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;results&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mygrid&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;panelContainer&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-12&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>MetaMapa <span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Discovery API <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span>
+                    <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://docs.socratadiscovery.apiary.io&quot;</span><span class="p">&gt;</span>https://docs.socratadiscovery.apiary.io<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;radio&quot;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;optionsRadios&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;optionsRadios1&quot;</span>
+                            <span class="na">value</span><span class="o">=</span><span class="s">&quot;https://api.eu.socrata.com/api/catalog/v1?&quot;</span> <span class="na">checked</span><span class="p">&gt;</span>
+                        EU API Discovery
+                    <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;radio&quot;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;optionsRadios&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;optionsRadios2&quot;</span>
+                            <span class="na">value</span><span class="o">=</span><span class="s">&quot;https://api.us.socrata.com/api/catalog/v1?&quot;</span><span class="p">&gt;</span>
+                        US API Discovery
+                    <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
             <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;text_filter_socrata&quot;</span><span class="p">&gt;</span> Buscar {q=} <span class="p">&lt;</span><span class="nt">u</span><span class="p">&gt;&lt;/</span><span class="nt">u</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;text_filter_socrata&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Entrar cerca&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;num_results_socrata&quot;</span><span class="p">&gt;</span>Num results:{limit=}<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;num_results_socrata&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;100&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+<span class="hll">                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;bt_send&quot;</span> <span class="na">onClick</span><span class="o">=</span><span class="s">&quot;buscarMapas()&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-default btn-success&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span>            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;results&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mygrid&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
         <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Realizamos algunas búsquedas</p>
 </div>
-<h4 id="paso-2">Paso 2</h4>
+<p>Ejemplo "wifi" o "crime"</p>
+<h4 id="paso-4-peticion-2-localizar-y-obtener-el-recurso">Paso 4 Petición 2 localizar y obtener el recurso</h4>
 <ul>
-<li>Añadimos a <strong>socrata.js</strong> la funcion <strong>obtenerGeoJson()</strong></li>
+<li>Añadimos a <strong>socrata.js</strong> la funcion <strong>obtenerRecurso()</strong></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">obtenerGeoJson</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">obtenerRecurso</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">);</span>
     <span class="kd">var</span> <span class="nx">peticion2</span> <span class="o">=</span> <span class="s1">&#39;https://&#39;</span> <span class="o">+</span> <span class="nx">params</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;/api/views.json?method=getByResourceName&amp;name=&#39;</span> <span class="o">+</span> <span class="nx">params</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
 
     <span class="nx">enviarPeticion</span><span class="p">(</span><span class="nx">peticion2</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">respuestaNodoSocrata</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">peticion3</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">urlRecurso</span><span class="p">;</span>
         <span class="kd">var</span> <span class="nx">isGeojson</span><span class="p">;</span>
         <span class="kd">var</span> <span class="nx">bbox</span><span class="p">;</span>
         <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="nx">respuestaNodoSocrata</span><span class="p">);</span>
 
         <span class="k">if</span> <span class="p">(</span><span class="nx">respuestaNodoSocrata</span><span class="p">.</span><span class="nx">metadata</span> <span class="o">&amp;&amp;</span> <span class="nx">respuestaNodoSocrata</span><span class="p">.</span><span class="nx">metadata</span><span class="p">.</span><span class="nx">geo</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//es geo</span>
 
-            <span class="nx">peticion3</span> <span class="o">=</span> <span class="s1">&#39;https://&#39;</span> <span class="o">+</span> <span class="nx">params</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;/api/geospatial/&#39;</span> <span class="o">+</span> <span class="nx">respuestaNodoSocrata</span><span class="p">.</span><span class="nx">childViews</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;?method=export&amp;format=GeoJSON&#39;</span><span class="p">;</span>
+            <span class="nx">urlRecurso</span> <span class="o">=</span> <span class="s1">&#39;https://&#39;</span> <span class="o">+</span> <span class="nx">params</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;/api/geospatial/&#39;</span> <span class="o">+</span> <span class="nx">respuestaNodoSocrata</span><span class="p">.</span><span class="nx">childViews</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;?method=export&amp;format=GeoJSON&#39;</span><span class="p">;</span>
             <span class="nx">isGeojson</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
             <span class="nx">bbox</span> <span class="o">=</span> <span class="nx">respuestaNodoSocrata</span><span class="p">.</span><span class="nx">metadata</span><span class="p">.</span><span class="nx">geo</span><span class="p">.</span><span class="nx">bbox</span><span class="p">;</span>
         <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// es una tabla</span>
 
-            <span class="nx">peticion3</span> <span class="o">=</span> <span class="s1">&#39;https://&#39;</span> <span class="o">+</span> <span class="nx">params</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;/resource/&#39;</span> <span class="o">+</span> <span class="nx">params</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;.json?$limit=1000&#39;</span><span class="p">;</span>
+            <span class="nx">urlRecurso</span> <span class="o">=</span> <span class="s1">&#39;https://&#39;</span> <span class="o">+</span> <span class="nx">params</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;/resource/&#39;</span> <span class="o">+</span> <span class="nx">params</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;.json?$limit=1000&#39;</span><span class="p">;</span>
             <span class="nx">isGeojson</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
             <span class="nx">bbox</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
 
         <span class="p">}</span>
 
-        <span class="nx">enviarPeticion</span><span class="p">(</span><span class="nx">peticion3</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">respuestaRecurso</span><span class="p">)</span> <span class="p">{</span>
-
-            <span class="c1">// console.info(respuestaNodoSocrata.metadata.geo.bbox);</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="nx">respuestaRecurso</span><span class="p">);</span>
-            <span class="nx">prepararDatos</span><span class="p">(</span><span class="nx">respuestaRecurso</span><span class="p">,</span> <span class="nx">bbox</span><span class="p">,</span> <span class="nx">isGeojson</span><span class="p">);</span>
-
-        <span class="p">});</span><span class="c1">// fin peticion 2 </span>
+        <span class="c1">//prepararDatos(urlRecurso, bbox, isGeojson)</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s2">&quot;urlRecurso&quot;</span><span class="p">,</span> <span class="nx">urlRecurso</span><span class="p">);</span>
 
     <span class="p">});</span><span class="c1">// fin peticion 2 </span>
 
@@ -1308,98 +1362,102 @@
 <div class="admonition note">
 <p class="admonition-title">Realizamos algunas búsquedas y descomentamos /comentamos consoles</p>
 </div>
-<h4 id="paso-3">Paso 3</h4>
+<h4 id="paso-5-obtenr-i-pintar-datos">Paso 5 Obtenr i pintar datos</h4>
 <ul>
 <li>
-<p>descomentamos <code>prepararDatos(respuestaRecurso, bbox, isGeojson);</code> de la función <strong>obtenerGeoJson</strong></p>
+<p>Descomentamos <strong>prepararDatos(urlRecurso, bbox, isGeojson);</strong> de la función obtenerGeoJson</p>
 </li>
 <li>
-<p>Creamos las funciones para ver los geojson <strong>prepararDatos y  verMapa</strong> dentro de <strong>socrata.js</strong></p>
+<p>Creamos la funcion <strong>prepararDatos</strong> dentro de <strong>socrata.js</strong>  para obtener y/o tranformar los datos a GeoJson</p>
+</li>
+<li>
+<p>Creamos la funcions <strong>pintarMapa</strong> dentro de <strong>socrata.js</strong> para añadir los datos al mapa</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">prepararDatos</span><span class="p">(</span><span class="nx">respuestaRecurso</span><span class="p">,</span> <span class="nx">bbox</span><span class="p">,</span> <span class="nx">isGeojson</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">prepararDatos</span><span class="p">(</span><span class="nx">urlRecurso</span><span class="p">,</span> <span class="nx">bbox</span><span class="p">,</span> <span class="nx">isGeojson</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">enviarPeticion</span><span class="p">(</span><span class="nx">urlRecurso</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">respuestaRecurso</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nx">isGeojson</span><span class="p">)</span> <span class="p">{</span>
+
+            <span class="nx">pintarMapa</span><span class="p">(</span><span class="nx">respuestaRecurso</span><span class="p">,</span> <span class="nx">bbox</span><span class="p">);</span>
+
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+
+            <span class="kd">var</span> <span class="nx">geoJSON</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;FeatureCollection&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="p">[]</span>
+            <span class="p">};</span>
 
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">isGeojson</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="nx">verMapa</span><span class="p">(</span><span class="nx">respuestaRecurso</span><span class="p">,</span> <span class="nx">bbox</span><span class="p">);</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">respuestaRecurso</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-
-        <span class="kd">var</span> <span class="nx">geoJSON</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;FeatureCollection&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;features&quot;</span><span class="o">:</span> <span class="p">[]</span>
-        <span class="p">};</span>
-
-        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">respuestaRecurso</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-
-            <span class="k">if</span> <span class="p">(</span><span class="nx">respuestaRecurso</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">location_1</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span>
-                    <span class="p">{</span>
-                        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Feature&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;properties&quot;</span><span class="o">:</span> <span class="p">{},</span>
-                        <span class="s2">&quot;geometry&quot;</span><span class="o">:</span> <span class="p">{</span>
-                            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
-                            <span class="s2">&quot;coordinates&quot;</span><span class="o">:</span> <span class="p">[</span>
-                                <span class="nx">respuestaRecurso</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">location_1</span><span class="p">.</span><span class="nx">longitud</span><span class="p">,</span>
-                                <span class="nx">respuestaRecurso</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">location_1</span><span class="p">.</span><span class="nx">latitude</span>
-                            <span class="p">]</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">respuestaRecurso</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">location_1</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Feature&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;properties&quot;</span><span class="o">:</span> <span class="nx">respuestaRecurso</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">location_1</span><span class="p">,</span>
+                            <span class="s2">&quot;geometry&quot;</span><span class="o">:</span> <span class="p">{</span>
+                                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;coordinates&quot;</span><span class="o">:</span> <span class="p">[</span>
+                                    <span class="nx">respuestaRecurso</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">location_1</span><span class="p">.</span><span class="nx">longitud</span><span class="p">,</span>
+                                    <span class="nx">respuestaRecurso</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">location_1</span><span class="p">.</span><span class="nx">latitude</span>
+                                <span class="p">]</span>
+                            <span class="p">}</span>
                         <span class="p">}</span>
-                    <span class="p">}</span>
-                <span class="p">);</span>
+                    <span class="p">);</span>
 
 
-            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">respuestaRecurso</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">location</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span>
-                    <span class="p">{</span>
-                        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Feature&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;properties&quot;</span><span class="o">:</span> <span class="p">{},</span>
-                        <span class="s2">&quot;geometry&quot;</span><span class="o">:</span> <span class="p">{</span>
-                            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
-                            <span class="s2">&quot;coordinates&quot;</span><span class="o">:</span> <span class="p">[</span>
-                                <span class="nx">respuestaRecurso</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">location</span><span class="p">.</span><span class="nx">longitude</span><span class="p">,</span>
-                                <span class="nx">respuestaRecurso</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">location</span><span class="p">.</span><span class="nx">latitude</span>
-                            <span class="p">]</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">respuestaRecurso</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">location</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Feature&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;properties&quot;</span><span class="o">:</span> <span class="nx">respuestaRecurso</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">location</span><span class="p">,</span>
+                            <span class="s2">&quot;geometry&quot;</span><span class="o">:</span> <span class="p">{</span>
+                                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;coordinates&quot;</span><span class="o">:</span> <span class="p">[</span>
+                                    <span class="nx">respuestaRecurso</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">location</span><span class="p">.</span><span class="nx">longitude</span><span class="p">,</span>
+                                    <span class="nx">respuestaRecurso</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">location</span><span class="p">.</span><span class="nx">latitude</span>
+                                <span class="p">]</span>
+                            <span class="p">}</span>
                         <span class="p">}</span>
-                    <span class="p">}</span>
-                <span class="p">);</span>
+                    <span class="p">);</span>
 
 
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span>
-                    <span class="p">{</span>
-                        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Feature&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;properties&quot;</span><span class="o">:</span> <span class="p">{},</span>
-                        <span class="s2">&quot;geometry&quot;</span><span class="o">:</span> <span class="p">{</span>
-                            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
-                            <span class="s2">&quot;coordinates&quot;</span><span class="o">:</span> <span class="p">[</span>
-                                <span class="mf">0</span><span class="p">,</span>
-                                <span class="mf">0</span>
-                            <span class="p">]</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Feature&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;properties&quot;</span><span class="o">:</span> <span class="p">{},</span>
+                            <span class="s2">&quot;geometry&quot;</span><span class="o">:</span> <span class="p">{</span>
+                                <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;coordinates&quot;</span><span class="o">:</span> <span class="p">[</span>
+                                    <span class="mf">0</span><span class="p">,</span>
+                                    <span class="mf">0</span>
+                                <span class="p">]</span>
+                            <span class="p">}</span>
                         <span class="p">}</span>
-                    <span class="p">}</span>
-                <span class="p">);</span>
-            <span class="p">}</span>
+                    <span class="p">);</span>
+                <span class="p">}</span>
 
 
-        <span class="p">}</span> <span class="c1">//fin for</span>
+            <span class="p">}</span> <span class="c1">//fin for</span>
 
 
-        <span class="kd">var</span> <span class="nx">newBBOx</span> <span class="o">=</span> <span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">coordinates</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span>
-            <span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">coordinates</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span>
-            <span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">[</span><span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mf">1</span><span class="p">].</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">coordinates</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span>
-            <span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">[</span><span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mf">1</span><span class="p">].</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">coordinates</span><span class="p">[</span><span class="mf">1</span><span class="p">];</span>
+            <span class="kd">var</span> <span class="nx">newBBOx</span> <span class="o">=</span> <span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">coordinates</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span>
+                <span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">coordinates</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span>
+                <span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">[</span><span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mf">1</span><span class="p">].</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">coordinates</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span>
+                <span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">[</span><span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mf">1</span><span class="p">].</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">coordinates</span><span class="p">[</span><span class="mf">1</span><span class="p">];</span>
 
-        <span class="nx">verMapa</span><span class="p">(</span><span class="nx">geoJSON</span><span class="p">,</span> <span class="nx">newBBOx</span><span class="p">);</span>
+            <span class="nx">pintarMapa</span><span class="p">(</span><span class="nx">geoJSON</span><span class="p">,</span> <span class="nx">newBBOx</span><span class="p">);</span>
 
-    <span class="p">}</span> <span class="c1">//fin else</span>
+        <span class="p">}</span> <span class="c1">//fin else</span>
 
-
+    <span class="p">})</span> <span class="c1">//fin peticion</span>
 <span class="p">}</span>
-
-
-
-<span class="kd">function</span> <span class="nx">verMapa</span><span class="p">(</span><span class="nx">geoJSON</span><span class="p">,</span> <span class="nx">bbox</span><span class="p">)</span> <span class="p">{</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">pintarMapa</span><span class="p">(</span><span class="nx">geoJSON</span><span class="p">,</span> <span class="nx">bbox</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">tipoGeometria</span> <span class="o">=</span> <span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">type</span><span class="p">;</span>
 
@@ -1467,16 +1525,21 @@
 
     <span class="nx">map</span><span class="p">.</span><span class="nx">fitBounds</span><span class="p">([[</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span> <span class="nx">bounds</span><span class="p">[</span><span class="mf">1</span><span class="p">]],</span> <span class="p">[</span><span class="nx">bounds</span><span class="p">[</span><span class="mf">2</span><span class="p">],</span> <span class="nx">bounds</span><span class="p">[</span><span class="mf">3</span><span class="p">]]]);</span>
 
-        <span class="c1">//addPopupToMap(&quot;socrata&quot;);</span>
+
 
 <span class="p">}</span>
 </code></pre></div>
 <div class="admonition success">
 <p class="admonition-title">Buscamos datos</p>
 </div>
-<div class="admonition success">
-<p class="admonition-title">descomentamos <code>addPopupToMap("socrata")</code></p>
+<div class="admonition question">
+<p class="admonition-title">Podrímos aprovecha la funció de info <code>addPopupToMap("socrata")</code></p>
 </div>
+<div class="highlight"><pre><span></span><code> map.on(&quot;load&quot;, function(){
+
+    addPopupToMap(&quot;socrata&quot;);
+});
+</code></pre></div>
 <p><img alt="alt text" src="../img/socrata.png" title="socrata.png" /></p>
 <div class="admonition success">
 <p class="admonition-title">¿Subimos el ejemplo al GitHub?</p>
