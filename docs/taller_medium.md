@@ -28,11 +28,18 @@
 
 ![alt text](img/medium-ex.png "medium")
 
-[https://medium.com/@jordi.rodriguezdiaz/pr%C3%A1ctica-final-de-porgrado-con-kepler-gl-m%C3%B3dulo-m2b-mapas-y-opendata-herramientas-de-99c33ed87678](https://medium.com/@jordi.rodriguezdiaz/pr%C3%A1ctica-final-de-porgrado-con-kepler-gl-m%C3%B3dulo-m2b-mapas-y-opendata-herramientas-de-99c33ed87678)
+<a href="https://janruigar.medium.com/visor-de-patrimonio-arqueol%C3%B3gico-un-asistente-a-la-prospecci%C3%B3n-y-reconocimiento-del-terreno-a2703cbd2600" target="_blank">https://janruigar.medium.com/visor-de-patrimonio-arqueol%C3%B3gico-un-asistente-a-la-prospecci%C3%B3n-y-reconocimiento-del-terreno-a2703cbd2600</a>
 
-[https://medium.com/@claudiobracho9696/gis-and-field-analysis-after-gloria-storm-approximation-to-flooding-risk-assessment-in-8592ccebec0b](https://medium.com/@claudiobracho9696/gis-and-field-analysis-after-gloria-storm-approximation-to-flooding-risk-assessment-in-8592ccebec0b)
 
-[https://medium.com/master-upc-sig/taller-de-la-asignatura-introducci%C3%B3-a-la-programaci%C3%B3-sig-en-entorn-web-cf39862c954f](https://medium.com/master-upc-sig/taller-de-la-asignatura-introducci%C3%B3-a-la-programaci%C3%B3-sig-en-entorn-web-cf39862c954f)
+<a href="https://fdo-dellano.medium.com/pr%C3%A1ctica-final-de-m%C3%B3dulo-m2b-mapas-y-open-data-posgrado-sig-upc-prof-v%C3%ADctor-pascal-144fab21529a" target="_blank">https://fdo-dellano.medium.com/pr%C3%A1ctica-final-de-m%C3%B3dulo-m2b-mapas-y-open-data-posgrado-sig-upc-prof-v%C3%ADctor-pascal-144fab21529a</a>
+
+<a href="https://medium.com/@jordi.rodriguezdiaz/pr%C3%A1ctica-final-de-porgrado-con-kepler-gl-m%C3%B3dulo-m2b-mapas-y-opendata-herramientas-de-99c33ed87678" target="_blank">https://medium.com/@jordi.rodriguezdiaz/pr%C3%A1ctica-final-de-porgrado-con-kepler-gl-m%C3%B3dulo-m2b-mapas-y-opendata-herramientas-de-99c33ed87678</a>
+
+<a href="https://m-selindo7.medium.com/visor-dincendis-forestals-1986-2019-e9e6177bebd" target="_blank">https://m-selindo7.medium.com/visor-dincendis-forestals-1986-2019-e9e6177bebd</a>
+
+<a href="https://medium.com/@claudiobracho9696/gis-and-field-analysis-after-gloria-storm-approximation-to-flooding-risk-assessment-in-8592ccebec0b" target="_blank">https://medium.com/@claudiobracho9696/gis-and-field-analysis-after-gloria-storm-approximation-to-flooding-risk-assessment-in-8592ccebec0b</a>
+
+<a href="https://medium.com/master-upc-sig/taller-de-la-asignatura-introducci%C3%B3-a-la-programaci%C3%B3-sig-en-entorn-web-cf39862c954f" target="_blank">https://medium.com/master-upc-sig/taller-de-la-asignatura-introducci%C3%B3-a-la-programaci%C3%B3-sig-en-entorn-web-cf39862c954f</a>
 
 
 #### Para escribir un buen artículo técnico podriamos dividir en estas secciones

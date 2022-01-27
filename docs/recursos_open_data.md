@@ -6,7 +6,7 @@
 
 
 
-### El MetaMapa: Ejemplo de mapificació de resultados de Sócrata
+### El MetaMapa: Ejemplo de mapificación de resultados de Sócrata
 
 >Buscaremos mapas en formato geojson con la api discovery de Sócrata
 >[https://api.us.socrata.com/api/catalog/v1?q=chicago%20crime&only=maps](https://api.us.socrata.com/api/catalog/v1?q=chicago%20crime&only=maps){target=_blank}
@@ -22,7 +22,7 @@
 
 
 
-#### Paso 1 
+#### Paso 1 crear archivo metamapa
 
 * Creamos un archivo con el nombre de **metamapa.html** en  **/geoweb**.
 
@@ -32,6 +32,50 @@
 
   
 ```html
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>MetaMapa</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <link href='css/estilobase.css' rel='stylesheet' />
+    <script src='js/socrata.js'></script>
+    <script>
+        var map;
+        function init() {
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
+            map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/dark-v10',
+                center: [9.746, 40.473],
+                zoom: 5.5,
+                hash: true,
+                pitch: 45,
+                attributionControl: false
+            });
+            map.addControl(new mapboxgl.AttributionControl({
+                compact: true
+            }));
+            map.addControl(new mapboxgl.NavigationControl());
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div id='map'></div>
+</body>
+</html>
+```
+
+#### Paso 2 reutilizamos código y opciones html
+
+* Tendremos que enviar peticiones json a las Api's de Socrata , por lo tanto añadimos **js/utils.js** a nuestra aplicación
+
+* Añadimos css de estilos bootstarp **https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css **
+
+* Añadimos controles HTML dentro del ```<body>```
+
+```html hl_lines="8 10 12-34 57-95"
 <html>
 <head>
     <meta charset='utf-8' />
@@ -49,11 +93,10 @@
             background-color: #f2f2f2;
             margin: 5px;
         }
-        #mygrid{
+        #mygrid {
             height: 340px;
-            overflow:auto
+            overflow: auto
         }
-
         #panelContainer {
             position: absolute;
             top: 0px;
@@ -63,18 +106,15 @@
             height: 95%;
             opacity: 0.9;
         }
-        #num_results_socrata{
+        #num_results_socrata {
             width: 70px !important;
         }
-        
     </style>
     <script>
-
         var map;
         function init() {
-            
             mapboxgl.accessToken = 'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
-                 map = new mapboxgl.Map({
+            map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/dark-v10',
                 center: [9.746, 40.473],
@@ -87,67 +127,63 @@
                 compact: true
             }));
             map.addControl(new mapboxgl.NavigationControl());
-
-
         }
     </script>
 </head>
-
 <body onload="init()">
     <div id='map'></div>
-    <div id="panelContainer">             
-            <div class="col-md-12">
-                <h4>MetaMapa </h4>
-                <p>Discovery API <br>
-                    <a target="_blank"
-                        href="https://docs.socratadiscovery.apiary.io">https://docs.socratadiscovery.apiary.io</a>
-                </p>             
-                    <div class="form-group">
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios1"
-                                    value="https://api.eu.socrata.com/api/catalog/v1?" checked>
-                                EU API Discovery
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios2"
-                                    value="https://api.us.socrata.com/api/catalog/v1?">
-                                US API Discovery
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="text_filter_socrata"> Buscar {q=} <u></u></label>
-                        <input type="text" class="form-control" id="text_filter_socrata" value=""
-                            placeholder="Entrar cerca">
-
-                    </div>             
-                    <div class="form-group">
-                        <label for="num_results_socrata">Num results:{limit=}</label>
-                        <input type="number" class="form-control" id="num_results_socrata" value="100">
-                    </div>               
-                    <div class="form-group">
-                        <button id="bt_send" type="button" class="btn btn-default btn-success">Enviar</button>
-                    </div>
-              
-                <hr>
-                <div id="results"></div>
-                <div id="mygrid"></div>
+    <div id="panelContainer">
+        <div class="col-md-12">
+            <h4>MetaMapa </h4>
+            <p>Discovery API <br>
+                <a target="_blank"
+                    href="https://docs.socratadiscovery.apiary.io">https://docs.socratadiscovery.apiary.io</a>
+            </p>
+            <div class="form-group">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1"
+                            value="https://api.eu.socrata.com/api/catalog/v1?" checked>
+                        EU API Discovery
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2"
+                            value="https://api.us.socrata.com/api/catalog/v1?">
+                        US API Discovery
+                    </label>
+                </div>
             </div>
+            <div class="form-group">
+                <label for="text_filter_socrata"> Buscar {q=} <u></u></label>
+                <input type="text" class="form-control" id="text_filter_socrata" value="" placeholder="Entrar cerca">
+            </div>
+            <div class="form-group">
+                <label for="num_results_socrata">Num results:{limit=}</label>
+                <input type="number" class="form-control" id="num_results_socrata" value="100">
+            </div>
+            <div class="form-group">
+                <button id="bt_send" type="button" class="btn btn-default btn-success">Enviar</button>
+            </div>
+            <hr>
+            <div id="results"></div>
+            <div id="mygrid"></div>
         </div>
+    </div>
 </body>
-
 </html>
-
 ```
-  
+
+#### Paso 3 Función buscarMapas()
+
+ * Añadimos dentro de **js/socrata.js** la funcion **buscarMapas()**
+
+ >Para enviar la primera petición a la API global de Sócrata
+
+ <a href="https://api.eu.socrata.com/api/catalog/v1?q=wifi&limit=1&only=map">https://api.eu.socrata.com/api/catalog/v1?q=wifi&limit=1&only=map</a>
 
 
-* Añadimos dentro del tag  **socrata.js** la funcion **buscarMapas**
-
-  
 ```js
 function buscarMapas() {
 
@@ -178,7 +214,7 @@ function buscarMapas() {
 
                     resultadosHTML = resultadosHTML + '<li class="li"><b>' + respuestaSocrata.results[i].resource.name + ': <b>' +
                         '<a target="_blank" title="' + respuestaSocrata.results[i].resource.attribution + '" href="' + respuestaSocrata.results[i].link + '"> Link </a> ' +
-                        '<a class="btn btn-success btn-xs" onClick="obtenerGeoJson(this.id)" title="' + respuestaSocrata.results[i].resource.attribution + '" href="#" id="' + respuestaSocrata.results[i].resource.id + '#' + respuestaSocrata.results[i].metadata.domain + '">Ver mapa</a>';
+                        '<a class="btn btn-success btn-xs" onClick="obtenerRecurso(this.id)" title="' + respuestaSocrata.results[i].resource.attribution + '" href="#" id="' + respuestaSocrata.results[i].resource.id + '#' + respuestaSocrata.results[i].metadata.domain + '">Ver mapa</a>';
 
                 }
                 resultadosHTML = resultadosHTML + "</ul>";
@@ -202,7 +238,7 @@ function buscarMapas() {
 
 * Llamamos a la funcion **buscaMapa()** desde  **metamapa.html** 
 
-``` html hl_lines="96"
+``` html hl_lines="89"
 <html>
 <head>
     <meta charset='utf-8' />
@@ -220,11 +256,10 @@ function buscarMapas() {
             background-color: #f2f2f2;
             margin: 5px;
         }
-        #mygrid{
+        #mygrid {
             height: 340px;
-            overflow:auto
+            overflow: auto
         }
-
         #panelContainer {
             position: absolute;
             top: 0px;
@@ -234,17 +269,15 @@ function buscarMapas() {
             height: 95%;
             opacity: 0.9;
         }
-        #num_results_socrata{
+        #num_results_socrata {
             width: 70px !important;
         }
-        
     </style>
     <script>
-    var map;
+        var map;
         function init() {
-            
             mapboxgl.accessToken = 'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
-             map = new mapboxgl.Map({
+            map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/dark-v10',
                 center: [9.746, 40.473],
@@ -257,203 +290,195 @@ function buscarMapas() {
                 compact: true
             }));
             map.addControl(new mapboxgl.NavigationControl());
-
-
         }
     </script>
 </head>
-
 <body onload="init()">
     <div id='map'></div>
-    <div id="panelContainer">             
-            <div class="col-md-12">
-                <h4>MetaMapa </h4>
-                <p>Discovery API <br>
-                    <a target="_blank"
-                        href="https://docs.socratadiscovery.apiary.io">https://docs.socratadiscovery.apiary.io</a>
-                </p>             
-                    <div class="form-group">
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios1"
-                                    value="https://api.eu.socrata.com/api/catalog/v1?" checked>
-                                EU API Discovery
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="optionsRadios2"
-                                    value="https://api.us.socrata.com/api/catalog/v1?">
-                                US API Discovery
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="text_filter_socrata"> Buscar {q=} <u></u></label>
-                        <input type="text" class="form-control" id="text_filter_socrata" value=""
-                            placeholder="Entrar cerca">
-
-                    </div>             
-                    <div class="form-group">
-                        <label for="num_results_socrata">Num results:{limit=}</label>
-                        <input type="number" class="form-control" id="num_results_socrata" value="100">
-                    </div>               
-                    <div class="form-group">
-                        <button id="bt_send" onClick="buscarMapas()" type="button" class="btn btn-default btn-success">Enviar</button>
-                    </div>
-              
-                <hr>
-                <div id="results"></div>
-                <div id="mygrid"></div>
+    <div id="panelContainer">
+        <div class="col-md-12">
+            <h4>MetaMapa </h4>
+            <p>Discovery API <br>
+                <a target="_blank"
+                    href="https://docs.socratadiscovery.apiary.io">https://docs.socratadiscovery.apiary.io</a>
+            </p>
+            <div class="form-group">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1"
+                            value="https://api.eu.socrata.com/api/catalog/v1?" checked>
+                        EU API Discovery
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2"
+                            value="https://api.us.socrata.com/api/catalog/v1?">
+                        US API Discovery
+                    </label>
+                </div>
             </div>
+            <div class="form-group">
+                <label for="text_filter_socrata"> Buscar {q=} <u></u></label>
+                <input type="text" class="form-control" id="text_filter_socrata" value="" placeholder="Entrar cerca">
+            </div>
+            <div class="form-group">
+                <label for="num_results_socrata">Num results:{limit=}</label>
+                <input type="number" class="form-control" id="num_results_socrata" value="100">
+            </div>
+            <div class="form-group">
+                <button id="bt_send" onClick="buscarMapas()" type="button" class="btn btn-default btn-success">Enviar</button>
+            </div>
+            <hr>
+            <div id="results"></div>
+            <div id="mygrid"></div>
         </div>
+    </div>
 </body>
-
 </html>
 
 ```
 
 !!! Note "Realizamos algunas búsquedas"
+Ejemplo "wifi" o "crime"
 
-#### Paso 2
+#### Paso 4 Petición 2 localizar y obtener el recurso
 
-* Añadimos a **socrata.js** la funcion **obtenerGeoJson()**
+* Añadimos a **socrata.js** la funcion **obtenerRecurso()**
 
   
 ```javascript
-function obtenerGeoJson(data) {
+function obtenerRecurso(data) {
 
     var params = data.split("#");
     var peticion2 = 'https://' + params[1] + '/api/views.json?method=getByResourceName&name=' + params[0];
 
     enviarPeticion(peticion2).then(function (respuestaNodoSocrata) {
-        var peticion3;
+        var urlRecurso;
         var isGeojson;
         var bbox;
         console.info(respuestaNodoSocrata);
 
         if (respuestaNodoSocrata.metadata && respuestaNodoSocrata.metadata.geo) { //es geo
 
-            peticion3 = 'https://' + params[1] + '/api/geospatial/' + respuestaNodoSocrata.childViews[0] + '?method=export&format=GeoJSON';
+            urlRecurso = 'https://' + params[1] + '/api/geospatial/' + respuestaNodoSocrata.childViews[0] + '?method=export&format=GeoJSON';
             isGeojson = true;
             bbox = respuestaNodoSocrata.metadata.geo.bbox;
         } else { // es una tabla
 
-            peticion3 = 'https://' + params[1] + '/resource/' + params[0] + '.json?$limit=1000';
+            urlRecurso = 'https://' + params[1] + '/resource/' + params[0] + '.json?$limit=1000';
             isGeojson = false;
             bbox = null;
 
         }
 
-        enviarPeticion(peticion3).then(function (respuestaRecurso) {
-
-            // console.info(respuestaNodoSocrata.metadata.geo.bbox);
-            console.info(respuestaRecurso);
-            prepararDatos(respuestaRecurso, bbox, isGeojson);
-
-        });// fin peticion 2 
+        //prepararDatos(urlRecurso, bbox, isGeojson)
+        console.info("urlRecurso", urlRecurso);
 
     });// fin peticion 2 
 
 } //finfuncion
-
-
 ```  
 
 !!! Note "Realizamos algunas búsquedas y descomentamos /comentamos consoles"
 
 
 
-#### Paso 3
+#### Paso 5 Obtenr i pintar datos
 
-* descomentamos ```prepararDatos(respuestaRecurso, bbox, isGeojson);``` de la función **obtenerGeoJson**
+* Descomentamos **prepararDatos(urlRecurso, bbox, isGeojson);** de la función obtenerGeoJson
 
-* Creamos las funciones para ver los geojson **prepararDatos y  verMapa** dentro de **socrata.js**
+* Creamos la funcion **prepararDatos** dentro de **socrata.js**  para obtener y/o tranformar los datos a GeoJson
+
+* Creamos la funcions **pintarMapa** dentro de **socrata.js** para añadir los datos al mapa
 
 ```js
-function prepararDatos(respuestaRecurso, bbox, isGeojson) {
+function prepararDatos(urlRecurso, bbox, isGeojson) {
 
+    enviarPeticion(urlRecurso).then(function (respuestaRecurso) {
 
-    if (isGeojson) {
+        if (isGeojson) {
 
-        verMapa(respuestaRecurso, bbox);
+            pintarMapa(respuestaRecurso, bbox);
 
-    } else {
+        } else {
 
-        var geoJSON = {
-            "type": "FeatureCollection",
-            "features": []
-        };
+            var geoJSON = {
+                "type": "FeatureCollection",
+                "features": []
+            };
 
-        for (var i = 0; i < respuestaRecurso.length; i++) {
+            
 
-            if (respuestaRecurso[i].location_1) {
-                geoJSON.features.push(
-                    {
-                        "type": "Feature",
-                        "properties": {},
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                                respuestaRecurso[i].location_1.longitud,
-                                respuestaRecurso[i].location_1.latitude
-                            ]
+            for (var i = 0; i < respuestaRecurso.length; i++) {
+
+                if (respuestaRecurso[i].location_1) {
+                    geoJSON.features.push(
+                        {
+                            "type": "Feature",
+                            "properties": respuestaRecurso[i].location_1,
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    respuestaRecurso[i].location_1.longitud,
+                                    respuestaRecurso[i].location_1.latitude
+                                ]
+                            }
                         }
-                    }
-                );
+                    );
 
 
-            } else if (respuestaRecurso[i].location) {
-                geoJSON.features.push(
-                    {
-                        "type": "Feature",
-                        "properties": {},
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                                respuestaRecurso[i].location.longitude,
-                                respuestaRecurso[i].location.latitude
-                            ]
+                } else if (respuestaRecurso[i].location) {
+                    geoJSON.features.push(
+                        {
+                            "type": "Feature",
+                            "properties": respuestaRecurso[i].location,
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    respuestaRecurso[i].location.longitude,
+                                    respuestaRecurso[i].location.latitude
+                                ]
+                            }
                         }
-                    }
-                );
+                    );
 
 
-            } else {
-                geoJSON.features.push(
-                    {
-                        "type": "Feature",
-                        "properties": {},
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [
-                                0,
-                                0
-                            ]
+                } else {
+                    geoJSON.features.push(
+                        {
+                            "type": "Feature",
+                            "properties": {},
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    0,
+                                    0
+                                ]
+                            }
                         }
-                    }
-                );
-            }
+                    );
+                }
 
 
-        } //fin for
+            } //fin for
 
 
-        var newBBOx = geoJSON.features[0].geometry.coordinates[0] + "," +
-            geoJSON.features[0].geometry.coordinates[1] + "," +
-            geoJSON.features[geoJSON.features.length - 1].geometry.coordinates[0] + "," +
-            geoJSON.features[geoJSON.features.length - 1].geometry.coordinates[1];
+            var newBBOx = geoJSON.features[0].geometry.coordinates[0] + "," +
+                geoJSON.features[0].geometry.coordinates[1] + "," +
+                geoJSON.features[geoJSON.features.length - 1].geometry.coordinates[0] + "," +
+                geoJSON.features[geoJSON.features.length - 1].geometry.coordinates[1];
 
-        verMapa(geoJSON, newBBOx);
+            pintarMapa(geoJSON, newBBOx);
 
-    } //fin else
+        } //fin else
 
-
+    }) //fin peticion
 }
+```
 
-
-
-function verMapa(geoJSON, bbox) {
+```js
+function pintarMapa(geoJSON, bbox) {
 
     var tipoGeometria = geoJSON.features[0].geometry.type;
 
@@ -521,7 +546,7 @@ function verMapa(geoJSON, bbox) {
 
     map.fitBounds([[bounds[0], bounds[1]], [bounds[2], bounds[3]]]);
 
-        //addPopupToMap("socrata");
+      
 
 }
 
@@ -529,7 +554,14 @@ function verMapa(geoJSON, bbox) {
 
 !!! success "Buscamos datos"
 
-!!! success "descomentamos ```addPopupToMap("socrata")```"
+!!! question "Podrímos aprovecha la funció de info ```addPopupToMap("socrata")```"
+
+```
+ map.on("load", function(){
+
+    addPopupToMap("socrata");
+});
+```
 
 ![alt text](img/socrata.png "socrata.png")
 
