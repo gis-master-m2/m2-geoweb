@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://gis-master-m2.github.io/m2-geoweb/introduccion_a_cesium/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.4">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -23,29 +23,33 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bb3983ee.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
         
       
+      
+
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -56,7 +60,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
   
     
     
@@ -83,11 +87,11 @@
     <a href=".." title="Módulo 2 - Mapas y OpenData" class="md-header__button md-logo" aria-label="Módulo 2 - Mapas y OpenData" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -109,7 +113,7 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -117,13 +121,13 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -143,10 +147,10 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/gis-master-m2/m2-geoweb/" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/gis-master-m2/m2-geoweb" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -181,17 +185,17 @@
     <a href=".." title="Módulo 2 - Mapas y OpenData" class="md-nav__button md-logo" aria-label="Módulo 2 - Mapas y OpenData" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     Módulo 2 - Mapas y OpenData
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/gis-master-m2/m2-geoweb/" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/gis-master-m2/m2-geoweb" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -227,7 +231,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -303,7 +307,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -379,7 +383,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -469,7 +473,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -531,7 +535,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -579,7 +583,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
       
       
@@ -655,7 +659,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" data-md-state="indeterminate" type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       
       
@@ -717,7 +721,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" data-md-state="indeterminate" type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
       
       
       
@@ -877,13 +881,16 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-<a href="https://github.com/gis-master-m2/m2-geoweb/edit/master/docs/introduccion_a_cesium.md" title="Editar esta página" class="md-content__button md-icon">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-</a>
+                  
+
+  <a href="https://github.com/gis-master-m2/m2-geoweb/edit/master/docs/introduccion_a_cesium.md" title="Editar esta página" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
 
 
   <h1>Introduccion a cesium</h1>
@@ -948,40 +955,40 @@ Cesium destaca por haber creado de forma abierta las especificaciones de :
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index,follow&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cesiumjs.org/releases/1.65/Build/Cesium/Cesium.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cesiumjs.org/releases/1.65/Build/Cesium/Widgets/widgets.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-        <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
-            <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-            <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="p">#</span><span class="nn">map</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-        <span class="nt">body</span> <span class="p">{</span>
-            <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-        <span class="kd">function</span> <span class="nx">Init</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Ion</span><span class="p">.</span><span class="nx">defaultAccessToken</span> <span class="o">=</span> <span class="s1">&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2ZjVkZDdjMC0zNWNjLTRkMTktODM0YS1lNzVkYjQwNWQzNmEiLCJpZCI6NDMyLCJpYXQiOjE1MjUyNDI1NDR9.gnm-s8YmqoAXwQTr-dT-CCQkGxe5jk_8b6xFUd1VxgY&#39;</span><span class="p">;</span>
-            <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Viewer</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">Init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Ion</span><span class="p">.</span><span class="nx">defaultAccessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2ZjVkZDdjMC0zNWNjLTRkMTktODM0YS1lNzVkYjQwNWQzNmEiLCJpZCI6NDMyLCJpYXQiOjE1MjUyNDI1NDR9.gnm-s8YmqoAXwQTr-dT-CCQkGxe5jk_8b6xFUd1VxgY&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Viewer</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">);</span><span class="w"></span>
 
-            <span class="c1">//add Properties</span>
+<span class="w">            </span><span class="c1">//add Properties</span><span class="w"></span>
 
-            <span class="cm">/*</span>
+<span class="w">            </span><span class="cm">/*</span>
 <span class="cm">             map.camera.flyTo({</span>
 <span class="cm">                destination : Cesium.Cartesian3.fromDegrees( 2.1806,41.4003, 15000)</span>
 <span class="cm">            });</span>
 
-<span class="cm">             */</span>
-        <span class="p">};</span>
-    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="cm">             */</span><span class="w"></span>
+<span class="w">        </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;Init()&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -1003,59 +1010,59 @@ Cesium destaca por haber creado de forma abierta las especificaciones de :
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index,follow&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cesiumjs.org/releases/1.65/Build/Cesium/Cesium.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cesiumjs.org/releases/1.65/Build/Cesium/Widgets/widgets.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-        <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
-            <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-            <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="p">#</span><span class="nn">map</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-        <span class="nt">body</span> <span class="p">{</span>
-            <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-        <span class="kd">function</span> <span class="nx">Init</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Ion</span><span class="p">.</span><span class="nx">defaultAccessToken</span> <span class="o">=</span>
-                <span class="s1">&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2ZjVkZDdjMC0zNWNjLTRkMTktODM0YS1lNzVkYjQwNWQzNmEiLCJpZCI6NDMyLCJpYXQiOjE1MjUyNDI1NDR9.gnm-s8YmqoAXwQTr-dT-CCQkGxe5jk_8b6xFUd1VxgY&#39;</span><span class="p">;</span>
-            <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Viewer</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">,</span> <span class="p">{</span>
+<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">Init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Ion</span><span class="p">.</span><span class="nx">defaultAccessToken</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2ZjVkZDdjMC0zNWNjLTRkMTktODM0YS1lNzVkYjQwNWQzNmEiLCJpZCI6NDMyLCJpYXQiOjE1MjUyNDI1NDR9.gnm-s8YmqoAXwQTr-dT-CCQkGxe5jk_8b6xFUd1VxgY&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Viewer</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-                <span class="nx">imageryProvider</span><span class="o">:</span> <span class="ow">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">ArcGisMapServerImageryProvider</span><span class="p">({</span>
-                    <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;//services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/&#39;</span><span class="p">,</span>
-                <span class="p">}),</span>
+<span class="w">                </span><span class="nx">imageryProvider</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">ArcGisMapServerImageryProvider</span><span class="p">({</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;//services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="p">}),</span><span class="w"></span>
 
-                <span class="nx">timeline</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">navigationHelpButton</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">scene3DOnly</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">fullscreenButton</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">baseLayerPicker</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">homeButton</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">infoBox</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">sceneModePicker</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">animation</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">geocoder</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">sceneMode</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">SceneMode</span><span class="p">.</span><span class="nx">SCENE3D</span><span class="p">,</span>
-                <span class="nx">terrainProvider</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">createWorldTerrain</span><span class="p">()</span>
+<span class="w">                </span><span class="nx">timeline</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">navigationHelpButton</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">scene3DOnly</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">fullscreenButton</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">baseLayerPicker</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">homeButton</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">infoBox</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">sceneModePicker</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">animation</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">geocoder</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">sceneMode</span><span class="o">:</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">SceneMode</span><span class="p">.</span><span class="nx">SCENE3D</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">terrainProvider</span><span class="o">:</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">createWorldTerrain</span><span class="p">()</span><span class="w"></span>
 
-            <span class="p">});</span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
 
 
-            <span class="nx">map</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">flyTo</span><span class="p">({</span>
-                <span class="nx">destination</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Cartesian3</span><span class="p">.</span><span class="nx">fromDegrees</span><span class="p">(</span><span class="mf">2.1806</span><span class="p">,</span> <span class="mf">41.4003</span><span class="p">,</span> <span class="mf">15000</span><span class="p">),</span>
-                <span class="nx">orientation</span><span class="o">:</span> <span class="p">{</span>
-                    <span class="nx">pitch</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nb">Math</span><span class="p">.</span><span class="nx">toRadians</span><span class="p">(</span><span class="o">-</span><span class="mf">45.0</span><span class="p">)</span>
-                <span class="p">},</span>
-            <span class="p">});</span>
-        <span class="p">};</span>
-    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">flyTo</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">destination</span><span class="o">:</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Cartesian3</span><span class="p">.</span><span class="nx">fromDegrees</span><span class="p">(</span><span class="mf">2.1806</span><span class="p">,</span><span class="w"> </span><span class="mf">41.4003</span><span class="p">,</span><span class="w"> </span><span class="mf">15000</span><span class="p">),</span><span class="w"></span>
+<span class="w">                </span><span class="nx">orientation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">pitch</span><span class="o">:</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nb">Math</span><span class="p">.</span><span class="nx">toRadians</span><span class="p">(</span><span class="o">-</span><span class="mf">45.0</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+<span class="w">        </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;Init()&quot;</span><span class="p">&gt;</span>
@@ -1079,63 +1086,63 @@ Cesium destaca por haber creado de forma abierta las especificaciones de :
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index,follow&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cesiumjs.org/releases/1.65/Build/Cesium/Cesium.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cesiumjs.org/releases/1.65/Build/Cesium/Widgets/widgets.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-        <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
-            <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-            <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="p">#</span><span class="nn">map</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-        <span class="nt">body</span> <span class="p">{</span>
-            <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-        <span class="kd">function</span> <span class="nx">Init</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Ion</span><span class="p">.</span><span class="nx">defaultAccessToken</span> <span class="o">=</span>
-                <span class="s1">&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2ZjVkZDdjMC0zNWNjLTRkMTktODM0YS1lNzVkYjQwNWQzNmEiLCJpZCI6NDMyLCJpYXQiOjE1MjUyNDI1NDR9.gnm-s8YmqoAXwQTr-dT-CCQkGxe5jk_8b6xFUd1VxgY&#39;</span><span class="p">;</span>
-            <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Viewer</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">,</span> <span class="p">{</span>
+<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">Init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Ion</span><span class="p">.</span><span class="nx">defaultAccessToken</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2ZjVkZDdjMC0zNWNjLTRkMTktODM0YS1lNzVkYjQwNWQzNmEiLCJpZCI6NDMyLCJpYXQiOjE1MjUyNDI1NDR9.gnm-s8YmqoAXwQTr-dT-CCQkGxe5jk_8b6xFUd1VxgY&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Viewer</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-                <span class="nx">imageryProvider</span><span class="o">:</span> <span class="ow">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">ArcGisMapServerImageryProvider</span><span class="p">({</span>
-                    <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;//services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/&#39;</span><span class="p">,</span>
-                <span class="p">}),</span>
+<span class="w">                </span><span class="nx">imageryProvider</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">ArcGisMapServerImageryProvider</span><span class="p">({</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;//services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="p">}),</span><span class="w"></span>
 
-                <span class="nx">timeline</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">navigationHelpButton</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">scene3DOnly</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">fullscreenButton</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">baseLayerPicker</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">homeButton</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">infoBox</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">sceneModePicker</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">animation</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">geocoder</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">sceneMode</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">SceneMode</span><span class="p">.</span><span class="nx">SCENE3D</span><span class="p">,</span>
-                <span class="nx">terrainProvider</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">createWorldTerrain</span><span class="p">()</span>
+<span class="w">                </span><span class="nx">timeline</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">navigationHelpButton</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">scene3DOnly</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">fullscreenButton</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">baseLayerPicker</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">homeButton</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">infoBox</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">sceneModePicker</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">animation</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">geocoder</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">sceneMode</span><span class="o">:</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">SceneMode</span><span class="p">.</span><span class="nx">SCENE3D</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">terrainProvider</span><span class="o">:</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">createWorldTerrain</span><span class="p">()</span><span class="w"></span>
 
-            <span class="p">});</span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
 
-            <span class="nx">GPX_lyr</span> <span class="o">=</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">GeoJsonDataSource</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">&#39;datos/ruta.geojson&#39;</span><span class="p">,</span> <span class="p">{</span>
-                <span class="nx">stroke</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Color</span><span class="p">.</span><span class="nx">RED</span><span class="p">,</span>
-                <span class="nx">strokeWidth</span><span class="o">:</span> <span class="mf">3</span><span class="p">,</span>
-                <span class="nx">clampToGround</span><span class="o">:</span> <span class="kc">true</span>
-            <span class="p">});</span>
+<span class="w">            </span><span class="nx">GPX_lyr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">GeoJsonDataSource</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">&#39;datos/ruta.geojson&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nx">stroke</span><span class="o">:</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Color</span><span class="p">.</span><span class="nx">RED</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">strokeWidth</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">clampToGround</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
 
-            <span class="nx">GPX_lyr</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">dataSource</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">map</span><span class="p">.</span><span class="nx">dataSources</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">dataSource</span><span class="p">);</span>
-                <span class="nx">map</span><span class="p">.</span><span class="nx">flyTo</span><span class="p">(</span><span class="nx">dataSource</span><span class="p">);</span>
-            <span class="p">});</span>
+<span class="w">            </span><span class="nx">GPX_lyr</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">dataSource</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nx">map</span><span class="p">.</span><span class="nx">dataSources</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">dataSource</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="nx">map</span><span class="p">.</span><span class="nx">flyTo</span><span class="p">(</span><span class="nx">dataSource</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
 
-        <span class="p">};</span>
-    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;Init()&quot;</span><span class="p">&gt;</span>
@@ -1159,35 +1166,35 @@ Cesium destaca por haber creado de forma abierta las especificaciones de :
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index,follow&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cesiumjs.org/releases/1.65/Build/Cesium/Cesium.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cesiumjs.org/releases/1.65/Build/Cesium/Widgets/widgets.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-        <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
-            <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-            <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="p">#</span><span class="nn">map</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-        <span class="nt">body</span> <span class="p">{</span>
-            <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-        <span class="kd">function</span> <span class="nx">Init</span><span class="p">()</span> <span class="p">{</span>
-
-
-            <span class="kd">var</span> <span class="nx">imageReference</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">UrlTemplateImageryProvider</span><span class="p">({</span>
-                <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://api.mapbox.com/styles/v1/gismasterm2/cjqg9p2lm00442rqm4vlk89rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span>
-            <span class="p">});</span>
+<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">Init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
 
-            <span class="cm">/*</span>
+<span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">imageReference</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">UrlTemplateImageryProvider</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://api.mapbox.com/styles/v1/gismasterm2/cjqg9p2lm00442rqm4vlk89rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+
+
+<span class="w">            </span><span class="cm">/*</span>
 <span class="cm">                var imageReference=new Cesium.createOpenStreetMapImageryProvider({</span>
 <span class="cm">                url: &#39;https://geoserveis.icgc.cat/icc_mapesmultibase/noutm/wmts/orto/GRID3857/&#39;,</span>
 <span class="cm">                fileExtension: &#39;jpeg&#39;,</span>
@@ -1195,37 +1202,37 @@ Cesium destaca por haber creado de forma abierta las especificaciones de :
 <span class="cm">                credit: &#39;Institut Cartogràfic i Geològic de Catalunya&#39;</span>
 <span class="cm">                });</span>
 
-<span class="cm">            */</span>
+<span class="cm">            */</span><span class="w"></span>
 
-            <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Ion</span><span class="p">.</span><span class="nx">defaultAccessToken</span> <span class="o">=</span>
-                <span class="s1">&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2ZjVkZDdjMC0zNWNjLTRkMTktODM0YS1lNzVkYjQwNWQzNmEiLCJpZCI6NDMyLCJpYXQiOjE1MjUyNDI1NDR9.gnm-s8YmqoAXwQTr-dT-CCQkGxe5jk_8b6xFUd1VxgY&#39;</span><span class="p">;</span>
-            <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Viewer</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">,</span> <span class="p">{</span>
+<span class="w">            </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Ion</span><span class="p">.</span><span class="nx">defaultAccessToken</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2ZjVkZDdjMC0zNWNjLTRkMTktODM0YS1lNzVkYjQwNWQzNmEiLCJpZCI6NDMyLCJpYXQiOjE1MjUyNDI1NDR9.gnm-s8YmqoAXwQTr-dT-CCQkGxe5jk_8b6xFUd1VxgY&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Viewer</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-                <span class="nx">imageryProvider</span><span class="o">:</span> <span class="nx">imageReference</span><span class="p">,</span>
-                <span class="nx">timeline</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">navigationHelpButton</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">scene3DOnly</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">fullscreenButton</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">baseLayerPicker</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">homeButton</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">infoBox</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">sceneModePicker</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">animation</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">geocoder</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">sceneMode</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">SceneMode</span><span class="p">.</span><span class="nx">SCENE3D</span><span class="p">,</span>
-                <span class="nx">terrainProvider</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">createWorldTerrain</span><span class="p">()</span>
+<span class="w">                </span><span class="nx">imageryProvider</span><span class="o">:</span><span class="w"> </span><span class="nx">imageReference</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">timeline</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">navigationHelpButton</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">scene3DOnly</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">fullscreenButton</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">baseLayerPicker</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">homeButton</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">infoBox</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">sceneModePicker</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">animation</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">geocoder</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">sceneMode</span><span class="o">:</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">SceneMode</span><span class="p">.</span><span class="nx">SCENE3D</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">terrainProvider</span><span class="o">:</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">createWorldTerrain</span><span class="p">()</span><span class="w"></span>
 
-            <span class="p">});</span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
 
 
-            <span class="nx">map</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">flyTo</span><span class="p">({</span>
-                <span class="nx">destination</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Cartesian3</span><span class="p">.</span><span class="nx">fromDegrees</span><span class="p">(</span><span class="mf">2.1806</span><span class="p">,</span> <span class="mf">41.4003</span><span class="p">,</span> <span class="mf">15000</span><span class="p">),</span>
-                <span class="nx">orientation</span><span class="o">:</span> <span class="p">{</span>
-                    <span class="nx">pitch</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nb">Math</span><span class="p">.</span><span class="nx">toRadians</span><span class="p">(</span><span class="o">-</span><span class="mf">45.0</span><span class="p">)</span>
-                <span class="p">},</span>
-            <span class="p">});</span>
-        <span class="p">};</span>
-    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">flyTo</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">destination</span><span class="o">:</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Cartesian3</span><span class="p">.</span><span class="nx">fromDegrees</span><span class="p">(</span><span class="mf">2.1806</span><span class="p">,</span><span class="w"> </span><span class="mf">41.4003</span><span class="p">,</span><span class="w"> </span><span class="mf">15000</span><span class="p">),</span><span class="w"></span>
+<span class="w">                </span><span class="nx">orientation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">pitch</span><span class="o">:</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nb">Math</span><span class="p">.</span><span class="nx">toRadians</span><span class="p">(</span><span class="o">-</span><span class="mf">45.0</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+<span class="w">        </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;Init()&quot;</span><span class="p">&gt;</span>
@@ -1249,142 +1256,142 @@ Cesium destaca por haber creado de forma abierta las especificaciones de :
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cesiumjs.org/releases/1.65/Build/Cesium/Cesium.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cesiumjs.org/releases/1.65/Build/Cesium/Widgets/widgets.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-        <span class="p">#</span><span class="nn">map</span> <span class="p">{</span>
-            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
-            <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-            <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="p">#</span><span class="nn">map</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-        <span class="nt">body</span> <span class="p">{</span>
-            <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-        <span class="p">}</span>
-
-
-        <span class="nt">html</span> <span class="p">{</span>
-            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-        <span class="p">}</span>
-
-        <span class="p">#</span><span class="nn">capas</span> <span class="p">{</span>
-            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
-            <span class="k">top</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
-            <span class="k">left</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
-            <span class="k">z-index</span><span class="p">:</span> <span class="mi">1000</span><span class="p">;</span>
-            <span class="k">width</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
-            <span class="k">height</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
-
-            <span class="k">background-color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
-        <span class="p">}</span>
-
-        <span class="nt">li</span> <span class="p">{</span>
-            <span class="k">list-style-type</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-        <span class="p">}</span>
-
-        <span class="nt">ul</span> <span class="p">{</span>
-            <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span> <span class="cp">!important</span>
-        <span class="p">}</span>
-    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-        <span class="kd">function</span> <span class="nx">Init</span><span class="p">()</span> <span class="p">{</span>
+<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
 
-            <span class="kd">var</span> <span class="nx">imageReference</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">UrlTemplateImageryProvider</span><span class="p">({</span>
-                <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://api.mapbox.com/styles/v1/gismasterm2/cjqg9p2lm00442rqm4vlk89rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span>
-            <span class="p">});</span>
+<span class="w">        </span><span class="nt">html</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">#</span><span class="nn">capas</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">z-index</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="nt">li</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">list-style-type</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="nt">ul</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="cp">!important</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">Init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
 
-            <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Ion</span><span class="p">.</span><span class="nx">defaultAccessToken</span> <span class="o">=</span>
-                <span class="s1">&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2ZjVkZDdjMC0zNWNjLTRkMTktODM0YS1lNzVkYjQwNWQzNmEiLCJpZCI6NDMyLCJpYXQiOjE1MjUyNDI1NDR9.gnm-s8YmqoAXwQTr-dT-CCQkGxe5jk_8b6xFUd1VxgY&#39;</span><span class="p">;</span>
-            <span class="nx">map</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Viewer</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">,</span> <span class="p">{</span>
-
-                <span class="nx">imageryProvider</span><span class="o">:</span> <span class="nx">imageReference</span><span class="p">,</span>
-                <span class="nx">timeline</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">navigationHelpButton</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">scene3DOnly</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">fullscreenButton</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">baseLayerPicker</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">homeButton</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">infoBox</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-                <span class="nx">sceneModePicker</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">animation</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">geocoder</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">sceneMode</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">SceneMode</span><span class="p">.</span><span class="nx">SCENE3D</span><span class="p">,</span>
-                <span class="nx">terrainProvider</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">createWorldTerrain</span><span class="p">()</span>
-
-            <span class="p">});</span>
+<span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">imageReference</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">UrlTemplateImageryProvider</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://api.mapbox.com/styles/v1/gismasterm2/cjqg9p2lm00442rqm4vlk89rt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
 
 
-            <span class="nx">map</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">flyTo</span><span class="p">({</span>
-                <span class="nx">destination</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Cartesian3</span><span class="p">.</span><span class="nx">fromDegrees</span><span class="p">(</span><span class="mf">2.1806</span><span class="p">,</span> <span class="mf">41.4003</span><span class="p">,</span> <span class="mf">15000</span><span class="p">),</span>
-                <span class="nx">orientation</span><span class="o">:</span> <span class="p">{</span>
-                    <span class="nx">pitch</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nb">Math</span><span class="p">.</span><span class="nx">toRadians</span><span class="p">(</span><span class="o">-</span><span class="mf">45.0</span><span class="p">)</span>
-                <span class="p">},</span>
-            <span class="p">});</span>
+<span class="w">            </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Ion</span><span class="p">.</span><span class="nx">defaultAccessToken</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2ZjVkZDdjMC0zNWNjLTRkMTktODM0YS1lNzVkYjQwNWQzNmEiLCJpZCI6NDMyLCJpYXQiOjE1MjUyNDI1NDR9.gnm-s8YmqoAXwQTr-dT-CCQkGxe5jk_8b6xFUd1VxgY&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Viewer</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">                </span><span class="nx">imageryProvider</span><span class="o">:</span><span class="w"> </span><span class="nx">imageReference</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">timeline</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">navigationHelpButton</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">scene3DOnly</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">fullscreenButton</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">baseLayerPicker</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">homeButton</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">infoBox</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">sceneModePicker</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">animation</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">geocoder</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">sceneMode</span><span class="o">:</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">SceneMode</span><span class="p">.</span><span class="nx">SCENE3D</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">terrainProvider</span><span class="o">:</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">createWorldTerrain</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
 
 
-            <span class="kd">var</span> <span class="nx">overlay</span> <span class="o">=</span> <span class="nx">map</span><span class="p">.</span><span class="nx">imageryLayers</span><span class="p">;</span>
-
-<span class="kd">var</span> <span class="nx">ortoICGC</span> <span class="o">=</span> <span class="nx">overlay</span><span class="p">.</span><span class="nx">addImageryProvider</span><span class="p">(</span><span class="ow">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">createOpenStreetMapImageryProvider</span><span class="p">({</span>
-<span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://geoserveis.icgc.cat/icc_mapesmultibase/noutm/wmts/orto/GRID3857/&#39;</span><span class="p">,</span>
-<span class="nx">fileExtension</span><span class="o">:</span> <span class="s1">&#39;jpeg&#39;</span><span class="p">,</span>
-<span class="nx">maximumLevel</span><span class="o">:</span> <span class="mf">19</span><span class="p">,</span>
-<span class="nx">credit</span><span class="o">:</span> <span class="s1">&#39;Institut Cartogràfic i Geològic de Catalunya&#39;</span>
-<span class="p">}));</span>
-<span class="nx">ortoICGC</span><span class="p">.</span><span class="nx">show</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-
-<span class="kd">var</span> <span class="nx">topoICGC</span> <span class="o">=</span> <span class="nx">overlay</span><span class="p">.</span><span class="nx">addImageryProvider</span><span class="p">(</span><span class="ow">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">createOpenStreetMapImageryProvider</span><span class="p">({</span>
-<span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://geoserveis.icgc.cat/icc_mapesmultibase/noutm/wmts/topo/GRID3857/&#39;</span><span class="p">,</span>
-<span class="nx">fileExtension</span><span class="o">:</span> <span class="s1">&#39;jpeg&#39;</span><span class="p">,</span>
-<span class="nx">maximumLevel</span><span class="o">:</span> <span class="mf">19</span><span class="p">,</span>
-<span class="nx">credit</span><span class="o">:</span> <span class="s1">&#39;Institut Cartogràfic i Geològic de Catalunya&#39;</span>
-<span class="p">}));</span>
-<span class="nx">topoICGC</span><span class="p">.</span><span class="nx">show</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-
-<span class="kd">var</span> <span class="nx">topo2ICGC</span> <span class="o">=</span> <span class="nx">overlay</span><span class="p">.</span><span class="nx">addImageryProvider</span><span class="p">(</span><span class="ow">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">createOpenStreetMapImageryProvider</span><span class="p">({</span>
-<span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://tilemaps.icgc.cat/mapfactory/wmts/topo_suau/CAT3857/&#39;</span><span class="p">,</span>
-<span class="nx">fileExtension</span><span class="o">:</span> <span class="s1">&#39;png&#39;</span><span class="p">,</span>
-<span class="nx">maximumLevel</span><span class="o">:</span> <span class="mf">19</span><span class="p">,</span>
-<span class="nx">credit</span><span class="o">:</span> <span class="s1">&#39;Institut Cartogràfic i Geològic de Catalunya&#39;</span>
-<span class="p">}));</span>
-<span class="nx">topo2ICGC</span><span class="p">.</span><span class="nx">show</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-
-<span class="kd">var</span> <span class="nx">orto46</span> <span class="o">=</span> <span class="nx">overlay</span><span class="p">.</span><span class="nx">addImageryProvider</span><span class="p">(</span><span class="ow">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">createOpenStreetMapImageryProvider</span><span class="p">({</span>
-<span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://tilemaps.icgc.cat/mapfactory/wmts/orto46/CAT3857/&#39;</span><span class="p">,</span>
-<span class="nx">fileExtension</span><span class="o">:</span> <span class="s1">&#39;png&#39;</span><span class="p">,</span>
-<span class="nx">maximumLevel</span><span class="o">:</span> <span class="mf">17</span><span class="p">,</span>
-<span class="nx">credit</span><span class="o">:</span> <span class="s1">&#39;Institut Cartogràfic i Geològic de Catalunya&#39;</span>
-<span class="p">}));</span>
-<span class="nx">orto46</span><span class="p">.</span><span class="nx">show</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-<span class="mf">2</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.chk_capes&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="kd">var</span> <span class="nx">layer</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">val</span><span class="p">();</span>
-<span class="kd">var</span> <span class="nx">estado</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">prop</span><span class="p">(</span><span class="s1">&#39;checked&#39;</span><span class="p">);</span>
-
-<span class="k">if</span> <span class="p">(</span><span class="nx">layer</span> <span class="o">==</span> <span class="s1">&#39;ortoICGC&#39;</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">ortoICGC</span><span class="p">.</span><span class="nx">show</span> <span class="o">=</span> <span class="nx">estado</span><span class="p">;</span>
-<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">layer</span> <span class="o">==</span> <span class="s1">&#39;topoICGC&#39;</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">topoICGC</span><span class="p">.</span><span class="nx">show</span> <span class="o">=</span> <span class="nx">estado</span><span class="p">;</span>
-
-<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">layer</span> <span class="o">==</span> <span class="s1">&#39;topo2ICGC&#39;</span><span class="p">)</span> <span class="p">{</span>
-<span class="nx">topo2ICGC</span><span class="p">.</span><span class="nx">show</span> <span class="o">=</span> <span class="nx">estado</span><span class="p">;</span>
-
-<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">layer</span> <span class="o">==</span> <span class="s1">&#39;orto46&#39;</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">orto46</span><span class="p">.</span><span class="nx">show</span> <span class="o">=</span> <span class="nx">estado</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="p">});</span> <span class="c1">//fin onclick</span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">flyTo</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">destination</span><span class="o">:</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Cartesian3</span><span class="p">.</span><span class="nx">fromDegrees</span><span class="p">(</span><span class="mf">2.1806</span><span class="p">,</span><span class="w"> </span><span class="mf">41.4003</span><span class="p">,</span><span class="w"> </span><span class="mf">15000</span><span class="p">),</span><span class="w"></span>
+<span class="w">                </span><span class="nx">orientation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">pitch</span><span class="o">:</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nb">Math</span><span class="p">.</span><span class="nx">toRadians</span><span class="p">(</span><span class="o">-</span><span class="mf">45.0</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
 
 
-        <span class="p">};</span>
-    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">overlay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">map</span><span class="p">.</span><span class="nx">imageryLayers</span><span class="p">;</span><span class="w"></span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">ortoICGC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">overlay</span><span class="p">.</span><span class="nx">addImageryProvider</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">createOpenStreetMapImageryProvider</span><span class="p">({</span><span class="w"></span>
+<span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://geoserveis.icgc.cat/icc_mapesmultibase/noutm/wmts/orto/GRID3857/&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="nx">fileExtension</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;jpeg&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="nx">maximumLevel</span><span class="o">:</span><span class="w"> </span><span class="mf">19</span><span class="p">,</span><span class="w"></span>
+<span class="nx">credit</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Institut Cartogràfic i Geològic de Catalunya&#39;</span><span class="w"></span>
+<span class="p">}));</span><span class="w"></span>
+<span class="nx">ortoICGC</span><span class="p">.</span><span class="nx">show</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">topoICGC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">overlay</span><span class="p">.</span><span class="nx">addImageryProvider</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">createOpenStreetMapImageryProvider</span><span class="p">({</span><span class="w"></span>
+<span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://geoserveis.icgc.cat/icc_mapesmultibase/noutm/wmts/topo/GRID3857/&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="nx">fileExtension</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;jpeg&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="nx">maximumLevel</span><span class="o">:</span><span class="w"> </span><span class="mf">19</span><span class="p">,</span><span class="w"></span>
+<span class="nx">credit</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Institut Cartogràfic i Geològic de Catalunya&#39;</span><span class="w"></span>
+<span class="p">}));</span><span class="w"></span>
+<span class="nx">topoICGC</span><span class="p">.</span><span class="nx">show</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">topo2ICGC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">overlay</span><span class="p">.</span><span class="nx">addImageryProvider</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">createOpenStreetMapImageryProvider</span><span class="p">({</span><span class="w"></span>
+<span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://tilemaps.icgc.cat/mapfactory/wmts/topo_suau/CAT3857/&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="nx">fileExtension</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;png&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="nx">maximumLevel</span><span class="o">:</span><span class="w"> </span><span class="mf">19</span><span class="p">,</span><span class="w"></span>
+<span class="nx">credit</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Institut Cartogràfic i Geològic de Catalunya&#39;</span><span class="w"></span>
+<span class="p">}));</span><span class="w"></span>
+<span class="nx">topo2ICGC</span><span class="p">.</span><span class="nx">show</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">orto46</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">overlay</span><span class="p">.</span><span class="nx">addImageryProvider</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">Cesium</span><span class="p">.</span><span class="nx">createOpenStreetMapImageryProvider</span><span class="p">({</span><span class="w"></span>
+<span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://tilemaps.icgc.cat/mapfactory/wmts/orto46/CAT3857/&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="nx">fileExtension</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;png&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="nx">maximumLevel</span><span class="o">:</span><span class="w"> </span><span class="mf">17</span><span class="p">,</span><span class="w"></span>
+<span class="nx">credit</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Institut Cartogràfic i Geològic de Catalunya&#39;</span><span class="w"></span>
+<span class="p">}));</span><span class="w"></span>
+<span class="nx">orto46</span><span class="p">.</span><span class="nx">show</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
+<span class="mf">2</span><span class="w"></span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.chk_capes&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">val</span><span class="p">();</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">estado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">prop</span><span class="p">(</span><span class="s1">&#39;checked&#39;</span><span class="p">);</span><span class="w"></span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">layer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;ortoICGC&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">ortoICGC</span><span class="p">.</span><span class="nx">show</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">estado</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">layer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;topoICGC&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">topoICGC</span><span class="p">.</span><span class="nx">show</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">estado</span><span class="p">;</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">layer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;topo2ICGC&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="nx">topo2ICGC</span><span class="p">.</span><span class="nx">show</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">estado</span><span class="p">;</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">layer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;orto46&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">orto46</span><span class="p">.</span><span class="nx">show</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">estado</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="p">});</span><span class="w"> </span><span class="c1">//fin onclick</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;Init()&quot;</span><span class="p">&gt;</span>
@@ -1411,9 +1418,15 @@ Cesium destaca por haber creado de forma abierta las especificaciones de :
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 
-              
-            </article>
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
@@ -1440,11 +1453,13 @@ Cesium destaca por haber creado de forma abierta las especificaciones de :
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "translations": {"clipboard.copy": "Copiar al portapapeles", "clipboard.copied": "Copiado al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}, "search": "../assets/javascripts/workers/search.361d90f1.min.js"}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.289a2a4b.min.js"></script>
+      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
       
+    
     
   </body>
 </html>

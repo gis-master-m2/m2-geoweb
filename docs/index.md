@@ -1,42 +1,52 @@
-### Mapas y OpenData, Localización, Visualización y Análisis de GeoDatos
+### Mapas y Opendata: programación, organización y análisis de geodatos
 
-Materiales para el módulo 2: Mapas y OpenData, Localización, Visualización y Análisis de GeoDatos
+Materiales para el módulo 2: Mapas y Opendata: programación, organización y análisis de geodatos
 
 #### Guía rápida de recursos, fechas y entregas:
 [Guía rápida M2B](presentacion/guiarapida.pdf){target=_blank}
 
 #### Temario
 
-* Sesión 1 (Videos 1, 2, 3 y 4)
-  * [1. Introducción a la GeoWeb](introduccion_a_las_tecnologias_geoweb)
-  * [2. La Plataforma GitHub y órdenes básicas Git.](introduccion_github)
-  * [3. Mi primer proyecto en GitHub](taller_github)
-* Sesión 2 (Asíncrona videos 4, 5 y 7)
-  * [4. Introduccion a Leaflet](introduccion_a_leaflet)
-  * [5. Plugins Leaflet](plugins_leaflet)
-  * [6. Buscador de Farmacias con Leaflet](farmacias_leaflet)
-* Sesión 3  
-  * [7. Introducción a Vector-Tiles y Mapbox Styles](introduccion_a_vector_tiles)
-  * [8. MapBox Studio y MapBox GL JS](introduccion_a_mapbox)
-  * [9. Práctica Cementerio](practica_cementerio)
-  * [10. Visor edificios Catastro](visor_catastro)
-* Sesión 4
-  * [11. Introducción Mapas 3D](introduccion_mapas_3d)
-  * [12. Visor de rutas](visor_rutas)
-* Sesión 5 (Asíncrona videos 8 y 9)
-  * [13. StoryTelling](storytelling)
-* Sesión 6
-  * [14. Mapas personalizados con Maputnik y MapBox GL JS](introduccion_maputnik)
-  * [15. MapBox GL JS con recursos externos](mapbox_avanzado)
-  * [16. Visor de terremotos](mapbox_avanzado)
-* Sesión 7 
-  * [17. Mallas discretas y algoritmos en JS](mallas_discretas_algoritmos)
-  * [18. Visualización y publicación con Kepler GL](visualizacion_con_kepler_gl)
-* Sesión 8 (Asíncrona videos 10, 11 y 12)
-  * [19. Recursos OpenData](recursos_open_data)
-  * [20. Publicación en Medium](taller_medium) 
- 
-* [Preguntas Frecuentes](faq)
+* Sesión 1 (11 Enero - Presencial - videos 1, 2, 3 y 4)
+  * [1.1. Introducción a las tecnologías GeoWeb](1.1.Introduccion_a_las_tecnologias_geoweb)
+  * [1.2. La Plataforma GitHub y órdenes básicas Git.](1.2.Introduccion_github)
+  * [1.3. Mi primer proyecto en GitHub](1.3.proyecto_github)
+  * [1.4. Introducción a Visual Studio Code](1.4.introduccion_vscode)
+* Sesión 2 (16 Enero - Síncrona on-line)
+  * [2.1. Introducción a Vector-Tiles y Mapbox Styles](2.1.introduccion_a_vector_tiles)
+  * [2.2. Plataformas de mapas, ejemplo Mapbox](2.2.introduccion_a_mapbox_studio)
+  * [2.3. Tecnologías JavaScript](2.3.tecnologias_javascript)
+* Sesión 3 (18 Enero - Presencial)
+  * [3.1. Librerias de mapas, ejemplo Mapox GL JS](3.1.introduccion_a_mapbox_gs_js)
+  * [3.2. Mi primer mapa global](3.2.mapa_global)
+  * [3.3. Visor catastro](3.3.visor_catastro)
+* Sesión 4 (20 Enero - Asíncrona grabada - videos 5, 6)  
+  * [4.1. StoryTelling](4.1.storytelling) 
+* Sesión 5 (23 Enero - Síncrona on-line)
+  * [5.1. Introducción Mapas 3D](5.1.introduccion_mapas_3d)
+  * [5.2. Formato GeoJson](5.2.formato_geojson)
+  * [5.3. Visor de rutas](5.3.visor_rutas)
+* Sesión 6 (25 Enero - Presencial)
+  * [6.1. Mapas personalizados con Maputnik y MapBox GL JS](6.1.introduccion_maputnik)
+  * [6.2. Servicios web Geonames -Terremotos](6.2.visor_terremotos)
+* Sesión 7 (30 Enero - Asíncrona grabada - videos 7, 8, 9)  
+  * [7.1. Mallas discretas y algoritmos en JS](7.1.mallas_discretas_algoritmos)
+  * [7.2. Visualización y publicación con Kepler GL](7.2.visualizacion_con_kepler_gl)
+* Sesión 8 (1 Febrero - Presencial - video 10)
+  * [8.1. Turf JS](8.1.turfjs)
+  * [8.2. Visor de farmacias](8.2.visor_farmacias)
+* Sesión 9 (3 Febrero - Asíncrona grabada - videos 11, 12)  
+  * [9.1. Progressive web applications](9.1.pwa) 
+  * [9.2. Mi primera PWA](9.2.primera_pwa)   
+* Sesión 10 (6 Febrero - Síncrona on-line)
+  * [10.1. Tecnologia serverless](10.1.serverless)
+  * [10.2. Formato FlatGeoBuf](10.2.flatgeobuf)
+  * [10.3. Visor de piscinas](10.3.piscinometro)
+* Sesión 11 (8 Febrero - Presencial):
+  * [11.1. Recursos OpenData](11.1.recursos_open_data)
+  * [11.2. Taller de Medium](11.2.taller_medium) 
+
+* Preguntas Frecuentes](faq)
 
 
 #### Recursos necesarios (todos los recursos tienen versiones para Windows,Linux y Mac)
