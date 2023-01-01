@@ -1,0 +1,1540 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Mapas y Opendata programación, organización y análisis de geodatos.">
+      
+      
+        <meta name="author" content="geoweb">
+      
+      
+        <link rel="canonical" href="https://gis-master-m2.github.io/m2-geoweb/6.1.introduccion_maputnik/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>6.1.Mapas personalizados con Maputnik y MapBox GL JS - Módulo 2 - Mapas y OpenData</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduccion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Módulo 2 - Mapas y OpenData" class="md-header__button md-logo" aria-label="Módulo 2 - Mapas y OpenData" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Módulo 2 - Mapas y OpenData
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6.1.Mapas personalizados con Maputnik y MapBox GL JS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/gis-master-m2/m2-geoweb" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Módulo 2 - Mapas y OpenData" class="md-nav__button md-logo" aria-label="Módulo 2 - Mapas y OpenData" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Módulo 2 - Mapas y OpenData
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/gis-master-m2/m2-geoweb" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Sesión 1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 1" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.1.Introduccion_a_las_tecnologias_geoweb/" class="md-nav__link">
+        1.1.Introducción a las tecnologías GeoWeb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.2.Introduccion_github/" class="md-nav__link">
+        1.2.La Plataforma GitHub y órdenes básicas Git.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.3.proyecto_github/" class="md-nav__link">
+        1.3.Mi primer proyecto en GitHub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.4.introduccion_vscode/" class="md-nav__link">
+        1.4.Introducción a Visual Studio Code
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Sesión 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 2" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.1.introduccion_a_vector_tiles/" class="md-nav__link">
+        2.1.Introducción a Vector-Tiles y Mapbox Styles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.2.introduccion_a_mapbox_studio/" class="md-nav__link">
+        2.2.Plataformas de mapas, ejemplo Mapbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.3.tecnologias_javascript/" class="md-nav__link">
+        2.3.Tecnologías JavaScript
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Sesión 3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 3" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.1.introduccion_a_mapbox_gs_js/" class="md-nav__link">
+        3.1.Librerias de mapas, ejemplo Mapox GL JS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.2.mapa_global/" class="md-nav__link">
+        3.2.Mi primer mapa global
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.3.visor_catastro/" class="md-nav__link">
+        3.3.Visor catastro
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Sesión 4*
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 4*" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 4*
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.1.storytelling/" class="md-nav__link">
+        4.1.StoryTelling
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Sesión 5
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 5" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 5
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.1.introduccion_mapas_3d/" class="md-nav__link">
+        5.1.Introducción Mapas 3D
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.2.formato_geojson/" class="md-nav__link">
+        5.2.Formato GeoJson
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.3.visor_rutas/" class="md-nav__link">
+        5.3.Visor de rutas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Sesión 6
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 6" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 6
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          6.1.Mapas personalizados con Maputnik y MapBox GL JS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        6.1.Mapas personalizados con Maputnik y MapBox GL JS
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-utilizar-los-servicios-de-mapbox" class="md-nav__link">
+    ¿ Cuando utilizar los servicios de MapBox?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-no-utilizar-los-servicios-de-mapbox" class="md-nav__link">
+    ¿ Cuando NO utilizar los servicios de MapBox?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donde-podemos-encontrar-estilos-vector-tiles" class="md-nav__link">
+    ¿Dónde podemos encontrar estilos vector-tiles?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openicgc" class="md-nav__link">
+    OpenICGC.
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenICGC.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mapa-estilo-icgc" class="md-nav__link">
+    Mapa estilo ICGC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editar-estilo-con-maputnik" class="md-nav__link">
+    Editar estilo con Maputnik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapa-estilo-propio" class="md-nav__link">
+    Mapa estilo propio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-datos-propios-geojson" class="md-nav__link">
+    Añadir datos propios GeoJson
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.2.visor_terremotos/" class="md-nav__link">
+        6.2.Servicios web Geonames -Terremotos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Sesión 7*
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 7*" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 7*
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.1.mallas_discretas_algoritmos/" class="md-nav__link">
+        7.1.Mallas discretas y algoritmos en JS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.2.visualizacion_con_kepler_gl/" class="md-nav__link">
+        7.2.Visualización y publicación con Kepler GL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Sesión 8
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 8" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 8
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8.1.turfjs/" class="md-nav__link">
+        8.1.Turf JS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8.2.visor_farmacias/" class="md-nav__link">
+        8.2.Visor de farmacias
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Sesión 9*
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 9*" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 9*
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9.1.pwa/" class="md-nav__link">
+        9.1.Progressive web applications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9.2.primera_pwa/" class="md-nav__link">
+        9.2.Mi primera PWA
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Sesión 10
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 10" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 10
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10.1.serverless/" class="md-nav__link">
+        10.1.Tecnologia serverless
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10.2.flatgeobuf/" class="md-nav__link">
+        10.2.Formato FlatGeoBuf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10.3.piscinometro/" class="md-nav__link">
+        10.3.Visor de piscinas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
+          Sesión 11
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 11" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 11
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11.1.recursos_open_data/" class="md-nav__link">
+        11.1.Recursos OpenData
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11.2.taller_medium/" class="md-nav__link">
+        11.2.Taller de Medium
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        Preguntas Frecuentes
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-utilizar-los-servicios-de-mapbox" class="md-nav__link">
+    ¿ Cuando utilizar los servicios de MapBox?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuando-no-utilizar-los-servicios-de-mapbox" class="md-nav__link">
+    ¿ Cuando NO utilizar los servicios de MapBox?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donde-podemos-encontrar-estilos-vector-tiles" class="md-nav__link">
+    ¿Dónde podemos encontrar estilos vector-tiles?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openicgc" class="md-nav__link">
+    OpenICGC.
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenICGC.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mapa-estilo-icgc" class="md-nav__link">
+    Mapa estilo ICGC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editar-estilo-con-maputnik" class="md-nav__link">
+    Editar estilo con Maputnik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapa-estilo-propio" class="md-nav__link">
+    Mapa estilo propio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-datos-propios-geojson" class="md-nav__link">
+    Añadir datos propios GeoJson
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/gis-master-m2/m2-geoweb/edit/master/docs/6.1.introduccion_maputnik.md" title="Editar esta página" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>6.1.Mapas personalizados con Maputnik y MapBox GL JS</h1>
+
+<h3 id="introduccion">Introducción</h3>
+<blockquote>
+<p>Podemos trabajar con la libreria MapBox GL JS sin utilizar los estilos de Mapbox</p>
+<p>Si la versión de la libreria és anterior a la v2 tampoco haria falta especificar el Access Token</p>
+<p>Podemos editar estilos sin utilizar MapBox Studio, directamente con Maputnik</p>
+</blockquote>
+<p><img alt="alt text" src="../img/maputnik.png" title="Maputnik" /></p>
+<p><a href="https://maputnik.github.io//" target="_blank">https://maputnik.github.io/</a></p>
+<h4 id="cuando-utilizar-los-servicios-de-mapbox">¿ Cuando utilizar los servicios de MapBox?</h4>
+<ul>
+<li>
+<p>Cuando tenemos un dataset grande.Mapbox nos ofrece hasta 300mb por archivo</p>
+</li>
+<li>
+<p>Cuando necesitamos utilitzar alguno de sus servicios (geocoding, routing) o sus estilos</p>
+</li>
+<li>
+<p>Cuando necesitamos alta disponibilidad</p>
+</li>
+</ul>
+<h4 id="cuando-no-utilizar-los-servicios-de-mapbox">¿ Cuando NO utilizar los servicios de MapBox?</h4>
+<ul>
+<li>Cuando necesito trabajor con cartografia oficial</li>
+<li>Cuando tengo dataset pequeños (&lt; 50.000 geometrias)</li>
+<li>Cuando solo visualizo terceros servicios</li>
+</ul>
+<h4 id="donde-podemos-encontrar-estilos-vector-tiles">¿Dónde podemos encontrar estilos vector-tiles?</h4>
+<ul>
+<li><a href="https://openicgc.github.io/" target="_blank">https://openicgc.github.io/</a></li>
+<li><a href="https://cloud.maptiler.com/maps/" target="_blank">https://cloud.maptiler.com/maps/</a></li>
+<li><a href="https://www.ordnancesurvey.co.uk/business-government/products/open-zoomstack" target="_blank">https://www.ordnancesurvey.co.uk/business-government/products/open-zoomstack</a></li>
+<li><a href="https://www.thunderforest.com/docs/vector-maps-api/" target="_blank">https://www.thunderforest.com/docs/vector-maps-api/</a></li>
+<li>
+<p><a href="https://www.mapzen.com/projects/vector-tiles/" target="_blank">https://www.mapzen.com/projects/vector-tiles/</a></p>
+</li>
+<li>
+<p><a href="https://github.com/klokantech/roman-empire" target="_blank">https://github.com/klokantech/roman-empire</a></p>
+</li>
+</ul>
+<h3 id="openicgc">OpenICGC.</h3>
+<ul>
+<li>
+<p>Es un web con recursos y servicios open del Institut Cartográfic i Geològic de Catalunya</p>
+</li>
+<li>
+<p>Presenta estilos y bases <strong>Vector Tiles</strong> mundiales dónde fusiona datos OSM y del ICGC en un esquema de OpenMapTiles</p>
+</li>
+</ul>
+<blockquote>
+<p><a href="https://openicgc.github.io/" target="_blank">https://openicgc.github.io/</a></p>
+</blockquote>
+<p><img alt="alt text" src="../img/openicgc1.png" title="OpenIcgc" /></p>
+<h4 id="mapa-estilo-icgc">Mapa estilo ICGC</h4>
+<ul>
+<li>
+<p>Seleccionaremos el estilo ICGC de OpenICGC</p>
+</li>
+<li>
+<p><a href="https://geoserveis.icgc.cat/contextmaps/icgc_mapa_base_gris_simplificat.json">https://geoserveis.icgc.cat/contextmaps/icgc_mapa_base_gris_simplificat.json</a></p>
+</li>
+<li>
+<p>Creamos archivo <strong>mapbox-icgc.html</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Topogáfico<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">               </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://geoserveis.icgc.cat/contextmaps/icgc_mapa_base_gris_simplificat.json&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span><span class="w"> </span><span class="mf">41.3954</span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">13</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">hash</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">pitch</span><span class="o">:</span><span class="w"> </span><span class="mf">45</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">attributionControl</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">compact</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;map&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="editar-estilo-con-maputnik">Editar estilo con Maputnik</h4>
+<ul>
+<li>
+<p>Seleccionaremos el estilo gris de OpenICGC</p>
+</li>
+<li>
+<p><a href="https://geoserveis.icgc.cat/contextmaps/icgc_mapa_base_gris_simplificat.json">https://geoserveis.icgc.cat/contextmaps/icgc_mapa_base_gris_simplificat.json</a></p>
+</li>
+<li>
+<p>Vamos al editor de Maputnik <a href="https://maputnik.github.io/editor/">https://maputnik.github.io/editor/</a></p>
+</li>
+<li>
+<p><code>Open</code> --&gt; <code>Load from Url</code> --&gt;Pegamos URL  --&gt; <code>Open URL</code></p>
+</li>
+<li>
+<p>Canviamos colores del estilos de forma libre</p>
+</li>
+<li>
+<p><code>Export</code>--&gt;<code>Download</code>--&gt; Guardamos en <strong>/geoweb/datos/miestilo.json</strong></p>
+</li>
+</ul>
+<h4 id="mapa-estilo-propio">Mapa estilo propio</h4>
+<ul>
+<li>Creamos archivo <strong>mapbox-miestilo2.html</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi estilo<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;datos/miestilo.json&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// o &#39;datos/miestilo.json&#39;</span><span class="w"></span>
+<span class="w">                </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span><span class="w"> </span><span class="mf">41.3954</span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">13</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">hash</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">pitch</span><span class="o">:</span><span class="w"> </span><span class="mf">45</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">attributionControl</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">compact</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;map&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="anadir-datos-propios-geojson">Añadir datos propios GeoJson</h4>
+<div class="admonition note">
+<p class="admonition-title">Para archivos muy grandes no es recomendable</p>
+</div>
+<ul>
+<li>Añadimos un GeoJson local , como un nuevo source</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">GeoJSON<p>Es el constructor principal del mapa <a href="https://docs.mapbox.com/mapbox-gl-js/style-spec/#sources-geojson">https://docs.mapbox.com/mapbox-gl-js/style-spec/#sources-geojson</a></p>
+</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi estilo<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;datos/miestilo.json&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span><span class="w"> </span><span class="mf">41.3954</span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">13</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">hash</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">pitch</span><span class="o">:</span><span class="w"> </span><span class="mf">45</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">attributionControl</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">compact</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">}));</span><span class="w"></span>
+<span class="hll"><span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
+</span><span class="hll">
+</span><span class="hll"><span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</span><span class="hll"><span class="w">                </span><span class="nx">map</span><span class="p">.</span><span class="nx">addSource</span><span class="p">(</span><span class="s2">&quot;carrils-bici&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</span><span class="hll"><span class="w">                    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;geojson&quot;</span><span class="p">,</span><span class="w"></span>
+</span><span class="hll"><span class="w">                    </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;datos/carrils-bici.geojson&quot;</span><span class="w"></span>
+</span><span class="hll"><span class="w">                </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin map source</span><span class="w"></span>
+</span><span class="hll">
+</span><span class="hll"><span class="w">                </span><span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">({</span><span class="w"></span>
+</span><span class="hll"><span class="w">                    </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;carrils-bici-layer&quot;</span><span class="p">,</span><span class="w"></span>
+</span><span class="hll"><span class="w">                    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;line&quot;</span><span class="p">,</span><span class="w"></span>
+</span><span class="hll"><span class="w">                    </span><span class="nx">source</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;carrils-bici&quot;</span><span class="p">,</span><span class="w"></span>
+</span><span class="hll"><span class="w">                    </span><span class="nx">layout</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</span><span class="hll"><span class="w">                        </span><span class="s2">&quot;line-join&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;round&quot;</span><span class="p">,</span><span class="w"></span>
+</span><span class="hll"><span class="w">                        </span><span class="s2">&quot;line-cap&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;round&quot;</span><span class="w"></span>
+</span><span class="hll"><span class="w">                    </span><span class="p">},</span><span class="w"></span>
+</span><span class="hll"><span class="w">                    </span><span class="nx">paint</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</span><span class="hll"><span class="w">                        </span><span class="s2">&quot;line-color&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#FF0000&quot;</span><span class="p">,</span><span class="w"></span>
+</span><span class="hll"><span class="w">                        </span><span class="s2">&quot;line-width&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">8</span><span class="w"></span>
+</span><span class="hll"><span class="w">                    </span><span class="p">}</span><span class="w"></span>
+</span><span class="w">                </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin add layers</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"> </span><span class="c1">//Fin load mapa</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;map&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition question">
+<p class="admonition-title">¿Ponemos la proyección globe?</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Subimos el ejemplo al GitHub</p>
+<div class="highlight"><pre><span></span><code>    git pull
+    git add .
+    git commit -m <span class="s2">&quot;mi mapa bàsico&quot;</span>
+    git push
+</code></pre></div>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pie" >
+      
+        
+        <a href="../5.3.visor_rutas/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 5.3.Visor de rutas" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              5.3.Visor de rutas
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../6.2.visor_terremotos/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 6.2.Servicios web Geonames -Terremotos" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              6.2.Servicios web Geonames -Terremotos
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>

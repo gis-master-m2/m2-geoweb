@@ -1,0 +1,1893 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Mapas y Opendata programación, organización y análisis de geodatos.">
+      
+      
+        <meta name="author" content="geoweb">
+      
+      
+        <link rel="canonical" href="https://gis-master-m2.github.io/m2-geoweb/6.2.visor_terremotos/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>6.2.Servicios web Geonames -Terremotos - Módulo 2 - Mapas y OpenData</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#visualizador-de-terremotos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Módulo 2 - Mapas y OpenData" class="md-header__button md-logo" aria-label="Módulo 2 - Mapas y OpenData" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Módulo 2 - Mapas y OpenData
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6.2.Servicios web Geonames -Terremotos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/gis-master-m2/m2-geoweb" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Módulo 2 - Mapas y OpenData" class="md-nav__button md-logo" aria-label="Módulo 2 - Mapas y OpenData" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Módulo 2 - Mapas y OpenData
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/gis-master-m2/m2-geoweb" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Inicio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Sesión 1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 1" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.1.Introduccion_a_las_tecnologias_geoweb/" class="md-nav__link">
+        1.1.Introducción a las tecnologías GeoWeb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.2.Introduccion_github/" class="md-nav__link">
+        1.2.La Plataforma GitHub y órdenes básicas Git.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.3.proyecto_github/" class="md-nav__link">
+        1.3.Mi primer proyecto en GitHub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.4.introduccion_vscode/" class="md-nav__link">
+        1.4.Introducción a Visual Studio Code
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Sesión 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 2" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.1.introduccion_a_vector_tiles/" class="md-nav__link">
+        2.1.Introducción a Vector-Tiles y Mapbox Styles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.2.introduccion_a_mapbox_studio/" class="md-nav__link">
+        2.2.Plataformas de mapas, ejemplo Mapbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.3.tecnologias_javascript/" class="md-nav__link">
+        2.3.Tecnologías JavaScript
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Sesión 3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 3" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.1.introduccion_a_mapbox_gs_js/" class="md-nav__link">
+        3.1.Librerias de mapas, ejemplo Mapox GL JS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.2.mapa_global/" class="md-nav__link">
+        3.2.Mi primer mapa global
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.3.visor_catastro/" class="md-nav__link">
+        3.3.Visor catastro
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Sesión 4*
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 4*" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 4*
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.1.storytelling/" class="md-nav__link">
+        4.1.StoryTelling
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Sesión 5
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 5" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 5
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.1.introduccion_mapas_3d/" class="md-nav__link">
+        5.1.Introducción Mapas 3D
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.2.formato_geojson/" class="md-nav__link">
+        5.2.Formato GeoJson
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.3.visor_rutas/" class="md-nav__link">
+        5.3.Visor de rutas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Sesión 6
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 6" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 6
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.1.introduccion_maputnik/" class="md-nav__link">
+        6.1.Mapas personalizados con Maputnik y MapBox GL JS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          6.2.Servicios web Geonames -Terremotos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        6.2.Servicios web Geonames -Terremotos
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visualizador-de-terremotos" class="md-nav__link">
+    Visualizador de terremotos
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualizador de terremotos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-servicio-geonames" class="md-nav__link">
+    Paso 1: Servicio GeoNames
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2" class="md-nav__link">
+    Paso 2:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3creamos-archivo-js" class="md-nav__link">
+    Paso 3:Creamos archivo JS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-anadimos-js" class="md-nav__link">
+    Paso 4. Añadimos JS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-5-funcion-generica-get" class="md-nav__link">
+    Paso 5: función genérica GET
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6-convertir-la-respuesta-de-json-geonames-al-formato-geojson" class="md-nav__link">
+    Paso 6 :convertir la respuesta de JSON GeoNames al formato GeoJSON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-61-funcion-terremotosgeonamestogeojson" class="md-nav__link">
+    Paso 6.1 : Función terremotosGeonamesToGeoJSON()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-7-funcion-generarpeticionterremotos" class="md-nav__link">
+    Paso 7 : Función generarPeticionTerremotos()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-8la-funcion-generarpeticionterremotos" class="md-nav__link">
+    Paso 8:La función generarPeticionTerremotos()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-9funcion-para-generar-popups" class="md-nav__link">
+    Paso 9:función para generar popups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-10-llamamos-a-la-funcion-addpopuptomap" class="md-nav__link">
+    Paso 10: Llamamos a la funcion addPopupToMap()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Sesión 7*
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 7*" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 7*
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.1.mallas_discretas_algoritmos/" class="md-nav__link">
+        7.1.Mallas discretas y algoritmos en JS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.2.visualizacion_con_kepler_gl/" class="md-nav__link">
+        7.2.Visualización y publicación con Kepler GL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Sesión 8
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 8" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 8
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8.1.turfjs/" class="md-nav__link">
+        8.1.Turf JS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8.2.visor_farmacias/" class="md-nav__link">
+        8.2.Visor de farmacias
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Sesión 9*
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 9*" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 9*
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9.1.pwa/" class="md-nav__link">
+        9.1.Progressive web applications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9.2.primera_pwa/" class="md-nav__link">
+        9.2.Mi primera PWA
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Sesión 10
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 10" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 10
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10.1.serverless/" class="md-nav__link">
+        10.1.Tecnologia serverless
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10.2.flatgeobuf/" class="md-nav__link">
+        10.2.Formato FlatGeoBuf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10.3.piscinometro/" class="md-nav__link">
+        10.3.Visor de piscinas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
+          Sesión 11
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sesión 11" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Sesión 11
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11.1.recursos_open_data/" class="md-nav__link">
+        11.1.Recursos OpenData
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11.2.taller_medium/" class="md-nav__link">
+        11.2.Taller de Medium
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        Preguntas Frecuentes
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visualizador-de-terremotos" class="md-nav__link">
+    Visualizador de terremotos
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualizador de terremotos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-servicio-geonames" class="md-nav__link">
+    Paso 1: Servicio GeoNames
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2" class="md-nav__link">
+    Paso 2:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3creamos-archivo-js" class="md-nav__link">
+    Paso 3:Creamos archivo JS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-anadimos-js" class="md-nav__link">
+    Paso 4. Añadimos JS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-5-funcion-generica-get" class="md-nav__link">
+    Paso 5: función genérica GET
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6-convertir-la-respuesta-de-json-geonames-al-formato-geojson" class="md-nav__link">
+    Paso 6 :convertir la respuesta de JSON GeoNames al formato GeoJSON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-61-funcion-terremotosgeonamestogeojson" class="md-nav__link">
+    Paso 6.1 : Función terremotosGeonamesToGeoJSON()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-7-funcion-generarpeticionterremotos" class="md-nav__link">
+    Paso 7 : Función generarPeticionTerremotos()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-8la-funcion-generarpeticionterremotos" class="md-nav__link">
+    Paso 8:La función generarPeticionTerremotos()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-9funcion-para-generar-popups" class="md-nav__link">
+    Paso 9:función para generar popups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-10-llamamos-a-la-funcion-addpopuptomap" class="md-nav__link">
+    Paso 10: Llamamos a la funcion addPopupToMap()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/gis-master-m2/m2-geoweb/edit/master/docs/6.2.visor_terremotos.md" title="Editar esta página" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>6.2.Servicios web Geonames -Terremotos</h1>
+
+<h3 id="visualizador-de-terremotos">Visualizador de terremotos</h3>
+<div class="admonition warning">
+<p class="admonition-title">Atencion!!</p>
+<h4>
+<p>Nos han encargado realizar un mapa mundial para visualizar los últimos terremotos acontecidos</p>
+<ul>
+<li>
+<p>Sabemos que GeoNames.org tiene un servicio JSON para interrogar los terremotos</p>
+<p><a href="https://www.geonames.org/" target="_blank">https://www.geonames.org/</a></p>
+</li>
+<li>
+<p>Podemos utilizar el estilo dark de fondo</p>
+<p><a href="mapbox://styles/mapbox/dark-v10">mapbox://styles/mapbox/dark-v10</a> </p>
+</li>
+<li>
+<p>El estilo de Mapbox tiene un tipo "circle" que puedo cambiar de color y tamaño</p>
+<p><a href="https://docs.mapbox.com/mapbox-gl-js/style-spec/#layers-circle" target="_blank">https://docs.mapbox.com/mapbox-gl-js/style-spec/#layers-circle</a> </p>
+</li>
+</ul>
+</h4>
+</div>
+<h4 id="paso-1-servicio-geonames">Paso 1: Servicio GeoNames</h4>
+<ul>
+<li>
+<p><a href="https://www.geonames.org/" target="_blank">Geonames.org</a> Buscamos el servicio de terremotos y cuál es su implementación</p>
+</li>
+<li>
+<p><a href="https://www.geonames.org/export/JSON-webservices.html#earthquakesJSON" target="_blank">https://www.geonames.org/export/JSON-webservices.html#earthquakesJSON</a></p>
+</li>
+</ul>
+<h4 id="paso-2">Paso 2:</h4>
+<ul>
+<li>
+<p>Crearemos el archivo <strong>terremotos.html</strong></p>
+</li>
+<li>
+<p>Añadimos código con mapa base "dark"</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Terremotos<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">9.746</span><span class="p">,</span><span class="w"> </span><span class="mf">40.473</span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">5.5</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">hash</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">pitch</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">attributionControl</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">compact</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w">           </span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="c1">//fin init</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;map&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="paso-3creamos-archivo-js">Paso 3:Creamos archivo JS</h4>
+<ul>
+<li>Dentro de nuestro directorio <strong>/geoweb/js/</strong> creamos el archivo <strong>terremotos.js</strong>, dónde crearemos funciones especificas de nuestro proyect  </li>
+<li>Dentro de nuestro directorio <strong>/geoweb/js/</strong> creamos el archivo <strong>utils.js</strong> , dónde crearemos funciones genéricas que puedan ser reutilizadas    </li>
+</ul>
+<h4 id="paso-4-anadimos-js">Paso 4. Añadimos JS</h4>
+<ul>
+<li>Añadimos estos archivos (de momento vacíos) a <strong>terremotos.html</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Terremotos<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/utils.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span class="hll">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/terremotos.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">9.746</span><span class="p">,</span><span class="w"> </span><span class="mf">40.473</span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">5.5</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">hash</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">pitch</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">attributionControl</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">compact</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w">           </span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="c1">//fin init</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;map&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="paso-5-funcion-generica-get">Paso 5: función genérica GET</h4>
+<ul>
+<li>
+<p>Dentro del archivo <strong>js/utils.js</strong>  vamos a crear una función asíconcrona genérica para enviar y recibir respuesta de cualquier servicio GET que retorne un JSON </p>
+</li>
+<li>
+<p><code>async function</code>: Es un funcion en JavaScript que retornará  un valor sólo cuando haya recibido la respuesta</p>
+</li>
+<li>
+<p><code>fetch</code>: La API Fetch proporciona una interfaz JavaScript para acceder y manipular partes del canal HTTP, tales como peticiones y respuestas <a href="https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Utilizando_Fetch">https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Utilizando_Fetch</a>. Para hacer peticiones tipo Ajax</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">enviarPeticion</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="p">})</span><span class="w"></span>
+<span class="w">      </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="c1">//console.log(&#39;Respuesta&#39;, data);</span><span class="w"></span>
+<span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Error&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Error peticion&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">});</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h4 id="paso-6-convertir-la-respuesta-de-json-geonames-al-formato-geojson">Paso 6 :convertir la respuesta de JSON GeoNames al formato GeoJSON</h4>
+<ul>
+<li>
+<p>Creamos una función para convertir la respuesta de JSON GeoNames al formato GeoJSON en <strong>terremotos.js</strong></p>
+</li>
+<li>
+<p>Ejemplo peticion: <a href="https://secure.geonames.org/earthquakesJSON?north=44.1&amp;south=-9.9&amp;east=-22.4&amp;west=55.2&amp;username=masterupc" target="_blank">https://secure.geonames.org/earthquakesJSON?north=44.1&amp;south=-9.9&amp;east=-22.4&amp;west=55.2&amp;username=masterupc</a></p>
+</li>
+<li>
+<p>Estructura respuesta GeoNames</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="nt">&quot;earthquakes&quot;</span><span class="p">:[</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;datetime&quot;</span><span class="p">:</span><span class="s2">&quot;2011-03-11 04:46:23&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;depth&quot;</span><span class="p">:</span><span class="mf">24.4</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;lng&quot;</span><span class="p">:</span><span class="mf">142.369</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;src&quot;</span><span class="p">:</span><span class="s2">&quot;us&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;eqid&quot;</span><span class="p">:</span><span class="s2">&quot;c0001xgp&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;magnitude&quot;</span><span class="p">:</span><span class="mf">8.8</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="mf">38.322</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;datetime&quot;</span><span class="p">:</span><span class="s2">&quot;2012-04-11 06:38:37&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;depth&quot;</span><span class="p">:</span><span class="mf">22.9</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;lng&quot;</span><span class="p">:</span><span class="mf">93.0632</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;src&quot;</span><span class="p">:</span><span class="s2">&quot;us&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;eqid&quot;</span><span class="p">:</span><span class="s2">&quot;c000905e&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;magnitude&quot;</span><span class="p">:</span><span class="mf">8.6</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="mf">2.311</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;datetime&quot;</span><span class="p">:</span><span class="s2">&quot;2007-09-12 09:10:26&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;depth&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;lng&quot;</span><span class="p">:</span><span class="mf">101.3815</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;src&quot;</span><span class="p">:</span><span class="s2">&quot;us&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;eqid&quot;</span><span class="p">:</span><span class="s2">&quot;2007hear&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;magnitude&quot;</span><span class="p">:</span><span class="mf">8.4</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="mf">-4.5172</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">   </span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span>
+</code></pre></div>
+<ul>
+<li>
+<p>Miramos web <a href="https://geojson.io" target="_blank">https://geojson.io</a> cómo és un GeoJSON</p>
+</li>
+<li>
+<p>Deberíamos convertir con código el JSON de GeoNames a un GeoJSon de puntos</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FeatureCollection&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;features&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Feature&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;datetime&quot;</span><span class="p">:</span><span class="s2">&quot;2011-03-11 04:46:23&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;magnitude&quot;</span><span class="p">:</span><span class="mf">8.8</span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;geometry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Point&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">          </span><span class="mf">142.369</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="mf">38.322</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Feature&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;datetime&quot;</span><span class="p">:</span><span class="s2">&quot;2012-04-11 06:38:37&quot;</span><span class="p">,</span><span class="nt">&quot;magnitude&quot;</span><span class="p">:</span><span class="mf">8.6</span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;geometry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Point&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">         </span><span class="mf">93.0632</span><span class="p">,</span><span class="w"></span>
+<span class="w">         </span><span class="mf">2.311</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Feature&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;datetime&quot;</span><span class="p">:</span><span class="s2">&quot;2007-09-12 09:10:26&quot;</span><span class="p">,</span><span class="nt">&quot;magnitude&quot;</span><span class="p">:</span><span class="mf">8.4</span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;geometry&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Point&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">         </span><span class="mf">101.3815</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="mf">-4.5172</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Si tuvieramos que realizar reproyecciones o operaciones espaciales</p>
+</div>
+<blockquote>
+<p><a href="http://proj4js.org/">http://proj4js.org/</a></p>
+<p><a href="https://turfjs.org/">https://turfjs.org/</a></p>
+</blockquote>
+<h4 id="paso-61-funcion-terremotosgeonamestogeojson">Paso 6.1 : Función terremotosGeonamesToGeoJSON()</h4>
+<ul>
+<li>Creamos dentro de <strong>/js/terremotos.js</strong> la funcion terremotosGeonamesToGeoJSON</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">terremotosGeonamesToGeoJSON</span><span class="p">(</span><span class="nx">respuestaGeonames</span><span class="p">){</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">geoJSON</span><span class="w"> </span><span class="o">=</span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;FeatureCollection&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;features&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="w"></span>
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">respuestaGeonames</span><span class="p">.</span><span class="nx">earthquakes</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+
+<span class="w">        </span><span class="nx">geoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Feature&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="s2">&quot;properties&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;magnitude&quot;</span><span class="o">:</span><span class="nx">respuestaGeonames</span><span class="p">.</span><span class="nx">earthquakes</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">magnitude</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                </span><span class="s2">&quot;datetime&quot;</span><span class="o">:</span><span class="nx">respuestaGeonames</span><span class="p">.</span><span class="nx">earthquakes</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">datetime</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">                </span><span class="s2">&quot;geometry&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                  </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Point&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                  </span><span class="s2">&quot;coordinates&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">respuestaGeonames</span><span class="p">.</span><span class="nx">earthquakes</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">lng</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">respuestaGeonames</span><span class="p">.</span><span class="nx">earthquakes</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">lat</span><span class="w"></span>
+<span class="w">                  </span><span class="p">]</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">              </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">//fin loop</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">geoJSON</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">//fin funcion</span><span class="w"></span>
+</code></pre></div>
+<h4 id="paso-7-funcion-generarpeticionterremotos">Paso 7 : Función generarPeticionTerremotos()</h4>
+<ul>
+<li>Vamos a añadir otra funcion dentro de <strong>terremotos.js</strong>  para: <ul>
+<li>Capturar las coordenadas de mapa (BoundigBox)</li>
+<li>Crear la petición a Geonames</li>
+<li>Enviar petición</li>
+<li>Capturar la respuesta y convertirla a GeoJSON</li>
+<li>Generar Source y Layer de Mapbox Style y añadir datos</li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Justo debajo toda de la función terremotosGeonamesToGeoJSON()  añadimos"</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">generarPeticionTerremotos</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">peticion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;https://secure.geonames.org/earthquakesJSON?&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;north=&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">map</span><span class="p">.</span><span class="nx">getBounds</span><span class="p">().</span><span class="nx">_ne</span><span class="p">.</span><span class="nx">lat</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&amp;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;south=&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">map</span><span class="p">.</span><span class="nx">getBounds</span><span class="p">().</span><span class="nx">_sw</span><span class="p">.</span><span class="nx">lat</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&amp;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;east=&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">map</span><span class="p">.</span><span class="nx">getBounds</span><span class="p">().</span><span class="nx">_ne</span><span class="p">.</span><span class="nx">lng</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&amp;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;west=&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">map</span><span class="p">.</span><span class="nx">getBounds</span><span class="p">().</span><span class="nx">_sw</span><span class="p">.</span><span class="nx">lng</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&amp;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;maxRows=50&amp;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;minMagnitude=5&amp;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;username=masterupc&amp;&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//date : &#39;yyyy-MM-d</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">enviarPeticion</span><span class="p">(</span><span class="nx">peticion</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">respuestaGeonames</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">geoJSON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">terremotosGeonamesToGeoJSON</span><span class="p">(</span><span class="nx">respuestaGeonames</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">map</span><span class="p">.</span><span class="nx">getSource</span><span class="p">(</span><span class="s2">&quot;terremotos_source&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">addSource</span><span class="p">(</span><span class="s2">&quot;terremotos_source&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;geojson&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="nx">geoJSON</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;id&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;terremotos&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;circle&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;source&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;terremotos_source&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;paint&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="s1">&#39;circle-color&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                        </span><span class="s1">&#39;interpolate&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="p">[</span><span class="s1">&#39;linear&#39;</span><span class="p">],</span><span class="w"></span>
+<span class="w">                        </span><span class="p">[</span><span class="s1">&#39;get&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;magnitude&#39;</span><span class="p">],</span><span class="w"></span>
+<span class="w">                        </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;#ebe709&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;#eb1809&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;#ef4bf2&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="p">],</span><span class="w"></span>
+<span class="w">                    </span><span class="s1">&#39;circle-opacity&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">0.75</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="s1">&#39;circle-radius&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">                        </span><span class="s1">&#39;interpolate&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="p">[</span><span class="s1">&#39;linear&#39;</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;get&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;magnitude&#39;</span><span class="p">],</span><span class="w"></span>
+<span class="w">                        </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">16</span><span class="p">,</span><span class="w"></span>
+<span class="w">                        </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">32</span><span class="w"></span>
+<span class="w">                    </span><span class="p">]</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;id&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;terremotos-textos&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;symbol&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;source&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;terremotos_source&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;layout&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="s1">&#39;text-field&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w">                            </span>
+<span class="w">                        </span><span class="s1">&#39;format&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;get&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;magnitude&#39;</span><span class="p">],</span><span class="w">                               </span>
+<span class="w">                    </span><span class="p">],</span><span class="w"></span>
+<span class="w">                    </span><span class="s1">&#39;text-size&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="w"></span>
+<span class="w">                </span><span class="p">},</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;paint&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="s1">&#39;text-color&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(255,255,255,1)&#39;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">getSource</span><span class="p">(</span><span class="s2">&quot;terremotos_source&quot;</span><span class="p">).</span><span class="nx">setData</span><span class="p">(</span><span class="nx">geoJSON</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// fin funcion</span><span class="w"></span>
+</code></pre></div>
+<h4 id="paso-8la-funcion-generarpeticionterremotos">Paso 8:La función <strong>generarPeticionTerremotos()</strong></h4>
+<ul>
+<li>
+<p>La función <strong>generarPeticionTerremotos()</strong> és la función principal que necesitamos que se ejecute:</p>
+<ul>
+<li>Al cargar el mapa (evento <code>load</code>)</li>
+<li>Cada vez que me muevo por el mapa (eventos <code>moveend</code> y <code>zoomend</code>)</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Terremotos<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/utils.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/terremotos.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">Init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">9.746</span><span class="p">,</span><span class="w"> </span><span class="mf">40.473</span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">5.5</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">hash</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">pitch</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">attributionControl</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">compact</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
+
+<span class="hll"><span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;load&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</span><span class="hll">
+</span><span class="hll"><span class="w">                </span><span class="nx">generarPeticionTerremotos</span><span class="p">();</span><span class="w"></span>
+</span><span class="hll">
+</span><span class="hll"><span class="w">            </span><span class="p">});</span><span class="w"> </span><span class="c1">// fin load mapa</span><span class="w"></span>
+</span><span class="hll">
+</span><span class="hll"><span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;zoomend&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</span><span class="hll">
+</span><span class="hll"><span class="w">                </span><span class="nx">generarPeticionTerremotos</span><span class="p">();</span><span class="w"></span>
+</span><span class="hll"><span class="w">            </span><span class="p">});</span><span class="w"></span>
+</span><span class="hll">
+</span><span class="hll"><span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;moveend&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</span><span class="hll">
+</span><span class="hll"><span class="w">                </span><span class="nx">generarPeticionTerremotos</span><span class="p">();</span><span class="w"></span>
+</span><span class="hll"><span class="w">            </span><span class="p">});</span><span class="w"></span>
+</span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="c1">//fin init</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;Init()&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;map&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="paso-9funcion-para-generar-popups">Paso 9:función para generar popups</h4>
+<ul>
+<li>Dentro del archivo  <strong>utils.js</strong>  añadimos una función para enseñar popup, pero NO al hacer click sino simplemente al passar por encima</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">popup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">Popup</span><span class="p">({</span><span class="w"></span>
+<span class="w">    </span><span class="nx">closeButton</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">closeOnClick</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">addPopupToMap</span><span class="p">(</span><span class="nx">nombreCapa</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;mousemove&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">nombreCapa</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="c1">//console.info(e);</span><span class="w"></span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">features</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">properties</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">        </span><span class="nx">text</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s2">&quot;&lt;b&gt;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;&lt;/b&gt;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">features</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">properties</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span><span class="nx">popup</span><span class="p">.</span><span class="nx">setLngLat</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">lngLat</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="nx">setHTML</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;mouseenter&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">nombreCapa</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">map</span><span class="p">.</span><span class="nx">getCanvas</span><span class="p">().</span><span class="nx">style</span><span class="p">.</span><span class="nx">cursor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;pointer&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;mouseleave&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">nombreCapa</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">map</span><span class="p">.</span><span class="nx">getCanvas</span><span class="p">().</span><span class="nx">style</span><span class="p">.</span><span class="nx">cursor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="nx">popup</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">  </span><span class="p">}</span><span class="c1">// fin funcion</span><span class="w"></span>
+</code></pre></div>
+<h4 id="paso-10-llamamos-a-la-funcion-addpopuptomap">Paso 10: Llamamos a la funcion <strong>addPopupToMap()</strong></h4>
+<ul>
+<li>Llamamos a la funcion <strong>addPopupToMap()</strong> pasando el nombre de nuestra capa activa:</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Terremotos<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/utils.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/terremotos.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">Init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">9.746</span><span class="p">,</span><span class="w"> </span><span class="mf">40.473</span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">5.5</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">hash</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">pitch</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">attributionControl</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">compact</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;load&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">                </span><span class="nx">generarPeticionTerremotos</span><span class="p">();</span><span class="w"></span>
+<span class="hll"><span class="w">                </span><span class="nx">addPopupToMap</span><span class="p">(</span><span class="s2">&quot;terremotos&quot;</span><span class="p">);</span><span class="w"></span>
+</span>
+<span class="w">            </span><span class="p">});</span><span class="w"> </span><span class="c1">// fin load mapa</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;zoomend&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">                </span><span class="nx">generarPeticionTerremotos</span><span class="p">();</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;moveend&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">                </span><span class="nx">generarPeticionTerremotos</span><span class="p">();</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="c1">//fin init</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;Init()&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;map&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<img alt="alt text" src="../img/terremotos.png" title="terremotos.png" /></p>
+<div class="admonition question">
+<p class="admonition-title">¿Podemos añadir un color más para terremotos de más 8 magnitud?</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">¿Podemos cambiar dinamicamente el valor minMagnitude de la petición a GeoNames?</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Sabrías añadir este geojson de placas tectónicas como una capa más</p>
+</div>
+<p><a href="../datos/placas.geojson" target="_blank">placas.geojson</a></p>
+<div class="admonition question">
+<p class="admonition-title">¿Añadimos Titulo?</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">¿Subimos el ejemplo al GitHub?</p>
+<div class="highlight"><pre><span></span><code>    git pull
+    git add .
+    git commit -m <span class="s2">&quot;terremotos&quot;</span>
+    git push
+</code></pre></div>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pie" >
+      
+        
+        <a href="../6.1.introduccion_maputnik/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 6.1.Mapas personalizados con Maputnik y MapBox GL JS" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              6.1.Mapas personalizados con Maputnik y MapBox GL JS
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../7.1.mallas_discretas_algoritmos/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 7.1.Mallas discretas y algoritmos en JS" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              7.1.Mallas discretas y algoritmos en JS
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
