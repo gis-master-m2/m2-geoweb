@@ -1,4 +1,4 @@
-###  Mapas y Opendata: programación, organización y análisis de geodatos
+###  Mapes i OpenData: Programación web-sig
 
 #### Guía rápida de recursos, fechas y entregas:
 [Guía rápida M2B](presentacion/guiarapida.pdf){target=_blank}
