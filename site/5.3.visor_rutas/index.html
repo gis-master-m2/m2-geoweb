@@ -608,10 +608,9 @@
     Introducción
   </a>
   
-    <nav class="md-nav" aria-label="Introducción">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#visor-de-rutas" class="md-nav__link">
     Visor de rutas
   </a>
@@ -658,8 +657,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#saber-mas" class="md-nav__link">
     Saber más ..
   </a>
@@ -678,11 +677,6 @@
   <a href="#paso-6llamamos-a-la-funcion-en-el-html-pasando-el-parametro" class="md-nav__link">
     Paso 6:Llamamos a la función en el HTML , pasando el parámetro
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1136,10 +1130,9 @@
     Introducción
   </a>
   
-    <nav class="md-nav" aria-label="Introducción">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#visor-de-rutas" class="md-nav__link">
     Visor de rutas
   </a>
@@ -1186,8 +1179,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#saber-mas" class="md-nav__link">
     Saber más ..
   </a>
@@ -1206,11 +1199,6 @@
   <a href="#paso-6llamamos-a-la-funcion-en-el-html-pasando-el-parametro" class="md-nav__link">
     Paso 6:Llamamos a la función en el HTML , pasando el parámetro
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1241,11 +1229,15 @@
 
   <h1>5.3.Visor de rutas</h1>
 
-<h2 id="introduccion">Introducción</h2>
-<blockquote>
+<h3 id="introduccion">Introducción</h3>
+<ul>
+<li>
 <p>Utilizando el mapa 3D vamos a crear un pequeño visor de rutas</p>
+</li>
+<li>
 <p>Dentro del directorio de <strong>/geoweb/datos</strong> tenmos el archivo <strong>rutas.geojson</strong> que contiene tres cuatro rutas</p>
-</blockquote>
+</li>
+</ul>
 <h3 id="visor-de-rutas">Visor de rutas</h3>
 <h4 id="paso-1-con-vscode-abrimos-mapa3dhtml-i-lo-guardamos-como-mapa-rutas3dhtml">Paso 1: Con VSCODE abrimos mapa3d.html i lo guardamos cómo mapa-rutas3d.html</h4>
 <ul>
@@ -1257,8 +1249,8 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
 <span class="hll">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mapa rutas 3D<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 </span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
 
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/3d.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -1272,7 +1264,7 @@
 <span class="w">                </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"></span>
 <span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;mapbox://styles/mapbox/satellite-streets-v10&#39;</span><span class="p">,</span><span class="w"></span>
 <span class="hll"><span class="w">                </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">1.77878</span><span class="p">,</span><span class="w"> </span><span class="mf">41.60044</span><span class="p">],</span><span class="w"></span>
-</span><span class="hll"><span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">14</span><span class="p">,,</span><span class="w"></span>
+</span><span class="hll"><span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">14</span><span class="p">,</span><span class="w"></span>
 </span><span class="w">                </span><span class="nx">attributionControl</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
 <span class="w">                </span><span class="nx">pitch</span><span class="o">:</span><span class="w"> </span><span class="mf">45</span><span class="p">,</span><span class="w"></span>
 <span class="w">                </span><span class="nx">hash</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
@@ -1282,7 +1274,7 @@
 <span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
 
 <span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">             </span><span class="nx">add3D</span><span class="p">(</span><span class="s1">&#39;mapbox-dem&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">             </span><span class="nx">add3D</span><span class="p">();</span><span class="w"></span>
 
 <span class="w">            </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin onload         </span><span class="w"></span>
 
@@ -1336,8 +1328,8 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mapa rutas 3D<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
 
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/3d.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -1362,7 +1354,7 @@
 <span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
 
 <span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">             </span><span class="nx">add3D</span><span class="p">(</span><span class="s1">&#39;mapbox-dem&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">             </span><span class="nx">add3D</span><span class="p">();</span><span class="w"></span>
 <span class="hll"><span class="w">             </span><span class="nx">addRutas</span><span class="p">();</span><span class="w"></span>
 </span>
 <span class="w">            </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin onload         </span><span class="w"></span>
@@ -1395,8 +1387,8 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mapa rutas 3D<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
 
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/3d.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -1421,7 +1413,7 @@
 <span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
 
 <span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">             </span><span class="nx">add3D</span><span class="p">(</span><span class="s1">&#39;mapbox-dem&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">             </span><span class="nx">add3D</span><span class="p">();</span><span class="w"></span>
 <span class="w">             </span><span class="nx">addRutas</span><span class="p">();</span><span class="w"></span>
 
 <span class="w">            </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin onload         </span><span class="w"></span>
@@ -1506,23 +1498,31 @@
 </span><span class="hll"><span class="w">        </span><span class="s1">&#39;maxzoom&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">14</span><span class="w"></span>
 </span><span class="hll"><span class="w">    </span><span class="p">});</span><span class="w"></span>
 </span>
-<span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">({</span><span class="w"></span>
-<span class="w">        </span><span class="s1">&#39;id&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;sky&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s1">&#39;type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;sky&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s1">&#39;paint&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="s1">&#39;sky-type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;atmosphere&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="s1">&#39;sky-atmosphere-sun&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">],</span><span class="w"></span>
-<span class="w">            </span><span class="s1">&#39;sky-atmosphere-sun-intensity&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">});</span><span class="w"></span>
+<span class="w">   </span><span class="nx">map</span><span class="p">.</span><span class="nx">setFog</span><span class="p">({});</span><span class="w"></span>
 
-<span class="hll"><span class="w">   </span><span class="cm">/* codigo comentado</span>
+<span class="hll"><span class="w">   </span><span class="cm">/* codigo para comentar</span>
 </span><span class="hll"><span class="cm">    map.setTerrain({</span>
 </span><span class="hll"><span class="cm">        &#39;source&#39;: &#39;mapbox-dem&#39;,</span>
 </span><span class="hll"><span class="cm">        &#39;exaggeration&#39;: 1.5</span>
 </span><span class="hll"><span class="cm">    });</span>
 </span><span class="hll"><span class="cm">    */</span><span class="w"></span>
-</span><span class="hll"><span class="w">   </span><span class="nx">changeTerrain</span><span class="p">(</span><span class="nx">terreno</span><span class="p">);</span><span class="w"></span>
+</span>
+<span class="w">   </span><span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">({</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;id&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;3d-buildings&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;source&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;composite&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;source-layer&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;building&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;filter&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;==&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;extrude&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;true&#39;</span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;fill-extrusion&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;minzoom&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;paint&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="s1">&#39;fill-extrusion-color&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#aaa&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s1">&#39;fill-extrusion-height&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;get&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;height&#39;</span><span class="p">],</span><span class="w">                    </span>
+<span class="w">            </span><span class="s1">&#39;fill-extrusion-opacity&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">0.9</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+
+
+<span class="hll"><span class="w">   </span><span class="nx">changeTerrain</span><span class="p">(</span><span class="nx">terreno</span><span class="p">);</span><span class="w"></span>
 </span>
 
 <span class="p">}</span><span class="w"> </span><span class="c1">//fin funcion</span><span class="w"></span>
@@ -1546,8 +1546,8 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mapa 3D<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
 
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/3d.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -1592,9 +1592,9 @@
 <div class="admonition question">
 <p class="admonition-title">¿Cómo haríamos para poner una opción para activar/desactivar vista 3D y seleccionar el DEM Mapbox i el ICGC?</p>
 <p>Sabémos que  <code>map.setTerrain(null)</code> desactiva el 3D</p>
-<div class="highlight"><pre><span></span><code>    &lt;div class=&quot;panelTopIzquierda&quot;&gt;
-        &lt;input type=&quot;radio&quot; onClick=&quot;changeTerrain(this.value)&quot; checked  name=&quot;dem&quot; value=&quot;mapbox-dem&quot;&gt;Mapbox &lt;br&gt;
-        &lt;input type=&quot;radio&quot; onClick=&quot;changeTerrain(this.value)&quot; name=&quot;dem&quot; value=&quot;icgc-dem&quot;&gt;ICGC &lt;br&gt;
+<div class="highlight"><pre><span></span><code>    &lt;div&gt;
+        &lt;input type=&quot;radio&quot; onClick=&quot;changeTerrain(this.value)&quot;  name=&quot;dem&quot; value=&quot;mapbox-dem&quot;&gt;Mapbox &lt;br&gt;
+        &lt;input type=&quot;radio&quot; onClick=&quot;changeTerrain(this.value)&quot; checked name=&quot;dem&quot; value=&quot;icgc-dem&quot;&gt;ICGC &lt;br&gt;
         &lt;input type=&quot;radio&quot;  onClick=&quot;changeTerrain(null)&quot;  name=&quot;dem&quot; &gt;2D
       &lt;/div&gt;  
 </code></pre></div>

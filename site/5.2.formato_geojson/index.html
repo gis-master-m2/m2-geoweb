@@ -1120,13 +1120,18 @@
   <h1>5.2.Formato GeoJson</h1>
 
 <h2 id="introduccion">Introducción</h2>
-<p>Podemos añadir datos propios a nuestros mapas</p>
-<p>En mapbox tendremos que especificar un:</p>
-<p><strong>map.addSource()</strong> y el tipo de fuente</p>
+<p>Podemos añadir datos propios locales a nuestros mapas</p>
+<div class="admonition info">
+<p class="admonition-title">Para añadir datos a nuestros mapas</p>
+<p>En mapbox tendremos que especificar siempre :</p>
+<p><strong>map.addSource()</strong>  el tipo de dato fuente</p>
 <p><strong>map.addLayer()</strong> dónde se va a denifir como renderizar los datos</p>
+<p><a href="https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/" target="_blank">https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/</a>
+<a href="https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/" target="_blank">https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/</a></p>
+</div>
 <p>Un tipo de source aceptado por MapBox es <strong>GeoJSON</strong></p>
 <div class="admonition summary">
-<p class="admonition-title">GeoJSON<p>Es el constructor principal del mapa <a href="https://docs.mapbox.com/mapbox-gl-js/style-spec/#sources-geojson">https://docs.mapbox.com/mapbox-gl-js/style-spec/#sources-geojson</a></p>
+<p class="admonition-title">GeoJSON<p><a href="https://docs.mapbox.com/mapbox-gl-js/style-spec/#sources-geojson">https://docs.mapbox.com/mapbox-gl-js/style-spec/#sources-geojson</a></p>
 </p>
 </div>
 <h3 id="formato-geojson">Formato GeoJSON</h3>

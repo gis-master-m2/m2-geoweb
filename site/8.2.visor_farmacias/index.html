@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ejemplo-buscador-de-farmacias" class="md-skip">
+        <a href="#buscador-de-farmacias-de-barcelona-ciudad" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -790,6 +790,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#buscador-de-farmacias-de-barcelona-ciudad" class="md-nav__link">
+    Buscador de Farmacias de Barcelona ciudad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ejemplo-buscador-de-farmacias" class="md-nav__link">
     Ejemplo buscador de Farmacias
   </a>
@@ -1126,6 +1133,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#buscador-de-farmacias-de-barcelona-ciudad" class="md-nav__link">
+    Buscador de Farmacias de Barcelona ciudad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ejemplo-buscador-de-farmacias" class="md-nav__link">
     Ejemplo buscador de Farmacias
   </a>
@@ -1229,35 +1243,26 @@
 
   <h1>8.2.Visor de farmacias</h1>
 
-<div class="admonition warning">
-<p class="admonition-title">Atencion!!</p>
-<p><h3>
-<em>Buscador de Farmacias de Barcelona</em></p>
-<p>Nos han encargado realizar un mapa para poder localizar y buscar las farmacias de Barcelona</p>
-<ul>
-<li>Los datos de farmacias son del web de Datos Abiertos de Barcelona</li>
-</ul>
-<p><a href="https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies" target="_blank">https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies</a> </p>
-<ul>
-<li>
-<p>Existe un plugin de Leaflet llamado <strong>Leaflet-ajax</strong> que permite cargar capas GeoJSON ya sea en local o en remoto</p>
-<ul>
-<li>Leaflet-ajax <a href="https://github.com/calvinmetcalf/leaflet-ajax" target="_blank">https://github.com/calvinmetcalf/leaflet-ajax</a>  </li>
-</ul>
-</li>
-<li>
-<p>Existe un plugin de Leaflet llamado <strong>Leaflet-search</strong> que permite buscar dentro de atributos de un GeoJSON</p>
-<ul>
-<li>Leaflet-Search <a href="https://github.com/stefanocudini/leaflet-search" target="_blank">https://github.com/stefanocudini/leaflet-search</a>  </li>
-</ul>
-</li>
-</ul>
-</h3>
-</div>
+<h3 id="buscador-de-farmacias-de-barcelona-ciudad">Buscador de Farmacias de Barcelona ciudad</h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">Nos</span><span class="w"> </span><span class="nv">han</span><span class="w"> </span><span class="nv">encargado</span><span class="w"> </span><span class="nv">realizar</span><span class="w"> </span><span class="nv">un</span><span class="w"> </span><span class="nv">mapa</span><span class="w"> </span><span class="nv">para</span><span class="w"> </span><span class="nv">poder</span><span class="w"> </span><span class="nv">localizar</span><span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="nv">buscar</span><span class="w"> </span><span class="nv">las</span><span class="w"> </span><span class="nv">farmacias</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="nv">Barcelona</span><span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="nv">para</span><span class="w"> </span><span class="nv">cada</span><span class="w"> </span><span class="nv">farm</span>á<span class="nv">cia</span><span class="w"> </span><span class="nv">poder</span><span class="w"> </span><span class="nv">visualizar</span><span class="w"> </span><span class="nv">las</span><span class="w"> </span><span class="nv">cinco</span><span class="w"> </span><span class="nv">m</span>á<span class="nv">s</span><span class="w"> </span><span class="nv">cercanas</span><span class="w"></span>
+
+<span class="o">*</span><span class="w"> </span><span class="nv">Los</span><span class="w"> </span><span class="nv">datos</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="nv">farmacias</span><span class="w"> </span><span class="nv">se</span><span class="w"> </span><span class="nv">pueden</span><span class="w"> </span><span class="nv">obtener</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="nv">la</span><span class="w"> </span><span class="nv">web</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="nv">Datos</span><span class="w"> </span><span class="nv">Abiertos</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="nv">Barcelona</span><span class="w"> </span>[<span class="nv">https</span>:<span class="o">//</span><span class="nv">opendata</span><span class="o">-</span><span class="nv">ajuntament</span>.<span class="nv">barcelona</span>.<span class="nv">cat</span><span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">es</span><span class="o">/</span><span class="nv">dataset</span><span class="o">/</span><span class="nv">sanitat</span><span class="o">-</span><span class="nv">farmacies</span>]<span class="ss">(</span><span class="nv">https</span>:<span class="o">//</span><span class="nv">opendata</span><span class="o">-</span><span class="nv">ajuntament</span>.<span class="nv">barcelona</span>.<span class="nv">cat</span><span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">es</span><span class="o">/</span><span class="nv">dataset</span><span class="o">/</span><span class="nv">sanitat</span><span class="o">-</span><span class="nv">farmacies</span><span class="ss">)</span>{<span class="nv">target</span><span class="o">=</span><span class="nv">_blank</span>}<span class="w"></span>
+
+<span class="o">*</span><span class="w"> </span><span class="nv">Podemos</span><span class="w"> </span><span class="nv">transformar</span><span class="w"> </span><span class="nv">los</span><span class="w"> </span><span class="nv">datos</span><span class="w">  </span><span class="o">**</span><span class="nv">GeoJson</span><span class="o">**</span><span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="nv">cargalos</span><span class="w"> </span><span class="nv">com</span><span class="w"> </span><span class="nv">un</span><span class="w"> </span><span class="nv">source</span><span class="w"> </span><span class="nv">en</span><span class="w"> </span><span class="nv">Mapbox</span><span class="w"> </span><span class="nv">GlJs</span><span class="w"></span>
+
+<span class="o">*</span><span class="w"> </span><span class="nv">Podemos</span><span class="w"> </span><span class="nv">utilizar</span><span class="w"> </span><span class="nv">el</span><span class="w"> </span><span class="nv">control</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="o">**</span><span class="nv">mapbox</span><span class="o">-</span><span class="nv">gl</span><span class="o">-</span><span class="nv">geocoder</span><span class="o">**</span><span class="w"> </span><span class="nv">para</span><span class="w"> </span><span class="nv">buscar</span><span class="w"> </span><span class="nv">en</span><span class="w"> </span><span class="nv">GeoJson</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">local</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+
 <h3 id="ejemplo-buscador-de-farmacias">Ejemplo buscador de Farmacias</h3>
 <h4 id="paso-1visualizar-datos">Paso 1:Visualizar datos</h4>
 <ul>
-<li>Visualizamos con QGIS para ver cómo es, el archivo de <strong>/geoweb/datos/farmacias.geojson</strong></li>
+<li>Dentro de <strong>/geoweb/datos/farmacias.geojson</strong> ya tenemos los datos descargados y convertidos a GeoJson. Podemos visualizarlos con <a href="https://geojson.io/#map=2/0/20" target="_blank">https://geojson.io/#map=2/0/20</a> por ejemplo</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Convertir a GeoJson</p>
