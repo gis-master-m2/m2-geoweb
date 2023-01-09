@@ -680,12 +680,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#openicgc" class="md-nav__link">
     OpenICGC.
   </a>
@@ -718,6 +713,11 @@
   <a href="#anadir-datos-propios-geojson" class="md-nav__link">
     Añadir datos propios GeoJson
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1147,12 +1147,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#openicgc" class="md-nav__link">
     OpenICGC.
   </a>
@@ -1192,6 +1187,11 @@
     </nav>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
     </ul>
   
@@ -1215,12 +1215,18 @@
 
   <h1>6.1.Mapas personalizados con Maputnik y MapBox GL JS</h1>
 
-<h3 id="introduccion">Introducción</h3>
-<blockquote>
+<h2 id="introduccion">Introducción</h2>
+<ul>
+<li>
 <p>Podemos trabajar con la libreria MapBox GL JS sin utilizar los estilos de Mapbox</p>
+</li>
+<li>
 <p>Si la versión de la libreria és anterior a la v2 tampoco haria falta especificar el Access Token</p>
+</li>
+<li>
 <p>Podemos editar estilos sin utilizar MapBox Studio, directamente con Maputnik</p>
-</blockquote>
+</li>
+</ul>
 <p><img alt="alt text" src="../img/maputnik.png" title="Maputnik" /></p>
 <p><a href="https://maputnik.github.io//" target="_blank">https://maputnik.github.io/</a></p>
 <h4 id="cuando-utilizar-los-servicios-de-mapbox">¿ Cuando utilizar los servicios de MapBox?</h4>
@@ -1284,8 +1290,8 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Topogáfico<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
      <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
 <span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
@@ -1345,8 +1351,8 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi estilo<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
      <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
 <span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
@@ -1392,8 +1398,8 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi estilo<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
      <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
 
@@ -1413,9 +1419,9 @@
 <span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span><span class="w"></span>
 <span class="w">                </span><span class="nx">compact</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
 <span class="w">            </span><span class="p">}));</span><span class="w"></span>
-<span class="hll"><span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
-</span><span class="hll">
-</span><span class="hll"><span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
+
+<span class="hll"><span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 </span><span class="hll"><span class="w">                </span><span class="nx">map</span><span class="p">.</span><span class="nx">addSource</span><span class="p">(</span><span class="s2">&quot;carrils-bici&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 </span><span class="hll"><span class="w">                    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;geojson&quot;</span><span class="p">,</span><span class="w"></span>
 </span><span class="hll"><span class="w">                    </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;datos/carrils-bici.geojson&quot;</span><span class="w"></span>
@@ -1433,9 +1439,9 @@
 </span><span class="hll"><span class="w">                        </span><span class="s2">&quot;line-color&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#FF0000&quot;</span><span class="p">,</span><span class="w"></span>
 </span><span class="hll"><span class="w">                        </span><span class="s2">&quot;line-width&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">8</span><span class="w"></span>
 </span><span class="hll"><span class="w">                    </span><span class="p">}</span><span class="w"></span>
-</span><span class="w">                </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin add layers</span><span class="w"></span>
-<span class="w">            </span><span class="p">});</span><span class="w"> </span><span class="c1">//Fin load mapa</span><span class="w"></span>
-
+</span><span class="hll"><span class="w">                </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin add layers</span><span class="w"></span>
+</span><span class="hll"><span class="w">            </span><span class="p">});</span><span class="w"> </span><span class="c1">//Fin load mapa</span><span class="w"></span>
+</span>
 
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -1447,6 +1453,9 @@
 </code></pre></div>
 <div class="admonition question">
 <p class="admonition-title">¿Ponemos la proyección globe?</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Creamos archivo js/carriles.js" y funcion "addCarriles() movemos el código d añadir los carriles?</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Subimos el ejemplo al GitHub</p>

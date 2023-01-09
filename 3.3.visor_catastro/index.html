@@ -544,8 +544,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-8-llamamos-funcion-addpopuptomapedificios" class="md-nav__link">
-    Paso 8: Llamamos función addPopupToMapEdificios
+  <a href="#paso-8-eventos-click-i-popup" class="md-nav__link">
+    Paso 8: Eventos Click i popup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-9-llamamos-funcion-addpopuptomapedificios" class="md-nav__link">
+    Paso 9: Llamamos función addPopupToMapEdificios
   </a>
   
 </li>
@@ -558,6 +565,13 @@
         <li class="md-nav__item">
   <a href="#saber-mas" class="md-nav__link">
     Saber más..
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nivel-avanzado" class="md-nav__link">
+    Nivel avanzado..
   </a>
   
 </li>
@@ -1191,8 +1205,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-8-llamamos-funcion-addpopuptomapedificios" class="md-nav__link">
-    Paso 8: Llamamos función addPopupToMapEdificios
+  <a href="#paso-8-eventos-click-i-popup" class="md-nav__link">
+    Paso 8: Eventos Click i popup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-9-llamamos-funcion-addpopuptomapedificios" class="md-nav__link">
+    Paso 9: Llamamos función addPopupToMapEdificios
   </a>
   
 </li>
@@ -1205,6 +1226,13 @@
         <li class="md-nav__item">
   <a href="#saber-mas" class="md-nav__link">
     Saber más..
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nivel-avanzado" class="md-nav__link">
+    Nivel avanzado..
   </a>
   
 </li>
@@ -1242,14 +1270,14 @@
 <p>Sabemos también que existe un plugin de QGIS para hacer una descarga más fácil el "Spanish Inspire Catastral Downloader"</p>
 </li>
 <li>
-<p>Mapbox.com no ofrece opciones como servidor para hospedar y convertir datos a Vector-Tiles</p>
+<p>Mapbox.com nos ofrece opciones como servidor para hospedar y convertir datos a Vector-Tiles</p>
 </li>
 <li>
 <p>Mapbox tiene un estio mundial oscuro que también nos puede servir como fondo</p>
 <p><a href="mapbox://styles/mapbox/dark-v10" target="_blank">mapbox://styles/mapbox/dark-v10</a> </p>
 </li>
 <li>
-<p>En la specificación de Style de Mapbox los polígonos tienen tienen el "paint property" "fill-extrusion" dónde que puedo cambiar de color y extrudir geometrias</p>
+<p>En la specificación de Style de Mapbox los polígonos  tienen la propiedad "paint" "fill-extrusion" dónde que puedo cambiar de color y extrudir geometrias por un valor de altura</p>
 <p><a href="https://docs.mapbox.com/mapbox-gl-js/style-spec/#layers-fill-extrusion" target="_blank">https://docs.mapbox.com/mapbox-gl-js/style-spec/#layers-fill-extrusion</a> </p>
 </li>
 </ul>
@@ -1259,9 +1287,9 @@
 </div>
 <div class="admonition warning">
 <p class="admonition-title">No guardeís el archivo dentro de <strong>/geoweb</strong></p>
+</div>
 <div class="admonition note">
-<p class="admonition-title">Si quisieramos preparar los datos o descargar otro municipio</p>
-<ul>
+<p class="admonition-title">Si quisieramos preparar los datos o descargar otro municipio<ul>
 <li>
 <p>Podríamos descargar todas las construcciones de Barcelona (321 mil polígonos) directamente de la Direccion General de Catastro <a href="http://www.catastro.minhap.es/webinspire/index.html" target="_blank">http://www.catastro.minhap.es/webinspire/index.html</a>  </p>
 </li>
@@ -1272,7 +1300,7 @@
 <p>Convertiríamos el archivo <strong>A.ES.SDGC.BU.08900.buildingpart.gml</strong> a SHP  "contrucciones.shp" con QGIS (coordenadas lat/lon EPSG:4326)</p>
 </li>
 </ul>
-</div>
+</p>
 </div>
 <h4 id="paso-2entramos-en-mapbboxcom-i-cargamos-los-datos">Paso 2:Entramos en MapbBox.com i cargamos los datos</h4>
 <ul>
@@ -1288,10 +1316,8 @@
 </ul>
 <p><img alt="alt text" src="../img/mapbox-catastro.png" title="mapbox-catastro.png" /></p>
 <h4 id="paso-3crear-edificioshtml">Paso 3:Crear edificios.html</h4>
-<div class="admonition warning">
-<p class="admonition-title">En este ejemplo y en adelante vamos a eutilizar el archivo css <strong>/geoweb/css/estilobase.css</strong></p>
+<p>!!! warning "En este ejemplo y en adelante vamos a reutilizar el archivo css <strong>/geoweb/css/estilobase.css</strong>" que existe ya en nuestro proyecto</p>
 <p>El archivo <strong>estilobase.css</strong> es este</p>
-</div>
 <p><div class="highlight"><pre><span></span><code><span class="w">            </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">                </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <span class="w">            </span><span class="p">}</span><span class="w"></span>
@@ -1308,11 +1334,11 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Edificios<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
 
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/edificios.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
 <span class="w">        </span><span class="c1">//Añadir vuestor token y/o estilo !!</span><span class="w"></span>
 <span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
@@ -1352,11 +1378,22 @@
 <p>Creamos la función <strong>addEdificiosCapa()</strong></p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="w">   </span><span class="kd">function</span><span class="w"> </span><span class="nx">addEdificiosCapa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="admonition warning">
+<p class="admonition-title">Necesitamos saber mapbox://<strong>nuestro ID</strong> i   "source-layer": <strong>nombre de Tileset</strong> en Mapbox Studio!!</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Para añadir datos a nuestros mapas</p>
+<p>En mapbox tendremos que especificar siempre :</p>
+<p><strong>map.addSource()</strong>  el tipo de dato fuente</p>
+<p><strong>map.addLayer()</strong> dónde se va a denifir como renderizar los datos</p>
+<p><a href="https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/" target="_blank">https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/</a>
+<a href="https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/" target="_blank">https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/</a></p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">addEdificiosCapa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
 <span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">addSource</span><span class="p">(</span><span class="s2">&quot;edificios_source&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;vector&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;mapbox://gismasterm2.2gkan1gt&quot;</span><span class="w">  </span><span class="c1">// Nuestor ID Tileset</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;mapbox://gismasterm2.500eaqlm&quot;</span><span class="w">  </span><span class="c1">// mapbox://Nuestor ID Tileset</span><span class="w"></span>
 
 <span class="w">    </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin map source</span><span class="w"></span>
 
@@ -1365,7 +1402,7 @@
 <span class="w">    </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;edificios&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fill-extrusion&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;source&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;edificios_source&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;source-layer&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;construcciones-324xyz&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Nuestro nombre Tileset</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;source-layer&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;construcciones-3f5iwq&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Nuestro nombre Tileset</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;maxzoom&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">21</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;minzoom&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span><span class="w"></span>
 <span class="w">   </span><span class="c1">// &quot;filter&quot;: [&quot;&gt;&quot;, &quot;numberOfFl&quot;, 0],</span><span class="w"></span>
@@ -1381,20 +1418,11 @@
 <span class="w">            </span><span class="mf">15</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#14b1fd&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">            </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#3d73e6&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">            </span><span class="mf">40</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#123a8f&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="mf">60</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#ce2f7e&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="mf">106</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#ff4d4d&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="mf">80</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#ce2f7e&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;transparent&quot;</span><span class="w"></span>
 
 <span class="w">        </span><span class="p">],</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;fill-extrusion-height&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">            </span><span class="s2">&quot;interpolate&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="p">[</span><span class="s2">&quot;linear&quot;</span><span class="p">],</span><span class="w"></span>
-<span class="w">            </span><span class="p">[</span><span class="s2">&quot;zoom&quot;</span><span class="p">],</span><span class="w"></span>
-<span class="w">            </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="mf">12.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="mf">14</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;to-number&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;numberOfFl&quot;</span><span class="p">]]],</span><span class="w"></span>
-<span class="w">            </span><span class="mf">16</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;to-number&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;numberOfFl&quot;</span><span class="p">]]],</span><span class="w"></span>
-<span class="w">            </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;to-number&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;numberOfFl&quot;</span><span class="p">]]]</span><span class="w"></span>
-<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;fill-extrusion-height&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;to-number&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;numberOfFl&quot;</span><span class="p">]]],</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;fill-extrusion-opacity&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0.9</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
@@ -1405,7 +1433,12 @@
 </code></pre></div>
 <h4 id="paso-4-llamamos-funciones-en-el-evento-load-de-map">Paso 4: Llamamos funciones en el evento load de map</h4>
 <ul>
-<li>Llamamos a la función <strong>addEdificiosCapa()</strong></li>
+<li>
+<p>Llamamos al archivo javascript <strong>js/edificios.js</strong></p>
+</li>
+<li>
+<p>Llamamos a la función <strong>addEdificiosCapa()</strong> dentro del evento map.on("load")</p>
+</li>
 </ul>
 <div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 
@@ -1413,12 +1446,12 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Edificios<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
 
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/edificios.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/edificios.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
 <span class="w">        </span><span class="c1">//Añadir vuestor token y/o estilo !!</span><span class="w"></span>
 <span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -1461,11 +1494,11 @@
 <div class="admonition tip">
 <p class="admonition-title">Descomentamos filtro y orden de capas para una mejor visualización en <strong>edificios.js</strong> ¿Que ha cambiado?</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="w">   </span><span class="kd">function</span><span class="w"> </span><span class="nx">addEdificiosCapa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">addEdificiosCapa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
 <span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">addSource</span><span class="p">(</span><span class="s2">&quot;edificios_source&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;vector&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;mapbox://gismasterm2.2gkan1gt&quot;</span><span class="w">  </span><span class="c1">// Nuestor ID Tileset</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;mapbox://gismasterm2.500eaqlm&quot;</span><span class="w">  </span><span class="c1">// mapbox://Nuestor ID Tileset</span><span class="w"></span>
 
 <span class="w">    </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin map source</span><span class="w"></span>
 
@@ -1474,10 +1507,10 @@
 <span class="w">    </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;edificios&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;fill-extrusion&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;source&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;edificios_source&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;source-layer&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;construcciones-324xyz&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Nuestro nombre Tileset</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;source-layer&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;construcciones-3f5iwq&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Nuestro nombre Tileset</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;maxzoom&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">21</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;minzoom&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">14</span><span class="p">,</span><span class="w"></span>
-<span class="hll"><span class="w">   </span><span class="s2">&quot;filter&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;numberOfFl&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;minzoom&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span><span class="w"></span>
+<span class="hll"><span class="w">    </span><span class="s2">&quot;filter&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;numberOfFl&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">],</span><span class="w"></span>
 </span><span class="w">    </span><span class="s2">&quot;paint&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;fill-extrusion-color&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
 <span class="w">            </span><span class="s2">&quot;interpolate&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;linear&quot;</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;numberOfFl&quot;</span><span class="p">]],</span><span class="w"></span>
@@ -1490,20 +1523,11 @@
 <span class="w">            </span><span class="mf">15</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#14b1fd&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">            </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#3d73e6&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">            </span><span class="mf">40</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#123a8f&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="mf">60</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#ce2f7e&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="mf">106</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#ff4d4d&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="mf">80</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#ce2f7e&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;transparent&quot;</span><span class="w"></span>
 
 <span class="w">        </span><span class="p">],</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;fill-extrusion-height&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">            </span><span class="s2">&quot;interpolate&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="p">[</span><span class="s2">&quot;linear&quot;</span><span class="p">],</span><span class="w"></span>
-<span class="w">            </span><span class="p">[</span><span class="s2">&quot;zoom&quot;</span><span class="p">],</span><span class="w"></span>
-<span class="w">            </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="mf">12.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="mf">14</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;to-number&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;numberOfFl&quot;</span><span class="p">]]],</span><span class="w"></span>
-<span class="w">            </span><span class="mf">16</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;to-number&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;numberOfFl&quot;</span><span class="p">]]],</span><span class="w"></span>
-<span class="w">            </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;to-number&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;numberOfFl&quot;</span><span class="p">]]]</span><span class="w"></span>
-<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;fill-extrusion-height&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;to-number&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;get&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;numberOfFl&quot;</span><span class="p">]]],</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;fill-extrusion-opacity&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0.9</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
@@ -1521,14 +1545,17 @@
 <p>Creamos un elementos HTML de tipo <code>input:range</code> para poder filtrar</p>
 </li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Programamos funciones fuera del mapa!!</p>
+</div>
 <div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Edificios<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
 
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/edificios.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -1578,14 +1605,14 @@
 </ul>
 <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">panelTopIzquierda</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">z-index</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mf">0.9</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#333333</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#33333</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
@@ -1593,7 +1620,7 @@
 <span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="mf">0.85</span><span class="kt">em</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
-<span class="p">.</span><span class="nc">panelTopIzquierda</span><span class="w"> </span><span class="nt">input</span><span class="p">{</span><span class="w"></span>
+<span class="p">.</span><span class="nc">panelTopIzquierda</span><span class="w"> </span><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="nt">range</span><span class="o">]</span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">cursor</span><span class="p">:</span><span class="kc">pointer</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">95</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
@@ -1619,8 +1646,8 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Edificios<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/utils.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/edificios.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -1665,24 +1692,12 @@
 
     <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">Activar/ desactivar capa via código</p>
+<h4 id="paso-8-eventos-click-i-popup">Paso 8: Eventos Click i popup</h4>
+<div class="admonition summary">
+<p class="admonition-title">Nuevas posibilidades de mapbox</p>
+<p><a href="https://docs.mapbox.com/mapbox-gl-js/api/map/#map.event:click" target="_blank&quot;">https://docs.mapbox.com/mapbox-gl-js/api/map/#map.event:click</a></p>
+<p><a href="https://docs.mapbox.com/mapbox-gl-js/api/markers/#popup" target="_blank&quot;">https://docs.mapbox.com/mapbox-gl-js/api/markers/#popup</a></p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">setLayoutProperty</span><span class="p">(</span><span class="s2">&quot;edificios&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;visibility&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;visible&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">setLayoutProperty</span><span class="p">(</span><span class="s2">&quot;edificios&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;visibility&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;none&quot;</span><span class="p">);</span><span class="w"></span>
-</code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">desactivar capas cuyo id contenga 'label'</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">map</span><span class="p">.</span><span class="nx">getStyle</span><span class="p">().</span><span class="nx">layers</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
-
-<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">getStyle</span><span class="p">().</span><span class="nx">layers</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">id</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;label&quot;</span><span class="p">)</span><span class="o">!=-</span><span class="mf">1</span><span class="p">){</span><span class="w"></span>
-
-<span class="w">                        </span><span class="nx">map</span><span class="p">.</span><span class="nx">setLayoutProperty</span><span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">getStyle</span><span class="p">().</span><span class="nx">layers</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;visibility&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;none&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">                    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">                </span><span class="p">}</span><span class="w"></span>
-</code></pre></div>
 <div class="admonition success">
 <p class="admonition-title">Añadir funcion Popup personalizado dentro de edificios.js</p>
 </div>
@@ -1731,7 +1746,7 @@
 
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h4 id="paso-8-llamamos-funcion-addpopuptomapedificios">Paso 8: Llamamos función addPopupToMapEdificios</h4>
+<h4 id="paso-9-llamamos-funcion-addpopuptomapedificios">Paso 9: Llamamos función addPopupToMapEdificios</h4>
 <ul>
 <li>LLamamos a la función de desde el evento <code>load</code> del mapa</li>
 </ul>
@@ -1741,8 +1756,8 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Edificios<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/utils.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/edificios.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -1798,10 +1813,10 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Edificios<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
-<span class="hll">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span><span class="hll">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+<span class="hll">   <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span class="hll"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
 </span>    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
 
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/edificios.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -1854,13 +1869,14 @@
 </code></pre></div>
 <div class="admonition question">
 <p class="admonition-title">Miramos opciones de Geocoder. ¿Limitámos búsquedas del geocoder por caja de coordenadas de Barcelona?</p>
-<p><code>[2.1066 , 41.3000 , 2.2536 , 41.4468]</code></p>
+<p><a href="https://github.com/mapbox/mapbox-gl-geocoder/blob/main/API.md" target="_blank">https://github.com/mapbox/mapbox-gl-geocoder/blob/main/API.md</a></p>
+<p><code>bbox:[2.1066 , 41.3000 , 2.2536 , 41.4468]</code></p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">¿Ponemos título?</p>
 </div>
 <div class="admonition success">
-<p class="admonition-title">¿Subimos el ejemplo al GitHub?</p>
+<p class="admonition-title">¿Editamos index.html y subimos el ejemplo al GitHub?</p>
 <div class="highlight"><pre><span></span><code>    git pull
     git add .
     git commit -m <span class="s2">&quot;visor catastro&quot;</span>
@@ -1868,6 +1884,33 @@
 </code></pre></div>
 </div>
 <h3 id="saber-mas">Saber más..</h3>
+<div class="admonition example">
+<p class="admonition-title">Forma reactiva de hacer lo mismo en el evento onchange</p>
+</div>
+<div class="highlight"><pre><span></span><code> document.getElementById(&quot;slider&quot;).onchange = function() {
+
+                filtrarEdificios(this.value)
+            }
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Activar/ desactivar capa via código</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">setLayoutProperty</span><span class="p">(</span><span class="s2">&quot;edificios&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;visibility&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;visible&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">setLayoutProperty</span><span class="p">(</span><span class="s2">&quot;edificios&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;visibility&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;none&quot;</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">desactivar capas cuyo id contenga 'label'</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">map</span><span class="p">.</span><span class="nx">getStyle</span><span class="p">().</span><span class="nx">layers</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+
+<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">getStyle</span><span class="p">().</span><span class="nx">layers</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">id</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;label&quot;</span><span class="p">)</span><span class="o">!=-</span><span class="mf">1</span><span class="p">){</span><span class="w"></span>
+
+<span class="w">                        </span><span class="nx">map</span><span class="p">.</span><span class="nx">setLayoutProperty</span><span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">getStyle</span><span class="p">().</span><span class="nx">layers</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;visibility&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;none&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">                    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="nivel-avanzado">Nivel avanzado..</h3>
 <ul>
 <li>Podemos programas el evento click sobre el mapa y no sobre una capa conresta, obtener los vectores de todas las capas y filtrar por la capa que nos interesa.</li>
 <li>La función <strong>addPopupToMapEdificios</strong> quedaria así y funcionaria en 2d cómo en 3d</li>

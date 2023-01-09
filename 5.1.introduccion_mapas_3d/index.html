@@ -598,8 +598,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#capacidades-3d-de-mapbox-gls" class="md-nav__link">
-    Capacidades 3D de MapBox GLS
+  <a href="#capacidades-3d-de-mapbox-gl-js" class="md-nav__link">
+    Capacidades 3D de MapBox GL JS
   </a>
   
 </li>
@@ -635,26 +635,6 @@
         
       </ul>
     </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    
-  </a>
-  
-    <nav class="md-nav" aria-label="">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#anexo" class="md-nav__link">
-    ANEXO
-  </a>
   
 </li>
         
@@ -1154,8 +1134,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#capacidades-3d-de-mapbox-gls" class="md-nav__link">
-    Capacidades 3D de MapBox GLS
+  <a href="#capacidades-3d-de-mapbox-gl-js" class="md-nav__link">
+    Capacidades 3D de MapBox GL JS
   </a>
   
 </li>
@@ -1199,26 +1179,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    
-  </a>
-  
-    <nav class="md-nav" aria-label="">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#anexo" class="md-nav__link">
-    ANEXO
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1239,6 +1199,8 @@
   </a>
 
 
+  <h1>5.1.Introducción Mapas 3D</h1>
+
 <h2 id="introduccion">Introducción</h2>
 <p>Gracias a la poténcia de WebGL y los nuevos navegadores , cada vez hay más librerias geoweb con capacidades 3D</p>
 <p>La visualización 3D no sólo se limita a la extrusión del terreno síno que va más allá, como por ejemplo visualización de nubes de puntos <a href="http://betaserver.icgc.cat/potree/examples/gironaen3d.html" target="_blank">lidar</a> , visión hiperrealista de <a href="http://betaserver.icgc.cat/cesium/Girona3D.html" target="_blank">ciudades</a></p>
@@ -1256,12 +1218,18 @@
 <p><strong>Terrain-RGB</strong>: Datos de elevación codificados en teselas PNG rasterizadas como valores de color que pueden ser decodificados a alturas en metros.</p>
 <p>Formula para pasar el color a metros :
  <code>height = -10000 + ((R * 256 * 256 + G * 256 + B) * 0.1)</code></p>
-<h3 id="capacidades-3d-de-mapbox-gls">Capacidades 3D de MapBox GLS</h3>
-<blockquote>
+<h3 id="capacidades-3d-de-mapbox-gl-js">Capacidades 3D de MapBox GL JS</h3>
+<ul>
+<li>
 <p>Mapbox puede extrudir polígonos</p>
+</li>
+<li>
 <p>Mostrar el terreno en 3D</p>
+</li>
+<li>
 <p>Mostar objectos y textura 3D <a href="https://openicgc.github.io/exemples/maplibre/icgc-model3d-maplibre-code.html" target="_blank">https://openicgc.github.io/exemples/maplibre/icgc-model3d-maplibre-code.html</a></p>
-</blockquote>
+</li>
+</ul>
 <h3 id="como-ver-un-mapa-3d-en-mapbox-gl">Cómo ver un mapa 3D en Mapbox GL</h3>
 <div class="admonition note">
 <p class="admonition-title">Método setTerrain <a href="https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setterrain" target="_blank">https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setterrain</a></p>
@@ -1278,8 +1246,8 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mapa 3D<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
 
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/3d.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -1331,15 +1299,7 @@
 <span class="w">        </span><span class="s1">&#39;maxzoom&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">14</span><span class="w"></span>
 <span class="w">    </span><span class="p">});</span><span class="w"></span>
 
-<span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">({</span><span class="w"></span>
-<span class="w">        </span><span class="s1">&#39;id&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;sky&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s1">&#39;type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;sky&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s1">&#39;paint&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="s1">&#39;sky-type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;atmosphere&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="s1">&#39;sky-atmosphere-sun&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">],</span><span class="w"></span>
-<span class="w">            </span><span class="s1">&#39;sky-atmosphere-sun-intensity&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">});</span><span class="w"></span>
+<span class="w">   </span><span class="nx">map</span><span class="p">.</span><span class="nx">setFog</span><span class="p">({});</span><span class="w"></span>
 
 
 <span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">setTerrain</span><span class="p">({</span><span class="w"></span>
@@ -1348,8 +1308,35 @@
 <span class="w">    </span><span class="p">});</span><span class="w"></span>
 
 
+<span class="w">    </span><span class="c1">//edificios de los estilos Mapbox</span><span class="w"></span>
+
+<span class="cm">/*</span>
+<span class="cm">    map.addLayer({</span>
+<span class="cm">            &#39;id&#39;: &#39;3d-buildings&#39;,</span>
+<span class="cm">            &#39;source&#39;: &#39;composite&#39;,</span>
+<span class="cm">            &#39;source-layer&#39;: &#39;building&#39;,</span>
+<span class="cm">            &#39;filter&#39;: [&#39;==&#39;, &#39;extrude&#39;, &#39;true&#39;],</span>
+<span class="cm">            &#39;type&#39;: &#39;fill-extrusion&#39;,</span>
+<span class="cm">            &#39;minzoom&#39;: 15,</span>
+<span class="cm">            &#39;paint&#39;: {</span>
+<span class="cm">                &#39;fill-extrusion-color&#39;: &#39;#aaa&#39;,</span>
+<span class="cm">                &#39;fill-extrusion-height&#39;: [&#39;get&#39;, &#39;height&#39;],                    </span>
+<span class="cm">                &#39;fill-extrusion-opacity&#39;: 0.9</span>
+<span class="cm">            }</span>
+<span class="cm">        });</span>
+
+<span class="cm">*/</span><span class="w"></span>
+
+
+
+
+
 <span class="p">}</span><span class="w"> </span><span class="c1">//fin funcion</span><span class="w"></span>
 </code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Con fog controlamos el ambiente del mapa</p>
+<p><a href="https://docs.mapbox.com/mapbox-gl-js/style-spec/fog/" target="_blank">https://docs.mapbox.com/mapbox-gl-js/style-spec/fog/</a></p>
+</div>
 <h4 id="paso-4-llamamos-funciones-en-el-evento-load-de-map">Paso 4: Llamamos funciones en el evento load de map</h4>
 <ul>
 <li>Llamamos a la función <strong>add3D()</strong></li>
@@ -1359,8 +1346,8 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mapa 3D<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
 
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/3d.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -1402,7 +1389,9 @@
 <p class="admonition-title">visualizamos el mapa</p>
 </div>
 <p><img alt="alt text" src="../img/mapbox-3d.png" title="mapbox-3d.png" /></p>
-<h1 id="_1"></h1>
+<div class="admonition question">
+<p class="admonition-title">Descomentamos y añadimos capa edificios mapbox</p>
+</div>
 <div class="admonition success">
 <p class="admonition-title">Editamos index.html y subimos el ejemplo al GitHub</p>
 <div class="highlight"><pre><span></span><code>    git pull
@@ -1410,10 +1399,6 @@
     git commit -m <span class="s2">&quot;visor 3d&quot;</span>
     git push
 </code></pre></div>
-</div>
-<h2 id="anexo">ANEXO</h2>
-<div class="admonition question">
-<p class="admonition-title">¿Podríamos pasar a 3D el visor de edificios de Catastro?¿Cómo?</p>
 </div>
 
 
