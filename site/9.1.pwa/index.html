@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#progressive-web-application-pwa" class="md-skip">
+        <a href="#progressive-web-applications-pwa" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -814,6 +814,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           9.1.Progressive web applications
@@ -830,6 +832,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -838,8 +842,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#progressive-web-application-pwa" class="md-nav__link">
-    Progressive web application (PWA)
+  <a href="#progressive-web-applications-pwa_1" class="md-nav__link">
+    Progressive web applications (PWA)
   </a>
   
 </li>
@@ -1091,6 +1095,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1099,8 +1105,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#progressive-web-application-pwa" class="md-nav__link">
-    Progressive web application (PWA)
+  <a href="#progressive-web-applications-pwa_1" class="md-nav__link">
+    Progressive web applications (PWA)
   </a>
   
 </li>
@@ -1173,11 +1179,10 @@
   </a>
 
 
-  <h1>9.1.Progressive web applications</h1>
-
+<h1 id="progressive-web-applications-pwa">Progressive web applications (PWA)</h1>
 <p><a href="https://commons.wikimedia.org/wiki/File:Progressive_Web_Apps_Logo.svg#/media/Archivo:Progressive_Web_Apps_Logo.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Progressive_Web_Apps_Logo.svg" alt="Progressive Web Apps Logo.svg"  width="100"></a></p>
 
-<h3 id="progressive-web-application-pwa">Progressive web application (PWA)</h3>
+<h3 id="progressive-web-applications-pwa_1">Progressive web applications (PWA)</h3>
 <p>Una aplicación web progresiva (PWA),es basicamente una web que puede ser instalada en cualquier dispositivo </p>
 <p>Algunas características de las PWA son:</p>
 <ul>
@@ -1208,7 +1213,7 @@
 </ul>
 <h4 id="compilacion-a-app-mobil">Compilación a app móbil</h4>
 <ul>
-<li><a href="hhttps://www.pwabuilder.com/" target="_blank">https://www.pwabuilder.com/</a></li>
+<li><a href="https://www.pwabuilder.com/" target="_blank">https://www.pwabuilder.com/</a></li>
 </ul>
 <h4 id="definicion">Definición</h4>
 <ul>
@@ -1225,13 +1230,18 @@
 <ul>
 <li>
 <p>Crear un archivo webmanifest tipo JSON dónde  describir el nombre de la app, la URL, los íconos a utilizar y otros detalles necesarios para transformar el visor en una app.
-  Opeciones de un manifest <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Manifest</a></p>
+  Opciones de un manifest <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Manifest</a></p>
 </li>
 <li>
-<p>Utilizar un serviceworker.js. Un serviceworker es un archivo de JavaScript que se ejecuta en segundo plano en el navegador y puede realizar tareas como: interceptar solicitudes HTTP, almacenar en caché contenido para su posterior uso sin conexión y recibir notificaciones push. Los serviceworkers son una forma de mejorar la experiencia del usuario y el rendimiento de una aplicación web. </p>
+<p>Generar imagenes / capturas a diferentes resoluciones, que funcionará como icona al instalar el visor. Normalmente podemos generar la misma imagea a:</p>
+<blockquote>
+<p>512x512 pixeles</p>
+<p>256X256 pixeles</p>
+<p>128X128 píxeles</p>
+</blockquote>
 </li>
 <li>
-<p>Generar imagenes / capturas a diferentes resoluciones, que funcionarar como icona al instalar el visor</p>
+<p>Utilizar un serviceworker  (sw.js). Un serviceworker es un archivo de JavaScript que se ejecuta en segundo plano en el navegador y puede realizar tareas como: interceptar solicitudes HTTP, almacenar en caché contenido para su posterior uso sin conexión y recibir notificaciones push. Los serviceworkers son una forma de mejorar la experiencia del usuario y el rendimiento de una aplicación web. </p>
 </li>
 <li>
 <p>Integrar el webmanifest y el serviceworker dentro del html de nuestro visor</p>
