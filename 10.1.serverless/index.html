@@ -57,12 +57,16 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -70,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#practica-cementrio-puntuable" class="md-skip">
+        <a href="#que-es" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -109,6 +113,30 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -900,8 +928,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#practica-cementrio-puntuable" class="md-nav__link">
-    Práctica Cementrio. Puntuable!!
+  <a href="#que-es" class="md-nav__link">
+    ¿Qué es?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encabezados-http-range" class="md-nav__link">
+    Encabezados HTTP range
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatos-geospaciales-serverless" class="md-nav__link">
+    Formatos geospaciales "serverless"
   </a>
   
 </li>
@@ -1051,8 +1093,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#practica-cementrio-puntuable" class="md-nav__link">
-    Práctica Cementrio. Puntuable!!
+  <a href="#que-es" class="md-nav__link">
+    ¿Qué es?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encabezados-http-range" class="md-nav__link">
+    Encabezados HTTP range
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatos-geospaciales-serverless" class="md-nav__link">
+    Formatos geospaciales "serverless"
   </a>
   
 </li>
@@ -1079,43 +1135,27 @@
 
   <h1>10.1.Tecnologia serverless</h1>
 
-<h3 id="practica-cementrio-puntuable">Práctica Cementrio. <strong>Puntuable!!</strong></h3>
+<h3 id="que-es">¿Qué es?</h3>
+<p>Serverless significa sin servidor. La arquitectura Serverless es una forma de construir y desplegar aplicaciones y servicios sin la necesidad de provisionar o administrar servidores. En lugar de eso, los servicios se ejecutan en una plataforma de nube que se encarga de asignar recursos y escalar automáticamente de acuerdo a la demanda.Evidentemente, por detrás hay servidores para ejecutar las aplicaciones. Los desarrolladores solo pagan por el tiempo de ejecución y el uso de recursos, lo que puede resultar en un ahorro significativo en términos de costos y esfuerzo de administración. AWS Lambda, Azure Functions y Google Cloud Functions son ejemplos de plataformas de Serverless.</p>
+<p>Aunqué serverless es una arquitectura també se utliza el concepto para definir recursos que pueden ser servidos sin proceso en servidor, esto es posible gracias al encabezado HTTP range.</p>
+<h3 id="encabezados-http-range">Encabezados HTTP range</h3>
+<p>El origen de HTTP Range es una de las características de HTTP 1.1, una versión actualizada del protocolo HTTP 1.0. Fue definida en elRFC 7233 y publicada en el año 2014.</p>
+<p>El desarrollo de HTTP Range fue motivado por las limitaciones de la versión anterior de HTTP 1.0, que no proporcionaba una forma eficiente de descargar grandes archivos. Con el crecimiento de la Internet y el aumento del uso de contenido multimedia, se hizo necesario un mecanismo para descargar contenido de manera más eficiente.</p>
+<p>HTTP Range byte es un encabezado HTTP que permite a los clientes solicitar solo una parte de un recurso en lugar de descargar todo el archivo. Este encabezado es especialmente útil para descargar grandes archivos o para transmitir contenido multimedia en streaming. El formato del encabezado es "Range: bytes = x-y", donde x es el primer byte solicitado y y es el último byte solicitado. El servidor puede responder con el código de estado 206 (Partial Content) si puede cumplir con la solicitud de rango, o con el código de estado 416 (Requested Range Not Satisfiable) si el rango especificado no es válido.</p>
+<p>La relación entre Serverless y HTTP Range es que ambos son características o tecnologías que se utilizan para mejorar la escalabilidad y la eficiencia en la entrega de contenido.</p>
+<h3 id="formatos-geospaciales-serverless">Formatos geospaciales "serverless"</h3>
 <ul>
 <li>
-<p>Creamos nuevo estilo en Mapbox Studio</p>
-<ul>
-<li>
-<p>Descargamos capas <a href="../datos/constru_cementerio.geojson" target="_blank">datos/constru_cementerio.geojson</a> y <a href="../datos/cementerio.geojson" target="_blank">datos/cementerio.geojson</a></p>
+<p>COG (Cloud Optimized Geotiff):  es un formato de imagen geoespacial que esta optimizado para ser almacenado y servido en la nube. Es una extensión de TIFF (Tagged Image File Format) y utiliza el estándar de compresión JPEG2000 para reducir el tamaño del archivo.
+ de una imagen, en lugar de tener que descargar toda la imagen.</p>
 </li>
 <li>
-<p>Añadimos las capas  como tilesets en MapxBox</p>
+<p>PMTILES: es un formato de almacenamiento de mapas basado en SQLite, que es similar en funcionamiento a MBTiles y COG, se utiliza para almacenar mapas en pequeños bloques o teselas. Con PMTiles se puede utilizar el encabezado HTTP Range para descargar solo los bloques necesarios.</p>
 </li>
 <li>
-<p>Integramos los tilesets dentro nuestro estilo creado 
-     <code>Studio</code> --&gt; <code>Styles</code> --&gt;<code>Mi estilo</code> --&gt; <code>Layers</code> --&gt; <code>Add Layer</code> --&gt;<code>Mi tileset</code></p>
-</li>
-<li>
-<p>Editamos estilo capas y  publicamos</p>
-</li>
-<li>
-<p>Creamos visor ejemplo <strong>mapbox-cementerio.html</strong></p>
-</li>
-<li>
-<p>Subimos ejemplo al GitHUB</p>
+<p>FlatGeoBuf</p>
 </li>
 </ul>
-<p><div class="highlight"><pre><span></span><code>    git pull
-    git add .
-    git commit -m <span class="s2">&quot;practica cementerio&quot;</span>
-    git push
-</code></pre></div>
-* Entregamos la URL al visor</p>
-</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Truco</p>
-<p>Las capa de poligonos pueden ser añadidas con un estilo como tipo "Fill extrusion" y ser representados en 2.5D.</p>
-</div>
 
 
 

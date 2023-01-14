@@ -57,12 +57,16 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -109,6 +113,30 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -1387,19 +1415,31 @@
 </ul>
 <h3 id="descripcion-mapbox">Descripción Mapbox</h3>
 <p>Mapbox es una plataforma para crear y utilizar mapas personalizados. Ofrece una variedad de herramientas y APIs para crear mapas interactivos, como la biblioteca JavaScript Mapbox GL JS y los Mapbox Maps SDKs para Android e iOS. Algunas de las características que ofrece Mapbox son:</p>
+<ul>
+<li>
 <p>Estilos de mapas personalizados: Mapbox te permite personalizar la apariencia de tus mapas creando tus propios estilos de mapa con Mapbox Studio o usando alguno de los muchos estilos prediseñados que están disponibles.</p>
+</li>
+<li>
 <p>Geocodificación y reverse geocodificación: Mapbox ofrece servicios de geocodificación y reverse geocodificación, que permiten convertir direcciones y nombres de lugares en coordenadas geográficas y viceversa.</p>
+</li>
+<li>
 <p>Datos en tiempo real: Mapbox puede mostrar datos en tiempo real en tus mapas, como información de tráfico, actualizaciones del tiempo, etc.</p>
+</li>
+<li>
 <p>Navegación: Mapbox ofrece APIs de navegación y enrutamiento que se pueden utilizar para crear indicaciones paso a paso y otras funcionalidades de navegación para tus aplicaciones.</p>
+</li>
+<li>
 <p>Imágenes de satélite: Mapbox proporciona acceso a imágenes de satélite y aéreas de alta resolución que se pueden superponer encima de tus mapas para proporcionar contexto adicional y detalle.</p>
+</li>
+</ul>
 <p>Mapbox es utilizado por una amplia gama de empresas y organizaciones, como Foursquare, The Weather Channel y el Censo de los Estados Unidos, entre otras.</p>
 <h3 id="como-empezar">¿Cómo empezar?</h3>
 <div class="admonition warning">
 <p class="admonition-title">Utilizamos nuestro correo de estudiante UPC!!</p>
 </div>
-<blockquote>
-<p>Nos creamos usuario en <a href="https://www.mapbox.com/signup/" target="_blank">MapBox.com</a></p>
-</blockquote>
+<ul>
+<li>Creamos usuario en <a href="https://www.mapbox.com/signup/" target="_blank">MapBox.com</a></li>
+</ul>
 <div class="admonition tip">
 <p class="admonition-title">Cada usuario tiene un <strong>Access Token</strong> necessario para desarrollar y usar aplicaciones de Mapbox</p>
 <p>De forma gratuita MapBox nos ofrece hasta 50.000 cargas cada mes</p>
