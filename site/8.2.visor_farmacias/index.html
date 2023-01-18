@@ -57,12 +57,16 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -109,6 +113,30 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -792,7 +820,6 @@
         <li class="md-nav__item">
   <a href="#buscador-de-farmacias-de-barcelona-ciudad" class="md-nav__link">
     Buscador de Farmacias de Barcelona ciudad
-<<<<<<< HEAD
   </a>
   
 </li>
@@ -806,46 +833,98 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#paso-1visualizar-datos" class="md-nav__link">
-    Paso 1:Visualizar datos
+  <a href="#paso-0visualizar-datos" class="md-nav__link">
+    Paso 0:Visualizar datos
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-2-crear-archivo-farmaciashtml" class="md-nav__link">
-    Paso 2: Crear archivo farmacias.html
+  <a href="#paso-1-crear-archivo-farmaciashtml-dentro-de-geoweb" class="md-nav__link">
+    Paso 1: Crear archivo farmacias.html dentro de /geoweb
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-3anadir-plugin" class="md-nav__link">
-    Paso 3:Añadir plugin
+  <a href="#paso-2-cargamos-a-nivel-web-los-datos-de-farmaciasjson" class="md-nav__link">
+    Paso 2: Cargamos a nivel web los datos de farmacias.json
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-4cargamos-geojson-farmacias" class="md-nav__link">
-    Paso 4:Cargamos GeoJson Farmacias
-=======
->>>>>>> 0a70a4457f29fe68576eaae64b61f26105a7ee4e
+  <a href="#paso-3-crear-archivo-farmaciasjs-dentro-de-geowebjs" class="md-nav__link">
+    Paso 3: Crear archivo farmacias.js dentro de /geoweb/js
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-llamamos-a-la-funcion-addfarmacias" class="md-nav__link">
+    Paso 4: Llamamos a la funcion addFarmacias()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-5-reutilizamos-la-funcion-addpopuptomap-de-jsutilsjs" class="md-nav__link">
+    Paso 5: Reutilizamos la funcion addPopupToMap() de /js/utils.js
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6-control-geocoder-como-buscador-interno" class="md-nav__link">
+    Paso 6: Control geocoder como buscador interno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-7-dentro-de-jsfarmaciasjs-creamos-la-funcion-buscarfarmaciasvalor-para-buscar-en-el-geojson" class="md-nav__link">
+    Paso 7: Dentro de js/farmacias.js creamos la funcion buscarFarmacias(valor) para buscar en el GeoJson
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-8-llamamos-a-la-funcion-buscarfarmacias-en-el-control-geocoder" class="md-nav__link">
+    Paso 8: Llamamos a la funcion buscarFarmacias en el control Geocoder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-buscador-de-farmacias" class="md-nav__link">
-    Ejemplo buscador de Farmacias
+  <a href="#localizar-las-cinco-farmacias-mas-cercanas-a-una-farmacia-concreta" class="md-nav__link">
+    Localizar las cinco farmacias más cercanas a una farmacia concreta
   </a>
   
-    <nav class="md-nav" aria-label="Ejemplo buscador de Farmacias">
+    <nav class="md-nav" aria-label="Localizar las cinco farmacias más cercanas a una farmacia concreta">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#paso-1visualizar-datos" class="md-nav__link">
-    Paso 1:Visualizar datos
+  <a href="#paso-9-anadimos-libreria-turfjs-a-farmaciashtml" class="md-nav__link">
+    Paso 9: Añadimos libreria turf.js a farmacias.html
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-10-dentro-de-jsfarmaciasjs-creamos-funcion-addfarmaciascercanas" class="md-nav__link">
+    Paso 10: Dentro de js/farmacias.js creamos funcion addFarmaciasCercanas()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-llamamos-funcion-addfarmaciascercanas" class="md-nav__link">
+    Paso 1: Llamamos función addFarmaciasCercanas()
   </a>
   
 </li>
@@ -1112,7 +1191,6 @@
         <li class="md-nav__item">
   <a href="#buscador-de-farmacias-de-barcelona-ciudad" class="md-nav__link">
     Buscador de Farmacias de Barcelona ciudad
-<<<<<<< HEAD
   </a>
   
 </li>
@@ -1126,60 +1204,98 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#paso-1visualizar-datos" class="md-nav__link">
-    Paso 1:Visualizar datos
+  <a href="#paso-0visualizar-datos" class="md-nav__link">
+    Paso 0:Visualizar datos
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-2-crear-archivo-farmaciashtml" class="md-nav__link">
-    Paso 2: Crear archivo farmacias.html
+  <a href="#paso-1-crear-archivo-farmaciashtml-dentro-de-geoweb" class="md-nav__link">
+    Paso 1: Crear archivo farmacias.html dentro de /geoweb
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-3anadir-plugin" class="md-nav__link">
-    Paso 3:Añadir plugin
+  <a href="#paso-2-cargamos-a-nivel-web-los-datos-de-farmaciasjson" class="md-nav__link">
+    Paso 2: Cargamos a nivel web los datos de farmacias.json
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-4cargamos-geojson-farmacias" class="md-nav__link">
-    Paso 4:Cargamos GeoJson Farmacias
+  <a href="#paso-3-crear-archivo-farmaciasjs-dentro-de-geowebjs" class="md-nav__link">
+    Paso 3: Crear archivo farmacias.js dentro de /geoweb/js
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-5" class="md-nav__link">
-    Paso 5:
+  <a href="#paso-4-llamamos-a-la-funcion-addfarmacias" class="md-nav__link">
+    Paso 4: Llamamos a la funcion addFarmacias()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-6anadir-opcion-para-buscar-farmacias" class="md-nav__link">
-    Paso 6:Añadir opción para buscar Farmacias
-=======
->>>>>>> 0a70a4457f29fe68576eaae64b61f26105a7ee4e
+  <a href="#paso-5-reutilizamos-la-funcion-addpopuptomap-de-jsutilsjs" class="md-nav__link">
+    Paso 5: Reutilizamos la funcion addPopupToMap() de /js/utils.js
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6-control-geocoder-como-buscador-interno" class="md-nav__link">
+    Paso 6: Control geocoder como buscador interno
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-7-dentro-de-jsfarmaciasjs-creamos-la-funcion-buscarfarmaciasvalor-para-buscar-en-el-geojson" class="md-nav__link">
+    Paso 7: Dentro de js/farmacias.js creamos la funcion buscarFarmacias(valor) para buscar en el GeoJson
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-8-llamamos-a-la-funcion-buscarfarmacias-en-el-control-geocoder" class="md-nav__link">
+    Paso 8: Llamamos a la funcion buscarFarmacias en el control Geocoder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-buscador-de-farmacias" class="md-nav__link">
-    Ejemplo buscador de Farmacias
+  <a href="#localizar-las-cinco-farmacias-mas-cercanas-a-una-farmacia-concreta" class="md-nav__link">
+    Localizar las cinco farmacias más cercanas a una farmacia concreta
   </a>
   
-    <nav class="md-nav" aria-label="Ejemplo buscador de Farmacias">
+    <nav class="md-nav" aria-label="Localizar las cinco farmacias más cercanas a una farmacia concreta">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#paso-1visualizar-datos" class="md-nav__link">
-    Paso 1:Visualizar datos
+  <a href="#paso-9-anadimos-libreria-turfjs-a-farmaciashtml" class="md-nav__link">
+    Paso 9: Añadimos libreria turf.js a farmacias.html
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-10-dentro-de-jsfarmaciasjs-creamos-funcion-addfarmaciascercanas" class="md-nav__link">
+    Paso 10: Dentro de js/farmacias.js creamos funcion addFarmaciasCercanas()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-llamamos-funcion-addfarmaciascercanas" class="md-nav__link">
+    Paso 1: Llamamos función addFarmaciasCercanas()
   </a>
   
 </li>
@@ -1212,24 +1328,7 @@
   <h1>8.2.Visor de farmacias</h1>
 
 <h3 id="buscador-de-farmacias-de-barcelona-ciudad">Buscador de Farmacias de Barcelona ciudad</h3>
-<<<<<<< HEAD
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">Nos</span><span class="w"> </span><span class="nv">han</span><span class="w"> </span><span class="nv">encargado</span><span class="w"> </span><span class="nv">realizar</span><span class="w"> </span><span class="nv">un</span><span class="w"> </span><span class="nv">mapa</span><span class="w"> </span><span class="nv">para</span><span class="w"> </span><span class="nv">poder</span><span class="w"> </span><span class="nv">localizar</span><span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="nv">buscar</span><span class="w"> </span><span class="nv">las</span><span class="w"> </span><span class="nv">farmacias</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="nv">Barcelona</span><span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="nv">para</span><span class="w"> </span><span class="nv">cada</span><span class="w"> </span><span class="nv">farm</span>á<span class="nv">cia</span><span class="w"> </span><span class="nv">poder</span><span class="w"> </span><span class="nv">visualizar</span><span class="w"> </span><span class="nv">las</span><span class="w"> </span><span class="nv">cinco</span><span class="w"> </span><span class="nv">m</span>á<span class="nv">s</span><span class="w"> </span><span class="nv">cercanas</span><span class="w"></span>
-
-<span class="o">*</span><span class="w"> </span><span class="nv">Los</span><span class="w"> </span><span class="nv">datos</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="nv">farmacias</span><span class="w"> </span><span class="nv">se</span><span class="w"> </span><span class="nv">pueden</span><span class="w"> </span><span class="nv">obtener</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="nv">la</span><span class="w"> </span><span class="nv">web</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="nv">Datos</span><span class="w"> </span><span class="nv">Abiertos</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="nv">Barcelona</span><span class="w"> </span>[<span class="nv">https</span>:<span class="o">//</span><span class="nv">opendata</span><span class="o">-</span><span class="nv">ajuntament</span>.<span class="nv">barcelona</span>.<span class="nv">cat</span><span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">es</span><span class="o">/</span><span class="nv">dataset</span><span class="o">/</span><span class="nv">sanitat</span><span class="o">-</span><span class="nv">farmacies</span>]<span class="ss">(</span><span class="nv">https</span>:<span class="o">//</span><span class="nv">opendata</span><span class="o">-</span><span class="nv">ajuntament</span>.<span class="nv">barcelona</span>.<span class="nv">cat</span><span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">es</span><span class="o">/</span><span class="nv">dataset</span><span class="o">/</span><span class="nv">sanitat</span><span class="o">-</span><span class="nv">farmacies</span><span class="ss">)</span>{<span class="nv">target</span><span class="o">=</span><span class="nv">_blank</span>}<span class="w"></span>
-
-<span class="o">*</span><span class="w"> </span><span class="nv">Podemos</span><span class="w"> </span><span class="nv">transformar</span><span class="w"> </span><span class="nv">los</span><span class="w"> </span><span class="nv">datos</span><span class="w">  </span><span class="o">**</span><span class="nv">GeoJson</span><span class="o">**</span><span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="nv">cargalos</span><span class="w"> </span><span class="nv">com</span><span class="w"> </span><span class="nv">un</span><span class="w"> </span><span class="nv">source</span><span class="w"> </span><span class="nv">en</span><span class="w"> </span><span class="nv">Mapbox</span><span class="w"> </span><span class="nv">GlJs</span><span class="w"></span>
-
-<span class="o">*</span><span class="w"> </span><span class="nv">Podemos</span><span class="w"> </span><span class="nv">utilizar</span><span class="w"> </span><span class="nv">el</span><span class="w"> </span><span class="nv">control</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="o">**</span><span class="nv">mapbox</span><span class="o">-</span><span class="nv">gl</span><span class="o">-</span><span class="nv">geocoder</span><span class="o">**</span><span class="w"> </span><span class="nv">para</span><span class="w"> </span><span class="nv">buscar</span><span class="w"> </span><span class="nv">en</span><span class="w"> </span><span class="nv">GeoJson</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">local</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-
-=======
-<p>Nos han encargado realizar un mapa para poder localizar y buscar las farmacias de Barcelona y para cada farmácia poder visualizar las cinco más cercanas</p>
+<p>Nos han encargado realizar un mapa para poder localizar y buscar las farmacias de Barcelona y para cada farmácia poder visualizar las cinco más cercanas.</p>
 <ul>
 <li>
 <p>Los datos de farmacias se pueden obtener de la web de Datos Abiertos de Barcelona <a href="https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies" target="_blank">https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies</a> </p>
@@ -1241,9 +1340,8 @@
 <p>Podemos utilizar el control de <strong>mapbox-gl-geocoder</strong> para buscar en GeoJson de forma local</p>
 </li>
 </ul>
->>>>>>> 0a70a4457f29fe68576eaae64b61f26105a7ee4e
 <h3 id="ejemplo-buscador-de-farmacias">Ejemplo buscador de Farmacias</h3>
-<h4 id="paso-1visualizar-datos">Paso 1:Visualizar datos</h4>
+<h4 id="paso-0visualizar-datos">Paso 0:Visualizar datos</h4>
 <ul>
 <li>Dentro de <strong>/geoweb/datos/farmacias.geojson</strong> ya tenemos los datos descargados y convertidos a GeoJson. Podemos visualizarlos con <a href="https://geojson.io/#map=2/0/20" target="_blank">https://geojson.io/#map=2/0/20</a> por ejemplo</li>
 </ul>
@@ -1252,39 +1350,675 @@
 <p>El archivo de farmacias lo hemos descargado del portal <a href="https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies" target="_blank">https://opendata-ajuntament.barcelona.cat/data/es/dataset/sanitat-farmacies</a> en formato CSV y lo hemos transformado a GeoJSON</p>
 <p>Para ver cómo transformar y reproyectar un archivo CSV a GeoJson con Qgis mira el <strong>video 10</strong></p>
 </div>
-<!--
-#### Paso 2: Crear archivo farmacias.html
+<h4 id="paso-1-crear-archivo-farmaciashtml-dentro-de-geoweb">Paso 1: Crear archivo farmacias.html dentro de /geoweb</h4>
+<div class="admonition tip">
+<p class="admonition-title">Aprovechamos para:</p>
+<ul>
+<li>Añadir libreria geocoder</li>
+<li>Añadir utils.js</li>
+<li>Variable global <strong>farmaciasGeoJSON</strong></li>
+</ul>
+</div>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 
- * Abrimos archivo **mapabase.html** y guardamos como *File->Save as* **farmacias.html**
- * Añadimos un titulo y la función  inicial **initMapaFarmacias()** de nuestro proyecto
-* Llamamos a la función **initMapaFarmacias()** en el body onLoad
- <div class="highlight"><pre><span></span><code>   <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
-   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="hll">       <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Farmacias<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-</span>       <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span>
-       <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
-       <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;autor&quot;</span> <span class="p">/&gt;</span>
-       <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;descripción página&quot;</span> <span class="p">/&gt;</span>
-       <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;robots&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;index,follow&quot;</span> <span class="p">/&gt;</span>
-       <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&quot;</span> <span class="p">/&gt;</span>
-       <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Farmacias<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
 
-       <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;css/estilobase.css&quot;</span> <span class="p">/&gt;</span>
-       <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/mapabase.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="hll">       <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w">       </span>
-</span><span class="hll"><span class="w">           </span><span class="kd">function</span><span class="w"> </span><span class="nx">initMapaFarmacias</span><span class="p">(){</span><span class="w"></span>
-</span><span class="hll"><span class="w">               </span><span class="nx">init</span><span class="p">();</span><span class="w">              </span>
-</span><span class="hll"><span class="w">           </span><span class="p">}</span><span class="w">         </span>
-</span><span class="hll"><span class="w">       </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span>
-   <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
 
-<span class="hll">   <span class="p">&lt;</span><span class="nt">body</span> <span class="na">onLoad</span><span class="o">=</span><span class="s">&quot;initMapaFarmacias()&quot;</span><span class="p">&gt;</span>
-</span>       <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/utils.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
-   <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//Añadir vuestor token y/o estilo !!</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">farmaciasGeoJSON</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span><span class="w"> </span><span class="mf">41.3954</span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">attributionControl</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">hash</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">compact</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="c1">// final init</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
+<h4 id="paso-2-cargamos-a-nivel-web-los-datos-de-farmaciasjson">Paso 2: Cargamos a nivel web los datos de farmacias.json</h4>
+<div class="admonition tip">
+<p class="admonition-title">Reutilizamos funcion:</p>
+<ul>
+<li>enviarPeticion()</li>
+</ul>
+</div>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Farmacias<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/utils.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//Añadir vuestor token y/o estilo !!</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">farmaciasGeoJSON</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span><span class="w"> </span><span class="mf">41.3954</span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">attributionControl</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">hash</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">compact</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
+
+<span class="hll"><span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;load&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</span><span class="hll">
+</span><span class="hll"><span class="w">                </span><span class="c1">// reutilizamos funcion de utils para obtener geojson</span><span class="w"></span>
+</span><span class="hll"><span class="w">                </span><span class="nx">enviarPeticion</span><span class="p">(</span><span class="s2">&quot;datos/farmacias.geojson&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">datos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</span><span class="hll"><span class="w">                    </span><span class="nx">farmaciasGeoJSON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datos</span><span class="p">;</span><span class="w"></span>
+</span><span class="hll">
+</span><span class="hll"><span class="w">                </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin peticio</span><span class="w"></span>
+</span><span class="hll">
+</span><span class="hll">
+</span><span class="hll"><span class="w">            </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin load</span><span class="w"></span>
+</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="c1">// final init</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="paso-3-crear-archivo-farmaciasjs-dentro-de-geowebjs">Paso 3: Crear archivo farmacias.js dentro de /geoweb/js</h4>
+<p>Llamamos a nuestro geojson de farmacias que está en <strong>datos/farmacias.geojson</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">addFarmacias</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">//var url = &#39;datos/farmacias.geojson&#39;;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">farmaciasGeoJSON</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">addSource</span><span class="p">(</span><span class="s1">&#39;farmacias&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;geojson&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="nx">url</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">({</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;id&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;farmacias&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;circle&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;source&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;farmacias&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;paint&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="s1">&#39;circle-color&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#00ff00&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s1">&#39;circle-radius&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s1">&#39;circle-stroke-color&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s1">&#39;circle-stroke-width&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// fin funcion</span><span class="w"></span>
+</code></pre></div>
+<h4 id="paso-4-llamamos-a-la-funcion-addfarmacias">Paso 4: Llamamos a la funcion addFarmacias()</h4>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Farmacias<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/utils.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="hll">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/farmacias.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//Añadir vuestor token y/o estilo !!</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">farmaciasGeoJSON</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span><span class="w"> </span><span class="mf">41.3954</span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">attributionControl</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">hash</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">compact</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;load&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// reutilizamos funcion de utils para obtener geojson</span><span class="w"></span>
+<span class="w">                </span><span class="nx">enviarPeticion</span><span class="p">(</span><span class="s2">&quot;datos/farmacias.geojson&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">datos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">farmaciasGeoJSON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datos</span><span class="p">;</span><span class="w"></span>
+<span class="hll"><span class="w">                    </span><span class="nx">addFarmacias</span><span class="p">();</span><span class="w"></span>
+</span><span class="w">                </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin peticio</span><span class="w"></span>
+
+
+<span class="w">            </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin load</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="c1">// final init</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Visualizamos las farmacias</p>
+</div>
+<h4 id="paso-5-reutilizamos-la-funcion-addpopuptomap-de-jsutilsjs">Paso 5: Reutilizamos la funcion addPopupToMap() de /js/utils.js</h4>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Farmacias<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/utils.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/farmacias.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//Añadir vuestor token y/o estilo !!</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">farmaciasGeoJSON</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span><span class="w"> </span><span class="mf">41.3954</span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">attributionControl</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">hash</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">compact</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;load&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// reutilizamos funcion de utils para obtener geojson</span><span class="w"></span>
+<span class="w">                </span><span class="nx">enviarPeticion</span><span class="p">(</span><span class="s2">&quot;datos/farmacias.geojson&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">datos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">farmaciasGeoJSON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datos</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">addFarmacias</span><span class="p">();</span><span class="w"></span>
+<span class="hll"><span class="w">                    </span><span class="nx">addPopupToMap</span><span class="p">(</span><span class="s2">&quot;farmacias&quot;</span><span class="p">);</span><span class="w"></span>
+</span><span class="w">                </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin peticio</span><span class="w"></span>
+
+
+<span class="w">            </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin load</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="c1">// final init</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="paso-6-control-geocoder-como-buscador-interno">Paso 6: Control geocoder como buscador interno</h4>
+<ul>
+<li>Añadimos control geocoder</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Farmacias<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/utils.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/farmacias.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//Añadir vuestor token y/o estilo !!</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">farmaciasGeoJSON</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span><span class="w"> </span><span class="mf">41.3954</span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">attributionControl</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">hash</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">compact</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
+
+
+<span class="hll"><span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="w"></span>
+</span><span class="hll"><span class="w">                </span><span class="ow">new</span><span class="w"> </span><span class="nx">MapboxGeocoder</span><span class="p">({</span><span class="w"></span>
+</span><span class="hll"><span class="w">                </span><span class="nx">accessToken</span><span class="o">:</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="p">,</span><span class="w"></span>
+</span><span class="hll"><span class="w">                </span><span class="nx">mapboxgl</span><span class="o">:</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">,</span><span class="w"></span>
+</span><span class="hll"><span class="w">                </span><span class="nx">collapsed</span><span class="o">:</span><span class="kc">true</span><span class="w"></span>
+</span><span class="hll"><span class="w">                </span><span class="p">}));</span><span class="w"></span>
+</span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;load&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// reutilizamos funcion de utils para obtener geojson</span><span class="w"></span>
+<span class="w">                </span><span class="nx">enviarPeticion</span><span class="p">(</span><span class="s2">&quot;datos/farmacias.geojson&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">datos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">farmaciasGeoJSON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datos</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">addFarmacias</span><span class="p">();</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">addPopupToMap</span><span class="p">(</span><span class="s2">&quot;farmacias&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin peticio</span><span class="w"></span>
+
+
+<span class="w">            </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin load</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="c1">// final init</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="paso-7-dentro-de-jsfarmaciasjs-creamos-la-funcion-buscarfarmaciasvalor-para-buscar-en-el-geojson">Paso 7: Dentro de <em>js/farmacias.js</em> creamos la funcion <em>buscarFarmacias(valor)</em> para buscar en el GeoJson</h4>
+<p>Esta función recibirà el texto entrado por el usuario y buscarà en el geojson de faramacias.</p>
+<div class="admonition exemple">
+<p class="admonition-title"><a href="https://docs.mapbox.com/mapbox-gl-js/example/forward-geocode-custom-data/" target="_blank">https://docs.mapbox.com/mapbox-gl-js/example/forward-geocode-custom-data/</a></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Utilizeremos emojis!! 💊</p>
+<p><a href="https://getemoji.com/" target="_blank">https://getemoji.com/</a></p>
+<p><a href="https://unicode.org/emoji/charts/full-emoji-list.html" target="_blank">https://unicode.org/emoji/charts/full-emoji-list.html</a></p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">buscarFarmacias</span><span class="p">(</span><span class="nx">valor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">     </span><span class="kd">var</span><span class="w"> </span><span class="nx">resultadosFarmacias</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
+
+<span class="w">     </span><span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="nx">farmaciasGeoJSON</span><span class="p">);</span><span class="w"></span>
+<span class="w">     </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">farmaciasGeoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">         </span><span class="kd">var</span><span class="w"> </span><span class="nx">feature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">farmaciasGeoJSON</span><span class="p">.</span><span class="nx">features</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span><span class="w"></span>
+
+<span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">             </span><span class="nx">feature</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">nombre</span><span class="w"></span>
+<span class="w">             </span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span><span class="w"></span>
+<span class="w">             </span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">valor</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">())</span><span class="w"></span>
+<span class="w">         </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">             </span><span class="nx">feature</span><span class="p">[</span><span class="s1">&#39;place_name&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`💊 </span><span class="si">${</span><span class="nx">feature</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="nx">feature</span><span class="p">[</span><span class="s1">&#39;center&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">feature</span><span class="p">.</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">coordinates</span><span class="p">;</span><span class="w"></span>
+<span class="w">             </span><span class="nx">feature</span><span class="p">[</span><span class="s1">&#39;place_type&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;place&#39;</span><span class="p">];</span><span class="w"></span>
+<span class="w">             </span><span class="nx">resultadosFarmacias</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">feature</span><span class="p">);</span><span class="w"></span>
+<span class="w">         </span><span class="p">}</span><span class="w"></span>
+<span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="nx">resultadosFarmacias</span><span class="p">;</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// fin funcion</span><span class="w"></span>
+</code></pre></div>
+<h4 id="paso-8-llamamos-a-la-funcion-buscarfarmacias-en-el-control-geocoder">Paso 8: Llamamos a la funcion <em>buscarFarmacias</em> en el control Geocoder</h4>
+<div class="admonition info">
+<p class="admonition-title">Opcion localGeocoder</p>
+</div>
+<p><a href="https://github.com/mapbox/mapbox-gl-geocoder/blob/main/API.md" target="_blank">https://github.com/mapbox/mapbox-gl-geocoder/blob/main/API.md</a> </p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Farmacias<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/utils.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/farmacias.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//Añadir vuestor token y/o estilo !!</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">farmaciasGeoJSON</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span><span class="w"> </span><span class="mf">41.3954</span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">attributionControl</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">hash</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">compact</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
+
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="w"></span>
+<span class="w">                </span><span class="ow">new</span><span class="w"> </span><span class="nx">MapboxGeocoder</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">accessToken</span><span class="o">:</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">mapboxgl</span><span class="o">:</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">,</span><span class="w"></span>
+<span class="hll"><span class="w">                </span><span class="nx">localGeocoder</span><span class="o">:</span><span class="nx">buscarFarmacias</span><span class="p">,</span><span class="w"></span>
+</span><span class="w">                </span><span class="nx">collapsed</span><span class="o">:</span><span class="kc">true</span><span class="w"></span>
+<span class="w">                </span><span class="p">}));</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;load&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// reutilizamos funcion de utils para obtener geojson</span><span class="w"></span>
+<span class="w">                </span><span class="nx">enviarPeticion</span><span class="p">(</span><span class="s2">&quot;datos/farmacias.geojson&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">datos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">farmaciasGeoJSON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datos</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">addFarmacias</span><span class="p">();</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">addPopupToMap</span><span class="p">(</span><span class="s2">&quot;farmacias&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin peticio</span><span class="w"></span>
+
+
+<span class="w">            </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin load</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="c1">// final init</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Visualizamos</p>
+</div>
+<h3 id="localizar-las-cinco-farmacias-mas-cercanas-a-una-farmacia-concreta">Localizar las cinco farmacias más cercanas a una farmacia concreta</h3>
+<h4 id="paso-9-anadimos-libreria-turfjs-a-farmaciashtml">Paso 9: Añadimos libreria turf.js a <em>farmacias.html</em></h4>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Farmacias<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+
+<span class="hll">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/utils.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/farmacias.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//Añadir vuestor token y/o estilo !!</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">farmaciasGeoJSON</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span><span class="w"> </span><span class="mf">41.3954</span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">attributionControl</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">hash</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">compact</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
+
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="w"></span>
+<span class="w">                </span><span class="ow">new</span><span class="w"> </span><span class="nx">MapboxGeocoder</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">accessToken</span><span class="o">:</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">mapboxgl</span><span class="o">:</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">localGeocoder</span><span class="o">:</span><span class="nx">buscarFarmacias</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">collapsed</span><span class="o">:</span><span class="kc">true</span><span class="w"></span>
+<span class="w">                </span><span class="p">}));</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;load&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// reutilizamos funcion de utils para obtener geojson</span><span class="w"></span>
+<span class="w">                </span><span class="nx">enviarPeticion</span><span class="p">(</span><span class="s2">&quot;datos/farmacias.geojson&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">datos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">farmaciasGeoJSON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datos</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">addFarmacias</span><span class="p">();</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">addPopupToMap</span><span class="p">(</span><span class="s2">&quot;farmacias&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin peticio</span><span class="w"></span>
+
+
+<span class="w">            </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin load</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="c1">// final init</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="paso-10-dentro-de-jsfarmaciasjs-creamos-funcion-addfarmaciascercanas">Paso 10: Dentro de <em>js/farmacias.js</em> creamos funcion <em>addFarmaciasCercanas()</em></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">addFarmaciasCercanas</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">addSource</span><span class="p">(</span><span class="s1">&#39;farmacias_sel&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;geojson&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="s1">&#39;type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;FeatureCollection&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s1">&#39;features&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">({</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;id&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;farmacias_sel&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;circle&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;source&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;farmacias_sel&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;paint&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="s1">&#39;circle-color&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#f909b5&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s1">&#39;circle-radius&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s1">&#39;circle-stroke-color&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s1">&#39;circle-stroke-width&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">   </span><span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">({</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;farmacias_sel_text&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;symbol&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;source&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;farmacias_sel&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;layout&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="s1">&#39;text-field&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;concat&#39;</span><span class="p">,[</span><span class="s1">&#39;get&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;distancia&#39;</span><span class="p">],</span><span class="s1">&#39; m&#39;</span><span class="p">],</span><span class="w"></span>
+<span class="w">          </span><span class="s2">&quot;text-size&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="s1">&#39;text-offset&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.3</span><span class="p">],</span><span class="w"></span>
+<span class="w">          </span><span class="s1">&#39;text-anchor&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;left&#39;</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="s1">&#39;paint&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="s1">&#39;text-color&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#f909b5&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s1">&#39;text-halo-color&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#333333&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s1">&#39;text-halo-width&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;farmacias&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">puntoClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">turf</span><span class="p">.</span><span class="nx">point</span><span class="p">([</span><span class="nx">e</span><span class="p">.</span><span class="nx">lngLat</span><span class="p">.</span><span class="nx">lng</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">lngLat</span><span class="p">.</span><span class="nx">lat</span><span class="p">]);</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">ff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">farmaciasGeoJSON</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">ff</span><span class="p">.</span><span class="nx">features</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">puntoFarmacia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">turf</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="nx">ff</span><span class="p">.</span><span class="nx">features</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">coordinates</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">distancia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">turf</span><span class="p">.</span><span class="nx">distance</span><span class="p">(</span><span class="nx">puntoClick</span><span class="p">,</span><span class="w"> </span><span class="nx">puntoFarmacia</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">units</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;meters&#39;</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+<span class="w">            </span><span class="nx">ff</span><span class="p">.</span><span class="nx">features</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">properties</span><span class="p">.</span><span class="nx">distancia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">distancia</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="nx">ff</span><span class="p">.</span><span class="nx">features</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">distancia</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">b</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">distancia</span><span class="w"></span>
+<span class="w">        </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">        </span><span class="nx">map</span><span class="p">.</span><span class="nx">getSource</span><span class="p">(</span><span class="s1">&#39;farmacias_sel&#39;</span><span class="p">).</span><span class="nx">setData</span><span class="p">(</span><span class="nx">turf</span><span class="p">.</span><span class="nx">featureCollection</span><span class="p">(</span><span class="nx">ff</span><span class="p">.</span><span class="nx">features</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">)));</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+
+
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// fin funcion</span><span class="w"></span>
+</code></pre></div>
+<h4 id="paso-1-llamamos-funcion-addfarmaciascercanas">Paso 1: Llamamos función <em>addFarmaciasCercanas()</em></h4>
+<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Farmacias<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/utils.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/farmacias.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//Añadir vuestor token y/o estilo !!</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">map</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">farmaciasGeoJSON</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">                </span><span class="s1">&#39;pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nb">Map</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">container</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;map&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;mapbox://styles/mapbox/dark-v10&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">center</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.16859</span><span class="p">,</span><span class="w"> </span><span class="mf">41.3954</span><span class="p">],</span><span class="w"></span>
+<span class="w">                </span><span class="nx">zoom</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">attributionControl</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">hash</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">});</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">AttributionControl</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">compact</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">            </span><span class="p">}));</span><span class="w"></span>
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span><span class="w"></span>
+
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="w"></span>
+<span class="w">                </span><span class="ow">new</span><span class="w"> </span><span class="nx">MapboxGeocoder</span><span class="p">({</span><span class="w"></span>
+<span class="w">                </span><span class="nx">accessToken</span><span class="o">:</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">mapboxgl</span><span class="o">:</span><span class="w"> </span><span class="nx">mapboxgl</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">localGeocoder</span><span class="o">:</span><span class="nx">buscarFarmacias</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nx">collapsed</span><span class="o">:</span><span class="kc">true</span><span class="w"></span>
+<span class="w">                </span><span class="p">}));</span><span class="w"></span>
+
+<span class="w">            </span><span class="nx">map</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;load&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// reutilizamos funcion de utils para obtener geojson</span><span class="w"></span>
+<span class="w">                </span><span class="nx">enviarPeticion</span><span class="p">(</span><span class="s2">&quot;datos/farmacias.geojson&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">datos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">farmaciasGeoJSON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datos</span><span class="p">;</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">addFarmacias</span><span class="p">();</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">addPopupToMap</span><span class="p">(</span><span class="s2">&quot;farmacias&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="hll"><span class="w">                    </span><span class="nx">addFarmaciasCercanas</span><span class="p">();</span><span class="w"></span>
+</span><span class="w">                </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin peticio</span><span class="w"></span>
+
+
+<span class="w">            </span><span class="p">});</span><span class="w"> </span><span class="c1">//fin load</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="c1">// final init</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+ <!--
+
+
 #### Paso 3:Añadir plugin
 
  * Añadimos Plugins al proyecto
@@ -1740,6 +2474,7 @@ Este es uno de lo plugins más utilizados en Leaflet
 </code></pre></div>
 
  -->
+</p>
 
 
 

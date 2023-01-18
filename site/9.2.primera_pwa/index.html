@@ -57,12 +57,16 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -109,6 +113,30 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -1251,11 +1279,7 @@
 <span class="w">    </span><span class="nt">&quot;display&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;standalone&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/geoweb/&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;orientation&quot;</span><span class="p">:</span><span class="s2">&quot;any&quot;</span><span class="p">,</span><span class="w"></span>
-<<<<<<< HEAD
-<span class="w">    </span><span class="nt">&quot;start_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/geoweb/&quot;</span><span class="p">,</span><span class="w"></span>
-=======
 <span class="w">    </span><span class="nt">&quot;start_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/geoweb/pwa.html&quot;</span><span class="p">,</span><span class="w"></span>
->>>>>>> 0a70a4457f29fe68576eaae64b61f26105a7ee4e
 <span class="w">    </span><span class="nt">&quot;icons&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
 
 <span class="w">      </span><span class="p">{</span><span class="w"></span>
@@ -1289,19 +1313,11 @@
 <p class="admonition-title">Este archivo solo hace falta crearlo una vez y nos servirá siempre</p>
 </div>
 <div class="highlight"><pre><span></span><code><span class="nx">importScripts</span><span class="p">(</span><span class="s1">&#39;https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js&#39;</span><span class="p">);</span><span class="w"></span>
-<<<<<<< HEAD
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">CACHE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;pwabuilder-page&quot;</span><span class="p">;</span><span class="w"></span>
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">offlineFallbackPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;offline.html&quot;</span><span class="p">;</span><span class="w"></span>
 
-=======
-
-<span class="kd">const</span><span class="w"> </span><span class="nx">CACHE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;pwabuilder-page&quot;</span><span class="p">;</span><span class="w"></span>
-
-<span class="kd">const</span><span class="w"> </span><span class="nx">offlineFallbackPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;offline.html&quot;</span><span class="p">;</span><span class="w"></span>
-
->>>>>>> 0a70a4457f29fe68576eaae64b61f26105a7ee4e
 <span class="nx">self</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">type</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;SKIP_WAITING&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nx">self</span><span class="p">.</span><span class="nx">skipWaiting</span><span class="p">();</span><span class="w"></span>
@@ -1324,7 +1340,6 @@
 <span class="w">    </span><span class="nx">event</span><span class="p">.</span><span class="nx">respondWith</span><span class="p">((</span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">      </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">preloadResp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">preloadResponse</span><span class="p">;</span><span class="w"></span>
-<<<<<<< HEAD
 
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">preloadResp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="nx">preloadResp</span><span class="p">;</span><span class="w"></span>
@@ -1334,17 +1349,6 @@
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">networkResp</span><span class="p">;</span><span class="w"></span>
 <span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-=======
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">preloadResp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="nx">preloadResp</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">networkResp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">request</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">networkResp</span><span class="p">;</span><span class="w"></span>
-<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
->>>>>>> 0a70a4457f29fe68576eaae64b61f26105a7ee4e
 <span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">cache</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">caches</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">CACHE</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">cachedResp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">cache</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">offlineFallbackPage</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">cachedResp</span><span class="p">;</span><span class="w"></span>
@@ -1435,12 +1439,8 @@
 </span><span class="hll"><span class="w">                </span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="s1">&#39;./sw.js&#39;</span><span class="p">)</span><span class="w"></span>
 </span><span class="hll"><span class="w">                </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 </span><span class="hll"><span class="w">                    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Todo ok!&quot;</span><span class="p">);</span><span class="w"></span>
-<<<<<<< HEAD
-</span><span class="hll"><span class="w">                </span><span class="p">})</span><span class="w"></span>
-=======
 </span><span class="hll"><span class="w">                </span><span class="p">}).</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span><span class="w"></span>
 </span><span class="hll"><span class="w">          </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;Error&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">)})</span><span class="w"></span>
->>>>>>> 0a70a4457f29fe68576eaae64b61f26105a7ee4e
 </span><span class="hll"><span class="w">        </span><span class="p">}</span><span class="w"></span>
 </span><span class="hll"><span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span>
