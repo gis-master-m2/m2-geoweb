@@ -57,17 +57,26 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#recursos" class="md-skip">
+          Saltar a contenido
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -104,6 +113,30 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -886,9 +919,58 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          10.2.Formato FlatGeoBuf
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         10.2.Formato FlatGeoBuf
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    Recursos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flatgeobuf-fgb" class="md-nav__link">
+    FlatgeoBuf (*.fgb)
+  </a>
+  
+    <nav class="md-nav" aria-label="FlatgeoBuf (*.fgb)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-interna" class="md-nav__link">
+    Estructura interna
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1010,6 +1092,41 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recursos" class="md-nav__link">
+    Recursos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flatgeobuf-fgb" class="md-nav__link">
+    FlatgeoBuf (*.fgb)
+  </a>
+  
+    <nav class="md-nav" aria-label="FlatgeoBuf (*.fgb)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-interna" class="md-nav__link">
+    Estructura interna
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1030,7 +1147,18 @@
 
   <h1>10.2.Formato FlatGeoBuf</h1>
 
-
+<h3 id="recursos">Recursos</h3>
+<p><a href="https://flatgeobuf.org/" target="_blank">https://flatgeobuf.org/</a></p>
+<p><a href="https://worace.works/2022/03/12/flatgeobuf-implementers-guide/" target="_blank">https://worace.works/2022/03/12/flatgeobuf-implementers-guide/</a></p>
+<p><a href="https://flatgeobuf.org/examples/maplibre/large.html" target="_blank">https://flatgeobuf.org/examples/maplibre/large.html</a></p>
+<h3 id="flatgeobuf-fgb">FlatgeoBuf (*.fgb)</h3>
+<p>Flatgeobuf es un formato de almacenamiento de mapas vectoriales basado en protocol buffers, un sistema de serialización de datos. Es similar a Mapbox Vector Tiles (MVT) en su capacidad de almacenar mapas vectoriales en pequeños bloques o teselas y se puede utilizar con el encabezado HTTP Range para descargar solo los bloques necesarios.</p>
+<p>El origen de Flatgeobuf es un proyecto de código abierto desarrollado por los miembros de la comunidad de software libre y geoespacial. Se basa en el estándar de protocol buffers, un sistema de serialización de datos desarrollado por Google, y en el estándar de mapas vectoriales desarrollado por Mapbox.</p>
+<p>Flatgeobuf fue diseñado con el objetivo de proporcionar una alternativa a los formatos geoespaciales existentes, como GeoJSON y MVT (Mapbox Vector Tiles) y <em>tiene lo mejor de los dos formatos</em>, és serverless como GeoJson y binario como MVT.</p>
+<p>El desarrollo de Flatgeobuf comenzó en <em>2018</em> como un proyecto de investigación de un grupo de desarrolladores de software libre y geoespaciales, buscando una forma de mejorar la eficiencia en el uso de recursos y la velocidad en la transmisión de datos geoespaciales. Flatgeobuf es un formato relativamente nuevo, pero ha sido adoptado por algunas aplicaciones y proyectos open source como por ejemplo Qgis y Gdal.</p>
+<p>También es compatible con MapBox GL Js utilizando la libreria  <a href="https://github.com/rowanwins/mapbox-gl-flatgeobuf" target="_blank">https://github.com/rowanwins/mapbox-gl-flatgeobuf</a></p>
+<h4 id="estructura-interna">Estructura interna</h4>
+<p><img alt="alt text" src="../img/flatgeobuf2.png" title="flatgeobf2.png" /></p>
 
 
 
