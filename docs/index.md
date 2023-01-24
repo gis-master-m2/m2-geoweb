@@ -39,7 +39,7 @@
 * Sesión 10 (6 Febrero - Síncrona on-line.md)
   * [10.1. Tecnologia serverless](10.1.serverless.md)
   * [10.2. Formato FlatGeoBuf](10.2.flatgeobuf.md)
-  * [10.3. Visor de piscinas](10.3.piscinometro.md)
+  * [10.3. Visor de población](10.3.piscinometro.md)
 * Sesión 11 (8 Febrero - Presencial):
   * [11.1. Recursos OpenData](11.1.recursos_open_data.md)
   * [11.2. Taller de Medium](11.2.taller_medium.md) 
