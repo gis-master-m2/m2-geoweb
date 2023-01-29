@@ -36,7 +36,7 @@
 * Sesión 9 (3 Febrero - Asíncrona grabada - videos 11, 12)  
   * [9.1. Progressive web applications](9.1.pwa.md) 
   * [9.2. Mi primera PWA](9.2.primera_pwa.md)   
-* Sesión 10 (6 Febrero - Síncrona on-line.md)
+* Sesión 10 (6 Febrero - Síncrona on-line)
   * [10.1. Tecnologia serverless](10.1.serverless.md)
   * [10.2. Formato FlatGeoBuf](10.2.flatgeobuf.md)
   * [10.3. Visor de población](10.3.poblacion.md)
