@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#recursos" class="md-skip">
+        <a href="#web" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -942,6 +942,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    Web
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recursos" class="md-nav__link">
     Recursos
   </a>
@@ -983,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10.3.piscinometro/" class="md-nav__link">
+      <a href="../10.3.poblacion/" class="md-nav__link">
         10.3.Visor de población
       </a>
     </li>
@@ -1099,6 +1106,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    Web
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recursos" class="md-nav__link">
     Recursos
   </a>
@@ -1147,16 +1161,37 @@
 
   <h1>10.2.Formato FlatGeoBuf</h1>
 
-<h3 id="recursos">Recursos</h3>
+<h3 id="web">Web</h3>
 <p><a href="https://flatgeobuf.org/" target="_blank">https://flatgeobuf.org/</a></p>
+<p><img alt="alt text" src="../img/flatgeobuf0.png" title="turf" /></p>
+<h3 id="recursos">Recursos</h3>
 <p><a href="https://worace.works/2022/03/12/flatgeobuf-implementers-guide/" target="_blank">https://worace.works/2022/03/12/flatgeobuf-implementers-guide/</a></p>
+<p><a href="https://github.com/flatgeobuf/flatgeobuf" target="_blank">https://github.com/flatgeobuf/flatgeobuf</a></p>
 <p><a href="https://flatgeobuf.org/examples/maplibre/large.html" target="_blank">https://flatgeobuf.org/examples/maplibre/large.html</a></p>
 <h3 id="flatgeobuf-fgb">FlatgeoBuf (*.fgb)</h3>
 <p>Flatgeobuf es un formato de almacenamiento de mapas vectoriales basado en protocol buffers, un sistema de serialización de datos. Es similar a Mapbox Vector Tiles (MVT) en su capacidad de almacenar mapas vectoriales en pequeños bloques o teselas y se puede utilizar con el encabezado HTTP Range para descargar solo los bloques necesarios.</p>
 <p>El origen de Flatgeobuf es un proyecto de código abierto desarrollado por los miembros de la comunidad de software libre y geoespacial. Se basa en el estándar de protocol buffers, un sistema de serialización de datos desarrollado por Google, y en el estándar de mapas vectoriales desarrollado por Mapbox.</p>
 <p>Flatgeobuf fue diseñado con el objetivo de proporcionar una alternativa a los formatos geoespaciales existentes, como GeoJSON y MVT (Mapbox Vector Tiles) y <em>tiene lo mejor de los dos formatos</em>, és serverless como GeoJson y binario como MVT.</p>
 <p>El desarrollo de Flatgeobuf comenzó en <em>2018</em> como un proyecto de investigación de un grupo de desarrolladores de software libre y geoespaciales, buscando una forma de mejorar la eficiencia en el uso de recursos y la velocidad en la transmisión de datos geoespaciales. Flatgeobuf es un formato relativamente nuevo, pero ha sido adoptado por algunas aplicaciones y proyectos open source como por ejemplo Qgis y Gdal.</p>
-<p>También es compatible con MapBox GL Js utilizando la libreria  <a href="https://github.com/rowanwins/mapbox-gl-flatgeobuf" target="_blank">https://github.com/rowanwins/mapbox-gl-flatgeobuf</a></p>
+<p>También es compatible con MapBox GL Js </p>
+<p>Deberemos llamar a la libreria de esta forma</p>
+<div class="highlight"><pre><span></span><code> <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://unpkg.com/flatgeobuf@3.22.0/dist/flatgeobuf-geojson.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Ejemplo de implementación javascript</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">fgBoundingBox</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">lng</span><span class="p">,</span><span class="w"> </span><span class="nx">lat</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">map</span><span class="p">.</span><span class="nx">getCenter</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">minX</span><span class="o">:</span><span class="w"> </span><span class="nx">lng</span><span class="o">-</span><span class="nx">size</span><span class="p">,</span><span class="w"> </span><span class="nx">minY</span><span class="o">:</span><span class="w"> </span><span class="nx">lat</span><span class="o">-</span><span class="nx">size</span><span class="p">,</span><span class="w"> </span><span class="nx">maxX</span><span class="o">:</span><span class="w"> </span><span class="nx">lng</span><span class="o">+</span><span class="nx">size</span><span class="p">,</span><span class="w"> </span><span class="nx">maxY</span><span class="o">:</span><span class="w"> </span><span class="nx">lat</span><span class="o">+</span><span class="nx">size</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">fc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;FeatureCollection&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">features</span><span class="o">:</span><span class="w"> </span><span class="p">[]};</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">iter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">flatgeobuf</span><span class="p">.</span><span class="nx">deserialize</span><span class="p">(</span><span class="s2">&quot;/test/data/UScounties.fgb&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">fgBoundingBox</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">feature</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">iter</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">fc</span><span class="p">.</span><span class="nx">features</span><span class="p">.</span><span class="nx">push</span><span class="p">({...</span><span class="nx">feature</span><span class="p">,</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">i</span><span class="p">});</span><span class="w"></span>
+<span class="w">            </span><span class="nx">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nx">map</span><span class="p">.</span><span class="nx">getSource</span><span class="p">(</span><span class="s2">&quot;counties&quot;</span><span class="p">).</span><span class="nx">setData</span><span class="p">(</span><span class="nx">fc</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
 <h4 id="estructura-interna">Estructura interna</h4>
 <p><img alt="alt text" src="../img/flatgeobuf2.png" title="flatgeobf2.png" /></p>
 
@@ -1195,7 +1230,7 @@
       
       
         
-        <a href="../10.3.piscinometro/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 10.3.Visor de población" rel="next">
+        <a href="../10.3.poblacion/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 10.3.Visor de población" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
