@@ -1008,7 +1008,7 @@
         
           <li class="md-nav__item">
   <a href="#paso-4-anadimos-el-plugin-para-dibujar-geometrias-mapbox-gl-draw" class="md-nav__link">
-    Paso 4 Añadimos el plugin para dibujar geometrías mapbox-gl-draw
+    Paso 4: Añadimos el plugin para dibujar geometrías mapbox-gl-draw
   </a>
   
 </li>
@@ -1220,7 +1220,7 @@
         
           <li class="md-nav__item">
   <a href="#paso-4-anadimos-el-plugin-para-dibujar-geometrias-mapbox-gl-draw" class="md-nav__link">
-    Paso 4 Añadimos el plugin para dibujar geometrías mapbox-gl-draw
+    Paso 4: Añadimos el plugin para dibujar geometrías mapbox-gl-draw
   </a>
   
 </li>
@@ -1286,7 +1286,7 @@
   <h1>10.3.Visor de población</h1>
 
 <h2 id="cuantas-personas-viven-aqui">¿Cuantas personas viven aquí?</h2>
-<p>Nos han encargado realizar un mapa para poder saber quanta gente vive en un zona de un 1km o 10km a la redonda --<em>buffer</em>-- o en cualquier zona que el usuario defina.</p>
+<p>Nos han encargado realizar un mapa para poder saber cuanta gente vive en un zona de un 1km o 5km a la redonda --<em>buffer</em>-- o en cualquier zona que el usuario defina.</p>
 <p>Nuestro mapa se centrará en España, però deberia ser exportable a cualquier otro país del mundo y ser facilmente escalable en un entorno <em>cloud</em> y preferiblemente <em>serverless</em>.</p>
 <h3 id="sabemos">Sabemos</h3>
 <ul>
@@ -1294,7 +1294,7 @@
 <p>Que existe el formato <strong>FlatGeoBuf</strong></p>
 </li>
 <li>
-<p>Conocemos <a href="https://www.kontur.io/" target="_blank">https://www.kontur.io/</a> que utiliza datos de <a href="https://data.humdata.org/" target="_blank">https://data.humdata.org/</a> de mallas de població H3 </p>
+<p>Conocemos <a href="https://data.humdata.org/" target="_blank">https://data.humdata.org/</a> que utiliza datos de  <a href="https://www.kontur.io/" target="_blank">https://www.kontur.io/</a>  de mallas de població H3 </p>
 </li>
 <li>
 <p>Podemos descargar los geodatos de España <a href="https://data.humdata.org/dataset/kontur-population-spain" target="_blank">https://data.humdata.org/dataset/kontur-population-spain</a> pero también de hasta 248 paises <a href="https://data.humdata.org/dataset?ext_geodata=1&amp;res_format=Geopackage&amp;q=Hexagon&amp;sort=if(gt(last_modified%2Creview_date)%2Clast_modified%2Creview_date)%20desc&amp;ext_page_size=25" target="_blank">hhttps://data.humdata.org/dataset?ext_geodata=1&amp;res_format=Geopackage&amp;q=Hexagon&amp;sort=if(gt(last_modified%2Creview_date)%2Clast_modified%2Creview_date)%20desc&amp;ext_page_size=25</a></p>
@@ -1303,7 +1303,7 @@
 <p>Podemos utilizar el plugin de <strong>mapbox-gl-draw</strong> para dibujar puntos y polígonos</p>
 </li>
 <li>
-<p>Podemos utilizar <strong>turfjs</strong> para calcular buffers y áreas</p>
+<p>Podemos utilizar <strong>turfjs</strong> para calcular buffers,  áreas y operaciones espaciales</p>
 </li>
 </ul>
 <h3 id="ejemplo-mapa-poblacion">Ejemplo mapa población</h3>
@@ -1382,7 +1382,7 @@
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <h4 id="paso-2-crear-archivo-poblacionjs-dentro-de-geowebjs">Paso 2: Crear archivo <em>poblacion.js</em> dentro de <em>/geoweb/js</em></h4>
-<p>Implementaremos funciones para llamar al flatGeobuf de forma genérica y por caja de coordenadas</p>
+<p>Implementaremos funciones para llamar al archivo flatGeobuf de forma genérica y filtrando por caja de coordenadas</p>
 <div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">getBounds</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">bounds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">map</span><span class="p">.</span><span class="nx">getBounds</span><span class="p">();</span><span class="w"></span>
 <span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">bbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -1448,7 +1448,7 @@
 <span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nx">minZoom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <ul>
-<li>Llamos la función getFeaturesFGB des de los eventos del maps</li>
+<li>Llamos la función getFeaturesFGB des de los eventos del mapa: <em>load</em>,<em>moveed</em>,<em>zoomend</em></li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 
@@ -1524,13 +1524,14 @@
 <div class="admonition question">
 <p class="admonition-title">Probamos cambiar - <em>"fill-opacity": 1</em> - en getFeaturesFGB</p>
 </div>
-<h4 id="paso-4-anadimos-el-plugin-para-dibujar-geometrias-mapbox-gl-draw">Paso 4 Añadimos el plugin para dibujar geometrías <em>mapbox-gl-draw</em></h4>
+<h4 id="paso-4-anadimos-el-plugin-para-dibujar-geometrias-mapbox-gl-draw">Paso 4: Añadimos el plugin para dibujar geometrías <em>mapbox-gl-draw</em></h4>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
+<p class="admonition-title">Vemos información del plugin</p>
 <p>Web  <a href="https://github.com/mapbox/mapbox-gl-draw" target="_blank">https://github.com/mapbox/mapbox-gl-draw</a></p>
 <p>Ejemplo <a href="https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-draw/" target="_blank">https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-draw/</a></p>
 <p>API <a href="https://github.com/mapbox/mapbox-gl-draw/blob/main/docs/API.md" target="_blank">https://github.com/mapbox/mapbox-gl-draw/blob/main/docs/API.md</a></p>
 </div>
+<p>Para añadir la librerías:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.3.0/mapbox-gl-draw.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.3.0/mapbox-gl-draw.css&#39;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#39;text/css&#39;</span> <span class="p">/&gt;</span>
 </code></pre></div>
