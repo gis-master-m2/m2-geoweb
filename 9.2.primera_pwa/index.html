@@ -901,8 +901,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-4-creamos-el-archivo-offlinehtml-dentro-del-directorio-js-de-geoweb" class="md-nav__link">
-    Paso 4- Creamos el archivo "offline.html" dentro del directorio JS de  "/geoweb"
+  <a href="#paso-4-creamos-el-archivo-offlinehtml-dentro-del-directorio-geoweb" class="md-nav__link">
+    Paso 4- Creamos el archivo "offline.html" dentro del directorio  "/geoweb"
   </a>
   
 </li>
@@ -923,7 +923,7 @@
       
         <li class="md-nav__item">
   <a href="#practica" class="md-nav__link">
-    Practica
+    Práctica
   </a>
   
 </li>
@@ -1149,8 +1149,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-4-creamos-el-archivo-offlinehtml-dentro-del-directorio-js-de-geoweb" class="md-nav__link">
-    Paso 4- Creamos el archivo "offline.html" dentro del directorio JS de  "/geoweb"
+  <a href="#paso-4-creamos-el-archivo-offlinehtml-dentro-del-directorio-geoweb" class="md-nav__link">
+    Paso 4- Creamos el archivo "offline.html" dentro del directorio  "/geoweb"
   </a>
   
 </li>
@@ -1171,7 +1171,7 @@
       
         <li class="md-nav__item">
   <a href="#practica" class="md-nav__link">
-    Practica
+    Práctica
   </a>
   
 </li>
@@ -1271,6 +1271,9 @@
   <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <h4 id="paso-2-creamos-el-archivo-manifest-pwajson-dentro-de-geoweb">Paso 2- Creamos el archivo "manifest-pwa.json" dentro de "/geoweb"</h4>
+<div class="admonition warning">
+<p class="admonition-title">Dentro de /geoweb al mismo nivel que los archivos *.html !!</p>
+</div>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mi primera PWA&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;short_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Visor Global&quot;</span><span class="p">,</span><span class="w"></span>
@@ -1309,6 +1312,9 @@
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/Manifest" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Manifest</a></p>
 </div>
 <h4 id="paso-3-creamos-el-archivo-serviceworker-swjs-dentro-del-directorio-geoweb">Paso 3- Creamos el archivo serviceworker "sw.js" dentro del directorio  "/geoweb"</h4>
+<div class="admonition warning">
+<p class="admonition-title">Dentro de /geoweb al mismo nivel que los archivos *.html !!</p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Este archivo solo hace falta crearlo una vez y nos servirá siempre</p>
 </div>
@@ -1357,7 +1363,10 @@
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="p">});</span><span class="w"></span>
 </code></pre></div>
-<h4 id="paso-4-creamos-el-archivo-offlinehtml-dentro-del-directorio-js-de-geoweb">Paso 4- Creamos el archivo "offline.html" dentro del directorio JS de  "/geoweb"</h4>
+<h4 id="paso-4-creamos-el-archivo-offlinehtml-dentro-del-directorio-geoweb">Paso 4- Creamos el archivo "offline.html" dentro del directorio  "/geoweb"</h4>
+<div class="admonition warning">
+<p class="admonition-title">Dentro de /geoweb al mismo nivel que los archivos *.html !!</p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Este archivo solo hace falta crearlo una vez y nos servirá siempre<p>Es un archivo html vacio dón el service worker creará un "copia" offline de nuestro visor</p>
 </p>
@@ -1449,7 +1458,7 @@
   <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <h4 id="paso-6-visualizar-pwa-en-https">Paso 6- Visualizar PWA en HTTPS</h4>
-<p>Para poder hacer una instalación correcta de la PWA necesitamos que este en HTTPS, debemos subirla a Github y ver via web de githab</p>
+<p>Para poder hacer una instalación correcta de la PWA necesitamos que esté en HTTPS, debemos subirla a Github y ver via web de github</p>
 <div class="highlight"><pre><span></span><code>https://{tu_usuario_github}.github.io/geoweb/pwa.html
 </code></pre></div>
 <div class="admonition success">
@@ -1461,21 +1470,31 @@
 </code></pre></div>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">Si aparece la icona de instalación en la barra de navegación de del browser todo está ok!!</p>
+<p class="admonition-title">Si aparece la icona de instalación en la barra de navegación del browser todo está ok!!</p>
 </div>
 <p><img alt="alt text" src="../img/pwa.png" title="pwa" /></p>
-<p>Una vez instalada aparecerá una icona en el desktop</p>
+<ul>
+<li>Hacemos click en la icona e instalamos la aplicación, una vez instalada aparecerá una icona en el desktop</li>
+</ul>
 <p><img alt="alt text" src="../img/pwa2.png" title="pwa" /></p>
 <div class="admonition question">
 <p class="admonition-title">¿Probamos de visualizar en un móbil? ¿Qué pasa?</p>
 </div>
 <p><img alt="alt text" src="../img/pwa3.png" title="pwa" /></p>
-<h3 id="practica">Practica</h3>
+<h3 id="practica">Práctica</h3>
 <div class="admonition summary">
 <p class="admonition-title">Probamos de convertir cualquier otro visor a PWA</p>
 </div>
 <h3 id="saber-mas">Saber más...</h3>
-<p>Con la web  <a href="hhttps://www.pwabuilder.com/" target="_blank">https://www.pwabuilder.com/</a> podriamos convertir a app nuestra pwa isubirla a un market</p>
+<p>Con la web  <a href="hhttps://www.pwabuilder.com/" target="_blank">https://www.pwabuilder.com/</a> podriamos convertir a app nuestro html i publicarla en un market</p>
+<div class="admonition info">
+<p class="admonition-title">Ver video 12 para más información</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Sólo tenmos que añadir la url de nuestra web</p>
+<div class="highlight"><pre><span></span><code>https://{tu_usuario_github}.github.io/geoweb/pwa.html
+</code></pre></div>
+</div>
 <p><img alt="alt text" src="../img/pwa4.png" title="pwa" /></p>
 
 
