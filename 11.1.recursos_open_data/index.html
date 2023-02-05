@@ -1044,22 +1044,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-3-funcion-buscarmapas" class="md-nav__link">
-    Paso 3 Función buscarMapas()
+  <a href="#paso-3-funcion-peticionunoapiglobal" class="md-nav__link">
+    Paso 3 Función peticionUnoApiGlobal()
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#paso-4-peticion-2-localizar-y-obtener-el-recurso" class="md-nav__link">
-    Paso 4 Petición 2 localizar y obtener el recurso
+    Paso 4: Petición 2 localizar y obtener el recurso
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-5-obtenr-i-pintar-datos" class="md-nav__link">
-    Paso 5 Obtenr i pintar datos
+  <a href="#paso-5-obtener-y-pintar-datos" class="md-nav__link">
+    Paso 5: Obtener y pintar datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6-ejecutar-i-pintar-datos" class="md-nav__link">
+    Paso 6: Ejecutar i pintar datos
   </a>
   
 </li>
@@ -1078,8 +1085,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#para-que-no-puede-servir" class="md-nav__link">
-    ¿Para que no puede servir?
+  <a href="#para-que-nos-puede-servir" class="md-nav__link">
+    ¿Para que nos puede servir?
   </a>
   
 </li>
@@ -1236,22 +1243,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-3-funcion-buscarmapas" class="md-nav__link">
-    Paso 3 Función buscarMapas()
+  <a href="#paso-3-funcion-peticionunoapiglobal" class="md-nav__link">
+    Paso 3 Función peticionUnoApiGlobal()
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#paso-4-peticion-2-localizar-y-obtener-el-recurso" class="md-nav__link">
-    Paso 4 Petición 2 localizar y obtener el recurso
+    Paso 4: Petición 2 localizar y obtener el recurso
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#paso-5-obtenr-i-pintar-datos" class="md-nav__link">
-    Paso 5 Obtenr i pintar datos
+  <a href="#paso-5-obtener-y-pintar-datos" class="md-nav__link">
+    Paso 5: Obtener y pintar datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6-ejecutar-i-pintar-datos" class="md-nav__link">
+    Paso 6: Ejecutar i pintar datos
   </a>
   
 </li>
@@ -1270,8 +1284,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#para-que-no-puede-servir" class="md-nav__link">
-    ¿Para que no puede servir?
+  <a href="#para-que-nos-puede-servir" class="md-nav__link">
+    ¿Para que nos puede servir?
   </a>
   
 </li>
@@ -1351,13 +1365,13 @@
 </blockquote>
 <ul>
 <li>
-<p>Para ir de la API Global hasta el recurso local debemos realizar 3 peticiones</p>
+<p>Para ir de la API Global hasta el recurso local debemos realizar <strong>3 peticiones</strong></p>
 </li>
 <li>
-<p>Peticio 1 API Global : <code>https://api.us.socrata.com/api/catalog/v1?q=chicago%20crime&amp;only=maps</code></p>
+<p>Peticion 1 API Global : <code>https://api.us.socrata.com/api/catalog/v1?q=chicago%20crime&amp;only=maps</code></p>
 </li>
 <li>
-<p>Peticio dos obtener url recurso <code>https://{dominio/api/views.json?method=getByResourceName&amp;name={id recurso}</code></p>
+<p>Peticion 2 obtener url recurso <code>https://{dominio/api/views.json?method=getByResourceName&amp;name={id recurso}</code></p>
 </li>
 <li>
 <p>Petición 3  obterner el recurso <code>https://{dminio}/api/geospatial/{recurso}?method=export&amp;format=GeoJSON</code></p>
@@ -1382,6 +1396,7 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#39;viewport&#39;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;css/estilobase.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;js/socrata.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
@@ -1519,15 +1534,15 @@
 </span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<h4 id="paso-3-funcion-buscarmapas">Paso 3 Función buscarMapas()</h4>
+<h4 id="paso-3-funcion-peticionunoapiglobal">Paso 3 Función peticionUnoApiGlobal()</h4>
 <ul>
-<li>Añadimos dentro de <strong>js/socrata.js</strong> la funcion <strong>buscarMapas()</strong></li>
+<li>Añadimos dentro de <strong>js/socrata.js</strong> la funcion <strong>peticionUnoApiGlobal()</strong></li>
 </ul>
 <blockquote>
 <p>Para enviar la primera petición a la API global de Sócrata</p>
 </blockquote>
 <p><a href="https://api.eu.socrata.com/api/catalog/v1?q=wifi&limit=1&only=map"><a href="https://api.eu.socrata.com/api/catalog/v1?q=wifi&amp;limit=1&amp;only=map">https://api.eu.socrata.com/api/catalog/v1?q=wifi&amp;limit=1&amp;only=map</a></a></p>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">buscarMapas</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">peticionUnoApiGlobal</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
 <span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByName</span><span class="p">(</span><span class="s2">&quot;optionsRadios&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">url_servidor</span><span class="p">;</span><span class="w"></span>
@@ -1556,7 +1571,7 @@
 
 <span class="w">                    </span><span class="nx">resultadosHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">resultadosHTML</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&lt;li class=&quot;li&quot;&gt;&lt;b&gt;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">resource</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;: &lt;b&gt;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
 <span class="w">                        </span><span class="s1">&#39;&lt;a target=&quot;_blank&quot; title=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">resource</span><span class="p">.</span><span class="nx">attribution</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; href=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">link</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot;&gt; Link &lt;/a&gt; &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
-<span class="w">                        </span><span class="s1">&#39;&lt;a class=&quot;btn btn-success btn-xs&quot; onClick=&quot;obtenerRecurso(this.id)&quot; title=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">resource</span><span class="p">.</span><span class="nx">attribution</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; href=&quot;#&quot; id=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">resource</span><span class="p">.</span><span class="nx">id</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;#&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">metadata</span><span class="p">.</span><span class="nx">domain</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot;&gt;Ver mapa&lt;/a&gt;&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="s1">&#39;&lt;a class=&quot;btn btn-success btn-xs btmapa&quot;  onClick=&quot;buscaPintaDatos(this.id)&quot; title=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">resource</span><span class="p">.</span><span class="nx">attribution</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; href=&quot;#&quot; id=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">resource</span><span class="p">.</span><span class="nx">id</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;#&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">respuestaSocrata</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">metadata</span><span class="p">.</span><span class="nx">domain</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot;&gt;Ver mapa&lt;/a&gt;&#39;</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">                </span><span class="p">}</span><span class="w"></span>
 <span class="w">                </span><span class="nx">resultadosHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">resultadosHTML</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;&lt;/ul&gt;&quot;</span><span class="p">;</span><span class="w"></span>
@@ -1575,7 +1590,7 @@
 <span class="p">}</span><span class="w"> </span><span class="c1">// fin funcion</span><span class="w"></span>
 </code></pre></div>
 <ul>
-<li>Llamamos a la funcion <strong>buscaMapa()</strong> desde  <strong>metamapa.html</strong> </li>
+<li>Llamamos a la funcion <strong>peticionUnoApiGlobal()</strong> desde  <strong>metamapa.html</strong> </li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -1665,7 +1680,7 @@
                 <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;num_results_socrata&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;100&quot;</span><span class="p">&gt;</span>
             <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
-<span class="hll">                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;bt_send&quot;</span> <span class="na">onClick</span><span class="o">=</span><span class="s">&quot;buscarMapas()&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-default btn-success&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="hll">                <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;bt_send&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;peticionUnoApiGlobal()&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-default btn-success&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span>            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;results&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -1676,19 +1691,38 @@
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition note">
+<p class="admonition-title">Otra forma de hacerlo <em>más profesional</em> seria</p>
+<div class="highlight"><pre><span></span><code>        const boton = document.getElementById(&quot;bt_send&quot;);
+        const texto = document.getElementById(&quot;text_filter_socrata&quot;);
+
+        texto.addEventListener(&quot;keypress&quot;, function (event) {
+            console.info(event);
+            if (event.which == 13 || event.keyCode == 13) {
+                peticionUnoApiGlobal();
+                return false;
+            }
+        });
+
+        boton.addEventListener(&quot;click&quot;, function (event) {
+            peticionUnoApiGlobal();
+
+        });
+</code></pre></div>
+</div>
+<div class="admonition success">
 <p class="admonition-title">Realizamos algunas búsquedas</p>
 </div>
 <p>Ejemplo "wifi" o "crime"</p>
-<h4 id="paso-4-peticion-2-localizar-y-obtener-el-recurso">Paso 4 Petición 2 localizar y obtener el recurso</h4>
+<h4 id="paso-4-peticion-2-localizar-y-obtener-el-recurso">Paso 4: Petición 2 localizar y obtener el recurso</h4>
 <ul>
-<li>Añadimos a <strong>socrata.js</strong> la funcion <strong>obtenerRecurso()</strong></li>
+<li>Añadimos a <strong>socrata.js</strong> la funcion asíncrona <strong>peticionDosObtenerRecurso()</strong></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">obtenerRecurso</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">peticionDosObtenerRecurso</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
 <span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">peticion2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;https://&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">params</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;/api/views.json?method=getByResourceName&amp;name=&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">params</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span><span class="w"></span>
 
-<span class="w">    </span><span class="nx">enviarPeticion</span><span class="p">(</span><span class="nx">peticion2</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">respuestaNodoSocrata</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">await</span><span class="w">  </span><span class="nx">enviarPeticion</span><span class="p">(</span><span class="nx">peticion2</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">respuestaNodoSocrata</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">urlRecurso</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">isGeojson</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">bbox</span><span class="p">;</span><span class="w"></span>
@@ -1707,29 +1741,27 @@
 
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">        </span><span class="c1">//prepararDatos(urlRecurso, bbox, isGeojson)</span><span class="w"></span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s2">&quot;urlRecurso&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">urlRecurso</span><span class="p">);</span><span class="w"></span>
+<span class="w">       </span><span class="kd">var</span><span class="w"> </span><span class="nx">respuesta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">url</span><span class="o">:</span><span class="nx">urlRecurso</span><span class="p">,</span><span class="nx">bbox</span><span class="o">:</span><span class="w"> </span><span class="nx">bbox</span><span class="p">,</span><span class="nx">isGeojson</span><span class="o">:</span><span class="w"> </span><span class="nx">isGeojson</span><span class="p">};</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">respuesta</span><span class="p">;;</span><span class="w"></span>
 
 <span class="w">    </span><span class="p">});</span><span class="c1">// fin peticion 2 </span><span class="w"></span>
 
 <span class="p">}</span><span class="w"> </span><span class="c1">//finfuncion</span><span class="w"></span>
 </code></pre></div>
 <div class="admonition note">
-<p class="admonition-title">Realizamos algunas búsquedas y descomentamos /comentamos consoles</p>
+<p class="admonition-title">observamos la función aún no creada <em>buscaPintaDatos</em></p>
 </div>
-<h4 id="paso-5-obtenr-i-pintar-datos">Paso 5 Obtenr i pintar datos</h4>
+<h4 id="paso-5-obtener-y-pintar-datos">Paso 5: Obtener y pintar datos</h4>
 <ul>
 <li>
-<p>Descomentamos <strong>prepararDatos(urlRecurso, bbox, isGeojson);</strong> de la función obtenerGeoJson</p>
-</li>
-<li>
-<p>Creamos la funcion <strong>prepararDatos</strong> dentro de <strong>socrata.js</strong>  para obtener y/o tranformar los datos a GeoJson</p>
+<p>Creamos la funcion <strong>peticionTresObtenerDato</strong> dentro de <strong>socrata.js</strong>  para obtener y/o tranformar los datos a GeoJson</p>
 </li>
 <li>
 <p>Creamos la funcions <strong>pintarMapa</strong> dentro de <strong>socrata.js</strong> para añadir los datos al mapa</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">prepararDatos</span><span class="p">(</span><span class="nx">urlRecurso</span><span class="p">,</span><span class="w"> </span><span class="nx">bbox</span><span class="p">,</span><span class="w"> </span><span class="nx">isGeojson</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">peticionTresObtenerDato</span><span class="p">(</span><span class="nx">urlRecurso</span><span class="p">,</span><span class="w"> </span><span class="nx">bbox</span><span class="p">,</span><span class="w"> </span><span class="nx">isGeojson</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
 <span class="w">    </span><span class="nx">enviarPeticion</span><span class="p">(</span><span class="nx">urlRecurso</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">respuestaRecurso</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
@@ -1884,6 +1916,21 @@
 
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
+<h4 id="paso-6-ejecutar-i-pintar-datos">Paso 6: Ejecutar i pintar datos</h4>
+<ul>
+<li>Creamos la funcion <strong>buscaPintaDatos</strong> dentro de <strong>socrata.js</strong>  para llamar a las funciones 2 y 3</li>
+</ul>
+<div class="highlight"><pre><span></span><code>function buscaPintaDatos(data){
+
+    peticionDosObtenerRecurso(data).then(function(respuesta){
+
+        peticionTresObtenerDato(respuesta.url, respuesta.bbox, respuesta.isGeojson)
+
+
+    })
+
+}
+</code></pre></div>
 <div class="admonition success">
 <p class="admonition-title">Buscamos datos</p>
 </div>
@@ -1906,7 +1953,7 @@
 </code></pre></div>
 <h3 id="saber-mas-ejemplos-avanzados-con-mapbox-gl-js">Saber más... Ejemplos avanzados con MapBox GL JS</h3>
 <p>Vamos a ver algunos ejemplos más avanzados y complejos</p>
-<h4 id="para-que-no-puede-servir">¿Para que no puede servir?</h4>
+<h4 id="para-que-nos-puede-servir">¿Para que nos puede servir?</h4>
 <ul>
 <li>
 <p>Como base para nuestra práctica final</p>

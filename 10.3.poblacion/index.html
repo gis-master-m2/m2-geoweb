@@ -1046,6 +1046,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#saber-mas" class="md-nav__link">
+    Saber más ...
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1255,6 +1262,13 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saber-mas" class="md-nav__link">
+    Saber más ...
+  </a>
   
 </li>
         
@@ -1691,6 +1705,13 @@ Utilizando Turfjs calcularemos la población proporcionalmente según el área i
 <img alt="alt text" src="../img/intersects.png" title="intersect" /></p>
 <p>Aproximación por centroide
 <img alt="alt text" src="../img/centroide.png" title="intersect" /></p>
+<p>Para calcular la proporción de población haremos</p>
+<p><div class="highlight"><pre><span></span><code>AreaHexágono ---&gt; PoblacionHexágono
+
+AreaInterseccion ---&gt;  X
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>X= (AreaInterseccion * PoblacionHexágono) / AreaHexágono
+</code></pre></div></p>
 <div class="admonition info">
 <p class="admonition-title">Utilizaremos estas funciones de Turfjs</p>
 <p><a href="https://turfjs.org/docs/#area" target="_blank">https://turfjs.org/docs/#area</a></p>
@@ -1876,8 +1897,8 @@ Utilizando Turfjs calcularemos la población proporcionalmente según el área i
 <span class="hll">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;panelTopIzquierda&quot;</span><span class="p">&gt;</span>
 </span><span class="hll">        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;pop&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span><span class="hll">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span><span class="hll">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
@@ -1902,6 +1923,9 @@ Utilizando Turfjs calcularemos la población proporcionalmente según el área i
 <div class="admonition question">
 <p class="admonition-title">¿Probamos con otro país?</p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">¿Convertimos a PWA?</p>
+</div>
 <div class="admonition success">
 <p class="admonition-title">¿Subimos el ejemplo al GitHub?</p>
 <div class="highlight"><pre><span></span><code>    git pull
@@ -1910,6 +1934,31 @@ Utilizando Turfjs calcularemos la población proporcionalmente según el área i
     git push
 </code></pre></div>
 </div>
+<h3 id="saber-mas">Saber más ...</h3>
+<p>Añadir un capa WMS a Mapbox GL, exemplo funcion addWMS()</p>
+<p>Con WMS del servicio EFFIS - European Forest Fire Information System</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">addWMS</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+
+<span class="w">  </span><span class="nx">map</span><span class="p">.</span><span class="nx">addSource</span><span class="p">(</span><span class="s1">&#39;wms-incencios&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;raster&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;tiles&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">      </span><span class="s1">&#39;https://maps.wild-fire.eu/gwis?time=2023-02-04%2F2023-02-05&amp;bbox={bbox-epsg-3857}&amp;format=image/png&amp;service=WMS&amp;version=1.1.1&amp;request=GetMap&amp;srs=EPSG:3857&amp;transparent=true&amp;width=512&amp;height=512&amp;layers=modis.hs&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="s1">&#39;tileSize&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">512</span><span class="w"></span>
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
+<span class="w">  </span><span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="s1">&#39;id&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;wms&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s1">&#39;type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;raster&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s1">&#39;source&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;wms-incencios&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s1">&#39;paint&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+
+<span class="w">  </span><span class="p">);</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
 
 
 
